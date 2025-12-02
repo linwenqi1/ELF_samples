@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e9980058646af3a85d56bcd3c917f04809e6dd5dd5da4e778eb78b8e07796fb2.elf` | **Job ID:** `f484463a`
+**Date:** 2025-12-02 23:41:13
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed and established network connections to a command-and-control (C2) server. It performed memory protection adjustments, forked a child process, and attempted multiple socket connections to external IP addresses (non-localhost) before being terminated by a SIGKILL signal. The behavior matches Mirai's pattern of establishing TCP connections for C2 communication.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple socket creation and connection attempts
+- Memory protection manipulation
+- Process forking
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external addresses (domain 2, type 1/2)
+- CLONE/TRACK_FORK indicating process creation
+- Multiple MPROTECT calls suggesting memory manipulation
+- Exit via SIGKILL (signal 9) suggesting forced termination
+
+### 💡 Recommendations
+Isolate the system, analyze network traffic to identified addresses, check for persistence mechanisms, and scan for related artifacts. The C2 addresses should be blocked and reported.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

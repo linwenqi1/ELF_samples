@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f5d393c9c9688915c99dc33cedcf21b2927fad950d07145d3d1869b4f878582b.elf` | **Job ID:** `cfac4c33`
+**Date:** 2025-12-02 23:39:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Botnet`, `DDoS`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it executes from /tmp, forks multiple processes, escalates privileges to root via SETUID, establishes a network socket connection to a non-local address, and attempts to connect to a command-and-control server. The binary appears to be a non-x86 architecture emulated via QEMU, which is common for IoT-targeted malware like Mirai.
+
+### ⚠️ Suspicious Behaviors
+- Privilege escalation to root (SETUID 0)
+- Network socket creation and connection to external address
+- Multiple process forking pattern
+- Execution from temporary directory (/tmp)
+
+### 🔍 Key Evidence
+- SETUID event with uid=0 (root privilege escalation)
+- SOCKET and CONNECT events establishing network connection to external address (domain=2 indicates AF_INET/IPv4)
+- TRACK_FORK events showing process chain (423135→423136→423137→423138)
+- Execution from /tmp directory, common for malware persistence
+
+### 💡 Recommendations
+Isolate the system immediately, analyze network traffic to identify C2 server, check for persistence mechanisms (crontab, systemd services), and scan for other compromised binaries. The CONNECT address should be decoded to reveal the target IP/port for blocking.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

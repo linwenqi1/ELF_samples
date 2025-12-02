@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c380cceb8ea357d68519a8d8d50036d8cadb68c0d3bb1ae9fd3b90a47c5502c2.elf` | **Job ID:** `37aac359`
+**Date:** 2025-12-02 23:38:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential command-and-control servers, forks multiple processes for parallel operations, and performs directory scanning. The program successfully executed and exited cleanly, indicating it completed its intended reconnaissance and connection setup phase.
+
+### ⚠️ Suspicious Behaviors
+- Network connections to non-local addresses
+- Multiple process forking (CLONE events)
+- Directory scanning (GETDENTS64)
+- Memory protection manipulation (MPROTECT)
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external addresses (e.g., 020000350808080800000000000000000100000030002000e003087d8974000090828b5bfd7f0000100000000300000030498b6555550000003c787d718537a8)
+- Multiple CLONE events with different flags creating child processes
+- GETDENTS64 calls indicating directory enumeration
+- SENDTO/RECVFROM events showing data transmission
+
+### 💡 Recommendations
+Isolate affected systems, block the observed network addresses, analyze network traffic for command patterns, and check for persistence mechanisms (crontab, systemd services). The program appears to be a reconnaissance/initial infection stage of a Mirai variant.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

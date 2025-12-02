@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `471647009122790cda8551215b2fa36cab0bf0b7f1cb36ecf550a147e973f3a9.elf` | **Job ID:** `3a22ed9d`
+**Date:** 2025-12-02 23:36:52
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Privilege Escalation`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits characteristics of a Mirai botnet variant. It successfully executed, performed privilege escalation attempts to gain root access, created multiple child processes, and established an external network connection to a potential C2 server. The program demonstrates malicious intent with both local privilege escalation and network communication capabilities.
+
+### ⚠️ Suspicious Behaviors
+- Privilege escalation attempt to root (uid 0)
+- Multiple process forking creating a process tree
+- External network connection to non-localhost address
+- SET_KEEPCAPS capability manipulation
+
+### 🔍 Key Evidence
+- SETUID call with uid=0 (root) from PID 407025
+- PRCTL(SET_KEEPCAPS) call from PID 407021
+- CONNECT syscall to external address 020001a405afc097... from PID 407027
+- Multiple CLONE/TRACK_FORK events creating process tree (PIDs 407021-407028)
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic to the connected address, check for persistence mechanisms (crontab, systemd services), and scan for additional payloads. The binary appears to be a Mirai variant attempting to establish botnet connectivity.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

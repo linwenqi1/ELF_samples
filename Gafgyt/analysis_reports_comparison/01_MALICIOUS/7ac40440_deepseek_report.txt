@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fb0b62ed32ce8eb0c75c683986afd620142688429322e5dea7a1d875756fac78.elf` | **Job ID:** `7ac40440`
+**Date:** 2025-12-02 23:39:24
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it creates network sockets, attempts external connections to hardcoded IP addresses (8.8.8.8:53 and 129.132.35.129:53), spawns multiple child processes via cloning, and uses signal handling for process management. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious routine.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to suspicious IP addresses
+- Multiple process forking/cloning patterns
+- Socket creation and connection attempts
+- Signal generation for process control
+
+### 🔍 Key Evidence
+- CONNECT event to 8.8.8.8:53 (0200003508080808...)
+- CONNECT event to 129.132.35.129:53 (02003039b9843581...)
+- Multiple CLONE events with different flags (4001536, 18874385)
+- SOCKET creation for both TCP (type 2) and UDP (type 1) protocols
+- Process tree creation via TRACK_FORK events
+
+### 💡 Recommendations
+Isolate infected systems immediately. Block outbound connections to the identified IP addresses (8.8.8.8:53, 129.132.35.129:53). Analyze network traffic for DDoS patterns. Check for persistence mechanisms (crontab, systemd services). Scan for other Mirai variants that may have been deployed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

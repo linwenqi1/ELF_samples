@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d0753582abb899178981886d7a14071c2474b72116e9eefb4fc495a387764aae.elf` | **Job ID:** `a84937e6`
+**Date:** 2025-12-02 23:38:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `DDoS.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed and established network connections to a command-and-control (C2) server. It performed process forking, memory protection modifications, and initiated multiple socket connections with consistent patterns of sending and receiving small data packets, characteristic of botnet communication and DDoS attack coordination.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Repeated SENDTO/RECVFROM patterns with consistent 25-byte payloads
+- Process forking and cloning with specific flags
+- Multiple MPROTECT calls modifying memory permissions
+
+### 🔍 Key Evidence
+- CONNECT events with encoded network addresses (AF_INET domain 2, type 2 for TCP)
+- Repeated pattern: SOCKET → CONNECT → SENDTO(25 bytes) → RECVFROM(1 byte) loop
+- CLONE events with flags 4001536 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND) and 18874385 (additional CLONE_THREAD)
+- Network addresses appear to be encoded IPv4 addresses with port information
+
+### 💡 Recommendations
+Isolate affected systems, block the identified network addresses, analyze the binary for additional capabilities, and monitor for DDoS attack patterns. The program appears to be actively communicating with C2 infrastructure.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

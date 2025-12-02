@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `51919576254b24acac956a09ec5d40c2f984e4533f6655ec0e1fdc14ced698eb.elf` | **Job ID:** `0ce0225e`
+**Date:** 2025-12-02 23:41:14
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential command-and-control (C2) servers, forks multiple child processes for parallel operations, and uses socket communication typical of DDoS botnets. The program executed successfully with exit code 0, indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Multiple process forking (CLONE events with child processes)
+- Memory protection manipulation (MPROTECT events)
+- Signal generation and child process management
+
+### 🔍 Key Evidence
+- SOCKET event with domain=2 (AF_INET) and type=2 (SOCK_DGRAM) followed by CONNECT to address 020000350808080800000000000000000000000000000000005478405eeeb891b017e377fe7f000010000000030000000100000030002000005478405eeeb891
+- Second SOCKET event with type=1 (SOCK_STREAM) and CONNECT to different address 0200115cc4fb7313000000000000000000000000000000000000000000000000b017e377fe7f000010000000030000000100000030002000005478405eeeb891
+- Multiple CLONE events creating child processes (432526, 432527, 432528, 432529, 432530) with different flags
+- MPROTECT events changing memory permissions (read/write/exec flags)
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze network traffic to identify C2 servers. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Update IoT device firmware and change default credentials.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

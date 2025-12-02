@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `854483021ebc03c329d11e618b589c6511168910ab54157e63f5a5a6d3b9df0b.elf` | **Job ID:** `5c4d7c78`
+**Date:** 2025-12-02 23:37:16
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Privilege Escalation`, `Backdoor`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits clear malicious behavior consistent with Mirai botnet variants. It successfully executes, performs privilege escalation to root via SETUID, creates multiple child processes through cloning, and establishes a network connection to a non-local address. The program appears to be a botnet client attempting to connect to a command-and-control server.
+
+### ⚠️ Suspicious Behaviors
+- Privilege escalation to root (uid 0)
+- Multiple process forking/cloning patterns
+- Network socket creation and connection to external address
+- Memory protection manipulation (mprotect calls)
+
+### 🔍 Key Evidence
+- SETUID call with uid=0 (root) from pid 409557
+- CONNECT event to external address: 02000017797f227600000000000000000100000030002000e003a82ced7b000020b6c471fc7f00001000000003000000c04bd25955550000002465e3447fb07d
+- Multiple CLONE events with different flags creating process hierarchy
+- Exit code 0 indicates successful execution
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze the network connection address for C2 infrastructure. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Consider this as part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

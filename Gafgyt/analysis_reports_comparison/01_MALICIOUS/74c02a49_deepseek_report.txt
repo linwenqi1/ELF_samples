@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6feeea1accc730facf808f318a3313f8b62cd9585e91480a351a0d53036c0ed5.elf` | **Job ID:** `74c02a49`
+**Date:** 2025-12-02 23:40:17
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes network connections to a command-and-control (C2) server and performs repeated socket operations characteristic of DDoS attack preparation. It executes from /tmp, forks multiple processes, and engages in persistent network communication patterns.
+
+### ⚠️ Suspicious Behaviors
+- Network connection to external IP address
+- Repeated socket creation and connection patterns
+- Multiple process forking (CLONE events)
+- Execution from temporary directory (/tmp)
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to IP address 35.8.8.4 (decoded from hex address)
+- Repeated pattern of SOCKET-CONNECT-SENDTO-RECVFROM cycles
+- Multiple CLONE events creating child processes (PIDs 426695-426699)
+- TRACK_QEMU event indicating non-x86 architecture emulation (benign per context)
+
+### 💡 Recommendations
+Isolate affected systems, block network traffic to identified C2 IP (35.8.8.4), analyze memory dumps for additional indicators, and monitor for DDoS attack patterns. Consider this as part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f0421fbbd98d289ad10f72e3b34b7916ca3a12a5a808c9882968be736d7ab5d7.elf` | **Job ID:** `fd8ade31`
+**Date:** 2025-12-02 23:38:19
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it forks multiple processes, escalates privileges to root via SETUID, and establishes an outbound network connection to a non-localhost address. The program successfully executed its malicious payload before exiting with code 0, indicating it completed its intended infection routine.
+
+### ⚠️ Suspicious Behaviors
+- Privilege escalation to root (SETUID 0)
+- Outbound network connection to external address
+- Multiple process forking (CLONE events)
+- Memory protection manipulation (MPROTECT)
+
+### 🔍 Key Evidence
+- SETUID event with uid=0 (root privilege escalation)
+- CONNECT event to external address (02000017797f227600...)
+- Multiple CLONE/TRACK_FORK events creating process tree
+- PRCTL system call with option 15 (PR_SET_PTRACER)
+
+### 💡 Recommendations
+Isolate infected systems, block the destination IP from the CONNECT event, examine network traffic for C2 communication patterns, and check for persistence mechanisms (crontab, systemd services) that may have been installed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```
