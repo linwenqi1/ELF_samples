@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fa2eb37c31a6038c0422270722b8d449a1e8bf0856f65bd3840b06563e37cc83.elf` | **Job ID:** `8dbc9636`
+**Date:** 2025-12-02 22:26:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program successfully executed and exhibited clear malicious behavior consistent with IoT botnet malware. It forked a child process that immediately created a network socket and attempted to connect to a remote address, strongly indicating command-and-control (C2) communication. The behavior pattern matches Mirai-family malware that establishes persistent connections to hardcoded C2 servers for DDoS attacks and remote control.
+
+### ⚠️ Suspicious Behaviors
+- Process forking immediately after execution
+- Network socket creation with AF_INET (domain: 2)
+- Outbound connection attempt to encoded remote address
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- EXEC event from /tmp/fa2eb37c31a6038c0422270722b8d449a1e8bf0856f65bd3840b06563e37cc83.elf
+- TRACK_FORK creating child process 224597
+- SOCKET with domain 2 (AF_INET) and type 1 (SOCK_STREAM)
+- CONNECT to encoded address 02001a0bb966aafa0600000006000000000000000000000000000000000000003df62e69000000002af62e6900000000e0a70805fc7f0000c735400000000000
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze the encoded CONNECT address to identify C2 infrastructure. Check for persistence mechanisms (crontab, systemd services). Monitor for additional propagation attempts via telnet/SSH brute-force. Consider network segmentation for IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

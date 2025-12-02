@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8e35f336b50ef3ce4da8356f81ab0ddab7378cd8faea6507d7a5eb753b3a8d00.elf` | **Job ID:** `363ab190`
+**Date:** 2025-12-02 22:36:20
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes command-and-control (C2) connections and performs network scanning/brute-force attacks. It forks multiple processes to create a botnet infrastructure, attempts to connect to numerous IP addresses (likely for propagation or DDoS target scanning), and terminates with kill signals. The benign output text appears to be a decoy.
+
+### ⚠️ Suspicious Behaviors
+- Massive network socket creation and connection attempts
+- Process forking to create botnet hierarchy
+- Use of PRCTL with option 15 (PR_SET_NAME) for process hiding
+- KILL signals sent to terminate processes
+- Network connections to multiple non-local IP addresses
+
+### 🔍 Key Evidence
+- Initial CONNECT to 020000350808080800000000000001000100000030002000e003a8bf70700000b0907ccdff7f0000100000000300000070eaf17855550000007b1a7a04d931bf (likely C2)
+- Over 400 SOCKET/CONNECT events from PID 256004 to various addresses
+- CLONE/TRACK_FORK events creating process tree (PIDs 256001-256009)
+- PRCTL with option 15 (process name manipulation)
+- KILL events targeting PIDs 7, 27, 29, 31 with SIGKILL (9)
+
+### 💡 Recommendations
+Isolate infected systems, block outbound connections to identified C2 IPs, monitor for unusual network traffic patterns, and implement strong password policies to prevent brute-force attacks.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+gosh that chinese family at the other table sure ate a lot
+```

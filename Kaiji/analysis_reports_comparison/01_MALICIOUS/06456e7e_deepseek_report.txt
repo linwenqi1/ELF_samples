@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8e5ad42b4a2c953231c72ecb37ac83e9ae0f8df18f02dd3acc7b819464614820.elf` | **Job ID:** `06456e7e`
+**Date:** 2025-12-02 22:46:50
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes persistence by writing a shell script to /etc/rc.local, creating a backdoor that runs continuously. It attempts to manipulate system services and exhibits botnet-like behavior with multiple process forks and signal generation.
+
+### ⚠️ Suspicious Behaviors
+- Writes persistent shell script to /etc/rc.local
+- Attempts to manipulate system services via /usr/sbin/service
+- Creates multiple child processes with CLONE operations
+- Generates repeated SIGTSTOP (signal 23) signals
+- Executes from /tmp with suspicious filename patterns
+
+### 🔍 Key Evidence
+- WRITE event to fd:3 with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- EXEC event for /etc/32678 (suspicious path)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- STAT events probing system directories and service files
+- ACCESS events with empty filenames and mode 0 (suspicious file existence checks)
+
+### 💡 Recommendations
+Isolate infected system immediately. Check /etc/rc.local for malicious scripts. Monitor for network connections to known Mirai C2 servers (ports 23, 2323, 48101). Scan for other persistence mechanisms like crontab entries. Consider full system reimage due to potential rootkit installation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

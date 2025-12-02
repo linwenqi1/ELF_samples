@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `3f44e7b40ebc35bfc17fe4b59811411c8bdd024deec26355039a828c46aedae4.elf` | **Job ID:** `95058c03`
+**Date:** 2025-12-02 22:47:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `XorDDoS`
+- **Threat Categories:** `Backdoor`, `Rootkit`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.XorDDoS`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a sophisticated Linux malware exhibiting characteristics of the XorDDoS family. The program successfully executes and performs multiple malicious activities including file deletion, persistence mechanism installation, process manipulation, and anti-analysis techniques. It attempts to establish persistence through systemd services, cron jobs, and profile scripts while actively removing competing malware and security tools.
+
+### ⚠️ Suspicious Behaviors
+- Mass file deletion of system configuration files
+- Attempted installation of persistence mechanisms
+- Process manipulation via signal generation (SIGSTOP/SIGCONT)
+- Anti-analysis behavior with multiple VM/sandbox checks
+- Attempted privilege escalation and service manipulation
+- Creation of malicious scripts and configuration files
+
+### 🔍 Key Evidence
+- Multiple UNLINKAT events deleting system files: /etc/rc.d/init.d/linux_kill, /etc/init.d/linux_kill, /etc/rc.d/linux_kill, /etc/systemd/system/linux.service, /etc/profile.d/linux.sh, /boot/System.img.config, /.img, /usr/lib/libdlrpcld.so, /etc/32678, /etc/id.services.conf, /lib/system-monitor, /usr/sbin/ifconfig.conf, /tmp/seeintlog, /etc/profile.d/bash_config.sh, /etc/profile.d/bash_config
+- Creation of malicious scripts with content like '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/opt.services.cfg\ndone'
+- Multiple SIGNAL_GENERATE events with sig=23 (SIGSTOP) used for process manipulation
+- Attempted service manipulation via systemctl and service commands
+- Creation of cron job entry '*/1 * * * * root /.mod'
+- Multiple ACCESS events with empty filenames and mode=0 suggesting anti-analysis checks
+- MEMFD_CREATE with name 'qemu-open' indicating awareness of emulation environment
+- Failed attempts to manipulate process priority (renice) and mount /proc/27
+
+### 💡 Recommendations
+Isolate infected systems immediately. Conduct full system scan for remaining artifacts. Check for unauthorized cron jobs, systemd services, and profile scripts. Monitor network traffic for C2 communications. Consider system reinstallation if critical system files were modified. Update all credentials and SSH keys.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

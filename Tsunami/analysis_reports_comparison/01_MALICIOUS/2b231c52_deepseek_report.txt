@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `73adcaa30bfcaf249c983a758dcf1ef620b9dc6e05b5611d33dd486f4a30a6cf.elf` | **Job ID:** `2b231c52`
+**Date:** 2025-12-02 22:23:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed and attempted to establish a command-and-control (C2) connection before being terminated. It exhibited typical Mirai behaviors including process forking, memory protection manipulation, and network socket creation with a connection to a non-local address using a hardcoded binary protocol pattern consistent with Mirai's centralized C2 architecture.
+
+### ⚠️ Suspicious Behaviors
+- Network connection to external address
+- Process forking/cloning
+- Multiple memory protection changes
+- Binary executed from /tmp directory
+
+### 🔍 Key Evidence
+- CONNECT event to external address (0200029a4d5a99c4...) with Mirai-like binary protocol pattern
+- CLONE event for process forking
+- Multiple MPROTECT events changing memory permissions
+- SOCKET creation with domain=2 (AF_INET) and type=1 (SOCK_STREAM)
+- Execution from /tmp directory (common Mirai landing zone)
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic for C2 communication patterns, check for persistence mechanisms (crontab, systemd services), and scan for additional payloads or competitor-killing activities. The hardcoded address should be blocked at network perimeter.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

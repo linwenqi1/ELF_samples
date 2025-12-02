@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c797c8b0b25cb051ac6573eae36895cab20e7b66b3c7de364747a955ebd93014.elf` | **Job ID:** `620b89d7`
+**Date:** 2025-12-02 22:38:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections, forks multiple processes, and performs socket operations consistent with command-and-control (C2) communication. The program successfully executed with exit code 0, indicating it completed its intended malicious activities without environmental detection or dependency failures.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection attempts
+- Multiple process forking (fork bombing pattern)
+- Repeated SOCKET-CONNECT-SENDTO-RECVFROM cycles
+- Potential C2 communication with encoded addresses
+
+### 🔍 Key Evidence
+- Initial SOCKET (domain:2, type:2) and CONNECT to encoded address 02000035080808080000001006000000a832010000000000a832510010000000a832510000000000c02a2c1efe7f0000a82d2c1efe7f00001364400000000000
+- Multiple TRACK_FORK events creating child processes (263579, 263580, 263581, 264912, 264913)
+- Repeated pattern of SOCKET-CONNECT-SENDTO-RECVFROM in processes 263581 and 264913
+- SENDTO operations with consistent length 39 bytes, suggesting protocol handshake
+- CONNECT addresses with similar patterns (020000350808080800000000...), indicating structured C2 communication
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze network traffic for the encoded addresses to identify C2 servers. Check for persistence mechanisms (crontab, systemd services). Look for additional payloads or propagation attempts. Consider this part of a larger botnet campaign targeting IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

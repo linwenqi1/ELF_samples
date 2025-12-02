@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `79e1e3fc21a3d841371e874404d4ffb6b442564b7e912ac6c03129ae29c87498.elf` | **Job ID:** `75414c4d`
+**Date:** 2025-12-02 22:36:00
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits clear botnet behavior consistent with Mirai-family malware. It establishes network connections to external C2 servers, spawns multiple child processes, and performs socket operations typical of DDoS botnets. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple process forking/cloning patterns
+- Socket creation and connection attempts
+- Repeated network I/O operations
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external addresses (domain 2, type 2 for TCP connections)
+- Multiple CLONE events with flags 18874385 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_PTRACE|CLONE_VFORK|CLONE_PARENT|CLONE_THREAD|CLONE_NEWNS|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED) indicating thread creation
+- SENDTO and RECVFROM events showing bidirectional communication
+- Process tree creation with parent-child relationships (TRACK_FORK events)
+
+### 💡 Recommendations
+Isolate affected systems, block identified C2 IP addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms. Consider this as part of a larger botnet campaign targeting IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

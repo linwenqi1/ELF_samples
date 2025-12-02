@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ee32c7c0b480bbd90e51f4d44d5e53cea5b149defbcd2aa9e306716d418503d4.elf` | **Job ID:** `6034eed8`
+**Date:** 2025-12-02 23:14:54
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Privilege Escalation`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program is a malicious backdoor that creates unauthorized user accounts, modifies system files, establishes network connections, and attempts to escalate privileges. The behavior pattern matches Mirai-family botnets that create backdoor access for remote control and potential DDoS operations.
+
+### ⚠️ Suspicious Behaviors
+- Creates unauthorized user account 'moderator' with weak password 'chujchuj'
+- Executes privileged system commands (useradd, chpasswd, usermod) from /tmp
+- Modifies critical system files (/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow)
+- Establishes multiple socket connections including to /dev/log
+- Attempts to execute /sbin/zsysctl (likely persistence mechanism)
+- Downloads and executes additional payload from /tmp/nwatchdog/d
+- Performs network reconnaissance with SOCKET/CONNECT operations
+
+### 🔍 Key Evidence
+- EXEC /usr/sbin/useradd followed by password setting via chpasswd
+- WRITE operations to system files with user 'moderator' credentials
+- Multiple CLONE/TRACK_FORK events spawning shells and system utilities
+- Network socket connections including to /var/run/nscd/socket and /dev/log
+- Attempted execution of /sbin/zsysctl for system configuration modification
+- Download and execution of additional payload from /tmp/nwatchdog/d
+- Pattern of spawning /bin/sh shells that execute privileged commands
+
+### 💡 Recommendations
+Immediate isolation of affected system. Investigate created user accounts (especially 'moderator'). Check for persistence mechanisms in /etc/rc.local, crontab, or systemd services. Analyze network connections for C2 communication. Examine /tmp/nwatchdog/d for additional payloads. Consider this system compromised and rebuild from known clean state.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

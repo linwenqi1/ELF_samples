@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0f580f0db3d4644fe503a3d7e810ce1e4d17e242b89d5de7bcf91b97d0448281.elf` | **Job ID:** `25a82637`
+**Date:** 2025-12-02 22:35:02
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior: it establishes network connections to external C2 servers, forks multiple processes, and performs repeated socket operations consistent with DDoS command-and-control communication. The program successfully executed its malicious payload despite numerous segmentation faults (SIG 11) that appear to be part of its execution pattern rather than failures.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to multiple IP addresses
+- Multiple process forking and cloning
+- Repeated socket creation and connection attempts
+- Segmentation fault signals during execution
+- Statistical sampling indicates high-volume activity
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external addresses (e.g., 020000350808080800040004100000000100000030002000e003c851297200009056d13ffd7f0000100000000300000060ba1772555500000003e168ac6e0d73)
+- Multiple CLONE and TRACK_FORK events creating child processes
+- Repeated SENDTO and RECVFROM operations with consistent payload sizes
+- Exit code 0 despite numerous SIG 11 signals
+- Massive original log count (7846) indicating extensive activity
+
+### 💡 Recommendations
+Isolate infected systems, block identified C2 IP addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms. The binary appears to be a Mirai variant targeting IoT/Linux systems for DDoS attacks.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

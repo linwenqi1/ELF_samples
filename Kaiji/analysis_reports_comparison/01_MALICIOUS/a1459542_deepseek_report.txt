@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b5fb1596b0b306ae93ecb350a0f27bbf6d5e53798779beeb4c11728237c422bb.elf` | **Job ID:** `a1459542`
+**Date:** 2025-12-02 22:45:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai variant that establishes persistence by creating a shell script that runs continuously, checking for a configuration file at /etc/id.services.conf. It spawns multiple processes, executes system utilities like 'service' and 'sleep', and attempts to hide its activity through process forking and memory protection changes. The behavior indicates a backdoor designed to maintain long-term access and potentially execute further commands.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Writes script to file descriptor 3 (likely a hidden file)
+- Spawns multiple child processes via CLONE/TRACK_FORK
+- Executes system utilities ('service', 'sh', 'sleep')
+- Repeated MPROTECT calls suggesting code injection or evasion
+- SIGNAL_GENERATE events (sig 23) indicating process control
+
+### 🔍 Key Evidence
+- WRITE event with script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Multiple EXEC events for /usr/bin/sh, /usr/sbin/service, /usr/bin/sleep
+- Process tree creation with parent PID 293359 spawning multiple children
+- ACCESS events to empty filenames suggesting hidden file operations
+- Script references /etc/id.services.conf (potential C2 configuration)
+
+### 💡 Recommendations
+Isolate infected system, analyze /etc/id.services.conf if present, check for cron jobs or startup scripts, monitor network connections for C2 communication, and examine memory for injected code. The script's infinite loop with sleep suggests periodic beaconing or command checking.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `03c174e6757abf8a3661990e8a5b1911e471304188603c859b92dd3c1ae0b8a3.elf` | **Job ID:** `e51c2dfb`
+**Date:** 2025-12-02 22:26:10
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it executes from /tmp, forks multiple processes, creates a network socket, and attempts to connect to a hardcoded external IP address (likely a C2 server). The connection attempt uses a raw socket with a non-standard address format, characteristic of Mirai's network communication for command and control. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious setup.
+
+### ⚠️ Suspicious Behaviors
+- External network connection to potential C2 server
+- Multiple process forking (CLONE events)
+- Memory protection manipulation (MPROTECT events)
+- Execution from temporary directory (/tmp)
+
+### 🔍 Key Evidence
+- CONNECT event with external IP address (02001a0b149747e4800162ac00000005000000000000000000f6fa6c67002fc0404894f9fd7f00001000000003000000a0c7a1645555000000f6fa6c67002fc0) - decoded as 10.11.20.1:6667
+- Multiple CLONE/TRACK_FORK events creating child processes
+- SOCKET creation with domain 2 (AF_INET) and type 1 (SOCK_STREAM)
+- Execution from /tmp directory, common for Mirai payloads
+
+### 💡 Recommendations
+Isolate affected systems, block the identified C2 IP address (10.11.20.1), analyze network traffic for additional C2 communication, and check for persistence mechanisms (crontab, systemd services). Consider this as part of a larger botnet campaign targeting IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

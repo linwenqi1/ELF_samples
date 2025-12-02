@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0b5bde3a1e195658d3eac6a8eca01e30ac4a75e25bd3f92bfb345f3e05151201.elf` | **Job ID:** `0e0c7cea`
+**Date:** 2025-12-02 22:38:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet sample that successfully executed and attempted to connect to a command-and-control server. The program printed 'MIRAI' to stdout, created a socket, and attempted to connect to a hardcoded IP address (0200005102c066a2 in hex, which resolves to 81.0.102.162). The connection attempt appears to have failed (exit code 1), but the program demonstrated clear malicious intent by attempting to establish C2 communication.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation
+- Outbound connection to suspicious IP
+- Process forking/cloning
+- Memory protection manipulation
+- Mirai identification string output
+
+### 🔍 Key Evidence
+- Output 'MIRAI' to stdout
+- SOCKET syscall with domain=2 (AF_INET)
+- CONNECT syscall to IP 81.0.102.162
+- CLONE syscall for process creation
+- Multiple MPROTECT calls suggesting memory manipulation
+
+### 💡 Recommendations
+Block outbound connections to 81.0.102.162 and related IP ranges. Analyze network traffic for similar connection patterns. Check for persistence mechanisms (crontab, systemd services). Scan for other Mirai indicators like anime-inspired process names or telnet/SSH brute-force attempts.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+MIRAI
+NIF
+```

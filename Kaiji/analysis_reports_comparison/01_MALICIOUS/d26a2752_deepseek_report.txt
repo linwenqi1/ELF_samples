@@ -1,0 +1,43 @@
+# DeepSeek Malware Analysis Report
+**Target:** `af6b7d2303e41e97b25d9c22c60e6fbee0c053671307cf2eeb81f85729231e4b.elf` | **Job ID:** `d26a2752`
+**Date:** 2025-12-02 22:46:45
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`, `Persistence`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence through multiple mechanisms, attempts to disable security services, and communicates with C2 infrastructure. The malware executes from /tmp, forks multiple processes, writes shell scripts for persistence, attempts to manipulate system services (cron, systemd), and shows characteristic Mirai behaviors including signal generation (SIGURG/23) and process manipulation.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking and cloning
+- Writing shell scripts to /tmp for persistence
+- Attempting to manipulate system services (cron, systemctl)
+- Signal generation (SIGURG/23) for process coordination
+- Writing to file descriptor 7 (likely C2 communication)
+- Creating memory-backed files with MEMFD_CREATE
+- Attempting to modify process priorities with renice
+- Trying to mount /proc/26 (likely process hiding)
+
+### 🔍 Key Evidence
+- EXEC events show the binary re-executing itself from /tmp
+- WRITE events contain shell scripts for persistence (e.g., 'while [ 1 ]; do sleep 60; /etc/opt.services.cfg done')
+- Multiple CLONE/TRACK_FORK events creating child processes
+- SIGNAL_GENERATE events with sig=23 (SIGURG) for coordination
+- Attempts to manipulate cron via systemctl/service commands
+- Writing to fd=7 contains what appears to be C2 communication data
+- MEMFD_CREATE with name 'qemu-open' for temporary file operations
+- Failed attempts to use renice and mount commands for privilege manipulation
+
+### 💡 Recommendations
+Isolate infected systems immediately. Analyze network traffic for C2 communication on unusual ports. Check for persistence mechanisms in /etc/cron*, /etc/systemd/system/, and /etc/rc.local. Look for suspicious processes with anime-inspired names. Block outbound traffic to known Mirai C2 IP ranges. Consider resetting SSH keys and passwords on affected systems.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

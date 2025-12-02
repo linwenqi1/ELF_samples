@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `00adc960a4c5b25828f84d45e8225c08e66cb9315cb745702b3007e1f7bb1a80.elf` | **Job ID:** `a0ac0c6c`
+**Date:** 2025-12-02 22:44:39
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior with backdoor installation and persistence mechanisms. It creates a shell script that runs continuously, attempts to access system service configuration files, and spawns multiple processes including sleep commands for timing. The program successfully executes and exits cleanly (exit code 0) after establishing persistence.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script in /tmp
+- Attempts to access /etc/id.services.conf
+- Spawns multiple child processes
+- Executes sleep commands for timing
+- Uses service command for system manipulation
+
+### 🔍 Key Evidence
+- WRITE event with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- ACCESS events targeting /etc/id.services.conf
+- Multiple CLONE/TRACK_FORK events creating child processes
+- EXEC of /usr/bin/sleep for timing
+- EXEC of /usr/sbin/service for system service manipulation
+- Process spawning pattern consistent with Mirai persistence mechanisms
+
+### 💡 Recommendations
+Isolate infected system immediately. Check /tmp for malicious scripts. Examine /etc/rc.local and crontab for persistence entries. Monitor network traffic for C2 connections. Consider this system compromised and reimage if possible.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

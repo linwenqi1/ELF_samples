@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6b2d4b72f1e5302f8db2683de4c2406c1057d74c2412fba669e4c5dbfd14c198.elf` | **Job ID:** `2222b70c`
+**Date:** 2025-12-02 22:49:00
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai variant that establishes persistence by creating a shell script that runs continuously, checking for a configuration file at /etc/id.services.conf every 60 seconds. It spawns multiple processes, executes system utilities, and attempts to manage services, indicating backdoor functionality for remote command execution.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Writes to file descriptor 3 with script content
+- Spawns multiple child processes via CLONE/TRACK_FORK
+- Executes system binaries (/usr/bin/sh, /usr/sbin/service, /usr/bin/basename)
+- Generates multiple SIGTSTOP signals (signal 23)
+
+### 🔍 Key Evidence
+- WRITE event with script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Multiple EXEC events for system binaries
+- Repeated CLONE/TRACK_FORK events creating process tree
+- ACCESS events to empty filenames and special characters
+- SIGNAL_GENERATE events with sig=23 (SIGTSTOP) potentially for process control
+
+### 💡 Recommendations
+Isolate affected system, analyze /etc/id.services.conf if present, check for unauthorized cron jobs or startup scripts, monitor network connections for C2 communication, and consider this as part of a larger botnet infection.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

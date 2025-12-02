@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2cae01a9c5ccb06c91d94ba45a9aaec9f804f60f9bf86cdf97daf5ceacae8f4f.elf` | **Job ID:** `473e6385`
+**Date:** 2025-12-02 22:38:30
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes C2 connections, performs network reconnaissance, and exhibits typical botnet behaviors including process forking, directory scanning, and socket communications. It outputs a decoy message 'thIs wEek on xLaB lEarNs nOthinG xd' while performing malicious activities in the background.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Multiple process forking (CLONE with flags 18874385)
+- Directory scanning via GETDENTS64
+- Memory protection manipulation (MPROTECT)
+- PRCTL system call with option 15
+- High-volume file descriptor reading patterns
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external addresses (domain 2, type 2 and 1)
+- Multiple CLONE events creating child processes (pids 266603-266609)
+- GETDENTS64 calls scanning directories (filenames with control characters)
+- PRCTL with option 15 (PR_SET_NAME) suggesting process name hiding
+- CONNECT addresses contain encoded network data (0200003508080808...)
+- Aggregated summary shows proc_fs and dev_node access patterns
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic to identified addresses, check for persistence mechanisms, and monitor for DDoS attack patterns. Consider this as part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e123ae2cdf715332757929bd9e18e6d38b175009676257911679404ac9e23ec9.elf` | **Job ID:** `57978fbb`
+**Date:** 2025-12-02 22:26:18
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed and established network connections to potential command-and-control (C2) servers. It forked a child process that performed socket operations, including connecting to external addresses with encoded data, consistent with Mirai's centralized C2 communication pattern for DDoS attacks.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Forking a child process for network operations
+- Sending and receiving data over sockets
+- Repeated connection attempts to similar addresses
+
+### 🔍 Key Evidence
+- EXEC event from /tmp with binary execution
+- TRACK_FORK creating child process 223711
+- SOCKET events with domain 2 (AF_INET) and types 1 (SOCK_STREAM) and 2 (SOCK_DGRAM)
+- CONNECT events to encoded addresses (likely IP:port combinations)
+- SENDTO and RECVFROM events indicating data transmission
+- Repeated connection patterns suggesting retry logic
+
+### 💡 Recommendations
+Isolate the system, analyze network traffic to identify C2 servers, check for persistence mechanisms (crontab, systemd), and scan for other infected devices. The binary should be submitted for deeper static analysis to identify specific Mirai variant characteristics.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

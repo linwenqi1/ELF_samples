@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5605c88eca0b9e3e5b615e7376d2a5d1b43ae2b4be9fbe2cd5ea2bafdc8fe89b.elf` | **Job ID:** `de9c2123`
+**Date:** 2025-12-02 22:36:28
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program successfully executed and established a network connection to a remote address, exhibiting characteristics consistent with Mirai botnet malware. It performed process forking, memory protection modifications, and socket operations typical of botnet initialization before attempting to connect to a command-and-control (C2) server.
+
+### ⚠️ Suspicious Behaviors
+- Process forking/cloning
+- Memory protection modifications (mprotect)
+- Socket creation and remote connection
+- File descriptor duplication (dup2)
+
+### 🔍 Key Evidence
+- EXEC event from /tmp with hash-based filename
+- CLONE events creating child processes
+- SOCKET and CONNECT events establishing network connection
+- CONNECT address contains non-local hexadecimal data suggesting remote C2
+- DUP2 operations redirecting standard file descriptors
+
+### 💡 Recommendations
+Isolate the system, analyze network traffic to/from the connected address, examine memory for additional payloads, and check for persistence mechanisms (crontab, systemd services). The binary should be submitted to threat intelligence platforms for further analysis.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

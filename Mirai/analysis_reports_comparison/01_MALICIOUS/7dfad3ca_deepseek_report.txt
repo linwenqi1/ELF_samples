@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `20a56e4d75bd9aa610390ff724a232ccd3a328db5ea75c5f1f3bc447c04352b4.elf` | **Job ID:** `7dfad3ca`
+**Date:** 2025-12-02 22:37:57
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections, forks multiple processes, and engages in repeated socket communication patterns consistent with command-and-control (C2) activity. The program successfully executed and terminated with exit code 0, indicating it completed its intended malicious operations.
+
+### ⚠️ Suspicious Behaviors
+- Multiple network socket creations and connections
+- Process forking to create child processes
+- Repeated SENDTO/RECVFROM patterns suggesting C2 communication
+- Memory protection modifications (MPROTECT) for execution permissions
+
+### 🔍 Key Evidence
+- Initial SOCKET/CONNECT to address 0200003508080808000000100600000000900100000000000090510010000000009051000000000010eb5298fd7f0000f8ed5298fd7f000063a5400000000000
+- Multiple forked processes (262939, 262940, 262941, 263146, 263147) creating additional sockets
+- Repeated pattern of SOCKET→CONNECT→SENDTO→RECVFROM across multiple PIDs
+- Directory scanning via GETDENTS64 calls
+- MPROTECT with read+exec permissions suggesting code injection/modification
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze network traffic to identify C2 servers. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Consider this as part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

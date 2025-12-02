@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b14a68c8a5da01d27b995e0365514eb60fb16ac4d6eb3472f35ad4015e0cdfc5.elf` | **Job ID:** `825accb0`
+**Date:** 2025-12-02 22:24:32
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai-family IoT botnet client that successfully establishes command-and-control (C2) connections and performs network reconnaissance. It executes from /tmp, forks processes, creates multiple sockets (both stream and datagram), connects to external IP addresses, sends data packets (36 and 51 bytes), and receives responses (512 bytes each). This pattern matches Mirai's behavior of connecting to hardcoded C2 servers, receiving commands, and preparing for DDoS attacks. No anti-analysis evasion was detected.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket creations (AF_INET domain)
+- Repeated connections to external IP addresses
+- Data transmission to remote hosts
+- Process forking and child process execution
+- Network reconnaissance behavior
+
+### 🔍 Key Evidence
+- High volume of SOCKET/CONNECT/SENDTO/RECVFROM calls (domain=2 indicates AF_INET/IPv4)
+- Consistent pattern: SOCKET → CONNECT → SENDTO → RECVFROM repeated hundreds of times
+- Data transmission lengths (36 and 51 bytes) typical of Mirai handshake/command packets
+- External network connections (not localhost) indicating C2 communication
+- Process forking (CLONE/TRACK_FORK) creating child processes for network operations
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identify C2 servers for blocking. Check for persistence mechanisms (crontab, systemd). Scan for other infected devices on network. Consider network segmentation for IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

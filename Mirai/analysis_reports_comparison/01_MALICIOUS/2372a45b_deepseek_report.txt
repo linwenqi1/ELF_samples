@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `cf41c96260caaad5b06132ce734246318c5cf6e0968b62a610bfbdd38c3878b5.elf` | **Job ID:** `2372a45b`
+**Date:** 2025-12-02 22:37:21
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to external C2 servers, forks multiple processes for scanning/propagation, performs directory enumeration, and attempts to hide its presence. The program successfully executed and displayed output while running malicious activities in the background.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to suspicious IP addresses
+- Multiple process forking with different flags
+- Extensive directory enumeration via GETDENTS64
+- Memory protection manipulation (MPROTECT)
+- Process control operations (PRCTL)
+- Repeated scanning patterns
+
+### 🔍 Key Evidence
+- CONNECT event to external IP 8.8.8.8 (Google DNS) with suspicious payload
+- Multiple CLONE events with different flags (4001536 and 18874385) indicating process creation for different purposes
+- High volume of GETDENTS64 calls enumerating directories
+- SOCKET creation with both stream (type 2) and datagram (type 1) sockets
+- PRCTL with option 15 (PR_SET_NAME) to change process name
+- Repeated block patterns showing systematic scanning behavior
+- Process tree creation with parent-child relationships for coordinated activity
+
+### 💡 Recommendations
+Isolate the infected system immediately. Analyze network traffic for C2 communication patterns. Check for persistence mechanisms (crontab, systemd services). Look for additional payloads or dropped files. Monitor for outbound DDoS traffic. Consider the system compromised and rebuild from known clean backups.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

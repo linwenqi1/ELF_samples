@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e03b170edb8f75e7585174957903b85f0758a56063da7750e3b5de54fb186600.elf` | **Job ID:** `78a07f6e`
+**Date:** 2025-12-02 22:45:50
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits clear malicious behavior consistent with Mirai-family botnets. It creates a persistent backdoor by writing a shell script to /etc/id.services.conf that runs continuously, attempts to execute system service commands, and spawns multiple child processes. The program successfully executes and exits cleanly (exit code 0) after establishing persistence mechanisms.
+
+### ⚠️ Suspicious Behaviors
+- Persistence script creation
+- Multiple process forking
+- Service manipulation attempts
+- Continuous loop execution
+
+### 🔍 Key Evidence
+- WRITE event to fd:3 with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- EXEC events to /usr/bin/sh and /usr/sbin/service
+- Multiple CLONE/TRACK_FORK events creating child processes
+- ACCESS events to system paths
+- SIGNAL_GENERATE events (sig:23) indicating process control
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze /etc/id.services.conf for malicious content. Check for unauthorized cron jobs or systemd services. Monitor network connections for C2 communication. Consider full system reimage due to persistence mechanisms.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

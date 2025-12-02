@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `eb6c4a5985b1e644ad64ce61fb3eee4f93a2f16ac2960ece0b23f9c39e37dc04.elf` | **Job ID:** `72719a03`
+**Date:** 2025-12-02 22:45:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Botnet`, `Privilege Escalation`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence, attempts to connect to C2 servers, and performs system reconnaissance. The malware executes from /tmp, creates multiple processes, writes shell scripts for persistence, attempts to modify system services, and establishes network connections to potential C2 infrastructure.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking and cloning
+- Writing shell scripts to /tmp for persistence
+- Attempting to modify system services via update-rc.d
+- Establishing multiple network socket connections
+- Setting capabilities via prctl(SET_KEEPCAPS)
+- Attempting to access /etc/id.services.conf
+- Writing to cron configuration
+
+### 🔍 Key Evidence
+- Process 294760 called prctl(SET_KEEPCAPS, 824634158104) - privilege escalation attempt
+- Multiple SOCKET and CONNECT events to various IP addresses (including 172.18.1.92, 192.168.1.1, 10.0.0.9) - potential C2 connections
+- Writing shell script with infinite loop to /etc/id.services.conf - persistence mechanism
+- Process 294797 executed bash and wrote to cron configuration (*/1 * * * * root /.img) - scheduled task persistence
+- Multiple attempts to execute system utilities (service, update-rc.d, mount) - system reconnaissance and modification
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identified IP addresses. Check for persistence mechanisms in /etc/id.services.conf, cron jobs, and systemd services. Look for additional payloads in /.img. Block outbound connections to identified C2 IPs.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

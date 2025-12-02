@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5f4a5f8c6ef02f76b5d21981c4093294ec243535dfe1142a807fa5623a6c6576.elf` | **Job ID:** `d3716ba7`
+**Date:** 2025-12-02 22:25:17
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits clear botnet behavior consistent with Mirai family malware. It successfully executed, forked multiple processes, established network connections, and sent IRC-like authentication commands to a remote server, indicating C2 communication setup. The program terminated normally (exit code 0) after completing its initialization sequence.
+
+### ⚠️ Suspicious Behaviors
+- Process forking and cloning
+- Network socket creation and connection to external addresses
+- IRC protocol authentication commands sent over network
+- Memory protection modifications
+
+### 🔍 Key Evidence
+- CONNECT events to non-localhost addresses with encoded network data
+- WRITE event containing IRC authentication commands (NICK BGRE\nUSER YWFHKYB...)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- SOCKET creation with domain 2 (AF_INET) for network communication
+- MPROTECT events modifying memory permissions
+
+### 💡 Recommendations
+Isolate infected systems, block outbound connections to identified C2 addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms like cron jobs or startup scripts. The binary appears to be a Mirai variant establishing botnet connectivity.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

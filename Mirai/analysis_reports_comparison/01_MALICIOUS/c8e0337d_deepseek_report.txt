@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2d28a99cbef077ddb2407301d1b9474a9346c7a743084891412534aea6d698ef.elf` | **Job ID:** `c8e0337d`
+**Date:** 2025-12-02 22:37:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits clear Mirai botnet behavior with network scanning, command-and-control communication, and process forking for distributed operations. The program successfully executed, established multiple network connections to external IP addresses, and performed directory enumeration while generating numerous segmentation fault signals (SIGSEGV) that appear to be part of evasion or testing behavior.
+
+### ⚠️ Suspicious Behaviors
+- Multiple external network connections to non-localhost addresses
+- Process forking and creation of child processes for distributed operations
+- Repeated SIGSEGV signal generation (potentially anti-analysis)
+- Directory enumeration via GETDENTS64
+- Socket creation and connection to multiple addresses with encoded payloads
+
+### 🔍 Key Evidence
+- CONNECT events to external addresses (020000350808080800000000000000000100000030002000e00328b2e3700000e029ae68ff7f000010000000030000003029b7565555000000da280b82b8f168)
+- Multiple SOCKET/CONNECT/SENDTO/RECVFROM patterns indicating C2 communication
+- Process tree creation via CLONE/TRACK_FORK events (parent 257348 → children 257471, 257472, 257473, 257474, 257476, 257477)
+- Repeated SIGNAL_GENERATE events with sig=11 (SIGSEGV) totaling hundreds of occurrences
+- GETDENTS64 calls for directory listing
+
+### 💡 Recommendations
+Isolate infected systems immediately. Block outbound connections to the observed IP addresses. Analyze network traffic for DDoS patterns. Check for persistence mechanisms (crontab, systemd services). Monitor for additional payload downloads. Consider this part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

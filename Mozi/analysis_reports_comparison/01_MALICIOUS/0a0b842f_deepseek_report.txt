@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c186c0b876a56d0da7b79bc2cae2e2ecf4617518fd9c996568da100e99179693.elf` | **Job ID:** `0a0b842f`
+**Date:** 2025-12-02 22:54:28
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Memory Corruption`, `Shellcode Execution`, `Privilege Escalation`
+- **Standard Label:** `HEUR:Trojan.Linux.Shellcode`
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> The program attempted to execute shellcode in memory but crashed due to a bus error. It performed memory manipulation to create executable regions, forked a child process, and handled fatal signals, indicating an exploit attempt or malicious payload execution.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation (mprotect with PROT_EXEC)
+- Abnormally large memory allocation (1048576 pages)
+- Fatal signal handling (SIGBUS, SIGPIPE)
+- Child process creation via clone/fork
+
+### 🔍 Key Evidence
+- mprotect call setting PROT_EXEC permission (evidence of shellcode execution)
+- mmap allocation of 1048576 pages (suspiciously large memory region)
+- Process handled SIGBUS (signal 7) and SIGPIPE (signal 13) indicating memory access violations
+- Exit code 135 (SIGBUS) confirms crash due to invalid memory access
+
+### 💡 Recommendations
+Perform deeper static analysis on the binary to identify shellcode patterns. Check for exploit code targeting specific vulnerabilities. Monitor for network activity or file system changes that might indicate successful exploitation in different environments.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Bus error (core dumped)
+```

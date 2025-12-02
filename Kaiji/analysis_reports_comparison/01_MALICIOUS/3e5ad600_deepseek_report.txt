@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ec261047881518e03fce16cdef5db214d0e55d1a4dfbe03f8af2ec82b6e733d4.elf` | **Job ID:** `3e5ad600`
+**Date:** 2025-12-02 22:43:15
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai variant that establishes persistence by creating a shell script that runs continuously, checking for a configuration file at /etc/id.services.conf every 60 seconds. It spawns multiple processes, executes system utilities like 'service' and 'sleep', and attempts to write a persistent script to maintain its presence on the system.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Executes from /tmp directory
+- Spawns multiple child processes
+- Writes script content to file descriptor
+- Uses system utilities for persistence
+
+### 🔍 Key Evidence
+- WRITE event with script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Multiple CLONE and TRACK_FORK events indicating process spawning
+- EXEC events for /usr/bin/sh and /usr/sbin/service
+- ACCESS events to system paths
+- Exit code 0 indicating successful execution
+
+### 💡 Recommendations
+Isolate affected system, analyze /etc/id.services.conf if present, check for cron jobs or startup scripts, and monitor for network connections to potential C2 servers.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c2f59629d987fea9b54e20e6d1c10141477735ce042e6a30138aea966cb6188d.elf` | **Job ID:** `2b2b70ea`
+**Date:** 2025-12-02 22:43:57
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior with persistence mechanisms, process forking, and creation of a backdoor shell script. It executes from /tmp, forks multiple processes, generates SIGSTOP signals (sig 23) to manipulate execution flow, and writes a persistent shell script that continuously checks /etc/id.services.conf every 60 seconds. The program also spawns /usr/bin/sh and /usr/sbin/service processes, indicating command execution capabilities typical of botnet C2 communication.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking with CLONE events
+- Repeated SIGSTOP signal generation (sig 23)
+- Writing persistent shell script to file descriptor
+- Execution of system binaries (/usr/bin/sh, /usr/sbin/service)
+- Access to /etc/id.services.conf configuration file
+- High volume of MPROTECT calls modifying memory permissions
+
+### 🔍 Key Evidence
+- WRITE event with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Multiple CLONE events with flags 4001536 (typical of process creation)
+- SIGNAL_GENERATE events with sig 23 (SIGSTOP) used for execution control
+- EXEC events for /usr/bin/sh and /usr/sbin/service
+- ACCESS events targeting /etc/id.services.conf
+- Re-execution of the original binary from /tmp
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic for C2 communication. Check for persistence mechanisms in crontab, systemd, or rc.local. Examine /etc/id.services.conf for malicious configuration. Consider this part of a larger botnet infrastructure requiring coordinated takedown.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

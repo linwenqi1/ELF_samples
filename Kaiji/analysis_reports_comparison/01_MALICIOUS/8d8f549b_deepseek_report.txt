@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fb58552f2e41f83d38518142997eab68d9f1068b597ad43549ab44f9b2621af5.elf` | **Job ID:** `8d8f549b`
+**Date:** 2025-12-02 22:46:37
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`, `Persistence`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence through multiple mechanisms, attempts to connect to C2 servers, and performs reconnaissance of the system. The program successfully executed its malicious payload despite some failed commands due to missing system utilities.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script in /tmp
+- Attempts to create systemd service for persistence
+- Modifies crontab for scheduled execution
+- Multiple network connections to non-local IP addresses
+- Attempts to disable security tools (audit, SELinux)
+- Process forking and privilege manipulation attempts
+
+### 🔍 Key Evidence
+- Writes shell script with infinite loop to /etc/id.services.conf
+- Creates systemd service unit file with description 'linux'
+- Adds crontab entry '*/1 * * * * root /.img'
+- Multiple SOCKET/CONNECT events to various IP addresses (including 172.18.1.92, 192.168.158.9, 10.0.0.9)
+- Attempts to execute security tools (ausearch, audit2allow, semodule) which fail
+- Uses update-rc.d for service persistence
+- Attempts to renice and mount /proc/29 processes
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identified IPs. Check for persistence mechanisms in /etc/systemd/, crontab, and /etc/init.d/. Look for additional payloads in /.img and /usr/lib/libdlrpcld.so. Block outbound connections to identified C2 IPs.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

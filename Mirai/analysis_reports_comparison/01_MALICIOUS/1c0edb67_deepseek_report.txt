@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `bf31ccf6b8097d847357bbb335a425f0424d3186b15879542631fc73c9bad8bc.elf` | **Job ID:** `1c0edb67`
+**Date:** 2025-12-02 22:36:45
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, performs memory protection modifications typical of self-modifying code, forks processes, and attempts to connect to external IP addresses. The program successfully executed and printed a decoy message before engaging in malicious network activity.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple process forking (CLONE events)
+- Memory protection modifications (MPROTECT) suggesting code injection or unpacking
+- Socket creation and connection attempts with encoded addresses
+
+### 🔍 Key Evidence
+- CONNECT event with encoded address '02000035080808083c0c8040000020000100000030002000e0036874717f0000c05d3fa4fc7f00001000000003000000605a95605555000000878c4d667797da' (likely C2 connection)
+- Second CONNECT event from forked process with different encoded address
+- Multiple MPROTECT calls changing memory permissions (read/write/exec)
+- Process forking pattern (CLONE with TRACK_FORK) typical of botnet replication
+- PRCTL system call with option 15 (PR_SET_NAME) potentially setting process name
+
+### 💡 Recommendations
+Isolate affected systems, block outgoing connections to the identified IP addresses, examine network traffic for additional C2 communication, and check for persistence mechanisms (crontab, systemd services). The binary should be submitted to threat intelligence platforms for further analysis.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

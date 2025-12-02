@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `51c5ca5399f1d103a75aaa39183c389bb8d0b1a14b8fa4a141dd30b31fe3775b.elf` | **Job ID:** `25b9be3d`
+**Date:** 2025-12-02 23:09:06
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed malicious activities including process forking, network communication to a remote C2 server, directory enumeration, and process termination via SIGKILL. It exhibits classic Mirai behaviors such as creating multiple child processes, establishing socket connections, and sending data to a hardcoded address.
+
+### ⚠️ Suspicious Behaviors
+- Network connection to external C2 server
+- Multiple process forking and cloning
+- Directory enumeration via GETDENTS64
+- Process termination via KILL with SIGKILL
+- Memory protection manipulation via MPROTECT
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external address 020000350808080800000000000000000100000030002000e003088a82770000c0a6ff43fc7f000010000000050000003069f79455550000005e65eca9cc761a
+- Multiple CLONE and TRACK_FORK events creating process tree
+- GETDENTS64 calls enumerating directory contents
+- KILL events targeting specific PIDs with SIGKILL
+- SENDTO event sending 38 bytes of data to C2
+
+### 💡 Recommendations
+Isolate affected systems, block the identified C2 address, analyze network traffic for additional indicators, and implement endpoint detection for similar process forking patterns. Consider this as part of a larger botnet campaign requiring coordinated response.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

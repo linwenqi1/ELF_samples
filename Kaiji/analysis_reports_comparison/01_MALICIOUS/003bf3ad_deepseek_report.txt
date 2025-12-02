@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `08b66af4f458dbce94e740d2366670932a696db18912571223c5c1b3bd2bfd5f.elf` | **Job ID:** `003bf3ad`
+**Date:** 2025-12-02 22:49:11
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes persistence by creating a shell script in /tmp that continuously monitors /etc/id.services.conf, spawns multiple processes including shell execution and service management, and exhibits DDoS botnet behaviors through process forking and signal generation patterns.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Spawns multiple child processes (forking behavior)
+- Executes from /tmp with suspicious filename
+- Monitors system configuration file (/etc/id.services.conf)
+- Generates repeated SIGTSTP (signal 23) signals
+
+### 🔍 Key Evidence
+- WRITE event creates shell script: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Multiple CLONE/TRACK_FORK events creating process tree
+- EXEC events for /usr/bin/sh and /usr/sbin/service
+- ACCESS events targeting /etc/id.services.conf
+- SIGNAL_GENERATE events with sig=23 (SIGTSTP) repeated 24+ times
+- Process spawning pattern matches Mirai's multi-process architecture
+
+### 💡 Recommendations
+Isolate infected system immediately, analyze /tmp/08b66af4f458dbce94e740d2366670932a696db18912571223c5c1b3bd2bfd5f.elf for C2 connections, check /etc/id.services.conf for modifications, monitor network traffic for DDoS activity, and implement strong authentication on IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

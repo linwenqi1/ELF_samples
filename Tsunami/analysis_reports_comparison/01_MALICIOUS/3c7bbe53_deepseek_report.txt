@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `7de81c06a286527b62cd17f8b0b0c5e41b17affcbb06557a034ca096a8ee847e.elf` | **Job ID:** `3c7bbe53`
+**Date:** 2025-12-02 22:28:27
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes network connections to command-and-control servers and performs network scanning/communication patterns characteristic of DDoS botnets. It executes from /tmp, forks processes, creates multiple sockets, and engages in repeated network communication with external IP addresses.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket creation and connection attempts
+- Repeated network communication patterns
+- Process forking and child process execution
+- Execution from temporary directory
+- Network scanning behavior
+
+### 🔍 Key Evidence
+- Multiple SOCKET syscalls with domain=2 (AF_INET) and type=1/2 (SOCK_STREAM/SOCK_DGRAM)
+- Repeated CONNECT calls to external IP addresses (02000035ac12015c...)
+- SENDTO and RECVFROM operations indicating bidirectional communication
+- Process forking via CLONE and TRACK_FORK events
+- Execution from /tmp directory which is common for malware
+
+### 💡 Recommendations
+Isolate affected systems, block identified C2 IP addresses, analyze network traffic for DDoS patterns, and implement proper endpoint security controls.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

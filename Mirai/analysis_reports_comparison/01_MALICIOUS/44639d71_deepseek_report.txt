@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `73ef0e9dccc2d8a5b17d1c0aab975e59099adf6882d1f6e48c9f8361fd286c17.elf` | **Job ID:** `44639d71`
+**Date:** 2025-12-02 22:35:18
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, performs process forking for persistence/parallel operations, and attempts to manipulate process control via PRCTL. The program successfully executed and printed a benign message as camouflage while performing malicious network activities.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to non-local addresses
+- Process forking (CLONE events) for potential persistence
+- PRCTL system call with suspicious argument (option 15, arg2: 2155873768)
+- Multiple memory protection changes (MPROTECT) suggesting code injection/modification
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events establishing network connections to encoded addresses (likely C2 servers)
+- CLONE events with different flags suggesting process manipulation
+- PRCTL(15, 2155873768) - potentially setting process name or other attributes
+- Execution from /tmp with QEMU emulation (common for IoT malware targeting non-x86 architectures)
+
+### 💡 Recommendations
+Isolate affected systems, block the identified network connections, analyze the binary for C2 domains/IPs, and check for persistence mechanisms. The program appears to be a Mirai variant targeting IoT/embedded devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

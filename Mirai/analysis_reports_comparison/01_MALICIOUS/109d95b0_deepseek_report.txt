@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `bdbe7fa06377d81f49651885a2309cb867b5993a2acd953a5e1402d4d28e7df2.elf` | **Job ID:** `109d95b0`
+**Date:** 2025-12-02 22:38:13
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed and attempted to establish a command-and-control (C2) connection. It displayed the string 'MIRAI' (a known Mirai fingerprint), forked a child process, and attempted to connect to a remote IP address (2.0.0.81:8080) via a raw socket. The program terminated with exit code 1, possibly due to network failure or environment mismatch, but exhibited clear malicious intent.
+
+### ⚠️ Suspicious Behaviors
+- Network connection to external IP (2.0.0.81:8080)
+- Process forking (CLONE with flags 4001536)
+- Memory protection manipulation (MPROTECT with read/write/exec changes)
+- Output of 'MIRAI' string (known botnet fingerprint)
+
+### 🔍 Key Evidence
+- CONNECT event to address '0200005102c066a2...' (decodes to IP 2.0.0.81, port 8080)
+- WRITE event with buffer 'MIRAI\n' (characteristic Mirai identifier)
+- CLONE event indicating process creation for persistence or scanning
+- SOCKET event with domain 2 (AF_INET) and type 1 (SOCK_STREAM) for TCP communication
+
+### 💡 Recommendations
+Isolate affected systems, block connections to 2.0.0.81:8080, analyze network traffic for additional C2 communication, and check for persistence mechanisms (crontab, systemd services). The binary should be treated as active malware despite early termination.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+MIRAI
+NIF
+```

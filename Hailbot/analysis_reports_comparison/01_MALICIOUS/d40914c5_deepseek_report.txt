@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6ef0fb0cfe1625f54e650b8e38b45e8bb5775f03f5aab89fc4c8706f9ddd0d49.elf` | **Job ID:** `d40914c5`
+**Date:** 2025-12-02 23:09:47
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `XorDDoS`
+- **Threat Categories:** `Botnet`, `DDoS`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.XorDDoS`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits characteristics of the XorDDoS malware family, showing DDoS botnet behavior with strong anti-analysis capabilities. The program successfully executed, created multiple processes, attempted network connections, and displayed evasion techniques including process forking and potential environment detection before crashing with a bus error signal.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking and cloning
+- Network socket creation
+- Memory protection manipulation
+- Potential anti-emulation behavior
+- ELF content writing to stdout
+- Signal generation and process termination
+
+### 🔍 Key Evidence
+- Multiple CLONE events with different flags creating process tree
+- SOCKET creation events indicating network capability
+- WRITE events showing ELF content output (potential code injection)
+- PRCTL system calls with option 15 (PR_SET_NAME) and option 1 (PR_SET_PDEATHSIG)
+- Signal generation (SIGUSR1, SIGCHLD, SIGBUS) and KILL events
+- Process termination with 'qemu: uncaught target signal 10 (Bus error)' indicating potential anti-emulation crash
+- Multiple MPROTECT calls changing memory permissions
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic for C2 communication, check for persistence mechanisms, and monitor for additional payload downloads. The binary appears to be a XorDDoS variant with anti-analysis capabilities.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+All the china banks
+```

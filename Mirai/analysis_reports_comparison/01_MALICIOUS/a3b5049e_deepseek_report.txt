@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0796941c13bce856e6949cff109c927a3cca074bda671a48bf975daa0e741003.elf` | **Job ID:** `a3b5049e`
+**Date:** 2025-12-02 22:39:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to external C2 servers, forks multiple processes for parallel operations, and performs directory scanning. The program successfully executed its malicious payload without environment detection or dependency failures.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple process forking (CLONE events with various flags)
+- Directory scanning via GETDENTS64
+- Socket creation and connection attempts with encoded addresses
+- Memory protection manipulation (MPROTECT events)
+
+### 🔍 Key Evidence
+- CONNECT events with encoded addresses (0200003508080808...) indicating external C2 connections
+- Multiple SOCKET events with domain 2 (AF_INET) and types 1 (SOCK_STREAM) and 2 (SOCK_DGRAM)
+- Repeated CLONE events with flags 18874385 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_PTRACE|CLONE_VFORK|CLONE_PARENT|CLONE_THREAD|CLONE_NEWNS|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED) indicating thread creation for parallel operations
+- GETDENTS64 events showing directory enumeration
+- Exit code 0 indicates successful execution of malicious payload
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze network traffic to identify C2 servers for takedown. Check for persistence mechanisms (crontab, systemd services). Monitor for additional payload downloads or lateral movement attempts.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

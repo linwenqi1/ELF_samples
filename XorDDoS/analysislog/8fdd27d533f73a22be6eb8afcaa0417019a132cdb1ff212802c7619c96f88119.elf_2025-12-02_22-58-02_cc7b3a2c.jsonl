@@ -1,0 +1,24 @@
+{"type": "RUN_META", "session": "5189afa417a9412faa3929e596e87fe2", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/malware/XorDDoS/bin/8fdd27d533f73a22be6eb8afcaa0417019a132cdb1ff212802c7619c96f88119.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 342592, "cgroup_inode": 142335, "container_id": "ea49251b227fd3406182f43a0dffb0ee70757d12fb418dedd7acd69a031bee9b", "container_name": "determined_shtern", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1764687483.2302759}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "EXEC", "filename": "/tmp/8fdd27d533f73a22be6eb8afcaa0417019a132cdb1ff212802c7619c96f88119.elf"}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "TRACK_QEMU", "bin": "8fdd27d533f73a2", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "READ", "fd": 3, "buf_len": 8, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "CLONE", "flags": 855808, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "TRACK_FORK", "parent": 342932, "child": 342933, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "CLONE", "flags": 855808, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "TRACK_FORK", "parent": 342932, "child": 342934, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "CLONE", "flags": 855808, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "TRACK_FORK", "parent": 342932, "child": 342935, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "CLONE", "flags": 855808, "count": 1}
+{"ts": 7849735, "pid": 342934, "cgroup_id": 142335, "event": "TRACK_FORK", "parent": 342934, "child": 342936, "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "Usage of /tmp/8fdd27d533f73a22be6eb8afcaa0417019a132cdb1ff212802", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "  -accept-tos\n    \tAccept tos\n", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "  -device-id string\n    \tDevice id\n", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "  -device-name string\n    \tDevice name\n", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "  -email string\n    \tEmail\n", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "  -password string\n    \tPassword\n", "count": 1}
+{"ts": 7849735, "pid": 342932, "cgroup_id": 142335, "event": "WRITE", "fd": 2, "buf": "  -show-tos\n    \tShow tos\n", "count": 1}
+{"ts": 7849736, "pid": 342925, "cgroup_id": 142335, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7849736, "pid": 342925, "cgroup_id": 142335, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1764687483538, "pid": -1, "cgroup_id": 142335, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"ts": 1764687483538, "pid": -1, "cgroup_id": 142335, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"type": "RUN_END", "end_ts": 1764687483.9409258, "events_count": 22, "analyzed_count": 0, "timeout": false}

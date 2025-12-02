@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b760ca2501fce0675753455ba5bf36f4518b253ee6617a2b28ad6f9c0adefcf9.elf` | **Job ID:** `13151748`
+**Date:** 2025-12-02 22:43:20
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Botnet`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes a reverse shell backdoor, attempts to create persistence mechanisms, and connects to external C2 servers. The malware executes from /tmp, forks multiple processes, writes shell scripts for persistence, and establishes network connections to remote hosts.
+
+### ⚠️ Suspicious Behaviors
+- Reverse shell establishment
+- External C2 connections
+- Persistence script creation
+- Multiple process forking
+- File descriptor manipulation for I/O redirection
+
+### 🔍 Key Evidence
+- Local alert: 'Potential Reverse Shell Detected' with CVSS 9.4 score
+- CONNECT events to remote IP addresses (e.g., 02000035ac12015c...)
+- WRITE events creating shell scripts for persistence
+- DUP2 events redirecting file descriptors for I/O
+- Execution of /usr/bin/sh and /usr/bin/bash with network operations
+- Creation of cron job entry '*/1 * * * * root /.img'
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identify C2 servers. Check for persistence mechanisms in /etc/rc.local, crontab, and systemd services. Look for additional payloads in /tmp and /.img. Block outbound connections to identified IP addresses.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

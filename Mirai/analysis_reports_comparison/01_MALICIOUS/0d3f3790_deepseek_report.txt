@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `dd46ebf32d49c416f55984f1824438027c7437f7069d3a15b094916ec4a015e2.elf` | **Job ID:** `0d3f3790`
+**Date:** 2025-12-02 22:36:14
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, forks multiple child processes, and performs socket operations consistent with DDoS botnet initialization. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Multiple network socket creations and connections
+- Rapid process forking and child process creation
+- Suspicious network addresses in CONNECT events
+- Repeated ACCESS calls with empty filenames
+
+### 🔍 Key Evidence
+- SOCKET events with domain=2 (AF_INET) and type=2 (SOCK_DGRAM) and type=1 (SOCK_STREAM)
+- CONNECT events to hexadecimal addresses (likely encoded IP:port combinations)
+- Multiple CLONE/TRACK_FORK events creating child processes (PIDs 254325, 254328-254333, 255634-255637)
+- SENDTO and RECVFROM events indicating network communication
+- MPROTECT events modifying memory permissions
+
+### 💡 Recommendations
+Isolate and analyze the binary further; check for persistence mechanisms; monitor network traffic for C2 communication; analyze the network addresses in CONNECT events to identify potential C2 servers.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

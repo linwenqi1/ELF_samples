@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `9534b7c6114e1558764e26adf635a2bfae8865bb860eebf982005d187b06d869.elf` | **Job ID:** `6c19c3f7`
+**Date:** 2025-12-02 22:45:01
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Linux backdoor that establishes persistence by creating a shell script that runs continuously, checking a configuration file at /etc/id.services.conf every 60 seconds. It spawns multiple processes, executes system utilities like /usr/bin/sh and /usr/sbin/service, and exhibits behavior consistent with Mirai-family botnets that maintain persistent access to compromised systems.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Writes script to file descriptor 3
+- Spawns multiple child processes via CLONE/TRACK_FORK
+- Executes system binaries from suspicious context
+- Monitors system configuration file
+
+### 🔍 Key Evidence
+- WRITE event with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Multiple CLONE/TRACK_FORK events creating process tree
+- EXEC events for /usr/bin/sh and /usr/sbin/service
+- ACCESS events to empty filenames (potential path probing)
+- Program re-executes itself from /tmp location
+
+### 💡 Recommendations
+Isolate affected system, analyze /etc/id.services.conf for malicious configuration, check for unauthorized cron jobs or systemd services, examine network connections for C2 communication, and perform memory analysis of running processes.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `14da7da835f4d450a6314546f9cf33eea974397ec39a8a3f492e68027e874a3d.elf` | **Job ID:** `8f9b3254`
+**Date:** 2025-12-02 22:37:21
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior: initial memory manipulation via repeated MPROTECT calls, followed by network communication with external C2 servers using raw sockets and UDP connections. The program forks multiple child processes to handle network operations, connects to multiple IP addresses (including 8.8.8.8 and other external addresses), and performs repeated SENDTO/RECVFROM operations consistent with DDoS command-and-control communication patterns.
+
+### ⚠️ Suspicious Behaviors
+- Repeated MPROTECT memory permission changes
+- Multiple process forking for network operations
+- Raw socket creation and UDP connections to external IPs
+- Repeated network communication patterns
+- SIGNAL_GENERATE events (sig 11) potentially for process control
+
+### 🔍 Key Evidence
+- SOCKET/CONNECT events to external addresses including 8.8.8.8
+- Multiple CLONE/TRACK_FORK events creating child processes
+- Repeated SENDTO/RECVFROM operations with consistent payload sizes
+- CONNECT addresses showing network communication patterns
+- Execution from /tmp with no legitimate utility behavior
+
+### 💡 Recommendations
+Isolate affected systems, block identified C2 IP addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms. This appears to be an active Mirai variant attempting to establish botnet connections.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

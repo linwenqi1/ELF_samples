@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ffe536b3d11dd297b8155ecf55695ef88518cc6e35976efed155b6328444bfb5.elf` | **Job ID:** `06c34dc1`
+**Date:** 2025-12-02 22:35:03
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, forks multiple processes for parallel operations, and performs memory protection modifications typical of malware loading. The program successfully executed and displayed output while conducting suspicious network activities.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Multiple process forking with clone operations
+- Memory protection modifications (mprotect) for potential code injection
+- High-volume read operations from file descriptors
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events with encoded addresses (potentially C2 connections)
+- Multiple CLONE events with different flags creating child processes
+- PRCTL system call with option 15 (PR_SET_NAME) suggesting process name modification
+- Repeated READ operations from fd 4 with varying buffer lengths indicating data processing
+
+### 💡 Recommendations
+Isolate the system immediately, capture network traffic for further analysis of the connected addresses, and examine memory dumps for injected code. The binary should be submitted to malware repositories for further classification and IoC extraction.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

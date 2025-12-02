@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8a04585157033b86cb2c104f441d236bc3255b46127355f8342b75ab40eb3e35.elf` | **Job ID:** `a73001e6`
+**Date:** 2025-12-02 22:26:25
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it creates a child process that establishes multiple network connections, including connections to local system sockets and external IP addresses, consistent with botnet command-and-control (C2) communication patterns. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Process forking to create persistent child process
+- Multiple socket connections to both local system services and external addresses
+- Network communication via SENDTO and RECVFROM indicating data exchange
+- Execution from /tmp directory (common for malware staging)
+
+### 🔍 Key Evidence
+- CLONE event with flags 18874385 (creating child process)
+- Multiple SOCKET and CONNECT events to different domains (AF_INET=2 and AF_UNIX=1)
+- CONNECT to encoded Unix socket paths (decoded: /var/run/nscd/socket) indicating system service interaction
+- CONNECT to external IP address (35.172.18.92 and 35.172.18.93) on port 6667 (common IRC/botnet port)
+- SENDTO and RECVFROM events confirming bidirectional network communication
+- No benign utility behavior observed - no standard I/O, file operations, or legitimate service behavior
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze network traffic to identified IPs (35.172.18.92/93) for C2 communication patterns. Check for persistence mechanisms (crontab, systemd services). Scan for additional compromised binaries in /tmp and other writable directories. Consider this part of a larger botnet campaign and investigate lateral movement.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

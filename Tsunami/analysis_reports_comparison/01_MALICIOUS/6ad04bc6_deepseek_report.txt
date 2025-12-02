@@ -1,0 +1,45 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2f1854f309c913068700c0c3efec3a84ea48e62393df38bab9c8233053e2b19b.elf` | **Job ID:** `6ad04bc6`
+**Date:** 2025-12-02 22:27:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `XorDDoS`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Rootkit`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.XorDDoS`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a sophisticated XorDDoS botnet variant that establishes persistence, performs anti-analysis evasion, creates backdoors, and communicates with C2 servers. The malware executes from /tmp, creates multiple processes, deletes persistence-related files to hide evidence, establishes network connections to external IPs, and attempts to disable security mechanisms. It shows characteristics of XorDDoS including XOR-encrypted C2 traffic, anti-VM techniques, and aggressive competitor killing.
+
+### ⚠️ Suspicious Behaviors
+- Persistence file deletion in /etc/cron.d and /etc/cron.daily
+- Multiple VFORK/CLONE operations creating child processes
+- Network socket connections to external addresses
+- Deletion of temporary files (/tmp/sys-helper, /tmp/service-agent)
+- Execution of bash commands including 'ufw' (firewall) and 'pgrep' (process monitoring)
+- File deletion operations on system binaries (/bin/bprofr, /bin/crondr, /bin/initdr)
+- SIGNAL_GENERATE events (SIGCHLD, SIGSTOP) for process control
+- HTTP request generation to external domains
+- Anti-analysis behavior with timing checks and process manipulation
+
+### 🔍 Key Evidence
+- Deleted persistence files: /etc/cron.d/.lib-knlib4 and /etc/cron.daily/.lib-knlib4 (evidence destruction)
+- Network connections to multiple external IPs with XOR-encrypted patterns (domain 2, type 526337/526338)
+- Repeated VFORK operations creating process trees for parallel execution
+- Execution of /usr/bin/bash with commands attempting to disable firewall ('ufw: command not found')
+- Process monitoring via /usr/bin/pgrep
+- File deletion of system binaries suggesting competitor killing
+- HTTP request to 'run.sck-dns.ws:80' with User-Agent string
+- Multiple SIGNAL_GENERATE events for process control and evasion
+- Creation and deletion of temporary helper files in /tmp
+
+### 💡 Recommendations
+1. Isolate infected system immediately. 2. Analyze network traffic for C2 communication patterns. 3. Check for remaining persistence mechanisms in cron directories and systemd. 4. Review all /tmp files for additional payloads. 5. Monitor for XOR-encrypted traffic on unusual ports. 6. Check for modified system binaries and SSH keys. 7. Consider this part of a larger botnet campaign targeting Linux systems.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0a073f905cfa696a77a34a7217e7b9006bf0cc2b45da59de2bf983fd58d91648.elf` | **Job ID:** `db3a8a6b`
+**Date:** 2025-12-02 22:22:04
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it forks multiple processes, makes memory regions executable via mprotect (indicating shellcode execution), and establishes an outbound network connection to a non-local IP address. The program successfully executed its malicious payload before exiting cleanly.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation (mprotect with PROT_EXEC)
+- Process forking and child process creation
+- Outbound network connection to external address
+- Large memory allocation
+
+### 🔍 Key Evidence
+- mprotect call with PROT_EXEC flag (evidence of shellcode execution)
+- CONNECT event to external IP address 020013c4b07b02db... (C2 communication)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- MMAP_SUM showing abnormally large page allocation (1048560 pages)
+
+### 💡 Recommendations
+Isolate infected systems, block the identified C2 IP address, analyze network traffic for DDoS patterns, and check for persistence mechanisms (crontab, systemd services). The binary should be submitted to threat intelligence platforms for further analysis.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

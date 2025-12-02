@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6e0f799fc550bfca6216e37bd6c2f66f3fc426e446a3ad94a1f8a8b5c2dc4058.elf` | **Job ID:** `cce0108e`
+**Date:** 2025-12-02 22:34:15
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits characteristics of a Mirai-family IoT botnet. It successfully executes, creates multiple child processes, establishes network connections to external IP addresses, and performs reconnaissance activities. The program shows abnormal signal handling and high-volume device node operations, consistent with botnet behavior.
+
+### ⚠️ Suspicious Behaviors
+- Rapid process forking and cloning
+- External network connections to non-localhost addresses
+- Abnormal signal handling (SIG=7)
+- Massive device node operations (4137-6585 times/sec)
+- Directory enumeration via GETDENTS64
+
+### 🔍 Key Evidence
+- CONNECT events to external addresses (0200003508080808...)
+- Multiple CLONE/TRACK_FORK events creating process tree
+- AbnormalSignalHandling alert for SIG=7 handling
+- AggregatedEvents alerts for dev_node operations exceeding thresholds by 41-65x
+- SOCKET creation with domain=2 (AF_INET) and type=1/2 (SOCK_STREAM/SOCK_DGRAM)
+
+### 💡 Recommendations
+Isolate affected systems, block identified C2 IP addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms. The program appears to be a Mirai variant attempting to establish botnet connectivity and perform reconnaissance.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

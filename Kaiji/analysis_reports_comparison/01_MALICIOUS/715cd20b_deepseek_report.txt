@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `eaf2f72b30f65be112e05c6ab5d4cd3df59155b97ac4f2e8f4bc589e966ae6c3.elf` | **Job ID:** `715cd20b`
+**Date:** 2025-12-02 22:46:12
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Rootkit`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that performs extensive system modification, persistence installation, and establishes C2 connections. The malware deletes competitor files, attempts to install system services and cron jobs, and connects to multiple remote IP addresses for command and control.
+
+### ⚠️ Suspicious Behaviors
+- Mass file deletion of system files
+- Attempted installation of persistence mechanisms
+- Multiple network connections to remote IPs
+- Fork bombing and process spawning
+- Attempted privilege escalation via mount/renice
+
+### 🔍 Key Evidence
+- UNLINKAT operations on sensitive system paths (/etc/rc.d/init.d/linux_kill, /etc/systemd/system/linux.service, /boot/System.img.config, etc.)
+- WRITE operations creating shell scripts and systemd service files
+- Multiple SOCKET/CONNECT events to remote IPs (172.18.1.92:53, 192.168.1.200:53, 10.0.0.9:8192, 192.168.139.18:8080)
+- Attempted cron job installation with '*/1 * * * * root /.mod'
+- Multiple CLONE/TRACK_FORK events indicating process spawning
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identified IPs. Check for persistence mechanisms in /etc/rc.d/, /etc/systemd/system/, and crontab. Look for remaining malicious files in /tmp and system directories. Consider this part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

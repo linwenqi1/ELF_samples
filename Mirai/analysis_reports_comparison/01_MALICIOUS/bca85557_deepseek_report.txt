@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ae5646b7c903a28dcc978e3f2935bbaa894ca44fb9ac9a372a96eacdf4a7affb.elf` | **Job ID:** `bca85557`
+**Date:** 2025-12-02 22:39:21
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior: it establishes network connections to potential command-and-control servers, forks multiple processes for parallel operations, and performs directory scanning. The program successfully executed with exit code 0, indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Multiple process forking (CLONE with flags 18874385)
+- Directory enumeration via GETDENTS64
+- Repeated ACCESS calls with empty filenames
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to non-local addresses (e.g., 0200003508080808...)
+- Multiple CLONE events with flags 18874385 (CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED)
+- GETDENTS64 calls for directory listing
+- Process tree creation with TRACK_FORK events showing parent-child relationships
+
+### 💡 Recommendations
+Isolate affected systems, block the observed network connections, analyze the binary for specific C2 addresses and propagation methods, and check for persistence mechanisms like cron jobs or systemd services.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

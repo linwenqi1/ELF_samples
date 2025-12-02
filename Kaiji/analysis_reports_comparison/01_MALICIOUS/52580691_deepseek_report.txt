@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `11e0ef0293aa9cd02fe8070de01af44f76be39c88edda5c746579d50b765e8c5.elf` | **Job ID:** `52580691`
+**Date:** 2025-12-02 22:47:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior with persistence mechanisms, process forking, and attempts to establish backdoor access. It writes a shell script to /etc/id.services.conf (likely a persistence mechanism), spawns multiple child processes, and attempts to manipulate system services. The program successfully executed its malicious payload before exiting cleanly.
+
+### ⚠️ Suspicious Behaviors
+- Writing shell script to system configuration path
+- Multiple process forking with CLONE events
+- Attempting to manipulate system services via /usr/sbin/service
+- Signal generation (SIGSTOP/SIGCHLD) for process control
+- Re-execution of the same binary from /tmp
+
+### 🔍 Key Evidence
+- WRITE event to fd:3 with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- EXEC event for /etc/32678 (suspicious path)
+- Multiple TRACK_FORK events creating child processes
+- STAT events checking for /etc/init.d/crond and service manipulation
+- Re-execution of the same ELF binary from /tmp (pid 303301)
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze the written shell script at /etc/id.services.conf. Check for persistence mechanisms in crontab, rc.local, or systemd services. Monitor for outbound connections to known Mirai C2 IPs/domains. Consider network segmentation for IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

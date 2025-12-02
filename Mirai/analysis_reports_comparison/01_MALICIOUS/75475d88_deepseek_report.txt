@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `9b9764585122f6e0d842fb301963fed0cb6cba5a12740fec2c660d1f636bafd5.elf` | **Job ID:** `75475d88`
+**Date:** 2025-12-02 22:38:20
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, forks multiple child processes, performs directory enumeration, and attempts to read from file descriptors that may contain configuration data. The program successfully executed and displayed a benign message as camouflage while performing malicious reconnaissance and connection attempts.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to external addresses
+- Multiple process forking (CLONE events with child processes)
+- Repeated directory enumeration (GETDENTS64)
+- Memory protection manipulation (MPROTECT)
+- Process control operations (PRCTL)
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events with encoded addresses (potentially C2 servers)
+- Multiple CLONE events creating child processes (PIDs 265155-265161)
+- Repeated GETDENTS64 calls enumerating directories
+- PRCTL system call with option 15 (PR_SET_NAME)
+- Execution from /tmp with suspicious filename pattern
+
+### 💡 Recommendations
+Isolate affected systems, block the observed network connections, analyze the binary for C2 addresses and propagation mechanisms, and check for persistence mechanisms like cron jobs or systemd services. The encoded addresses in CONNECT events should be decoded to identify C2 infrastructure.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

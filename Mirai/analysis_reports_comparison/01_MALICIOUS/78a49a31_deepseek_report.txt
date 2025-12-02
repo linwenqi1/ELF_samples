@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c1d986c9c265127323bbf74e64f17520ac71056bfe4bf70f200e597033f19b14.elf` | **Job ID:** `78a49a31`
+**Date:** 2025-12-02 22:37:41
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully establishes command-and-control (C2) connections and exhibits DDoS attack capabilities. It forks multiple processes, creates network sockets, and attempts to connect to external IP addresses (8.8.8.8 and others) on ports 53 (DNS) and potentially other ports, consistent with Mirai's centralized C2 architecture. The program shows no signs of environment mismatch or evasion; it executes fully in the Docker container.
+
+### ⚠️ Suspicious Behaviors
+- External C2 connections
+- Multiple process forking (fork bombing pattern)
+- Network socket creation and connection attempts
+- Repeated SENDTO/RECVFROM cycles indicating command reception
+
+### 🔍 Key Evidence
+- CONNECT events to 8.8.8.8 (0200003508080808...) on port 53 (0x0035)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- SOCKET events with domain 2 (AF_INET) and types 1 (SOCK_DGRAM) and 2 (SOCK_STREAM)
+- Repeated SENDTO (len: 31) and RECVFROM (size: 2048) patterns indicating C2 communication
+- No access to sensitive system paths or files, focusing only on network activity
+
+### 💡 Recommendations
+Isolate the system, block outgoing connections to the identified IPs (8.8.8.8 and others in CONNECT events), and scan for persistence mechanisms (crontab, systemd). The binary should be submitted for deeper static analysis to extract C2 IPs/domains and propagation modules.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `05680c8f57642d9754d386f58e02cbd9b77e6e58d5bb2c415fa0b561a7ff303f.elf` | **Job ID:** `0a8e8404`
+**Date:** 2025-12-02 22:45:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it creates a persistent backdoor service, establishes process hierarchies through multiple forks, writes shell scripts for continuous execution, and attempts to interact with system services. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious setup.
+
+### ⚠️ Suspicious Behaviors
+- Process forking and cloning to create multiple child processes
+- Writing shell scripts with infinite loops for persistence
+- Executing from /tmp with self-replication behavior
+- Signal generation (SIGSTOP/SIGCHLD) for process control
+- Accessing system directories and attempting to execute system binaries
+- Creating memory-mapped files with QEMU-related content
+
+### 🔍 Key Evidence
+- EXEC events show the binary executing itself again from /tmp (self-replication)
+- WRITE events contain shell script with infinite loop: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/opt.services.cfg\ndone'
+- Multiple CLONE events with flags 4001536 (CLONE_VM|CLONE_FS|CLONE_FILES) creating process trees
+- EXEC of /usr/sbin/service and other system binaries
+- MEMFD_CREATE with name 'qemu-open' suggesting emulation-related activity
+- Multiple MPROTECT calls changing memory permissions (RWX patterns)
+- SIGNAL_GENERATE events with SIGSTOP (23) for process suspension
+
+### 💡 Recommendations
+Isolate infected systems immediately. Analyze the written shell script at /etc/opt.services.cfg. Check for persistence mechanisms in crontab or systemd. Monitor network connections for C2 communication. The binary appears to be a Mirai variant - update IoT device firmware and change default credentials.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

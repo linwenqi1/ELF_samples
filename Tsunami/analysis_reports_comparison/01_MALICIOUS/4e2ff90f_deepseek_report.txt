@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `9144a2ae2850eea4168bc7fd324e2872b90febb0ab5b46198ee04cd36d595075.elf` | **Job ID:** `4e2ff90f`
+**Date:** 2025-12-02 22:23:55
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it executes from /tmp, forks multiple processes, establishes network connections to external IP addresses (likely C2 servers), and performs socket operations consistent with DDoS command-and-control communication. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking (CLONE/TRACK_FORK events)
+- Network socket creation (SOCKET events with domain 2 - AF_INET)
+- External network connections (CONNECT events with hex addresses)
+- Data transmission (SENDTO/RECVFROM events)
+
+### 🔍 Key Evidence
+- Execution from /tmp/9144a2ae2850eea4168bc7fd324e2872b90febb0ab5b46198ee04cd36d595075.elf
+- Multiple CLONE events creating child processes (PIDs 211513, 211514, 211515)
+- SOCKET events with domain 2 (AF_INET) and types 1 (SOCK_STREAM) and 2 (SOCK_DGRAM)
+- CONNECT events to hex-encoded IP addresses (likely external C2 servers)
+- SENDTO events transmitting 33-byte packets followed by RECVFROM events receiving 512-byte responses
+- Pattern of socket creation → connection → data exchange repeated multiple times
+
+### 💡 Recommendations
+Isolate affected systems, block identified C2 IP addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms (crontab, systemd services). The binary should be submitted to malware repositories for further analysis and signature generation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

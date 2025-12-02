@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6a4921e304b97e9d9dd7c8be486a0126a29e83271918dfa612e3cd3376626e9e.elf` | **Job ID:** `f62a3fc7`
+**Date:** 2025-12-02 22:22:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed in the analysis environment. It performed process forking, memory protection manipulation, and established network connections consistent with botnet command-and-control (C2) communication. The program attempted to connect to local Unix domain sockets and external network addresses, indicating both local reconnaissance and potential external C2 communication.
+
+### ⚠️ Suspicious Behaviors
+- Process forking and child process creation
+- Multiple MPROTECT calls changing memory permissions
+- Network socket creation and connection attempts
+- Attempted connection to Unix domain socket at /var/run/nscd/socket
+- External network connection attempts with encoded addresses
+
+### 🔍 Key Evidence
+- CLONE events with flags 4001536 and 18874385 indicating process creation
+- SOCKET events with domain 2 (AF_INET) and type 1 (SOCK_STREAM) for TCP connections
+- CONNECT events with encoded network addresses suggesting C2 communication
+- SENDTO and RECVFROM events indicating data transmission
+- Multiple MPROTECT calls changing read/write/execute permissions on memory regions
+
+### 💡 Recommendations
+Isolate and analyze the binary further. Check for hardcoded C2 addresses in the CONNECT events. Monitor for outbound connections to suspicious IP addresses. The program appears to be a functional Mirai variant that would attempt to join a botnet and receive DDoS commands.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

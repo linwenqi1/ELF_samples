@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `da2d67da39516555b62279a50b825c3933e596e6307c870f00bee8a4738d5448.elf` | **Job ID:** `b0413deb`
+**Date:** 2025-12-02 23:09:08
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits characteristics of a Mirai botnet variant. It successfully executed, printed a message ('All the china banks'), then performed reconnaissance via directory listing (GETDENTS64), created multiple child processes, and established network connections to external C2 servers. The program appears to be a DDoS bot that connects to command-and-control infrastructure.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking (CLONE with various flags)
+- Network socket creation and connection to external addresses
+- Directory reconnaissance (GETDENTS64)
+- Signal generation to child processes
+- Memory protection manipulation (MPROTECT)
+
+### 🔍 Key Evidence
+- SOCKET creation (domain: 2/AF_INET) followed by CONNECT to external IP addresses
+- Multiple CLONE events creating child processes (349363, 349364, 349365, 349366, 349367, 349368, 349369)
+- GETDENTS64 calls for directory listing
+- PRCTL calls with option 15 (PR_SET_NAME) and option 1 (PR_SET_PDEATHSIG)
+- Network data transmission (SENDTO with 41 bytes) and reception (RECVFROM with 2048 bytes)
+
+### 💡 Recommendations
+Isolate the infected system immediately. Analyze the network connections to identify C2 infrastructure. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Consider this part of a larger botnet campaign targeting IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+All the china banks
+```

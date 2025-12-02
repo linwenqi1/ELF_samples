@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `50f1703bc940d6f089f4bc88843b067a6dd160f1f0fa8c8f8753645fdec72c51.elf` | **Job ID:** `d55b75ed`
+**Date:** 2025-12-02 22:24:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed in the Docker environment. It performed process forking, memory protection modifications, and established network connections to external C2 servers. The program terminated normally (exit code 0) after completing its malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Process forking and cloning
+- Multiple MPROTECT calls modifying memory permissions
+- Network socket creation and external connections
+- SIGNAL_GENERATE and WAIT4_EXITED events indicating process management
+
+### 🔍 Key Evidence
+- CONNECT events to external addresses (020013c4b07b02db3c40020001000000b033c673fd7f000076d0652f1b7100001033c673fd7f000010000000030000002059325c5555000000925afa8a520d30 and similar)
+- Multiple CLONE events with different flags (4001536, 18874385) indicating process creation
+- SOCKET event with domain 2 (AF_INET) and type 1 (SOCK_STREAM) for TCP connections
+- Execution from /tmp directory which is common for Mirai variants
+
+### 💡 Recommendations
+1. Block the observed C2 addresses at network level. 2. Analyze the binary for additional capabilities. 3. Check for persistence mechanisms (crontab, systemd services). 4. Monitor for DDoS attack patterns from infected systems. 5. Update IoT device credentials to prevent brute-force attacks.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

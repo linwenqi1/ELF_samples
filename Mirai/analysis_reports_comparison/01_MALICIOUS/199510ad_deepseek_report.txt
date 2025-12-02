@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `53bf75aa7b4f8e08357e1893b6d2e6b35e43ae1f02866c0a2981e5f61b71ac33.elf` | **Job ID:** `199510ad`
+**Date:** 2025-12-02 22:37:48
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it creates multiple processes, establishes network connections to potential command-and-control (C2) servers, and performs directory enumeration. The pattern of forking processes that each create sockets and connect to different addresses is consistent with Mirai's distributed architecture for DDoS attacks.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking (TRACK_FORK events)
+- Network socket creation and connection attempts to non-local addresses
+- Directory enumeration via GETDENTS64
+- Aggressive network activity with SENDTO/RECVFROM operations
+
+### 🔍 Key Evidence
+- CONNECT events to hexadecimal addresses (likely encoded C2 endpoints)
+- Multiple SOCKET creations (domain 2 = AF_INET) with both type 1 (SOCK_STREAM) and type 2 (SOCK_DGRAM)
+- Process tree expansion through repeated forking
+- Network communication patterns matching Mirai's C2 protocol
+
+### 💡 Recommendations
+Isolate affected systems, block outbound connections to the observed addresses, analyze network traffic for DDoS patterns, and check for persistence mechanisms like cron jobs or systemd services. Consider this as part of a larger botnet campaign targeting IoT devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

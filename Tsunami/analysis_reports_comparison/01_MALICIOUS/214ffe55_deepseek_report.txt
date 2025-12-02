@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5207ad909badbd55f599620ee9012a88edb281af25605a165f29448ba36618d0.elf` | **Job ID:** `214ffe55`
+**Date:** 2025-12-02 22:24:55
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits clear malicious behavior consistent with IoT botnet malware, specifically Mirai family characteristics. It successfully executes, forks multiple processes, establishes network connections to external C2 servers, and performs memory protection modifications typical of malware payload execution. The program appears to be a DDoS bot attempting to connect to command-and-control infrastructure.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple process forking (CLONE events)
+- Memory protection modifications (MPROTECT) enabling executable memory
+- Socket creation and connection attempts with encoded addresses
+
+### 🔍 Key Evidence
+- CONNECT events with encoded hexadecimal addresses (likely C2 server connections)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- MPROTECT events with read/write/exec permissions enabled
+- SOCKET creation with domain=2 (AF_INET) and type=1 (SOCK_STREAM)
+- PRCTL system call with option 15 (PR_SET_NAME) suggesting process name manipulation
+
+### 💡 Recommendations
+1. Block the IP addresses derived from the CONNECT events. 2. Analyze the binary for hardcoded C2 domains/IPs. 3. Check for persistence mechanisms (crontab, systemd services). 4. Monitor for DDoS attack patterns from infected systems. 5. Update IoT device credentials and patch known vulnerabilities (CVE-2017-17215, CVE-2014-8361).
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

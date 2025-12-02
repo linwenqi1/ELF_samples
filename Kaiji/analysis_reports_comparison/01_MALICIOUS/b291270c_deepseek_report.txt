@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `be22325d58dd689b8872e2a3e95e25a93ea9290ec477b0a5b6039d29bb2fa8e8.elf` | **Job ID:** `b291270c`
+**Date:** 2025-12-02 22:43:19
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Botnet`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence, attempts to connect to C2 servers, and deploys backdoor functionality. The program successfully executed multiple malicious behaviors including writing shell scripts to system directories, attempting to install services, and establishing network connections to remote IP addresses.
+
+### ⚠️ Suspicious Behaviors
+- Writes shell script to /etc/id.services.conf for persistence
+- Attempts to install service via update-rc.d
+- Creates multiple network connections to remote IPs
+- Writes cron job for scheduled execution
+- Executes bash with suspicious arguments
+- Multiple process forking and signal generation patterns
+
+### 🔍 Key Evidence
+- WRITE event to fd 3 with shell script content for /etc/id.services.conf
+- CONNECT events to multiple remote IP addresses (including 172.18.1.92 and others)
+- EXEC of /usr/bin/bash with subsequent DUP2 operations redirecting file descriptors
+- WRITE of cron job '*/1 * * * * root /.img'
+- Multiple CLONE and TRACK_FORK events indicating process spawning
+- Attempted service installation via /usr/sbin/update-rc.d
+
+### 💡 Recommendations
+Immediate isolation of affected system. Analyze network traffic to identified IPs. Check for persistence mechanisms in /etc/id.services.conf, cron jobs, and systemd services. Look for additional payloads like /.img. Block outbound connections to identified C2 IPs.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

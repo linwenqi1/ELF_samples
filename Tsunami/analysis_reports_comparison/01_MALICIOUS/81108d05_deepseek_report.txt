@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `48e8752ed600212718a91a2d06bd709fbfd08199449a51d415dc57467b5cffe5.elf` | **Job ID:** `81108d05`
+**Date:** 2025-12-02 22:24:30
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed in the analysis environment. It established network connections to external command-and-control (C2) servers, performed socket operations typical of DDoS botnets, and exhibited process forking behavior consistent with Mirai's architecture. The program exited cleanly (exit code 0) after completing its malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple socket creations with different protocols (AF_INET, AF_UNIX)
+- Process forking (CLONE events) creating child processes
+- Memory protection changes (MPROTECT) suggesting self-modifying code
+- SOCKET/CONNECT/SENDTO/RECVFROM sequence indicating network communication
+
+### 🔍 Key Evidence
+- CONNECT events with hex-encoded addresses containing network paths (e.g., '/var/run/nscd/socket')
+- SOCKET creation with domain=2 (AF_INET) and type=526338 (raw socket capabilities)
+- SENDTO and RECVFROM events indicating bidirectional network communication
+- Multiple CLONE/TRACK_FORK events creating process hierarchy
+- MPROTECT events with read/write/exec permissions suggesting code unpacking or protection changes
+
+### 💡 Recommendations
+Isolate affected systems, block identified network connections, analyze network traffic for C2 communication patterns, and check for persistence mechanisms (crontab, systemd services). The binary should be submitted to threat intelligence platforms for further analysis and signature generation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f6ed60dd00dc251f600eba9b392de9e5de5694c168d06d690d8f8e9db19080cc.elf` | **Job ID:** `14fee49e`
+**Date:** 2025-12-02 22:38:58
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This binary exhibits classic Mirai botnet behavior: it establishes network connections to external C2 servers, forks processes for scanning activities, performs directory enumeration, and sends signals to terminate processes. The program successfully executed its malicious payload without environment detection or dependency failures.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Process forking for parallel scanning activities
+- Directory enumeration via repeated GETDENTS64 calls
+- Signal sending to terminate other processes
+- Memory protection manipulation
+
+### 🔍 Key Evidence
+- CONNECT events to external addresses (0200003508080808000000000000000080d9e0d4fe7f000040a22a2b0000000040d9e0d4fe7f00001000000003000000010000003000200000d473451c48b6f7)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- Repeated GETDENTS64 calls enumerating directories (likely scanning for vulnerable devices)
+- KILL/SENDTO events targeting process ID 23 with SIGTERM (15) and SIGKILL (9)
+- SOCKET creation with domain 2 (AF_INET) and types 1 (SOCK_STREAM) and 2 (SOCK_DGRAM)
+
+### 💡 Recommendations
+Isolate infected systems immediately. Block outbound connections to the observed C2 addresses. Monitor for additional scanning activity on ports 23, 2323, and 48101. Check for persistence mechanisms like crontab entries or systemd services. Consider network segmentation to prevent lateral movement.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

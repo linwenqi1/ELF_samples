@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `eea3492e7ca629afba14d2235112033e3ed08f993c0fc0244b42d5823dafebfd.elf` | **Job ID:** `0aa786d9`
+**Date:** 2025-12-02 22:25:57
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits clear botnet behavior consistent with Mirai family malware. It successfully executed, created multiple child processes, established an external network connection to a non-local IP address, and performed memory protection modifications typical of malware unpacking/execution. The program appears to be attempting to connect to a command-and-control server.
+
+### ⚠️ Suspicious Behaviors
+- External network connection to non-local IP
+- Multiple process forking (CLONE events)
+- Memory protection modifications (MPROTECT)
+- Socket creation and connection to external address
+
+### 🔍 Key Evidence
+- CONNECT event to external address 02001a0bb966aafa8001334c00000004000000000000000000d3a212a44582d0d0c8f711ff7f0000100000000300000060b76c555555000000d3a212a44582d0 (likely encoded C2 address)
+- Multiple CLONE/TRACK_FORK events creating child processes
+- MPROTECT events with read/write/exec permissions changes
+- SOCKET creation with domain 2 (AF_INET) and type 1 (SOCK_STREAM)
+
+### 💡 Recommendations
+Isolate the infected system immediately. Analyze the network traffic to identify the C2 server IP. Check for persistence mechanisms (crontab, systemd services). Scan for other infected devices on the network. Update all IoT device passwords and firmware.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

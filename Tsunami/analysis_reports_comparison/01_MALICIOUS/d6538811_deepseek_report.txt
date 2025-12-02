@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `60ba27f463c379a442c75247e59bb41c9daf1688cf1b99e0deb80a0610f5b043.elf` | **Job ID:** `d6538811`
+**Date:** 2025-12-02 22:27:23
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program successfully executed and exhibited clear botnet behavior consistent with Mirai family malware. It performed system reconnaissance by scanning /proc, /sys, and /dev directories, then established network connections to external C2 servers. The program spawned multiple child processes and attempted to connect to hardcoded IP addresses, indicating DDoS botnet functionality.
+
+### ⚠️ Suspicious Behaviors
+- System reconnaissance scanning
+- Multiple process forking
+- External network connections to non-localhost addresses
+- Aggressive scanning of system directories
+
+### 🔍 Key Evidence
+- Two identical high-severity alerts for system reconnaissance (CVSS 7.0)
+- CONNECT events to external addresses (020008ae8d620a7a...)
+- Multiple CLONE/TRACK_FORK events indicating process spawning
+- Scanning of /proc (3 operations), /sys (1 operation), and /dev (5 operations) directories
+
+### 💡 Recommendations
+Immediate isolation of infected systems, network traffic analysis to identify C2 communication patterns, review of system logs for lateral movement attempts, and implementation of network segmentation to prevent DDoS attacks.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

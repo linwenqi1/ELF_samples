@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5f657d55424d0999ae5185ddba297d2466611122896e52be7f42e7da914f7c05.elf` | **Job ID:** `beae2294`
+**Date:** 2025-12-02 22:43:57
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Evasion`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that executes multiple malicious behaviors including process forking, memory manipulation, deletion of system files, creation of persistence mechanisms, and execution of shell scripts. The program successfully runs in the Docker environment and exhibits classic Mirai characteristics.
+
+### ⚠️ Suspicious Behaviors
+- Multiple process forking and cloning
+- Memory protection manipulation (MPROTECT)
+- Deletion of system files in /etc directories
+- Creation of anonymous memory file (MEMFD_CREATE)
+- Execution of shell scripts for persistence
+- Signal generation (SIGSTOP/SIGCONT patterns)
+- Writing suspicious configuration data
+
+### 🔍 Key Evidence
+- UNLINKAT events deleting /etc/rc.d/init.d/linux_kill, /etc/init.d/linux_kill, /etc/rc.d/linux_kill, /etc/systemd/system/linux.service - classic Mirai persistence removal
+- MEMFD_CREATE with name 'qemu-open' and flags 0 - fileless execution technique
+- WRITE events creating shell script with infinite loop for persistence
+- Multiple CLONE events with flags 4001536 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD) - process hiding behavior
+- Deletion of competitor files like /usr/lib/libdlrpcld.so, /etc/32678, /etc/id.services.conf - competitor removal
+- Execution of /etc/32676 and /usr/sbin/service - potential C2 communication or further payload execution
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic for C2 communication. Check for persistence mechanisms in crontab, systemd services, and init scripts. Look for additional payloads in /tmp and memory. Consider this system compromised and rebuild from clean backup.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `91f42186d8806e0001ab75c3ed40bb28abd8deafec2c0730748deec0b1c4787a.elf` | **Job ID:** `90c2d247`
+**Date:** 2025-12-02 22:46:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Persistence`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence through system service creation, attempts to connect to external C2 servers, and exhibits classic Mirai behaviors including process forking, memory protection manipulation, and signal generation. The malware writes shell scripts to maintain execution and attempts to install itself as a system service.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Attempts to install itself as system service via update-rc.d
+- Establishes network connections to external IPs
+- Multiple process forking and cloning
+- Memory protection manipulation (MPROTECT)
+- Signal generation (SIGURG 23) for coordination
+- Executes from /tmp with self-replication
+
+### 🔍 Key Evidence
+- Writes shell script: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- Executes /usr/sbin/update-rc.d to install service
+- Network connections to external addresses via CONNECT events
+- Multiple CLONE events with flags 4001536 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD)
+- Self-replication: executes same binary from /tmp again (pid 299620)
+- Attempts to execute /etc/32678 (likely malicious payload)
+- Writes init script with chkconfig configuration
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network connections to identify C2 infrastructure. Check for persistence mechanisms in /etc/init.d/, /etc/rc.local, and crontab. Look for additional payloads in /etc/ directory. Block outbound connections to identified C2 IPs.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

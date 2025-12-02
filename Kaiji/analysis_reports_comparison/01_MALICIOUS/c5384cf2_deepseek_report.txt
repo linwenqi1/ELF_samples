@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `78429b9a63030f46b3bfaf4b7d4a4ad3684c0a599192531842e4494eff2b4898.elf` | **Job ID:** `c5384cf2`
+**Date:** 2025-12-02 22:43:48
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai variant that establishes persistence by creating a shell script that runs continuously, checking for a configuration file at /etc/id.services.conf every 60 seconds. It spawns multiple processes including /usr/bin/sh and /usr/sbin/service, and attempts to execute /etc/32678 (likely a malicious binary). The behavior indicates a backdoor establishing long-term persistence on the system.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Writes script to file descriptor 3
+- Spawns multiple child processes
+- Attempts to execute /etc/32678
+- Generates numerous SIGTSTP (signal 23) signals
+- Accesses system directories
+
+### 🔍 Key Evidence
+- WRITE event with script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- EXEC event for /etc/32678
+- Multiple CLONE and TRACK_FORK events creating process tree
+- ACCESS events to system paths
+- SIGNAL_GENERATE events with sig 23 (SIGTSTP) potentially for process control
+
+### 💡 Recommendations
+Isolate the system immediately. Analyze /etc/id.services.conf if present. Check for the created script and remove it. Investigate /etc/32678 binary. Monitor for network connections that may indicate C2 communication. Update system and change credentials.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

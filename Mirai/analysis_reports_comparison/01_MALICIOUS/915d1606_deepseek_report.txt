@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e01f01503a980e90f3cd4adf8cf86b5e611b212707d37199eeeaa3d0170d5afd.elf` | **Job ID:** `915d1606`
+**Date:** 2025-12-02 22:34:06
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes C2 connections, performs network reconnaissance, and exhibits DDoS botnet behavior. The program successfully executed, created multiple child processes, performed directory enumeration of /proc and /dev filesystems, established outbound network connections to external IPs, and attempted to maintain capabilities via prctl(SET_KEEPCAPS).
+
+### ⚠️ Suspicious Behaviors
+- External C2 connection establishment
+- Extensive /proc filesystem enumeration
+- Multiple process forking and cloning
+- Capability manipulation via prctl(SET_KEEPCAPS)
+- Network socket creation and connection to external addresses
+- Repeated directory scanning patterns
+
+### 🔍 Key Evidence
+- CONNECT event to external IP address (0200003508080808000000000000000000000000000000000043a5ce25c3962650f9d9a4fe7f00001000000003000000e0ad1b61555500000043a5ce25c39626) - indicates C2 communication
+- Multiple SOCKET events with domain=2 (AF_INET) and type=1/2 (SOCK_STREAM/SOCK_DGRAM)
+- Extensive GETDENTS64 events on /proc (filename='\u0004') and /dev (filename='\u0005') filesystems - typical botnet reconnaissance
+- PRCTL event with option=15 (SET_KEEPCAPS) and arg2=1082131672 - attempting to maintain capabilities across privilege changes
+- Multiple CLONE events with flags indicating process creation (4001536, 18874385)
+- Repeated ACCESS and GETDENTS64 patterns showing systematic filesystem scanning
+
+### 💡 Recommendations
+Isolate infected systems, block outbound connections to identified C2 IPs, analyze network traffic for DDoS patterns, check for persistence mechanisms, and monitor for additional payload downloads. The binary should be submitted to threat intelligence platforms for further analysis and hash sharing.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

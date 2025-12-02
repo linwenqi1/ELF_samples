@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `484474aeb2bd8bbc4b8fe31c22fee04f7a2f96130b4f8934da02c470b4ed15ef.elf` | **Job ID:** `e8ce17e3`
+**Date:** 2025-12-02 22:34:14
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, forks multiple processes, and performs directory scanning. The program successfully executed and exited cleanly, indicating it completed its intended reconnaissance and connection attempts.
+
+### ⚠️ Suspicious Behaviors
+- Network connections to external addresses
+- Multiple process forking (CLONE events)
+- Directory scanning (GETDENTS64)
+- Repeated socket creation and connection attempts
+
+### 🔍 Key Evidence
+- CONNECT events to non-local addresses (0200003508080808...)
+- Multiple SOCKET events with domain 2 (AF_INET) and types 1 (SOCK_STREAM) and 2 (SOCK_DGRAM)
+- Process tree creation via CLONE with flags 18874385 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_PTRACE|CLONE_VFORK|CLONE_PARENT|CLONE_THREAD|CLONE_NEWNS|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED) and 4001536 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_PTRACE|CLONE_VFORK)
+- GETDENTS64 calls indicating directory enumeration
+
+### 💡 Recommendations
+Isolate affected systems, block the observed IP addresses in firewall rules, and conduct full system scans for persistence mechanisms. The binary should be submitted to threat intelligence platforms for further analysis and signature generation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

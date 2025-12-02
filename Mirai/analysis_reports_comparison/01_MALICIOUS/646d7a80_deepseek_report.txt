@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `98a4fd83ed3a0dbbea35953ea071e6535adf978f5892a7508d148151658e2352.elf` | **Job ID:** `646d7a80`
+**Date:** 2025-12-02 22:38:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it establishes network connections to potential C2 servers, forks processes for persistence/scanning, modifies memory protections, and performs directory enumeration. The program successfully executed and printed a decoy message while performing malicious activities in the background.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and connection to non-local addresses
+- Process forking with clone flags (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD)
+- Memory protection modifications (MPROTECT) potentially for code injection
+- Directory enumeration via GETDENTS64
+- PRCTL system call with option 15 (PR_SET_NAME) for process hiding
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to external addresses (domain 2 = AF_INET, type 2 = SOCK_DGRAM, type 1 = SOCK_STREAM)
+- CLONE events with flags 4001536 (typical for thread creation) and 18874385 (complex forking pattern)
+- CONNECT addresses in hex format suggesting IP:port connections (e.g., 0200003508080808 = 8.8.8.8:53)
+- Process forking chain (268919 → 268920 → 268921 → 268922) indicating spawning of worker processes
+- Directory scanning via GETDENTS64 on file descriptor 4
+
+### 💡 Recommendations
+Isolate infected systems, block outgoing connections to the observed IP addresses, examine network traffic for DDoS patterns, check for persistence mechanisms (crontab, systemd services), and scan for other Mirai variants that may have been downloaded.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+thIs wEek on xLaB lEarNs nOthinG xd
+```

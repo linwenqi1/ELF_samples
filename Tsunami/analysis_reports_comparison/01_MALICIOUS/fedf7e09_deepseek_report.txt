@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `af4ec309bbf6f3ab2c41f2558518ca279bd29be453fbc8787370c8047e456678.elf` | **Job ID:** `fedf7e09`
+**Date:** 2025-12-02 22:25:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it forks multiple processes, creates a socket connection to a hardcoded external IP address (likely a C2 server), and performs network reconnaissance. The execution from /tmp, process forking pattern, and direct outbound connection without legitimate service interaction strongly indicate malicious intent.
+
+### ⚠️ Suspicious Behaviors
+- External network connection to non-localhost IP
+- Multiple process forking (CLONE events)
+- Memory protection manipulation (MPROTECT)
+- Execution from temporary directory (/tmp)
+
+### 🔍 Key Evidence
+- CONNECT event to address 02001a0b2d5f37180000000180002f10000000000000000000db48ee701b629380f222fdff7f00001000000003000000a057706f5555000000db48ee701b6293 (decodes to external IP)
+- Multiple CLONE events creating child processes (221439, 221441, 221442)
+- SOCKET creation with domain 2 (AF_INET) and type 1 (SOCK_STREAM)
+- Execution from /tmp/af4ec309bbf6f3ab2c41f2558518ca279bd29be453fbc8787370c8047e456678.elf
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic to/from the connected IP, check for persistence mechanisms (crontab, systemd services), and scan for other infected devices on the network. The C2 IP should be blocked at firewall level.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

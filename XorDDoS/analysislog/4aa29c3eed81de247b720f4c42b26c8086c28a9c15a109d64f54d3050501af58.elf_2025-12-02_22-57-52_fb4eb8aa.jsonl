@@ -1,0 +1,154 @@
+{"type": "RUN_META", "session": "5189afa417a9412faa3929e596e87fe2", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/malware/XorDDoS/bin/4aa29c3eed81de247b720f4c42b26c8086c28a9c15a109d64f54d3050501af58.elf", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 334447, "cgroup_inode": 138379, "container_id": "b8ff84f654c8729bcc153f5b6076d8053cca72fdbfe35016b3a7b09f84da0ae9", "container_name": "dreamy_lederberg", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1764687473.2215803}
+{"ts": 7839713, "pid": 334778, "cgroup_id": 138379, "event": "EXEC", "filename": "/tmp/4aa29c3eed81de247b720f4c42b26c8086c28a9c15a109d64f54d3050501af58.elf"}
+{"ts": 7839713, "pid": 334778, "cgroup_id": 138379, "event": "TRACK_QEMU", "bin": "4aa29c3eed81de2", "count": 1}
+{"ts": 7839713, "pid": 334778, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334778, "child": 334782, "count": 1}
+{"ts": 7839713, "pid": 334743, "cgroup_id": 138379, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7839713, "pid": 334743, "cgroup_id": 138379, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1764687473416, "pid": -1, "cgroup_id": 138379, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1764687473416, "pid": -1, "cgroup_id": 138379, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"ts": 1764687473416, "pid": -1, "cgroup_id": 138379, "event": "MMAP_SUM", "meta": {"count": 7, "max_pages": 497}, "count": 1}
+{"ts": 7839719, "pid": 334782, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334782, "child": 334791, "count": 1}
+{"ts": 7839719, "pid": 334791, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334791, "child": 334792, "count": 1}
+{"ts": 7839719, "pid": 334782, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334782, "child": 334793, "count": 1}
+{"ts": 7839719, "pid": 334793, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334793, "child": 334794, "count": 1}
+{"ts": 7839719, "pid": 334782, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334782, "child": 334795, "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "TRACK_QEMU", "bin": "sh", "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "STAT", "filename": "/tmp", "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "STAT", "filename": ".", "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "STAT", "filename": "/bin/sed", "count": 1}
+{"ts": 7839719, "pid": 334795, "cgroup_id": 138379, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 7839720, "pid": 334795, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334795, "child": 334796, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "EXEC", "filename": "/bin/sed", "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "TRACK_QEMU", "bin": "update-rc.d", "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "TRACK_QEMU", "bin": "sed", "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 2}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 2}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 6}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 2}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 394, "count": 1}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 2}
+{"ts": 7839720, "pid": 334796, "cgroup_id": 138379, "event": "WRITE", "fd": 2, "buf": "sed: can't read /etc/crontab: No such file or directory\n", "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 2}
+{"ts": 7839720, "pid": 334795, "cgroup_id": 138379, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7839720, "pid": 334795, "cgroup_id": 138379, "event": "WAIT4_EXITED", "reaped_child": 28, "count": 1}
+{"ts": 7839720, "pid": 334782, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334782, "child": 334802, "count": 1}
+{"ts": 7839720, "pid": 334782, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334782, "child": 334803, "count": 1}
+{"ts": 7839720, "pid": 334782, "cgroup_id": 138379, "event": "TRACK_FORK", "parent": 334782, "child": 334804, "count": 1}
+{"ts": 7839720, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 4, "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/5.30.0/x86_64-linux-gnu-thread-multi", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/5.30.0", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/5.30.0/x86_64-linux-gnu-thread-multi", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/5.30.0", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/x86_64-linux-gnu-thread-multi", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/x86_64-linux-gnu-thread-multi", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 8192, "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/strict.pmc", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/strict.pm", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/strict.pmc", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/strict.pm", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/strict.pmc", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/strict.pm", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/strict.pmc", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/strict.pm", "count": 1}
+{"ts": 7839721, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/strict.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/strict.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/strict.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/strict.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/strict.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/strict.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/strict.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/strict.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/strict.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/strict.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 4, "buf_len": 1606, "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/warnings.pmc", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/warnings.pm", "count": 1}
+{"ts": 7839722, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 4, "buf_len": 8192, "count": 3}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 4, "buf_len": 1365, "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/File/Glob.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/File/Glob.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 4, "buf_len": 1855, "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/etc/perl/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/x86_64-linux-gnu/perl/5.30.0/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/share/perl/5.30.0/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl5/5.30/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl5/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl/5.30/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/share/perl/5.30/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/local/lib/site_perl/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/XSLoader.pmc", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/XSLoader.pm", "count": 1}
+{"ts": 7839724, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 4, "buf_len": 3967, "count": 1}
+{"ts": 7839725, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/auto/File/Glob/Glob.so", "count": 1}
+{"ts": 7839725, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/x86_64-linux-gnu/perl-base/auto/File/Glob/Glob.bs", "count": 1}
+{"ts": 7839725, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 4, "buf_len": 832, "count": 1}
+{"ts": 7839725, "pid": 334794, "cgroup_id": 138379, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 1}
+{"ts": 7839725, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 8192, "count": 1}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "READ", "fd": 3, "buf_len": 777, "count": 1}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/sbin/insserv", "count": 1}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/usr/lib/insserv/insserv", "count": 1}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "GETDENTS64", "filename": "\u0003", "count": 2}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/sbin/openrc", "count": 1}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "GETDENTS64", "filename": "\u0003", "count": 1}
+{"ts": 7839726, "pid": 334794, "cgroup_id": 138379, "event": "GETDENTS64", "filename": "\u0004", "count": 16}
+{"ts": 7839727, "pid": 334794, "cgroup_id": 138379, "event": "GETDENTS64", "filename": "\u0003", "count": 1}
+{"ts": 7839727, "pid": 334794, "cgroup_id": 138379, "event": "STAT", "filename": "/run/systemd/system", "count": 1}
+{"ts": 1764687473531, "pid": -1, "cgroup_id": 138379, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1764687473531, "pid": -1, "cgroup_id": 138379, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 7}
+{"ts": 1764687473531, "pid": -1, "cgroup_id": 138379, "event": "AGGREGATED_SUMMARY", "category": "utility_other", "count": 9}
+{"type": "RUN_END", "end_ts": 1764687473.9199986, "events_count": 152, "analyzed_count": 0, "timeout": false}

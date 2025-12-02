@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c2ba33b1b92cda9ad3af3ee57dd75c25a4b7c34336239ab1b9e2222ed37c1426.elf` | **Job ID:** `3f3935c7`
+**Date:** 2025-12-02 22:26:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it forks a child process that establishes multiple socket connections, including connections to local system services and external network addresses, consistent with command-and-control (C2) communication patterns. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Process forking to create persistent child process
+- Multiple socket creations with different protocols (AF_INET/AF_UNIX)
+- Connection attempts to system paths (/var/run/nscd/socket) and external IP addresses
+- Network communication via SENDTO and RECVFROM syscalls
+
+### 🔍 Key Evidence
+- CLONE syscall with flags 18874385 (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_PTRACE|CLONE_VFORK|CLONE_PARENT|CLONE_THREAD|CLONE_NEWNS|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID|CLONE_DETACHED) - typical for creating persistent malware threads
+- SOCKET with domain 2 (AF_INET) and type 1 (SOCK_STREAM) - TCP socket creation
+- SOCKET with domain 1 (AF_UNIX) and type 526337 - Unix domain socket for local communication
+- CONNECT to hex address '01002f7661722f72756e2f6e7363642f736f636b6574000008000000000000006430952a0000000000000000000000006430952a0000000000e66560029f1168' which decodes to '/var/run/nscd/socket' (Name Service Cache Daemon) - common for DNS resolution manipulation
+- CONNECT to external IP address '02000035ac12015c' (hex to IP: 172.18.1.92) - potential C2 server connection
+- SENDTO with length 33 bytes - sending data to network
+- RECVFROM with size 1024 bytes - receiving data from network
+
+### 💡 Recommendations
+Isolate infected systems immediately. Block outbound connections to identified IP addresses (172.18.1.92, 172.18.1.93). Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Update IoT device firmware and change default credentials.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

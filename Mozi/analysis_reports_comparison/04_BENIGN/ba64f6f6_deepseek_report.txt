@@ -1,0 +1,31 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d6dd3935268ed0fc0817220590bbbdb1cfe12b518e314e2db243ee28e9050d74.elf` | **Job ID:** `ba64f6f6`
+**Date:** 2025-12-02 22:55:55
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** `Tool.Linux.QEMU_Emulation`
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> The program failed to execute due to a QEMU emulation error (SIGBUS) before performing any meaningful activity. The syscall trace shows only basic process initialization (EXEC, MPROTECT, CLONE, READ) followed by the crash, with no evidence of malicious intent, network connections, file system tampering, or sensitive path access.
+
+### 🔍 Key Evidence
+- Exit code 135 indicates a fatal error (SIGBUS).
+- Execution output shows QEMU internal SIGBUS error at address 0x41fb68.
+- Syscall trace lacks malicious indicators: no network activity, file encryption, privilege escalation, or anti-analysis checks.
+- TRACK_QEMU event is benign per environment context (used for non-x86 emulation).
+- No local_alerts triggered.
+
+### 💡 Recommendations
+No further analysis needed. The crash is due to emulation incompatibility (likely a memory access issue in QEMU for the non-x86 binary). If analysis is required, consider running on native hardware or debugging the QEMU error.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+qemu-mips: QEMU internal SIGBUS {code=ADRERR, addr=0x41fb68}
+Bus error (core dumped)
+```

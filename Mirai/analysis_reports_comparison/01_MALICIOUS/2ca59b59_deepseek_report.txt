@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ae2895f4ca5b55e145e340e60dc85a116b101ed278aec7dfcab04b1a73267b0e.elf` | **Job ID:** `2ca59b59`
+**Date:** 2025-12-02 22:37:47
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits clear botnet behavior consistent with Mirai variants. It establishes network connections to external C2 servers, performs directory enumeration, forks multiple processes, and attempts to send/receive data over sockets. The program successfully executed and exited with code 0, indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- External network connections to non-localhost addresses
+- Multiple process forking and cloning
+- Directory enumeration via GETDENTS64
+- Repeated socket creation and connection attempts
+- Signal generation and kill operations
+
+### 🔍 Key Evidence
+- CONNECT events to external addresses (0200003508080808...)
+- Multiple SOCKET/CONNECT/SENDTO/RECVFROM sequences indicating C2 communication
+- CLONE/TRACK_FORK events showing process spawning
+- GETDENTS64 calls for directory listing
+- KILL/SIGNAL_GENERATE events targeting specific processes
+
+### 💡 Recommendations
+Isolate affected systems, block identified C2 IP addresses, analyze network traffic for exfiltration, and check for persistence mechanisms. The binary should be submitted to threat intelligence platforms for further analysis.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

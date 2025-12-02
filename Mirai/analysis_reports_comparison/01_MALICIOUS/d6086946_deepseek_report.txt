@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `17061bf8ab472de9d74c56a100161e8fc2b7bed0b973b085816ee28838036f93.elf` | **Job ID:** `d6086946`
+**Date:** 2025-12-02 22:36:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it forks multiple processes, creates a socket connection to a non-local IP address (likely a C2 server), and redirects standard I/O streams. The program executed successfully (exit code 0) and established an outbound network connection, indicating active malicious functionality rather than failed execution or environment evasion.
+
+### ⚠️ Suspicious Behaviors
+- Process forking and cloning
+- Socket creation and external network connection
+- Standard I/O stream redirection
+- Multiple memory protection modifications
+
+### 🔍 Key Evidence
+- SOCKET event with domain 2 (AF_INET) and type 1 (SOCK_STREAM)
+- CONNECT event to external address 0200115c555af5e7000000000000000001000000300020006002688bda76000080565a85fd7f00001000000003000000b8b47d765555000000de1e292c01e52b
+- Multiple CLONE and TRACK_FORK events creating child processes
+- DUP2 events redirecting stdin/stdout/stderr
+- Execution from /tmp directory (common for Mirai deployment)
+
+### 💡 Recommendations
+Isolate the infected system immediately. Capture network traffic to identify the C2 server IP address. Analyze the binary for hardcoded credentials and propagation mechanisms. Check for persistence mechanisms like cron jobs or systemd services. Monitor for DDoS attack patterns from this host.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

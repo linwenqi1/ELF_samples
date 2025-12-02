@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `a6b03e495f7f816ce4de8b4cce6cc46982f8c7be4159f7081dec6598979a8b2f.elf` | **Job ID:** `bac7c633`
+**Date:** 2025-12-02 22:24:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that successfully executed, forked multiple processes, and attempted to establish a C2 connection to a remote server. The behavior includes process creation, memory protection changes, and network socket operations characteristic of Mirai's initialization and C2 communication patterns.
+
+### ⚠️ Suspicious Behaviors
+- Process forking and cloning
+- Multiple mprotect calls for memory manipulation
+- Socket creation and connection to a non-local IP address
+- Attempted network communication with encoded/encrypted data
+
+### 🔍 Key Evidence
+- CLONE events with flags 4001536 and 18874385 (typical for process creation in botnets)
+- SOCKET and CONNECT events with domain 2 (AF_INET) and type 1 (SOCK_STREAM)
+- CONNECT address contains encoded data (likely C2 server details)
+- TRACK_FORK events showing process tree creation
+- No benign utility behaviors observed (e.g., file operations, standard I/O)
+
+### 💡 Recommendations
+Isolate the system, analyze network traffic for C2 communication, check for persistence mechanisms (crontab, systemd), and scan for related artifacts. The C2 address should be blocked and reported.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

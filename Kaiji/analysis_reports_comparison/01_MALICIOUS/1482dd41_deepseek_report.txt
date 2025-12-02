@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e717a53c4f21309645df7aabe10a41247e495bf4c827498cfeb1b23cc9c82be5.elf` | **Job ID:** `1482dd41`
+**Date:** 2025-12-02 22:42:24
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits classic Mirai botnet behavior: it creates a persistent backdoor by writing a shell script to /tmp that executes every 60 seconds, attempts to access system service configuration files, spawns multiple processes including shell execution, and demonstrates process forking patterns consistent with Mirai's architecture. The program successfully executed with exit code 0, indicating it completed its intended malicious activities.
+
+### ⚠️ Suspicious Behaviors
+- Creates persistent shell script with infinite loop
+- Executes shell (/usr/bin/sh) from spawned process
+- Attempts to access system configuration file (/etc/id.services.conf)
+- Multiple process forking with CLONE flags
+- Writes script content to file descriptor
+
+### 🔍 Key Evidence
+- WRITE event with shell script content: '#!/bin/sh\nwhile [ 1 ]; do\nsleep 60\n/etc/id.services.conf\ndone'
+- EXEC event: '/usr/bin/sh' executed from PID 277784
+- ACCESS events targeting system paths
+- Multiple CLONE events with flags 4001536 and 18874385 indicating process spawning
+- Script designed for persistence with 60-second sleep intervals
+
+### 💡 Recommendations
+Isolate affected system immediately, analyze the written shell script for additional payloads, check for unauthorized cron jobs or systemd services, monitor network traffic for C2 connections, and perform full system scan for additional malware components.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```
