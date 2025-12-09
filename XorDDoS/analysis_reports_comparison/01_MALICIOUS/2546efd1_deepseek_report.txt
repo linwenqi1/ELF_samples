@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0e817a2325c215997de15851152a66924874739eeff5da4b434e5d36c83a76eb.elf` | **Job ID:** `2546efd1`
+**Date:** 2025-12-09 17:54:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Privilege Escalation`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that attempts to establish persistence, download additional payloads, and connect to command-and-control servers. The malware writes a shell script to create a service, attempts to modify system startup configurations, downloads an ELF binary from a remote server, and establishes network connections to multiple IP addresses.
+
+### ⚠️ Suspicious Behaviors
+- Service persistence attempt via chkconfig/update-rc.d
+- Remote binary download via HTTP GET request
+- Multiple network connections to external IPs
+- Shell script execution for system manipulation
+- ELF binary writing to memory
+
+### 🔍 Key Evidence
+- Wrote shell script with chkconfig headers to create persistence
+- Executed /bin/sh for command injection
+- HTTP GET request to download /config.rar from remote server
+- Multiple CONNECT events to external IP addresses (02000050c612001b..., 02000596c612001a...)
+- Attempted to execute chkconfig and update-rc.d for service installation
+- Wrote ELF header content (0x7f454c46) indicating binary payload
+- Network socket creation and data transmission
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze downloaded config.rar payload. Block identified C2 IP addresses. Check for persistence mechanisms in /etc/init.d/, /etc/rc.local, and crontab. Monitor for unusual network traffic on ports 23, 2323, 48101. Consider system reimage due to potential rootkit installation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,43 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2afa52eb5e62a92d511d6a78ea4c68f1ff4a1a0996abfd3b36966d3de812c638` | **Job ID:** `687d0f75`
+**Date:** 2025-12-09 17:50:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Shellcode Execution`, `Memory Corruption`
+- **Standard Label:** `HEUR:Trojan.Linux.Shellcode`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program demonstrates shellcode execution behavior by dynamically modifying memory permissions to make regions executable. It executes from /tmp, performs pattern matching operations (likely a decoy), and uses mprotect syscalls to set PROT_EXEC permissions on memory regions, indicating potential code injection or self-modifying code execution.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation for execution
+- Execution from temporary directory
+- Forking process with clone syscall
+
+### 🔍 Key Evidence
+- mprotect call with PROT_EXEC flag (exec:1) at timestamp 3410096
+- Multiple mprotect calls changing memory protection flags
+- Local alert for Memory Corruption (Shellcode) with CVSS 9.3 score
+- Execution from /tmp directory
+
+### 💡 Recommendations
+Isolate and analyze memory dumps for shellcode patterns, check for network connections or file system modifications that may have been missed in trace, and examine the binary for obfuscation or packing techniques.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+String test: AABCAB12AFAABCABFFEGABCAB
+Test1: search pattern ABCAB
+--Pattern is found at: 1
+--Pattern is found at: 11
+--Pattern is found at: 20
+Test2: search pattern FFF
+Test3: search pattern CAB
+--Pattern is found at: 3
+--Pattern is found at: 13
+--Pattern is found at: 22
+```

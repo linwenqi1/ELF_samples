@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `47c0af3e024fb5b38a97768bb9f6dce954fe358ce7f24c46dcc23689e8687a70.elf` | **Job ID:** `b64b0f20`
+**Date:** 2025-12-09 17:57:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Privilege Escalation`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes C2 communication, attempts persistence via service configuration, and performs network reconnaissance. The program successfully executed with exit code 0, showing full malicious functionality including network connections to external IPs, process forking, and attempts to modify system services.
+
+### ⚠️ Suspicious Behaviors
+- External C2 communication via multiple socket connections
+- Attempted persistence via chkconfig/update-rc.d service installation
+- Process forking and execution of suspicious binaries from /tmp
+- Network reconnaissance with multiple socket operations
+- Writing shell scripts with service configuration headers
+
+### 🔍 Key Evidence
+- Multiple SOCKET/CONNECT events to external addresses (e.g., 02000019c6120025..., 02001f90c6120026...)
+- Execution of /bin/chkconfig, /sbin/chkconfig, /usr/bin/chkconfig, /bin/update-rc.d
+- Writing service script with '# chkconfig: 12345 90 90' header
+- Forking and execution of suspicious binary '/tmp/wjfmaeuids'
+- Network data transmission with encoded/encrypted payloads
+- Multiple MPROTECT calls suggesting memory manipulation
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identified IP addresses. Check for persistence mechanisms in /etc/init.d/, /etc/rc.local, and crontab. Examine /tmp directory for malicious binaries. Block outbound connections to suspicious IPs. Consider this part of a larger botnet campaign.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

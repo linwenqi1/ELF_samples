@@ -1,0 +1,398 @@
+[MPK] Protection Keys allocated: Config Key=1, FD Key=2
+[MPK] FD Integrity Guard initialized (Key 2)
+[SCAN] Analyzing executables in: /home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-x86_64
+[SCAN] Found 14 supported executable(s)
+Launched vulnerability report window.
+
+[POOL MODE] Using Docker pool with 7 concurrent workers
+[POOL MODE] Queue strategy: grouped
+[MONITOR] Starting global monitor process...
+[MONITOR] Command: sudo /home/zzh/Compass-Proj1/MirrorShield/Wrapper/monitor
+[CgroupManager] Warning: No BPF object and no pinned map found
+[CgroupManager] Will use bpftool for map operations
+[MONITOR] Global monitor started successfully (PID: 31037)
+[MONITOR_READER] Started reading monitor output
+[POOL MODE] Performing BPF health check and warm-up...
+[POOL MODE] Step 1/3: Basic stabilization...
+[POOL MODE] Step 2/3: Probe container test - warming up BPF...
+[DOCKER] Selected image for libc=glibc: ubuntu:24.04
+[POOL MODE] Probe: PID=31139, cgroup=23559
+[CgroupManager] Added cgroup 23559 via bpftool
+[CgroupManager] Removed cgroup 23559 via bpftool
+[POOL MODE] ✓ Probe container completed - BPF warmed up
+[POOL MODE] Step 3/3: Final stabilization (0.5s)...
+[POOL MODE] ✓ BPF health check PASSED - ready for concurrent execution
+Loaded Provider: deepseek | Model: deepseek-chat
+[AI-Integration] Initialized with max_workers=7
+[AI-Integration] Current Provider: deepseek
+[AI-Integration] Started worker pool
+[AI] ✓ DeepSeek AI analysis enabled (7 workers)
+[DOCKER_POOL] Submitted 14 tasks to queue (queue size: 14)
+[DOCKER_POOL] Starting 7 workers...
+[DockerWorker-0] Starting: 32b1fff5311b8d1462af49c0edc5d6f01175776e544be471115c345bf3df2a4b.30__cat (62_64bit)
+[DockerWorker-1] Starting: d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum (62_64bit)
+[ANALYSISLOG] d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum -> analysislog/d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum_2025-12-09_13-29-24_5fea665d.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[DockerWorker-2] Starting: 3501d30bb6f313af01000ff4f72b6bc5b73b3527386998c01f74918150e4e052.30__base32 (62_64bit)
+[ANALYSISLOG] 32b1fff5311b8d1462af49c0edc5d6f01175776e544be471115c345bf3df2a4b.30__cat -> analysislog/32b1fff5311b8d1462af49c0edc5d6f01175776e544be471115c345bf3df2a4b.30__cat_2025-12-09_13-29-24_cf0618b2.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[ANALYSISLOG] 3501d30bb6f313af01000ff4f72b6bc5b73b3527386998c01f74918150e4e052.30__base32 -> analysislog/3501d30bb6f313af01000ff4f72b6bc5b73b3527386998c01f74918150e4e052.30__base32_2025-12-09_13-29-24_069ff341.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[DockerWorker-3] Starting: 2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename (62_64bit)
+[DockerWorker-4] Starting: b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp (62_64bit)
+[DockerWorker-5] Starting: 533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid (62_64bit)
+[DockerWorker-6] Starting: 425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown (62_64bit)
+[DOCKER_POOL] 7 workers started
+[DOCKER_POOL] Waiting for all tasks to complete...
+[ANALYSISLOG] 533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid -> analysislog/533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid_2025-12-09_13-29-24_4e5a4385.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[ANALYSISLOG] b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp -> analysislog/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp_2025-12-09_13-29-24_2b1be3be.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[ANALYSISLOG] 2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename -> analysislog/2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename_2025-12-09_13-29-24_6ef19859.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[ANALYSISLOG] 425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown -> analysislog/425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown_2025-12-09_13-29-24_c0fbbfc0.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[CgroupManager] Added cgroup 23817 via bpftool
+[CgroupManager] Added cgroup 23903 via bpftool
+[EventRouter] DEBUG: EXEC #34 filename='/bin/true', triggers=['533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid', '/tmp/533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid']
+[CgroupManager] Added cgroup 23645 via bpftool
+[CgroupManager] Added cgroup 23989 via bpftool
+[CgroupManager] Added cgroup 24161 via bpftool
+[CgroupManager] Added cgroup 23731 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum', '/tmp/d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum']
+[CgroupManager] Added cgroup 24075 via bpftool
+[EventRouter] DEBUG: EXEC #49 filename='/bin/true', triggers=['425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown', '/tmp/425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown']
+[EventRouter] DEBUG: EXEC #49 filename='/bin/true', triggers=['b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp', '/tmp/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp']
+[EventRouter] ARM detected at event 87 for cgroup 23645
+[EventRouter] Discarded 86 pre-ARM events for cgroup 23645
+[EventRouter] ARM detected at event 132 for cgroup 23903
+[EventRouter] Discarded 131 pre-ARM events for cgroup 23903
+[EventRouter] ARM detected at event 149 for cgroup 23731
+[EventRouter] Discarded 148 pre-ARM events for cgroup 23731
+[DOCKER] Container exit code: 0
+[DOCKER][STDOUT] BEGIN
+786a02f742015903c6c6fd852552d272912f4740e15847618a86e217f71f5419d25e1031afee585313896444934eb04b903a685b1448b755d56f701afe9be2ce  -
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum_2025-12-09_13-29-24_5fea665d_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+/tmp/425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown: missing operand
+Try '/tmp/425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Container exit code: 0
+[DOCKER] Raw stdout saved: analysislog/425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown_2025-12-09_13-29-24_c0fbbfc0_container_stdout.txt
+[EventRouter] ARM detected at event 107 for cgroup 23989
+[EventRouter] Discarded 106 pre-ARM events for cgroup 23989
+[EventRouter] ARM detected at event 90 for cgroup 23817
+[EventRouter] Discarded 89 pre-ARM events for cgroup 23817
+[DOCKER] Container exit code: 0
+[DOCKER] Container exit code: 0
+[DOCKER][STDOUT] BEGIN
+RTNETLINK1 answers: No such file or directory
+533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid: error talking to the kernel via netlink
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid_2025-12-09_13-29-24_4e5a4385_container_stdout.txt
+[EventRouter] ARM detected at event 106 for cgroup 24161
+[EventRouter] Discarded 105 pre-ARM events for cgroup 24161
+[EventRouter] ARM detected at event 104 for cgroup 24075
+[EventRouter] Discarded 103 pre-ARM events for cgroup 24075
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+/tmp/2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename: missing operand
+Try '/tmp/2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename_2025-12-09_13-29-24_6ef19859_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+/tmp/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp: missing operand
+Try '/tmp/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp_2025-12-09_13-29-24_2b1be3be_container_stdout.txt
+[POOL] Collected 10 events for analysis (read from log file)
+[POOL] Running analyzers on 10 events for d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum
+[POOL] Analysis completed: 0 findings in 0.00s (9083 events/s)
+[AI-Integration] Submitted task: 5fea665d
+[AI] 5fea665d queued for DeepSeek analysis
+[POOL] Collected 13 events for analysis (read from log file)
+[POOL] Running analyzers on 13 events for 425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown
+[POOL] Analysis completed: 0 findings in 0.00s (12360 events/s)
+[AI-Integration] Submitted task: c0fbbfc0
+[AI] c0fbbfc0 queued for DeepSeek analysis
+[POOL] Collected 9 events for analysis (read from log file)
+[POOL] Running analyzers on 9 events for 32b1fff5311b8d1462af49c0edc5d6f01175776e544be471115c345bf3df2a4b.30__cat
+[POOL] Analysis completed: 0 findings in 0.00s (8794 events/s)
+[AI-Integration] Submitted task: cf0618b2
+[AI] cf0618b2 queued for DeepSeek analysis
+[POOL] Collected 9 events for analysis (read from log file)
+[POOL] Running analyzers on 9 events for 3501d30bb6f313af01000ff4f72b6bc5b73b3527386998c01f74918150e4e052.30__base32
+[POOL] Analysis completed: 0 findings in 0.00s (8725 events/s)
+[AI-Integration] Submitted task: 069ff341
+[AI] 069ff341 queued for DeepSeek analysis
+[POOL] Collected 31 events for analysis (read from log file)
+[POOL] Running analyzers on 31 events for 533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid
+[POOL] Analysis completed: 1 findings in 0.00s (28111 events/s)
+[AI-Integration] Submitted task: 4e5a4385
+[AI] 4e5a4385 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 23645 via bpftool
+[POOL] Cleanup scheduled for 2175f2437d6e
+[DockerWorker-1] ✓ Completed: d32a42959d88c5e46a6f5abc5cd1c62d211ddd81c39757bc66d89d3e5b817cb8.30__b2sum (10 events) (1.08s)
+[DockerWorker-1] Starting: ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot (62_64bit)
+[ANALYSISLOG] ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot -> analysislog/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot_2025-12-09_13-29-26_48c59267.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[CgroupManager] Removed cgroup 23903 via bpftool
+[CgroupManager] Removed cgroup 23731 via bpftool
+[POOL] Cleanup scheduled for 65cf00d1ce29
+[DockerWorker-6] ✓ Completed: 425b4db4502a434a70ffba419f97a7ee85b23c92ab53dc2781dd22579ed30358.30__chown (13 events) (1.08s)
+[DockerWorker-6] Starting: 7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod (62_64bit)
+[POOL] Collected 13 events for analysis (read from log file)
+[POOL] Running analyzers on 13 events for b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp
+[POOL] Analysis completed: 0 findings in 0.00s (12257 events/s)
+[POOL] Collected 13 events for analysis (read from log file)
+[POOL] Running analyzers on 13 events for 2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename
+[POOL] Analysis completed: 0 findings in 0.00s (11852 events/s)
+[ANALYSISLOG] 7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod -> analysislog/7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod_2025-12-09_13-29-26_2e8140d2.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[POOL] Cleanup scheduled for 4fc1bddb04cb
+[DockerWorker-0] ✓ Completed: 32b1fff5311b8d1462af49c0edc5d6f01175776e544be471115c345bf3df2a4b.30__cat (9 events) (1.08s)
+[DockerWorker-0] Starting: 47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[ (62_64bit)
+[AI-Integration] Submitted task: 2b1be3be
+[AI] 2b1be3be queued for DeepSeek analysis
+[ANALYSISLOG] 47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[ -> analysislog/47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[_2025-12-09_13-29-26_b4749028.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[AI-Integration] Submitted task: 6ef19859
+[AI] 6ef19859 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 23989 via bpftool
+[POOL] Cleanup scheduled for a8f6fdc1d74f
+[DockerWorker-2] ✓ Completed: 3501d30bb6f313af01000ff4f72b6bc5b73b3527386998c01f74918150e4e052.30__base32 (9 events) (1.08s)
+[DockerWorker-2] Starting: bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon (62_64bit)
+[ANALYSISLOG] bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon -> analysislog/bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon_2025-12-09_13-29-26_2d166abe.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[CgroupManager] Removed cgroup 23817 via bpftool
+[POOL] Cleanup scheduled for 1dd85a14ae3c
+[DockerWorker-5] ✓ Completed: 533e5adac9454e5c47d66f440fbfbf7fef9804eabc80ab27c135fa290918f507.31__acpid (31 events) (1.12s)
+[DockerWorker-5] Starting: e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon (62_64bit)
+[ANALYSISLOG] e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon -> analysislog/e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon_2025-12-09_13-29-26_a7ead1a3.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[CgroupManager] Removed cgroup 24075 via bpftool
+[POOL] Cleanup scheduled for 9bb06b83e901
+[DockerWorker-4] ✓ Completed: b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp (13 events) (1.12s)
+[DockerWorker-4] Starting: 2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64 (62_64bit)
+[ANALYSISLOG] 2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64 -> analysislog/2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64_2025-12-09_13-29-26_07ec7fec.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[CgroupManager] Removed cgroup 24161 via bpftool
+[POOL] Cleanup scheduled for a93008f6ab2e
+[DockerWorker-3] ✓ Completed: 2d22c9d71fcd0d081c2e58f51ac5ca7d55844492194eccba147dc009661d9248.30__basename (13 events) (1.13s)
+[DockerWorker-3] Starting: b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen (62_64bit)
+[ANALYSISLOG] b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen -> analysislog/b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen_2025-12-09_13-29-26_e068e9b8.jsonl
+[DOCKER] Selected image for libc=glibc: amd64/ubuntu:24.04
+[CgroupManager] Added cgroup 24247 via bpftool
+[CgroupManager] Added cgroup 24333 via bpftool
+[CgroupManager] Added cgroup 24505 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot', '/tmp/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot']
+[EventRouter] DEBUG: EXEC #49 filename='/bin/true', triggers=['7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod', '/tmp/7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod']
+[CgroupManager] Added cgroup 24419 via bpftool
+[CgroupManager] Added cgroup 24763 via bpftool
+[CgroupManager] Added cgroup 24591 via bpftool
+[CgroupManager] Added cgroup 24677 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[', '/tmp/47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[']
+[EventRouter] DEBUG: EXEC #49 filename='/bin/true', triggers=['e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon', '/tmp/e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon']
+[EventRouter] DEBUG: EXEC #35 filename='/bin/true', triggers=['b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen', '/tmp/b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen']
+[EventRouter] DEBUG: EXEC #49 filename='/bin/true', triggers=['2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64', '/tmp/2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64']
+[EventRouter] ARM detected at event 89 for cgroup 24247
+[EventRouter] Discarded 88 pre-ARM events for cgroup 24247
+[EventRouter] ARM detected at event 104 for cgroup 24333
+[EventRouter] Discarded 103 pre-ARM events for cgroup 24333
+[DOCKER] Container exit code: 125
+[DOCKER][STDOUT] BEGIN
+/tmp/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot: missing operand
+Try '/tmp/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot_2025-12-09_13-29-26_48c59267_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+/tmp/7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod: missing operand
+Try '/tmp/7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod_2025-12-09_13-29-26_2e8140d2_container_stdout.txt
+[EventRouter] ARM detected at event 142 for cgroup 24505
+[EventRouter] Discarded 141 pre-ARM events for cgroup 24505
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+/tmp/bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon: missing operand
+Try '/tmp/bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon_2025-12-09_13-29-26_2d166abe_container_stdout.txt
+[EventRouter] ARM detected at event 120 for cgroup 24591
+[EventRouter] Discarded 119 pre-ARM events for cgroup 24591
+[EventRouter] ARM detected at event 88 for cgroup 24419
+[EventRouter] Discarded 87 pre-ARM events for cgroup 24419
+[EventRouter] ARM detected at event 109 for cgroup 24763
+[EventRouter] Discarded 108 pre-ARM events for cgroup 24763
+[DOCKER] Container exit code: 2
+[DOCKER][STDOUT] BEGIN
+/tmp/47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[: missing ']'
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[_2025-12-09_13-29-26_b4749028_container_stdout.txt
+[EventRouter] ARM detected at event 122 for cgroup 24677
+[EventRouter] Discarded 121 pre-ARM events for cgroup 24677
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen: can't open socket /var/run/acpid.socket: No such file or directory
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen_2025-12-09_13-29-26_e068e9b8_container_stdout.txt
+[DOCKER] Container exit code: 0
+[POOL] Collected 13 events for analysis (read from log file)
+[POOL] Running analyzers on 13 events for ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot
+[POOL] Analysis completed: 0 findings in 0.00s (12224 events/s)
+[AI-Integration] Submitted task: 48c59267
+[AI] 48c59267 queued for DeepSeek analysis
+[POOL] Collected 13 events for analysis (read from log file)
+[POOL] Running analyzers on 13 events for 7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod
+[POOL] Analysis completed: 0 findings in 0.00s (12397 events/s)
+[AI-Integration] Submitted task: 2e8140d2
+[AI] 2e8140d2 queued for DeepSeek analysis
+[POOL] Collected 13 events for analysis (read from log file)
+[POOL] Running analyzers on 13 events for bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon
+[POOL] Analysis completed: 0 findings in 0.00s (12462 events/s)
+[AI-Integration] Submitted task: 2d166abe
+[AI] 2d166abe queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 24333 via bpftool
+[POOL] Cleanup scheduled for 99fbdb687768
+[DockerWorker-6] ✓ Completed: 7775425f6801e652f1309e347998d7a340ad82ff3e273ef64fbfc0360ea0015a.30__chmod (13 events) (1.22s)
+[CgroupManager] Removed cgroup 24247 via bpftool
+[POOL] Cleanup scheduled for 44c191534eb8
+[DockerWorker-1] ✓ Completed: ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot (13 events) (1.23s)
+[CgroupManager] Removed cgroup 24505 via bpftool
+[POOL] Cleanup scheduled for e5a6c06b036a
+[DockerWorker-2] ✓ Completed: bfd9c1d6fb36a955acc76e19e7f1907f0f607fb640aa74ede51820cde78f3821.30__chcon (13 events) (1.23s)
+[POOL] Collected 12 events for analysis (read from log file)
+[POOL] Running analyzers on 12 events for 47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[
+[POOL] Analysis completed: 0 findings in 0.00s (11365 events/s)
+[AI-Integration] Submitted task: b4749028
+[AI] b4749028 queued for DeepSeek analysis
+[POOL] Collected 12 events for analysis (read from log file)
+[POOL] Running analyzers on 12 events for b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen
+[POOL] Analysis completed: 0 findings in 0.00s (11246 events/s)
+[AI-Integration] Submitted task: e068e9b8
+[AI] e068e9b8 queued for DeepSeek analysis
+[POOL] Collected 9 events for analysis (read from log file)
+[POOL] Running analyzers on 9 events for 2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64
+[POOL] Analysis completed: 0 findings in 0.00s (8512 events/s)
+[AI-Integration] Submitted task: 07ec7fec
+[AI] 07ec7fec queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 24763 via bpftool
+[POOL] Cleanup scheduled for 73fa4eee175f
+[DockerWorker-3] ✓ Completed: b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen (12 events) (1.22s)
+[CgroupManager] Removed cgroup 24419 via bpftool
+[POOL] Cleanup scheduled for 9475e596ea8b
+[DockerWorker-0] ✓ Completed: 47255fa5ab90ff4e673f166bafe49dde14f8d4bafaa47fd46d29a3d0a38240f4.30__[ (12 events) (1.27s)
+[CgroupManager] Removed cgroup 24677 via bpftool
+[POOL] Cleanup scheduled for 15cccb852694
+[DockerWorker-4] ✓ Completed: 2bec892fa565e67130d56fe402966b0379f26d00dda5dafabe4500ea8e6a202c.30__base64 (9 events) (1.22s)
+[AI-Integration] Job 6ef19859 analyzed via deepseek
+[AI-Integration] Job 2b1be3be analyzed via deepseek
+[AI-Integration] Job c0fbbfc0 analyzed via deepseek
+[AI-Integration] Job 5fea665d analyzed via deepseek
+[AI-Integration] Job 069ff341 analyzed via deepseek
+[AI-Integration] Job cf0618b2 analyzed via deepseek
+[AI-Integration] Job 4e5a4385 analyzed via deepseek
+[AI-Integration] Job 48c59267 analyzed via deepseek
+[AI-Integration] Job 2e8140d2 analyzed via deepseek
+[AI-Integration] Job 2d166abe analyzed via deepseek
+[AI-Integration] Job 07ec7fec analyzed via deepseek
+[AI-Integration] Job e068e9b8 analyzed via deepseek
+[AI-Integration] Job b4749028 analyzed via deepseek
+[POOL] Execution timed out for e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon after 30s
+[POOL] Killing container a08d87240149...
+[POOL] Container killed successfully
+[DOCKER] Container exit code: -1
+[POOL] Execution timed out - stopping BPF monitoring for cgroup 24591
+[CgroupManager] Removed cgroup 24591 via bpftool
+[POOL] Collected 14 events for analysis (read from log file)
+[POOL] Running analyzers on 14 events for e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon
+[POOL] Analysis completed: 0 findings in 0.00s (13323 events/s)
+[AI-Integration] Submitted task: a7ead1a3
+[AI] a7ead1a3 queued for DeepSeek analysis
+[CgroupManager] bpftool delete failed: Command '['sudo', '/usr/sbin/bpftool', 'map', 'delete', 'id', '60', 'key', 'hex', '0f', '60', '00', '00', '00', '00', '00', '00']' returned non-zero exit status 254.
+[POOL] Cleanup scheduled for a08d87240149
+[DockerWorker-5] ✓ Completed: e4e69031993d38e11bb221b4db24384e90dc3caf08d31967b53982c92b358754.31__kacpimon (14 events) (31.27s)
+[DOCKER_POOL] All tasks completed, stopping workers...
+[POOL] Failed to kill container a08d87240149: 409 Client Error for http+docker://localhost/v1.50/containers/a08d872401495ee0cd53fe7779b09dbfe2edc6b73a0ec0161b363e2d02540eb9/kill: Conflict ("cannot kill container: a08d872401495ee0cd53fe7779b09dbfe2edc6b73a0ec0161b363e2d02540eb9: container a08d872401495ee0cd53fe7779b09dbfe2edc6b73a0ec0161b363e2d02540eb9 is not running")
+[MPK] Stats integrity verified: Python stats match MPK-anchored stats.
+[DOCKER_POOL] All workers stopped
+
+================================================================================
+[DOCKER_POOL] Execution Summary
+================================================================================
+Total tasks:     14
+Successful:      14   (100.0%) - Normal execution
+System Failed:   0    (0.0%) - Docker/Infrastructure errors
+
+Performance:
+  Total time:    46.35s
+  Average time:  3.31s per task
+  Throughput:    0.30 tasks/s
+
+By Architecture:
+  62_64bit    : 14 OK, 0 Crash, 0 Fail / 14 Total
+================================================================================
+
+================================================================================
+
+
+
+[EVENT ROUTER STATS]
+  Total events routed: 184
+  Events compressed: 39
+  Compression ratio: 17.5% (223 -> 184)
+  Events dropped: 0
+  Unknown cgroups: 0
+  Queue overflows: 0
+  Active cgroups: 0
+
+  Shard distribution (16 shards):
+    Shard 1: 13 events, 0 overflows, 2 compressed
+    Shard 3: 25 events, 0 overflows, 4 compressed
+    Shard 5: 18 events, 0 overflows, 4 compressed
+    Shard 7: 13 events, 0 overflows, 12 compressed
+    Shard 9: 44 events, 0 overflows, 5 compressed
+    Shard 11: 25 events, 0 overflows, 4 compressed
+    Shard 13: 23 events, 0 overflows, 4 compressed
+    Shard 15: 23 events, 0 overflows, 4 compressed
+[MONITOR_READER] Stopping...
+
+[MONITOR] Stopping global monitor process...
+[MONITOR_READER] Monitor process terminated
+[MONITOR_READER] Stopped
+[MONITOR] ✓ Global monitor process terminated
+
+[AI] Waiting for DeepSeek analysis to complete...
+[DEEPSEEK] Waiting for 0 tasks to complete...
+[AI-Integration] Job a7ead1a3 analyzed via deepseek
+[DEEPSEEK] All tasks completed
+[AI] Analysis complete:
+  Total analyzed: 14
+  Successful: 14
+  Failed: 0
+  In progress: 0
+  Queued: 0
+[AI-Integration] Waiting for tasks to complete...
+[AI-Integration] Stopped
+[AI] ✓ DeepSeek integration stopped
+
+[EVENT ROUTER] Statistics:
+  Events routed: 184
+  Unknown cgroups: 0
+  Queue overflows: 0
+
+[MONITOR READER] Statistics:
+  Lines read: 2187
+  Events parsed: 2187
+  Parse errors: 0
+
+[WRAPPER] Total execution time: 49.83 seconds
+Would you like to exit the wrapper? [y/N]: 
+Monitor terminated.
+Terminating report window...
+[WRAPPER] Performing final docker cleanup (prune)...
+[WRAPPER] ✓ Docker container prune completed

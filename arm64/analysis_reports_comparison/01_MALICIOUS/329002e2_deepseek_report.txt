@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `019c211d7d2ed8ad1cfae96bc77821b5cb9898957a1fd18fdea6b79e8f52d721` | **Job ID:** `329002e2`
+**Date:** 2025-12-09 13:22:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Memory Corruption`, `Shellcode Execution`
+- **Standard Label:** `HEUR:Trojan.Linux.Shellcode`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program executed shellcode by manipulating memory permissions to make a region executable, indicating memory corruption and code injection behavior. It successfully ran, forked a child process, performed I/O operations, and exited normally, suggesting it completed its intended malicious payload.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation for execution (mprotect with PROT_EXEC)
+- Process forking (clone)
+- Multiple mprotect calls changing permissions
+
+### 🔍 Key Evidence
+- mprotect call with read=1, write=1, exec=1 (PROT_EXEC) at timestamp 1421580
+- Local alert: Memory Corruption (Shellcode) with CVSS 9.3 score
+- Program executed from /tmp with successful exit code 0
+
+### 💡 Recommendations
+Perform deeper static analysis on the binary to identify the shellcode content, check for network connections or file system modifications that might have been missed in this trace, and analyze the child process behavior more thoroughly.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter 6 numbers unsorted 
+
+0 0 31956 4194896 4849696 1407187904
+```

@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `71ef590b32ef90a021be7bafd074b7698ffefab7f935e371568bef5eb2543f19.elf` | **Job ID:** `d8c3c39c`
+**Date:** 2025-12-09 17:58:01
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes command-and-control (C2) connections, downloads and executes additional payloads, and performs network reconnaissance. It exhibits classic Mirai behaviors including forking multiple processes, connecting to remote IPs via sockets, and attempting to kill competing processes. The malware successfully executed its core functionality before exiting cleanly.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket connections to remote IP addresses (non-localhost)
+- Forking/cloning multiple child processes
+- Downloading and executing additional binaries from /usr/bin
+- Killing processes with SIGKILL (signal 9)
+- Network reconnaissance (STAT calls on /etc and /etc/daemon.cfg)
+- Writing binary data (ELF headers) to file descriptors
+
+### 🔍 Key Evidence
+- Multiple SOCKET/CONNECT/SENDTO/RECVFROM events to remote addresses (e.g., 02000050c6120012fc2a004148320041...) indicating C2 communication
+- Execution of multiple binaries from /usr/bin with random-looking names (hvarlneysj, gvoptujeazrxmq, ylrzouqxqpzd, etc.)
+- KILL events targeting specific PIDs with SIGKILL (signal 9)
+- STAT calls on system paths (/etc, /etc/daemon.cfg) for reconnaissance
+- WRITE events containing ELF headers and binary data
+- Multiple TRACK_FORK events showing process tree expansion
+- Clean exit code 0 after completing malicious activities
+
+### 💡 Recommendations
+Isolate infected systems immediately. Analyze network traffic for C2 communication patterns. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Update IoT device credentials and firmware. Block identified C2 IP addresses at network perimeter.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

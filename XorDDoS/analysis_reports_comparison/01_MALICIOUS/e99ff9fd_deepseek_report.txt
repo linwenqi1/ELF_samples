@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `166564e90d19f28054245a9fd8bffe9ca32426036828858b87aaad49f2ce4fa9.elf` | **Job ID:** `e99ff9fd`
+**Date:** 2025-12-09 17:55:10
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Persistence`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that attempts to establish persistence via system service installation, performs network reconnaissance, and communicates with external C2 servers. The malware writes a shell script to create a service, attempts to use chkconfig/update-rc.d for persistence, performs network socket operations, and communicates with external IP addresses.
+
+### ⚠️ Suspicious Behaviors
+- Service persistence installation attempts
+- Network socket creation and communication
+- Multiple process forking and execution
+- Attempts to modify system configuration files
+- External C2 communication
+
+### 🔍 Key Evidence
+- Writes shell script with service configuration to file descriptor 3
+- Attempts to execute chkconfig and update-rc.d for service persistence
+- Creates raw sockets (SOCKET events with domain 2, type 2)
+- Sends and receives network data via SENDTO/RECVFROM
+- Connects to external address via CONNECT with encoded IP data
+- Multiple TRACK_FORK events creating child processes
+- Attempts to access /etc/crontab and other system paths
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic for C2 communication patterns. Check for installed services with suspicious names. Review /etc/crontab and service directories for malicious entries. Capture memory dump for further analysis of the malware's capabilities.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

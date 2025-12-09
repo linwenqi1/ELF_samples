@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b1b32e4ca117a393ad2dec01b112819864f34261a56b0dbebe5263840f769076.elf` | **Job ID:** `8d52c031`
+**Date:** 2025-12-09 17:57:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Privilege Escalation`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence, communicates with C2 servers, and performs network reconnaissance. The program executes from /tmp, creates multiple child processes, attempts to install itself as a service via chkconfig/update-rc.d, establishes socket connections to external IP addresses, and performs network data exfiltration.
+
+### ⚠️ Suspicious Behaviors
+- Service persistence installation attempts
+- Multiple socket connections to external addresses
+- Network data transmission (SENDTO events)
+- Forking multiple child processes
+- Writing shell script content to establish startup service
+- Binary data transmission containing ELF headers and executable code
+
+### 🔍 Key Evidence
+- WRITE event containing shell script with chkconfig headers for service persistence
+- Multiple SOCKET/CONNECT events to external IP addresses (hex encoded addresses in CONNECT events)
+- SENDTO events with data transmission
+- Execution of chkconfig and update-rc.d binaries for service installation
+- Binary data writes containing ELF headers (0x7F 0x45 0x4C 0x46)
+- Multiple TRACK_FORK events creating child processes for different functions
+- Writing encoded/encrypted data streams to network sockets
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identify C2 servers. Check for persistence mechanisms in /etc/init.d/, /etc/rc.local, and crontab. Monitor for unusual network connections on ports 23, 2323, 48101. Consider network-level blocking of identified C2 IPs.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

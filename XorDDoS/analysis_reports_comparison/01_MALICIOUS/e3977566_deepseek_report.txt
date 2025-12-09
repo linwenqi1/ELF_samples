@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0f00c2e074c6284c556040012ef23357853ccac4ad1373d1dea683562dc24bca.elf` | **Job ID:** `e3977566`
+**Date:** 2025-12-09 17:55:34
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This program exhibits classic Mirai botnet behavior: it attempts to establish persistence via service configuration, performs network reconnaissance, and attempts to connect to a potential C2 server. The program successfully executed and attempted to modify system services and communicate externally.
+
+### ⚠️ Suspicious Behaviors
+- Attempted service persistence via chkconfig/update-rc.d
+- Network socket creation and connection to encoded address
+- Multiple process forking and execution of system utilities
+- Writing shell script with service configuration headers
+
+### 🔍 Key Evidence
+- WRITE event with shell script containing '# chkconfig: 12345 90 90' header (typical for service persistence)
+- EXEC events attempting to locate chkconfig utility in multiple system paths
+- SOCKET and CONNECT events with encoded address (potential C2 connection)
+- DUP2 events redirecting file descriptors (common in botnet process management)
+- Multiple CLONE and TRACK_FORK events indicating process spawning
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic to/from the encoded address, check for unauthorized service installations, and scan for additional payloads. The encoded CONNECT address should be decoded for further investigation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

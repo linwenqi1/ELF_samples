@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `84eb28d8489f2b80f0dcb6822fc364dc785ace90af77aaf38a3f8e56513b25ae` | **Job ID:** `00569591`
+**Date:** 2025-12-09 13:22:50
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** `Tool.Linux.AVLTreeDemo`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a benign AVL tree demonstration utility that successfully executed and provided interactive menu options for tree operations. It performed standard I/O operations and memory management without any malicious activities.
+
+### 🔍 Key Evidence
+- Program executed successfully with exit code 0
+- Output shows interactive menu for AVL tree operations (insert, delete, search, traversal)
+- No network connections, file encryption, privilege escalation, or sensitive system path access
+- Memory protection calls (mprotect) are typical for legitimate programs managing memory permissions
+- TRACK_QEMU event is benign (environment emulation for non-x86 binaries)
+- All activities are consistent with normal program execution in Docker container
+
+### 💡 Recommendations
+No action needed. This appears to be a legitimate educational or demonstration program for data structure algorithms.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the Step to Run : 
+	1: Insert a node into AVL tree
+	2: Delete a node in AVL tree
+	3: Search a node into AVL tree
+	4: printPreOrder (Ro L R) Tree
+	5: printInOrder (L Ro R) Tree
+	6: printPostOrder (L R Ro) Tree
+	7: printAVL Tree
+	0: EXIT
+
+		Exiting, Thank You !!
+```

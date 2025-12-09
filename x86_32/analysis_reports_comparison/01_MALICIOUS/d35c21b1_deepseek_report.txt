@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d9defdb85ec751761c10fd10dece1b0b0100843b16f6236c1b29588081ea5677` | **Job ID:** `d35c21b1`
+**Date:** 2025-12-09 17:50:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Memory Corruption`, `Shellcode Execution`
+- **Standard Label:** `HEUR:Trojan.Linux.Shellcode`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program executed shellcode in memory by manipulating memory protection permissions. It started normally, forked a child process, and performed multiple mprotect calls to change memory regions from read/write to read/write/executable, indicating self-modifying code execution. This is characteristic of memory corruption exploits and shellcode payloads.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation for code execution
+- Forking child process
+- Multiple mprotect calls with PROT_EXEC flag
+
+### 🔍 Key Evidence
+- mprotect call with PROT_EXEC permission (read:1, write:1, exec:1)
+- Local alert for Memory Corruption (Shellcode) with CVSS 9.3 score
+- Sequence of mprotect calls changing permissions from RW to RWX
+
+### 💡 Recommendations
+Isolate and analyze the binary further for shellcode content. Check for network connections or file system modifications that may have occurred. Consider this a high-risk memory corruption exploit attempt.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

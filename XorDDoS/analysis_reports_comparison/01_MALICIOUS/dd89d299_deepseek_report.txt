@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5.elf` | **Job ID:** `dd89d299`
+**Date:** 2025-12-09 17:57:12
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Persistence`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence, downloads additional payloads, and attempts to connect to C2 servers. The malware writes a startup script, attempts to use chkconfig/update-rc.d for persistence, downloads an ELF binary via HTTP, and establishes network connections to external IPs.
+
+### ⚠️ Suspicious Behaviors
+- Writes startup script to establish persistence
+- Attempts to modify system services via chkconfig/update-rc.d
+- Downloads ELF binary via HTTP GET request
+- Establishes multiple network connections to external addresses
+- Creates and writes to suspicious files in /tmp
+- Uses multiple process forks to execute system utilities
+
+### 🔍 Key Evidence
+- WRITE event with startup script content: '#!/bin/sh\n# chkconfig: 12345 90 90\n# description: 8642022960d919'
+- EXEC events attempting to run chkconfig from multiple system paths
+- EXEC events attempting to run update-rc.d
+- HTTP GET request to '/dd.rar' with User-Agent containing 'zh-cn'
+- Multiple WRITE events writing ELF binary data (starting with '\x7fELF') to file descriptor 6
+- SOCKET and CONNECT events to external IP addresses (hex encoded)
+- WRITE event with suspicious string: 'cerfodennwbzggxpriscccoowzxtmigp'
+- STAT events checking for /var/run/gcc.pid and system library paths
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze downloaded ELF binary (from HTTP GET). Block identified C2 IP addresses. Check for persistence mechanisms in /etc/init.d, /etc/rc.local, and crontab. Monitor for unusual network traffic on ports 23, 2323, 48101 (common Mirai C2 ports).
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

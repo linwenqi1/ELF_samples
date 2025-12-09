@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8f5ebb5b1c09744b4bb0087dca66360530533a1913151eaa04f17b691aae5a6b.elf` | **Job ID:** `d1c925b1`
+**Date:** 2025-12-09 17:54:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Persistence`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Linux backdoor that attempts to establish persistence by creating a startup script and using system service management tools. It executes from /tmp, writes a shell script with chkconfig headers, then attempts to locate and execute chkconfig and update-rc.d binaries to register itself as a system service. It spawns multiple processes and shells, exhibiting behavior consistent with Mirai-family malware establishing persistence mechanisms.
+
+### ⚠️ Suspicious Behaviors
+- Service persistence attempt
+- Shell script creation with service headers
+- Multiple process forking
+- System service management tool execution
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- EXEC event for /bin/sh (PID 62782) with suspicious shell execution
+- WRITE event containing shell script with chkconfig headers (PID 62743)
+- Multiple EXEC events searching for chkconfig binary in various system paths (PID 62752)
+- EXEC event for /bin/update-rc.d (PID 62779)
+- TRACK_FORK events showing extensive process creation chain
+- Execution from /tmp/8f5ebb5b1c09744b4bb0087dca66360530533a1913151eaa04f17b691aae5a6b.elf
+
+### 💡 Recommendations
+Isolate affected system, examine created service files, check for unauthorized startup entries in /etc/init.d or systemd, monitor for network connections to C2 servers, and analyze the shell script content for additional malicious commands.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,43 @@
+# DeepSeek Malware Analysis Report
+**Target:** `52f74b25e1c3de023526ea8d8d3f93990523506dd3e5535cc53695092c1f982b.elf` | **Job ID:** `205a69f0`
+**Date:** 2025-12-09 17:57:47
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Evasion`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes multiple C2 connections, downloads and executes additional payloads, kills competing processes, and attempts to maintain persistence. The program successfully executed its malicious functionality including network communication, process creation, and system manipulation.
+
+### ⚠️ Suspicious Behaviors
+- Multiple network socket connections to external IP addresses (non-localhost)
+- Execution of numerous suspicious binaries from /usr/bin with random names
+- KILL signals sent to multiple processes (sig 9 - SIGKILL)
+- Repeated pattern of SOCKET, SENDTO, RECVFROM, CONNECT syscalls
+- Writing ELF headers and binary data to file descriptors
+- Multiple process forking and cloning creating a process tree
+- Access to /etc/daemon.cfg configuration file
+- Writing shell script content to file descriptors
+
+### 🔍 Key Evidence
+- Multiple CONNECT events with encoded network addresses (e.g., "02000050c6120012fc2a004148320041000000007c1a0041100000000000000000000000000000001e006096324aeb206600000000000000e019004100000000") indicating C2 communication
+- Execution of suspicious binaries: /usr/bin/hjjhrepzl, /usr/bin/callkvnl, /usr/bin/ityunztbso, /usr/bin/ygecrcampb, /usr/bin/ooqkpkgpnqilmx, etc.
+- KILL events targeting multiple PIDs (36, 73, 131, 168, 213, 270) with SIGKILL (signal 9)
+- Writing ELF headers ("\x7fELF\x01\x01\x01") and binary data to file descriptors
+- Access to /etc/daemon.cfg file suggesting persistence mechanism
+- Writing shell script content: "#!/bin/sh\n# chkconfig: 12345 90 90\n# description: pzielsibaqafd\n"
+- Multiple SOCKET, SENDTO, RECVFROM events with consistent patterns indicating botnet command and control
+- Process tree creation through repeated CLONE and TRACK_FORK events
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identify C2 servers. Collect memory and disk artifacts for forensic analysis. Check for persistence mechanisms in /etc/ directories. Block outbound connections to identified C2 IPs. Update all IoT/embedded device credentials.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

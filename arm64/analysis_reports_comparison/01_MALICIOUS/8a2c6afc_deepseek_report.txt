@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d316082a02322c167c8d575300c7a11140ebbc54dcdaffa4bcd08c289aa36f03` | **Job ID:** `8a2c6afc`
+**Date:** 2025-12-09 13:22:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Shellcode`, `Memory Corruption`, `Backdoor`
+- **Standard Label:** `HEUR:Trojan.Linux.Shellcode`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program executed shellcode-like behavior by manipulating memory permissions to create executable regions, suggesting an attempt to run injected code. Despite exiting with an error message indicating incorrect parameters, it performed suspicious memory operations before termination, indicating malicious intent rather than a simple failure.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation for execution (mprotect with PROT_EXEC)
+- Process forking (clone) potentially for persistence or evasion
+- Multiple mprotect calls altering memory protection in quick succession
+
+### 🔍 Key Evidence
+- mprotect call with read:1, write:1, exec:1 flags (making memory executable)
+- Local alert for Memory Corruption (Shellcode) with CVSS 9.3 score
+- Sequence of mprotect calls changing permissions rapidly (typical of shellcode setup)
+- Process forking immediately after memory manipulation
+
+### 💡 Recommendations
+Isolate and analyze the binary further in a controlled environment. Check for embedded shellcode or payloads. Monitor for network connections or file system changes that might occur with correct parameters. Consider this a potential backdoor or exploit attempt.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+<<<< TEST FUNCTION >>>>
+<<<< TEST DONE >>>>
+wrong number of parmeters
+```

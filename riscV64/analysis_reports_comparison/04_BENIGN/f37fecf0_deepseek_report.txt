@@ -1,0 +1,66 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b262a5edc2ab402fcbf62c69f0f68f7096988fbeff53864392f603aaeb1e79d5` | **Job ID:** `f37fecf0`
+**Date:** 2025-12-09 17:12:37
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** `Tool.Linux.PerceptronTrainer`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a benign machine learning utility that implements a perceptron training algorithm. It successfully executed three test cases, training models on different datasets and making predictions. The execution completed normally with exit code 0, showing no malicious behavior.
+
+### 🔍 Key Evidence
+- Execution output shows perceptron training iterations with weight updates and convergence messages
+- No network connections, file encryption, privilege escalation, or sensitive system path access observed
+- Syscall trace shows only standard I/O operations, memory protection adjustments, and benign QEMU emulation
+- No local alerts triggered during execution
+- Program executed from /tmp as expected in Docker environment
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate machine learning demonstration or educational program.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+------- Test 1 -------
+Model before fit: <1, 1, 1>
+	Iter   0: Training weights: <-0.4, 1, 0.6>	Avg error: 0.0400
+	Iter   1: Training weights: <-0.4, 1, 0.6>	Avg error: 0.0000
+Converged after 2 iterations.
+Model after fit: <-0.4, 1, 0.6>
+Predict for x=(5,-3): -1
+ ...passed
+Predict for x=(5, 8):  1
+ ...passed
+Press ENTER to continue...
+------- Test 2 -------
+Model before fit: <1, 1, 1>
+	Iter   0: Training weights: <0.548, 1.598, 0.4>	Avg error: 0.0120
+	Iter   1: Training weights: <0.562, 1.54, 0.6>	Avg error: 0.0040
+	Iter   2: Training weights: <0.516, 1.664, 0.4>	Avg error: 0.0120
+	Iter   3: Training weights: <0.53, 1.606, 0.6>	Avg error: 0.0040
+	Iter   4: Training weights: <0.53, 1.606, 0.6>	Avg error: 0.0000
+Converged after 5 iterations.
+Model after fit: <0.53, 1.606, 0.6>
+Predict for x=( 0.33,-0.34):  1
+ ...passed
+Predict for x=( 1.98, 2.42):  1
+ ...passed
+Predict for x=( 0.63,-0.72): -1
+ ...passed
+Predict for x=(-1.58,-2.20): -1
+ ...passed
+Predict for x=( 1.51, 0.01):  1
+ ...passed
+Press ENTER to continue...
+------- Test 3 -------
+Model before fit: <1, 1, 1, 1, 1, 1, 1>
+	Iter   0: Training weights: <0.358, -0.272, 0.202, 0.2541, -0.4051, -0.2585, 5.551e-17>	Avg error: 0.1160
+	Iter   1: Training weights: <0.136, -0.008, 0.024, -0.07352, -0.5366, -0.4012, 0.4>	Avg error: 0.0560
+	Iter   2: Training weights: <0.098, -0.064, -0.154, -0.4949, -0.6109, -0.5884, 0.4>	Avg error: 0.0480
+	Iter   3: Training weights: <-0.126, -0.132, -0.102, -0.4437, -0.7336, -0.5126, 0.6>	Avg error:
+```

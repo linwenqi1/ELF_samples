@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `75bfd448e4274cc4e5804c43768f62a36ccb3fc3b1df06e14d9c892daa2cde19.elf` | **Job ID:** `72071909`
+**Date:** 2025-12-09 17:56:50
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes persistence via service configuration, attempts to modify system files, and connects to external C2 servers. The program writes a shell script to create a service, attempts to modify /etc/crontab (but fails due to missing file), and establishes multiple network connections to external IPs with encoded data transmission.
+
+### ⚠️ Suspicious Behaviors
+- Service persistence creation via chkconfig/update-rc.d
+- Attempted modification of system cron file (/etc/crontab)
+- Multiple external network connections with encoded data
+- Binary data transmission over sockets
+- Forking multiple child processes for different tasks
+
+### 🔍 Key Evidence
+- WRITE event with shell script containing service configuration: '#!/bin/sh\n# chkconfig: 12345 90 90\n# description: 75bfd448e4274c'
+- EXEC events searching for chkconfig and update-rc.d binaries to establish persistence
+- SOCKET and CONNECT events to external IP addresses (not localhost)
+- WRITE events transmitting encoded strings like 'yscsaeryatcspcpackaxuujvdfqyztry' and binary ELF data
+- STAT events checking for /var/run/gcc.pid and other system paths
+- Multiple TRACK_FORK events creating child processes for different functions
+
+### 💡 Recommendations
+Isolate infected systems, block identified C2 IPs, remove created service entries, and monitor for similar network patterns. The binary should be analyzed for specific C2 domains and propagation methods.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

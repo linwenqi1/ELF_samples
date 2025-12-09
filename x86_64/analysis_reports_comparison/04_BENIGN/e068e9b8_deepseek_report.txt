@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen` | **Job ID:** `e068e9b8`
+**Date:** 2025-12-09 13:29:50
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** `Tool.Linux.acpi_listen`
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> The program is the standard Linux utility 'acpi_listen' which attempts to connect to the ACPI daemon socket to listen for power management events. It failed to start because the required ACPI daemon socket (/var/run/acpid.socket) does not exist in this Docker container environment. No malicious behavior was observed.
+
+### 🔍 Key Evidence
+- Exit code 1 with error message: 'can't open socket /var/run/acpid.socket: No such file or directory'
+- Program attempted to create a UNIX socket (domain: 1) and connect to /var/run/acpid.socket
+- No network connections to external IPs, no file encryption, no privilege escalation attempts
+- No access to sensitive system paths beyond the expected ACPI socket
+- TRACK_QEMU event is benign (emulation of non-x86 binary as per context)
+
+### 💡 Recommendations
+No further action needed. This is a legitimate system utility that requires the ACPI subsystem which is not present in this containerized environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+b76cf4cb7c85e9580fbf9a8c36c444369589a4a90aa166561ee3f8cba8a581ce.31__acpi_listen: can't open socket /var/run/acpid.socket: No such file or directory
+```

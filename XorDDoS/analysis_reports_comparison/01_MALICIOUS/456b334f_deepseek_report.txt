@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `76741721aede86e5d9a78da5dd349cc7f418a993eba77457c00b27aa627f9882.elf` | **Job ID:** `456b334f`
+**Date:** 2025-12-09 17:57:12
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes command-and-control (C2) connections, downloads and executes additional payloads, and performs process termination activities. The program successfully started, created multiple network sockets (TCP/UDP), connected to external IP addresses (hex-encoded CONNECT events), sent/received data, and executed numerous suspicious binaries from /usr/bin with random names. It also performed STAT operations on /etc and /etc/daemon.cfg (common Mirai configuration check), and terminated processes via KILL signals. The behavior matches Mirai's pattern of establishing C2 channels and downloading secondary payloads.
+
+### ⚠️ Suspicious Behaviors
+- Multiple external network connections to non-localhost addresses
+- Execution of randomly-named binaries from /usr/bin
+- Process termination via KILL signals
+- Repeated socket creation and data transmission
+- Checking system configuration files (/etc/daemon.cfg)
+- Forking multiple child processes
+- High volume of network activity
+
+### 🔍 Key Evidence
+- SOCKET events with domain=2 (AF_INET) and CONNECT to external addresses (hex-encoded IP:port)
+- Multiple EXEC events of suspicious binaries like /usr/bin/ewljudzwuelzi, /usr/bin/fhcacpgd, etc.
+- KILL events targeting specific PIDs with SIGKILL (9)
+- STAT operations on /etc and /etc/daemon.cfg
+- SENDTO/RECVFROM events indicating data exchange
+- TRACK_FORK events showing process proliferation
+- WRITE events containing binary data and ELF headers
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identify C2 servers. Check for persistence mechanisms (crontab, systemd). Collect memory and disk artifacts for further analysis. Block identified C2 IPs at firewall. Update IoT/embedded device credentials.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

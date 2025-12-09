@@ -1,0 +1,44 @@
+# DeepSeek Malware Analysis Report
+**Target:** `89597ef7a998a273f9e4b0b7913cfe7461c815204e6866d78b6c5efbd37389d5` | **Job ID:** `53c59666`
+**Date:** 2025-12-09 17:50:37
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Memory Corruption`, `Shellcode Execution`
+- **Standard Label:** `HEUR:Trojan.Linux.ShellcodeLoader`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits clear malicious behavior focused on memory manipulation for shellcode execution. Despite presenting as an AVL tree utility in its user interface, the system call trace reveals multiple mprotect calls that modify memory permissions to executable (PROT_EXEC), a classic technique for shellcode deployment. The program successfully executed and exited cleanly (exit code 0), indicating it completed its intended malicious operations.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation for execution
+- Suspicious memory allocation patterns
+- Forking behavior potentially for persistence
+
+### 🔍 Key Evidence
+- mprotect call with PROT_EXEC flag (ts: 3410095) enabling executable memory
+- Abnormally large mmap allocation of 1,048,560 pages detected
+- Multiple mprotect calls with varying permission changes
+- Program execution from /tmp directory
+
+### 💡 Recommendations
+Isolate and analyze the binary further for shellcode content. Check for network connections or file system modifications that may have occurred. Consider this a potential loader for more sophisticated payloads.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the Step to Run : 
+	1: Insert a node into AVL tree
+	2: Delete a node in AVL tree
+	3: Search a node into AVL tree
+	4: printPreOrder (Ro L R) Tree
+	5: printInOrder (L Ro R) Tree
+	6: printPostOrder (L R Ro) Tree
+	7: printAVL Tree
+	0: EXIT
+
+		Exiting, Thank You !!
+```

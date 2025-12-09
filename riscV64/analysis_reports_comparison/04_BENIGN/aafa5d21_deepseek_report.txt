@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c1ed77b0c84c91ce2521fb73212235fd387c695bad6efcdd06a50945f5c22580` | **Job ID:** `aafa5d21`
+**Date:** 2025-12-09 17:12:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 9/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** `Tool.Linux.GraphAlgorithm`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program appears to be a benign graph algorithm utility (likely Dijkstra's algorithm implementation) that calculates shortest paths in a graph. It successfully executed, prompting for user input (number of vertices and adjacency matrix), performed memory management operations, and displayed formatted output without exhibiting any malicious behaviors.
+
+### 🔍 Key Evidence
+- Program executed successfully with exit code 0 and produced expected algorithmic output
+- No network connections, file encryption, privilege escalation, or sensitive system path access observed
+- Memory protection calls (mprotect) are consistent with normal program memory management and not indicative of shellcode execution
+- TRACK_QEMU event is benign (emulation of non-x86 binary) and not anti-analysis
+- All file operations are limited to standard I/O (reads/writes to file descriptors 1, 3, 4)
+- No evidence of persistence mechanisms, C2 communication, or payload delivery
+
+### 💡 Recommendations
+No further action required. The program appears to be a legitimate graph algorithm utility. If additional context is needed, consider analyzing the binary's source code or checking for known signatures.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the number of vertices: Enter the adj matrix: 
+Node	Dist
+```

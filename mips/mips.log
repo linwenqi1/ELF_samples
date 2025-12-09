@@ -1,0 +1,1246 @@
+[MPK] Protection Keys allocated: Config Key=1, FD Key=2
+[MPK] FD Integrity Guard initialized (Key 2)
+[SCAN] Analyzing executables in: /home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-mips
+[SCAN] Found 29 supported executable(s)
+Launched vulnerability report window.
+
+[POOL MODE] Using Docker pool with 7 concurrent workers
+[POOL MODE] Queue strategy: grouped
+[MONITOR] Starting global monitor process...
+[MONITOR] Command: sudo /home/zzh/Compass-Proj1/MirrorShield/Wrapper/monitor
+[CgroupManager] Warning: No BPF object and no pinned map found
+[CgroupManager] Will use bpftool for map operations
+[MONITOR] Global monitor started successfully (PID: 46870)
+[MONITOR_READER] Started reading monitor output
+[POOL MODE] Performing BPF health check and warm-up...
+[POOL MODE] Step 1/3: Basic stabilization...
+[POOL MODE] Step 2/3: Probe container test - warming up BPF...
+[DOCKER] Selected image for libc=glibc: ubuntu:24.04
+[POOL MODE] Probe: PID=46985, cgroup=27816
+[CgroupManager] Added cgroup 27816 via bpftool
+[CgroupManager] Removed cgroup 27816 via bpftool
+[POOL MODE] ✓ Probe container completed - BPF warmed up
+[POOL MODE] Step 3/3: Final stabilization (0.5s)...
+[POOL MODE] ✓ BPF health check PASSED - ready for concurrent execution
+Loaded Provider: deepseek | Model: deepseek-chat
+[AI-Integration] Initialized with max_workers=7
+[AI-Integration] Current Provider: deepseek
+[AI-Integration] Started worker pool
+[AI] ✓ DeepSeek AI analysis enabled (7 workers)
+[DOCKER_POOL] Submitted 29 tasks to queue (queue size: 29)
+[DOCKER_POOL] Starting 7 workers...
+[DockerWorker-0] Starting: 880026daedbb54b15f2eba8267cf09ee6bcccea69fbb02c61bdb8c94d21a789f (8_32bit)
+[DockerWorker-1] Starting: 9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd (8_32bit)
+[DockerWorker-2] Starting: 9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d (8_32bit)
+[DockerWorker-3] Starting: 44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2 (8_32bit)
+[ANALYSISLOG] 9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d -> analysislog/9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d_2025-12-09_13-44-54_c5f54592.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[ANALYSISLOG] 9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd -> analysislog/9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd_2025-12-09_13-44-54_24b14b75.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[DockerWorker-4] Starting: f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af (8_32bit)
+[ANALYSISLOG] f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af -> analysislog/f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af_2025-12-09_13-44-54_fffd76ca.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[ANALYSISLOG] 44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2 -> analysislog/44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2_2025-12-09_13-44-54_1643af3f.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[DockerWorker-5] Starting: 476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5 (8_32bit)
+[ANALYSISLOG] 880026daedbb54b15f2eba8267cf09ee6bcccea69fbb02c61bdb8c94d21a789f -> analysislog/880026daedbb54b15f2eba8267cf09ee6bcccea69fbb02c61bdb8c94d21a789f_2025-12-09_13-44-54_94bfeeed.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[DockerWorker-6] Starting: a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd (8_32bit)
+[DOCKER_POOL] 7 workers started
+[DOCKER_POOL] Waiting for all tasks to complete...
+[ANALYSISLOG] 476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5 -> analysislog/476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5_2025-12-09_13-44-54_4ea5e9fe.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[ANALYSISLOG] a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd -> analysislog/a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd_2025-12-09_13-44-54_d2556f9f.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Added cgroup 27988 via bpftool
+[CgroupManager] Added cgroup 27902 via bpftool
+[CgroupManager] Added cgroup 28246 via bpftool
+[CgroupManager] Added cgroup 28074 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d', '/tmp/9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d']
+[CgroupManager] Added cgroup 28418 via bpftool
+[EventRouter] DEBUG: EXEC #50 filename='/bin/true', triggers=['9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd', '/tmp/9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af', '/tmp/f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af']
+[CgroupManager] Added cgroup 28160 via bpftool
+[CgroupManager] Added cgroup 28332 via bpftool
+[EventRouter] DEBUG: EXEC #50 filename='/bin/true', triggers=['44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2', '/tmp/44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5', '/tmp/476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5']
+[EventRouter] DEBUG: EXEC #35 filename='/bin/true', triggers=['a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd', '/tmp/a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd']
+[EventRouter] ARM detected at event 106 for cgroup 27902
+[EventRouter] Discarded 105 pre-ARM events for cgroup 27902
+[EventRouter] ARM detected at event 89 for cgroup 27988
+[EventRouter] Discarded 88 pre-ARM events for cgroup 27988
+[EventRouter] ARM detected at event 106 for cgroup 28246
+[EventRouter] Discarded 105 pre-ARM events for cgroup 28246
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Airtun-ng 1.2 rc1 - (C) 2006-2013 Thomas d'Otreppe
+  Original work: Martin Beck
+  http://www.aircrack-ng.org
+
+  usage: airtun-ng <options> <replay interface>
+
+      -x nbpps         : number of packets per second (default: 100)
+      -a bssid         : set Access Point MAC address
+                       : In WDS Mode this sets the Receiver
+      -i iface         : capture packets from this interface
+      -y file          : read PRGA from this file
+      -w wepkey        : use this WEP-KEY to encrypt packets
+      -t tods          : send frames to AP (1) or to client (0)
+                       : or tunnel them into a WDS/Bridge (2)
+      -r file          : read frames out of pcap file
+
+  WDS/Bridge Mode options:
+      -s transmitter   : set Transmitter MAC address for WDS Mode
+      -b               : bidirectional mode. This enables communication
+                       : in Transmitter's AND Receiver's networks.
+                       : Works only if you can see both stations.
+
+  Repeater options:
+      --repeat         : activates repeat mode
+      --bssid <mac>    : BSSID to repeat
+      --netmask <mask> : netmask for BSSID filter
+
+      --help           : Displays this usage screen
+
+No replay interface specified.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd_2025-12-09_13-44-54_24b14b75_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Airdecloak-ng 1.2 rc1 - (C) 2008-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: airdecloak-ng [options]
+
+  options:
+
+   Mandatory:
+     -i <file>             : Input capture file
+     --ssid <ESSID>        : ESSID of the network to filter
+        or
+     --bssid <BSSID>       : BSSID of the network to filter
+
+   Optional:
+     --filters <filters>   : Apply filters (separated by a comma). Filters:
+           signal:               Try to filter based on signal.
+           duplicate_sn:         Remove all duplicate sequence numbers
+                                 for both the AP and the client.
+           duplicate_sn_ap:      Remove duplicate sequence number for
+                                 the AP only.
+           duplicate_sn_client:  Remove duplicate sequence number for the
+                                 client only.
+           consecutive_sn:       Filter based on the fact that IV should
+                                 be consecutive (only for AP).
+           duplicate_iv:         Remove all duplicate IV.
+           signal_dup_consec_sn: Use signal (if available), duplicate and
+                                 consecutive sequence number (filtering is
+                                  much more precise than using all these
+                                  filters one by one).
+     --null-packets        : Assume that null packets can be cloaked.
+     --disable-base_filter : Do not apply base filter.
+     --drop-frag           : Drop fragmented packets
+
+     --help                : Displays this usage screen
+
+Missing input file
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af_2025-12-09_13-44-54_fffd76ca_container_stdout.txt
+[EventRouter] ARM detected at event 122 for cgroup 28418
+[EventRouter] Discarded 121 pre-ARM events for cgroup 28418
+[EventRouter] ARM detected at event 107 for cgroup 28074
+[EventRouter] Discarded 106 pre-ARM events for cgroup 28074
+[EventRouter] ARM detected at event 88 for cgroup 28332
+[EventRouter] Discarded 87 pre-ARM events for cgroup 28332
+[EventRouter] ARM detected at event 129 for cgroup 28160
+[EventRouter] Discarded 128 pre-ARM events for cgroup 28160
+[DOCKER] Container exit code: 0
+[DOCKER][STDOUT] BEGIN
+OpenSSL>
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d_2025-12-09_13-44-54_c5f54592_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Airbase-ng 1.2 rc1 - (C) 2008-2013 Thomas d'Otreppe
+  Original work: Martin Beck
+  http://www.aircrack-ng.org
+
+  usage: airbase-ng <options> <replay interface>
+
+  Options:
+
+      -a bssid         : set Access Point MAC address
+      -i iface         : capture packets from this interface
+      -w WEP key       : use this WEP key to en-/decrypt packets
+      -h MAC           : source mac for MITM mode
+      -f disallow      : disallow specified client MACs (default: allow)
+      -W 0|1           : [don't] set WEP flag in beacons 0|1 (default: auto)
+      -q               : quiet (do not print statistics)
+      -v               : verbose (print more messages)
+      -A               : Ad-Hoc Mode (allows other clients to peer)
+      -Y in|out|both   : external packet processing
+      -c channel       : sets the channel the AP is running on
+      -X               : hidden ESSID
+      -s               : force shared key authentication (default: auto)
+      -S               : set shared key challenge length (default: 128)
+      -L               : Caffe-Latte WEP attack (use if driver can't send frags)
+      -N               : cfrag WEP attack (recommended)
+      -x nbpps         : number of packets per second (default: 100)
+      -y               : disables responses to broadcast probes
+      -0               : set all WPA,WEP,open tags. can't be used with -z & -Z
+      -z type          : sets WPA1 tags. 1=WEP40 2=TKIP 3=WRAP 4=CCMP 5=WEP104
+      -Z type          : same as -z, but for WPA2
+      -V type          : fake EAPOL 1=MD5 2=SHA1 3=auto
+      -F prefix        : write all sent and received frames into pcap file
+      -P               : respond to all probes, even when specifying ESSIDs
+      -I interval      : sets the beacon interval value in ms
+      -C seconds       : enables beaconing of probed ESSID values (requires -P)
+
+  Filter options:
+      --bssid MAC      : BSSID to filter/use
+      --bssids file    : read a list of BSSIDs out of that file
+      --client MAC     : MAC of client to filter
+      --clients file   : read a list of MACs out of that file
+      --essid ESSID    : specify a single ESSID (default: default)
+      --essids file    : read a list of ESSIDs out of that file
+
+      --help           : Displays this usage screen
+
+No replay interface specified.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd_2025-12-09_13-44-54_d2556f9f_container_stdout.txt
+[DOCKER] Container exit code: 0
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for 9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd
+[POOL] Analysis completed: 1 findings in 0.00s (14085 events/s)
+[AI-Integration] Submitted task: 24b14b75
+[AI] 24b14b75 queued for DeepSeek analysis
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af
+[POOL] Analysis completed: 1 findings in 0.00s (10360 events/s)
+[AI-Integration] Submitted task: fffd76ca
+[AI] fffd76ca queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 27902 via bpftool
+[POOL] Cleanup scheduled for b93d279f8ee5
+[DockerWorker-1] ✓ Completed: 9326419d7e80133f0acb8a9ec078bb913cfa0ede03a83d7b4d43c1e1d2ec7dfd (16 events) (1.09s)
+[DockerWorker-1] Starting: 3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b (8_32bit)
+[ANALYSISLOG] 3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b -> analysislog/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b_2025-12-09_13-44-55_9811adce.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 28246 via bpftool
+[POOL] Cleanup scheduled for 1f87e49ad37d
+[DockerWorker-4] ✓ Completed: f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af (16 events) (1.09s)
+[DockerWorker-4] Starting: 05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6 (8_32bit)
+[ANALYSISLOG] 05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6 -> analysislog/05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6_2025-12-09_13-44-55_b3f80f2c.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 19 events for analysis (read from log file)
+[POOL] Running analyzers on 19 events for 9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d
+[POOL] Analysis completed: 1 findings in 0.00s (9357 events/s)
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd
+[POOL] Analysis completed: 1 findings in 0.00s (12599 events/s)
+[AI-Integration] Submitted task: c5f54592
+[AI] c5f54592 queued for DeepSeek analysis
+[AI-Integration] Submitted task: d2556f9f
+[AI] d2556f9f queued for DeepSeek analysis
+[POOL] Collected 18 events for analysis (read from log file)
+[POOL] Running analyzers on 18 events for 880026daedbb54b15f2eba8267cf09ee6bcccea69fbb02c61bdb8c94d21a789f
+[POOL] Analysis completed: 1 findings in 0.00s (13877 events/s)
+[AI-Integration] Submitted task: 94bfeeed
+[AI] 94bfeeed queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 27988 via bpftool
+[POOL] Cleanup scheduled for 691161afdfbc
+[DockerWorker-2] ✓ Completed: 9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d (19 events) (1.16s)
+[DockerWorker-2] Starting: 172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de (8_32bit)
+[ANALYSISLOG] 172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de -> analysislog/172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de_2025-12-09_13-44-56_7e74214f.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 28160 via bpftool
+[POOL] Cleanup scheduled for 7213b09cbcf6
+[DockerWorker-6] ✓ Completed: a7e571766abc2b2e235e7bbd9266e5cc7c4ce307c3cc1e0068732282772ea7cd (16 events) (1.15s)
+[DockerWorker-6] Starting: 8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099 (8_32bit)
+[ANALYSISLOG] 8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099 -> analysislog/8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099_2025-12-09_13-44-56_d5a6cd41.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 28074 via bpftool
+[POOL] Cleanup scheduled for b96a19781e53
+[DockerWorker-0] ✓ Completed: 880026daedbb54b15f2eba8267cf09ee6bcccea69fbb02c61bdb8c94d21a789f (18 events) (1.16s)
+[DockerWorker-0] Starting: 4eff7acbd564f9e381fcae1de950253e8c2f6b6716432010e2a2c2dfbbe289f5 (8_32bit)
+[ANALYSISLOG] 4eff7acbd564f9e381fcae1de950253e8c2f6b6716432010e2a2c2dfbbe289f5 -> analysislog/4eff7acbd564f9e381fcae1de950253e8c2f6b6716432010e2a2c2dfbbe289f5_2025-12-09_13-44-56_76cf2698.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Added cgroup 28504 via bpftool
+[CgroupManager] Added cgroup 28590 via bpftool
+[CgroupManager] Added cgroup 28676 via bpftool
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+Cmd line: wrong
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2_2025-12-09_13-44-54_1643af3f_container_stdout.txt
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6', '/tmp/05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b', '/tmp/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b']
+[CgroupManager] Added cgroup 28848 via bpftool
+[CgroupManager] Added cgroup 28762 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de', '/tmp/172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099', '/tmp/8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099']
+[EventRouter] ARM detected at event 89 for cgroup 28590
+[EventRouter] Discarded 88 pre-ARM events for cgroup 28590
+[EventRouter] ARM detected at event 90 for cgroup 28504
+[EventRouter] Discarded 89 pre-ARM events for cgroup 28504
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+/tmp/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b: no input files given
+usage: /tmp/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b [options] [filenames].
+Available options are:
+  -        process stdin
+  -l       list
+  -o name  output to file 'name' (default is "luac.out")
+  -p       parse only
+  -s       strip debug information
+  -v       show version information
+  --       stop handling options
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b_2025-12-09_13-44-55_9811adce_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Airdecap-ng 1.2 rc1 - (C) 2006-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: airdecap-ng [options] <pcap file>
+
+  Common options:
+      -l         : don't remove the 802.11 header
+      -b <bssid> : access point MAC address filter
+      -e <essid> : target network SSID
+
+  WEP specific option:
+      -w <key>   : target network WEP key in hex
+
+  WPA specific options:
+      -p <pass>  : target network WPA passphrase
+      -k <pmk>   : WPA Pairwise Master Key in hex
+
+      --help     : Displays this usage screen
+
+No file to decrypt specified.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6_2025-12-09_13-44-55_b3f80f2c_container_stdout.txt
+[EventRouter] ARM detected at event 127 for cgroup 28676
+[EventRouter] Discarded 126 pre-ARM events for cgroup 28676
+[EventRouter] ARM detected at event 89 for cgroup 28848
+[EventRouter] Discarded 88 pre-ARM events for cgroup 28848
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+[0m
+  Airodump-ng 1.2 rc1 - (C) 2006-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: airodump-ng <options> <interface>[,<interface>,...]
+
+  Options:
+      --ivs                 : Save only captured IVs
+      --gpsd                : Use GPSd
+      --write      <prefix> : Dump file prefix
+      -w                    : same as --write 
+      --beacons             : Record all beacons in dump file
+      --update       <secs> : Display update delay in seconds
+      --showack             : Prints ack/cts/rts statistics
+      -h                    : Hides known stations for --showack
+      -f            <msecs> : Time in ms between hopping channels
+      --berlin       <secs> : Time before removing the AP/client
+                              from the screen when no more packets
+                              are received (Default: 120 seconds)
+      -r             <file> : Read packets from that file
+      -x            <msecs> : Active Scanning Simulation
+      --manufacturer        : Display manufacturer from IEEE OUI list
+      --uptime              : Display AP Uptime from Beacon Timestamp
+      --output-format
+                  <formats> : Output format. Possible values:
+                              pcap, ivs, csv, gps, kismet, netxml
+      --ignore-negative-one : Removes the message that says
+                              fixed channel <interface>: -1
+
+  Filter options:
+      --encrypt   <suite>   : Filter APs by cipher suite
+      --netmask <netmask>   : Filter APs by mask
+      --bssid     <bssid>   : Filter APs by BSSID
+      --essid     <essid>   : Filter APs by ESSID
+      --essid-regex <regex> : Filter APs by ESSID using a regular
+                              expression
+      -a                    : Filter unassociated clients
+
+  By default, airodump-ng hop on 2.4GHz channels.
+  You can make it capture on other/specific channel(s) by using:
+      --channel <channels>  : Capture on specific channels
+      --band <abg>          : Band on which airodump-ng should hop
+      -C    <frequencies>   : Uses these frequencies in MHz to hop
+      --cswitch  <method>   : Set channel switching method
+                    0       : FIFO (default)
+                    1       : Round Robin
+                    2       : Hop on last
+      -s                    : same as --cswitch
+
+      --help                : Displays this usage screen
+
+No interface specified.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de_2025-12-09_13-44-56_7e74214f_container_stdout.txt
+[EventRouter] ARM detected at event 123 for cgroup 28762
+[EventRouter] Discarded 122 pre-ARM events for cgroup 28762
+[DOCKER] Container exit code: 1
+[DOCKER] Container exit code: 5
+[DOCKER][STDOUT] BEGIN
+
+dnsmasq: setting capabilities failed: Operation not permitted
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/4eff7acbd564f9e381fcae1de950253e8c2f6b6716432010e2a2c2dfbbe289f5_2025-12-09_13-44-56_76cf2698_container_stdout.txt
+[POOL] Collected 20 events for analysis (read from log file)
+[POOL] Running analyzers on 20 events for 44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2
+[POOL] Analysis completed: 2 findings in 0.00s (15664 events/s)
+[AI-Integration] Submitted task: 1643af3f
+[AI] 1643af3f queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 28418 via bpftool
+[POOL] Cleanup scheduled for c854b85b6f2b
+[DockerWorker-3] ✓ Completed: 44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2 (20 events) (2.12s)
+[DockerWorker-3] Starting: f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e (8_32bit)
+[ANALYSISLOG] f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e -> analysislog/f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e_2025-12-09_13-44-56_7c0c269a.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 24 events for analysis (read from log file)
+[POOL] Running analyzers on 24 events for 3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b
+[POOL] Analysis completed: 2 findings in 0.00s (18425 events/s)
+[AI-Integration] Submitted task: 9811adce
+[AI] 9811adce queued for DeepSeek analysis
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for 05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6
+[POOL] Analysis completed: 0 findings in 0.00s (14925 events/s)
+[AI-Integration] Submitted task: b3f80f2c
+[AI] b3f80f2c queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 28590 via bpftool
+[POOL] Cleanup scheduled for 928d7cb12e47
+[DockerWorker-1] ✓ Completed: 3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b (24 events) (1.21s)
+[DockerWorker-1] Starting: 82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b (8_32bit)
+[ANALYSISLOG] 82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b -> analysislog/82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b_2025-12-09_13-44-57_25346ec9.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 28504 via bpftool
+[POOL] Cleanup scheduled for e0cc5f035a50
+[DockerWorker-4] ✓ Completed: 05706dd7dcd44fad9a7514ec71086dbddad761fe534fd4b92eff5e2c2ee563a6 (16 events) (1.21s)
+[DockerWorker-4] Starting: 5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0 (8_32bit)
+[ANALYSISLOG] 5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0 -> analysislog/5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0_2025-12-09_13-44-57_a68884aa.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 19 events for analysis (read from log file)
+[POOL] Running analyzers on 19 events for 172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de
+[POOL] Analysis completed: 0 findings in 0.00s (17927 events/s)
+[AI-Integration] Submitted task: 7e74214f
+[AI] 7e74214f queued for DeepSeek analysis
+[POOL] Collected 33 events for analysis (read from log file)
+[POOL] Running analyzers on 33 events for 8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099
+[POOL] Analysis completed: 0 findings in 0.00s (30251 events/s)
+[AI-Integration] Submitted task: d5a6cd41
+[AI] d5a6cd41 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 28848 via bpftool
+[POOL] Cleanup scheduled for 4ba0014345fa
+[DockerWorker-2] ✓ Completed: 172c32d01e3e1b57efa7c24d0a5856967130d4c5305ef428ed5dc286f539e8de (19 events) (1.18s)
+[DockerWorker-2] Starting: a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b (8_32bit)
+[ANALYSISLOG] a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b -> analysislog/a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b_2025-12-09_13-44-57_00a4d459.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 28762 via bpftool
+[POOL] Cleanup scheduled for cb6fc33249b4
+[DockerWorker-6] ✓ Completed: 8f7cc5bed50d9cf2c990f18652a0293bfe0d6e787908f6474c5b89bb41e06099 (33 events) (1.19s)
+[DockerWorker-6] Starting: 4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c (8_32bit)
+[ANALYSISLOG] 4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c -> analysislog/4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c_2025-12-09_13-44-57_e2e9ce09.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 65 events for analysis (read from log file)
+[POOL] Running analyzers on 65 events for 4eff7acbd564f9e381fcae1de950253e8c2f6b6716432010e2a2c2dfbbe289f5
+[POOL] Analysis completed: 0 findings in 0.00s (58664 events/s)
+[AI-Integration] Submitted task: 76cf2698
+[AI] 76cf2698 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 28676 via bpftool
+[POOL] Cleanup scheduled for b73388b43d53
+[DockerWorker-0] ✓ Completed: 4eff7acbd564f9e381fcae1de950253e8c2f6b6716432010e2a2c2dfbbe289f5 (65 events) (1.23s)
+[DockerWorker-0] Starting: 64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2 (8_32bit)
+[ANALYSISLOG] 64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2 -> analysislog/64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2_2025-12-09_13-44-57_581530cf.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Added cgroup 28934 via bpftool
+[EventRouter] DEBUG: EXEC #34 filename='/bin/true', triggers=['f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e', '/tmp/f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e']
+[CgroupManager] Added cgroup 29020 via bpftool
+[EventRouter] ARM detected at event 90 for cgroup 28934
+[EventRouter] Discarded 89 pre-ARM events for cgroup 28934
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+Dropbear SSH multi-purpose v2015.70
+Make a symlink pointing at this binary with one of the following names:
+'dropbear' - the Dropbear server
+'dbclient' or 'ssh' - the Dropbear client
+'dropbearkey' - the key generator
+'dropbearconvert' - the key converter
+'scp' - secure copy
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e_2025-12-09_13-44-56_7c0c269a_container_stdout.txt
+[EventRouter] DEBUG: EXEC #34 filename='/bin/true', triggers=['82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b', '/tmp/82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b']
+[CgroupManager] Added cgroup 29106 via bpftool
+[CgroupManager] Added cgroup 29192 via bpftool
+[EventRouter] DEBUG: EXEC #50 filename='/bin/true', triggers=['a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b', '/tmp/a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b']
+[EventRouter] DEBUG: EXEC #34 filename='/bin/true', triggers=['5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0', '/tmp/5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0']
+[CgroupManager] Added cgroup 29364 via bpftool
+[CgroupManager] Added cgroup 29278 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2', '/tmp/64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2']
+[EventRouter] DEBUG: EXEC #50 filename='/bin/true', triggers=['4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c', '/tmp/4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c']
+[EventRouter] ARM detected at event 89 for cgroup 29020
+[EventRouter] Discarded 88 pre-ARM events for cgroup 29020
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+usage: 82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b [-V] [-M monitor_port[:echo_port]] [-f] [SSH_OPTIONS]
+
+    -M specifies monitor port. May be overridden by environment
+       variable AUTOSSH_PORT. 0 turns monitoring loop off.
+       Alternatively, a port for an echo service on the remote
+       machine may be specified. (Normally port 7.)
+    -f run in background (autossh handles this, and does not
+       pass it to ssh.)
+    -V print autossh version and exit.
+
+Environment variables are:
+    AUTOSSH_GATETIME    - how long must an ssh session be established
+                          before we decide it really was established
+                          (in seconds). Default is 30 seconds; use of -f
+                          flag sets this to 0.
+    AUTOSSH_LOGFILE     - file to log to (default is to use the syslog
+                          facility)
+    AUTOSSH_LOGLEVEL    - level of log verbosity
+    AUTOSSH_MAXLIFETIME - set the maximum time to live (seconds)
+    AUTOSSH_MAXSTART    - max times to restart (default is no limit)
+    AUTOSSH_MESSAGE     - message to append to echo string (max 64 bytes)
+    AUTOSSH_PATH        - path to ssh if not default
+    AUTOSSH_PIDFILE     - write pid to this file
+    AUTOSSH_POLL        - how often to check the connection (seconds)
+    AUTOSSH_FIRST_POLL  - time before first connection check (seconds)
+    AUTOSSH_PORT        - port to use for monitor connection
+    AUTOSSH_DEBUG       - turn logging to maximum verbosity and log to
+                          stderr
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b_2025-12-09_13-44-57_25346ec9_container_stdout.txt
+[EventRouter] ARM detected at event 89 for cgroup 29106
+[EventRouter] Discarded 88 pre-ARM events for cgroup 29106
+[EventRouter] ARM detected at event 105 for cgroup 29192
+[EventRouter] Discarded 104 pre-ARM events for cgroup 29192
+[DOCKER] Container exit code: 3
+[DOCKER][STDOUT] BEGIN
+modprobe: FATAL: Module arp_tables not found in directory /lib/modules/6.17.0-7-generic
+arptables v0.0.4: can't initialize arptables table `filter': arptables who? (do you need to insmod?)
+Perhaps arptables or your kernel needs to be upgraded.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b_2025-12-09_13-44-57_00a4d459_container_stdout.txt
+[DOCKER] Container exit code: 0
+[DOCKER][STDOUT] BEGIN
+tftp>
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0_2025-12-09_13-44-57_a68884aa_container_stdout.txt
+[EventRouter] ARM detected at event 92 for cgroup 29364
+[EventRouter] Discarded 91 pre-ARM events for cgroup 29364
+[EventRouter] ARM detected at event 106 for cgroup 29278
+[EventRouter] Discarded 105 pre-ARM events for cgroup 29278
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Aireplay-ng 1.2 rc1 - (C) 2006-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: aireplay-ng <options> <replay interface>
+
+  Filter options:
+
+      -b bssid  : MAC address, Access Point
+      -d dmac   : MAC address, Destination
+      -s smac   : MAC address, Source
+      -m len    : minimum packet length
+      -n len    : maximum packet length
+      -u type   : frame control, type    field
+      -v subt   : frame control, subtype field
+      -t tods   : frame control, To      DS bit
+      -f fromds : frame control, From    DS bit
+      -w iswep  : frame control, WEP     bit
+      -D        : disable AP detection
+
+  Replay options:
+
+      -x nbpps  : number of packets per second
+      -p fctrl  : set frame control word (hex)
+      -a bssid  : set Access Point MAC address
+      -c dmac   : set Destination  MAC address
+      -h smac   : set Source       MAC address
+      -g value  : change ring buffer size (default: 8)
+      -F        : choose first matching packet
+
+      Fakeauth attack options:
+
+      -e essid  : set target AP SSID
+      -o npckts : number of packets per burst (0=auto, default: 1)
+      -q sec    : seconds between keep-alives
+      -Q        : send reassociation requests
+      -y prga   : keystream for shared key auth
+      -T n      : exit after retry fake auth request n time
+
+      Arp Replay attack options:
+
+      -j        : inject FromDS packets
+
+      Fragmentation attack options:
+
+      -k IP     : set destination IP in fragments
+      -l IP     : set source IP in fragments
+
+      Test attack options:
+
+      -B        : activates the bitrate test
+
+  Source options:
+
+      -i iface  : capture packets from this interface
+      -r file   : extract packets from this pcap file
+
+  Miscellaneous options:
+
+      -R                    : disable /dev/rtc usage
+      --ignore-negative-one : if the interface's channel can't be determined,
+                              ignore the mismatch, needed for unpatched cfg80211
+
+  Attack modes (numbers can still be used):
+
+      --deauth      count : deauthenticate 1 or all stations (-0)
+      --fakeauth    delay : fake authentication with AP (-1)
+      --interactive       : interactive frame selection (-2)
+      --arpreplay         : standard ARP-request replay (-3)
+      --chopchop          : decrypt/chopchop WEP packet (-4)
+      --fragment          : generates valid keystream   (-5)
+      --caffe-latte       : query a client for new IVs  (-6)
+      --cfrag             : fragments against a client  (-7)
+      --migmode           : attacks WPA migration mode  (-8)
+      --test              : tests injection and quality (-9)
+
+      --help              : Displays this usage screen
+
+No replay interface specified.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c_2025-12-09_13-44-57_e2e9ce09_container_stdout.txt
+[DOCKER] Container exit code: 0
+[POOL] Collected 18 events for analysis (read from log file)
+[POOL] Running analyzers on 18 events for f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e
+[POOL] Analysis completed: 0 findings in 0.00s (16862 events/s)
+[AI-Integration] Submitted task: 7c0c269a
+[AI] 7c0c269a queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 28934 via bpftool
+[POOL] Cleanup scheduled for 9ebd97315000
+[DockerWorker-3] ✓ Completed: f351f144a58f1fa8dcacca2dfca3697e1fb2a833d483539999f06ed12e25d40e (18 events) (1.08s)
+[DockerWorker-3] Starting: ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953 (8_32bit)
+[ANALYSISLOG] ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953 -> analysislog/ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953_2025-12-09_13-44-58_47f7acf4.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 39 events for analysis (read from log file)
+[POOL] Running analyzers on 39 events for 82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b
+[POOL] Analysis completed: 0 findings in 0.00s (35830 events/s)
+[AI-Integration] Submitted task: 25346ec9
+[AI] 25346ec9 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 29020 via bpftool
+[POOL] Cleanup scheduled for 9026d706d832
+[DockerWorker-1] ✓ Completed: 82ca3fab3433cf60f0c451ac1c4d95e35e0c9f11cc402bae8ab108308681629b (39 events) (1.09s)
+[DockerWorker-1] Starting: ddf262da164ef92c02e6cb10effcd95b2d3f947a0e5eeb9d7cfb9f6ba03ba4e7 (8_32bit)
+[ANALYSISLOG] ddf262da164ef92c02e6cb10effcd95b2d3f947a0e5eeb9d7cfb9f6ba03ba4e7 -> analysislog/ddf262da164ef92c02e6cb10effcd95b2d3f947a0e5eeb9d7cfb9f6ba03ba4e7_2025-12-09_13-44-58_7b9fd1df.jsonl
+[DOCKER] Dynamic uClibc binary - using toolchain image
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=uclibc: dockcross/linux-mips-uclibc:latest
+[POOL] Collected 46 events for analysis (read from log file)
+[POOL] Running analyzers on 46 events for a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b
+[POOL] Analysis completed: 1 findings in 0.00s (39348 events/s)
+[AI-Integration] Submitted task: 00a4d459
+[AI] 00a4d459 queued for DeepSeek analysis
+[POOL] Collected 25 events for analysis (read from log file)
+[POOL] Running analyzers on 25 events for 5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0
+[POOL] Analysis completed: 0 findings in 0.00s (22529 events/s)
+[AI-Integration] Submitted task: a68884aa
+[AI] a68884aa queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 29192 via bpftool
+[POOL] Cleanup scheduled for 6ef9bb26e103
+[DockerWorker-2] ✓ Completed: a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b (46 events) (1.14s)
+[DockerWorker-2] Starting: cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85 (8_32bit)
+[ANALYSISLOG] cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85 -> analysislog/cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85_2025-12-09_13-44-58_2bd9107f.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 29106 via bpftool
+[POOL] Cleanup scheduled for 8b93d44c1744
+[DockerWorker-4] ✓ Completed: 5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0 (25 events) (1.18s)
+[DockerWorker-4] Starting: f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23 (8_32bit)
+[ANALYSISLOG] f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23 -> analysislog/f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23_2025-12-09_13-44-58_f357425d.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for 4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c
+[POOL] Analysis completed: 0 findings in 0.00s (15185 events/s)
+[AI-Integration] Submitted task: e2e9ce09
+[AI] e2e9ce09 queued for DeepSeek analysis
+[POOL] Collected 14 events for analysis (read from log file)
+[POOL] Running analyzers on 14 events for 64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2
+[POOL] Analysis completed: 0 findings in 0.00s (13575 events/s)
+[AI-Integration] Submitted task: 581530cf
+[AI] 581530cf queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 29278 via bpftool
+[POOL] Cleanup scheduled for a245cf1512fe
+[DockerWorker-6] ✓ Completed: 4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c (16 events) (1.18s)
+[DockerWorker-6] Starting: 61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e (8_32bit)
+[CgroupManager] Removed cgroup 29364 via bpftool
+[POOL] Cleanup scheduled for 7dd1bdd17e9f
+[DockerWorker-0] ✓ Completed: 64e97612de9139dc8823c4fe9665090b742362da5508ea3fedbdb993849acdc2 (14 events) (1.14s)
+[DockerWorker-0] Starting: b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af (8_32bit)
+[ANALYSISLOG] 61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e -> analysislog/61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e_2025-12-09_13-44-58_0ec27ebd.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[ANALYSISLOG] b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af -> analysislog/b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af_2025-12-09_13-44-58_d3c99e96.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Added cgroup 29450 via bpftool
+[EventRouter] DEBUG: EXEC #34 filename='/bin/true', triggers=['ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953', '/tmp/ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953']
+[EventRouter] ARM detected at event 89 for cgroup 29450
+[EventRouter] Discarded 88 pre-ARM events for cgroup 29450
+[DOCKER] Container exit code: 255
+[DOCKER][STDOUT] BEGIN
+Nmap 7.01 ( https://nmap.org )
+Usage: nmap [Scan Type(s)] [Options] {target specification}
+TARGET SPECIFICATION:
+  Can pass hostnames, IP addresses, networks, etc.
+  Ex: scanme.nmap.org, microsoft.com/24, 192.168.0.1; 10.0.0-255.1-254
+  -iL <inputfilename>: Input from list of hosts/networks
+  -iR <num hosts>: Choose random targets
+  --exclude <host1[,host2][,host3],...>: Exclude hosts/networks
+  --excludefile <exclude_file>: Exclude list from file
+HOST DISCOVERY:
+  -sL: List Scan - simply list targets to scan
+  -sn: Ping Scan - disable port scan
+  -Pn: Treat all hosts as online -- skip host discovery
+  -PS/PA/PU/PY[portlist]: TCP SYN/ACK, UDP or SCTP discovery to given ports
+  -PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes
+  -PO[protocol list]: IP Protocol Ping
+  -n/-R: Never do DNS resolution/Always resolve [default: sometimes]
+  --dns-servers <serv1[,serv2],...>: Specify custom DNS servers
+  --system-dns: Use OS's DNS resolver
+  --traceroute: Trace hop path to each host
+SCAN TECHNIQUES:
+  -sS/sT/sA/sW/sM: TCP SYN/Connect()/ACK/Window/Maimon scans
+  -sU: UDP Scan
+  -sN/sF/sX: TCP Null, FIN, and Xmas scans
+  --scanflags <flags>: Customize TCP scan flags
+  -sI <zombie host[:probeport]>: Idle scan
+  -sY/sZ: SCTP INIT/COOKIE-ECHO scans
+  -sO: IP protocol scan
+  -b <FTP relay host>: FTP bounce scan
+PORT SPECIFICATION AND SCAN ORDER:
+  -p <port ranges>: Only scan specified ports
+    Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+  --exclude-ports <port ranges>: Exclude the specified ports from scanning
+  -F: Fast mode - Scan fewer ports than the default scan
+  -r: Scan ports consecutively - don't randomize
+  --top-ports <number>: Scan <number> most common ports
+  --port-ratio <ratio>: Scan ports more common than <ratio>
+SERVICE/VERSION DETECTION:
+  -sV: Probe open ports to determine service/version info
+  --version-intensity <level>: Set from 0 (light) to 9 (try all probes)
+  --version-light: Limit to most likely probes (intensity 2)
+  --version-all: Try every single probe (intensity 9)
+  --version-trace: Show detailed version scan activity (for debugging)
+OS DETECTION:
+  -O: Enable OS detection
+  --osscan-limit: Limit OS detection to promising targets
+  --osscan-guess: Guess OS more aggressively
+TIMING AND PERFORMANCE:
+  Options which take <time> are in seconds, or append 'ms' (milliseconds),
+  's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
+  -T<0-5>: Set timing template (higher is faster)
+  --min-hostgroup/max-hostgroup <size>: Parallel host scan group sizes
+  --min-parallelism/max-parallelism <numprobes>: Probe parallelization
+  --min-rtt-timeout/max-rtt-timeout/initial-rtt-timeout <time>: Specifies
+      probe round trip time.
+  --max-retries <tries>: Caps number of port scan probe retransmissions.
+  --host-timeout <time>: Give up on target after this long
+  --scan-delay/--max-scan-delay <time>: Adjust delay between probes
+  --min-rate <number>: Send packets no slower than <number> per second
+  --max-rate <number>: Send packets no faster than <number> per second
+FIREWALL/IDS EVASION AND SPOOFING:
+  -f; --mtu <val>: fragment packets (optionally w/given MTU)
+  -D <decoy1,decoy2[,ME],...>: Cloak a scan with decoys
+  -S <IP_Address>: Spoof source address
+  -e <iface>: Use specified interface
+  -g/--source-port <portnum>: Use given port number
+  --proxies <url1,[url2],...>: Relay connections through HTTP/SOCKS4 proxies
+  --data <hex string>: Append a custom payload to sent packets
+  --data-string <string>: Append a custom ASCII string to sent packets
+  --data-length <num>: Append random data to sent packets
+  --ip-options <options>: Send packets with specified ip options
+  --ttl <val>: Set IP time-to-live field
+  --spoof-mac <mac address/prefix/vendor name>: Spoof your MAC address
+  --badsum: Send packets with a bogus TCP/UDP/SCTP checksum
+OUTPUT:
+  -oN/-oX/-oS/-oG <file>: Output scan in normal, XML, s|<rIpt kIddi3,
+     and Grepable format, respectively, to the given filename.
+  -oA <basename>: Output in the three major formats at once
+  -v: Increase verbosity level (use -vv or more for greater effect)
+  -d: Increase debugging level (use -dd or more for greater effect)
+  --reason: Display the reason a port is in a particular state
+  --open: Only show open (or possibly open) ports
+  --packet-trace: Show all packets sent and received
+  --iflist: Print host interfaces and routes (for debugging)
+  --append-output: Append to rather than clobber specified output files
+  --resume <filename>: Resume an aborted scan
+  --stylesheet <path/URL>: XSL stylesheet to transform XML output to HTML
+  --webxml: Reference stylesheet from Nmap.Org for more portable XML
+  --no-stylesheet: Prevent associating of XSL stylesheet w/XML output
+MISC:
+  -6: Enable IPv6 scanning
+  -A: Enable OS detection, version detection, script scanning, and traceroute
+  --datadir <dirname>: Specify custom Nmap data file location
+  --send-eth/--send-ip: Send using raw ethernet frames or IP packets
+  --privileged: Assume that the user is fully privileged
+  --unprivileged: Assume the user lacks raw socket privileges
+  -V: Print version number
+  -h: Print this help summary page.
+EXAMPLES:
+  nmap -v -A scanme.nmap.org
+  nmap -v -sn 192.168.0.0/16 10.0.0.0/8
+  nmap -v -iR 10000 -Pn -p 80
+SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953_2025-12-09_13-44-58_47f7acf4_container_stdout.txt
+[CgroupManager] Added cgroup 29536 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85', '/tmp/cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85']
+[CgroupManager] Added cgroup 29622 via bpftool
+[CgroupManager] Added cgroup 29794 via bpftool
+[CgroupManager] Added cgroup 29708 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af', '/tmp/b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23', '/tmp/f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23']
+[EventRouter] ARM detected at event 89 for cgroup 29536
+[EventRouter] Discarded 88 pre-ARM events for cgroup 29536
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85: applet not found
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85_2025-12-09_13-44-58_2bd9107f_container_stdout.txt
+[EventRouter] ARM detected at event 89 for cgroup 29794
+[EventRouter] Discarded 88 pre-ARM events for cgroup 29794
+[EventRouter] ARM detected at event 88 for cgroup 29622
+[EventRouter] Discarded 87 pre-ARM events for cgroup 29622
+[DOCKER] Container exit code: 0
+[DOCKER][STDOUT] BEGIN
+Use: /tmp/f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23 <SearchDir> <CapFileOut>
+What does it do?
+
+It recurses the SearchDir directory
+Opens all files in there, searching for pcap-dumpfiles
+Filters out a single beacon and all EAPOL frames from the WPA networks in there
+And saves them to CapFileOut.
+
+This tool is supposed to crawl capfiles for upload to sorbo's WPA statistic server!
+http://wpa.darkircop.org
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23_2025-12-09_13-44-58_f357425d_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+Error opening terminal: unknown.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af_2025-12-09_13-44-58_d3c99e96_container_stdout.txt
+[EventRouter] ARM detected at event 130 for cgroup 29708
+[EventRouter] Discarded 129 pre-ARM events for cgroup 29708
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+Cmd line: /tmp/61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e: missing hostname argument
+Try `/tmp/61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e --help' for more information.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e_2025-12-09_13-44-58_0ec27ebd_container_stdout.txt
+[POOL] Collected 23 events for analysis (read from log file)
+[POOL] Running analyzers on 23 events for ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953
+[POOL] Analysis completed: 0 findings in 0.00s (21177 events/s)
+[AI-Integration] Submitted task: 47f7acf4
+[AI] 47f7acf4 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 29450 via bpftool
+[POOL] Cleanup scheduled for 36a82c9b3981
+[DockerWorker-3] ✗ Failed: ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953 - Crashed: Signal 127 (Exit code 255) (1.08s)
+[DockerWorker-3] Starting: c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15 (8_32bit)
+[ANALYSISLOG] c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15 -> analysislog/c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15_2025-12-09_13-44-59_e442bf68.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[POOL] Collected 17 events for analysis (read from log file)
+[POOL] Running analyzers on 17 events for cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85
+[POOL] Analysis completed: 0 findings in 0.00s (16248 events/s)
+[AI-Integration] Submitted task: 2bd9107f
+[AI] 2bd9107f queued for DeepSeek analysis
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23
+[POOL] Analysis completed: 0 findings in 0.00s (15216 events/s)
+[AI-Integration] Submitted task: f357425d
+[AI] f357425d queued for DeepSeek analysis
+[CgroupManager] Added cgroup 29880 via bpftool
+[POOL] Collected 28 events for analysis (read from log file)
+[POOL] Running analyzers on 28 events for b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af
+[POOL] Analysis completed: 0 findings in 0.00s (25906 events/s)
+[AI-Integration] Submitted task: d3c99e96
+[AI] d3c99e96 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 29536 via bpftool
+[POOL] Cleanup scheduled for 0c6ff081ac2c
+[DockerWorker-2] ✓ Completed: cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85 (17 events) (1.13s)
+[DockerWorker-2] Starting: 52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f (8_32bit)
+[ANALYSISLOG] 52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f -> analysislog/52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f_2025-12-09_13-44-59_46c7ab9c.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 29622 via bpftool
+[POOL] Cleanup scheduled for f125a253063c
+[DockerWorker-4] ✓ Completed: f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23 (16 events) (1.13s)
+[DockerWorker-4] Starting: 68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb (8_32bit)
+[ANALYSISLOG] 68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb -> analysislog/68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb_2025-12-09_13-44-59_e18bc62d.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=unknown: dockcross/linux-mips:latest
+[CgroupManager] Removed cgroup 29794 via bpftool
+[POOL] Cleanup scheduled for 4d022025a80b
+[DockerWorker-0] ✓ Completed: b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af (28 events) (1.09s)
+[DockerWorker-0] Starting: b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342 (8_32bit)
+[ANALYSISLOG] b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342 -> analysislog/b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342_2025-12-09_13-44-59_0af4da2d.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=unknown: dockcross/linux-mips:latest
+[POOL] Collected 22 events for analysis (read from log file)
+[POOL] Running analyzers on 22 events for 61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e
+[POOL] Analysis completed: 0 findings in 0.00s (20753 events/s)
+[AI-Integration] Submitted task: 0ec27ebd
+[AI] 0ec27ebd queued for DeepSeek analysis
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15', '/tmp/c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15']
+[CgroupManager] Removed cgroup 29708 via bpftool
+[POOL] Cleanup scheduled for 8242c4ec6f9b
+[DockerWorker-6] ✓ Completed: 61b96e3bcfb394ffcf7722559bb48005c189cd01c68ff947529555ec38545f0e (22 events) (1.13s)
+[DockerWorker-6] Starting: 6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d (8_32bit)
+[ANALYSISLOG] 6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d -> analysislog/6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d_2025-12-09_13-44-59_4e4a5f92.jsonl
+[DOCKER] Detected dockcross image, forcing platform to linux/amd64
+[DOCKER] Selected image for libc=glibc: dockcross/linux-mips:latest
+[EventRouter] ARM detected at event 88 for cgroup 29880
+[EventRouter] Discarded 87 pre-ARM events for cgroup 29880
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Airserv-ng 1.2 rc1 - (C) 2007, 2008, 2009 Andrea Bittau
+  http://www.aircrack-ng.org
+
+  Usage: airserv-ng <options>
+
+  Options:
+
+       -h         : This help screen
+       -p  <port> : TCP port to listen on (default:666)
+       -d <iface> : Wifi interface to use
+       -c  <chan> : Channel to use
+       -v <level> : Debug level (1 to 3; default: 1)
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15_2025-12-09_13-44-59_e442bf68_container_stdout.txt
+[CgroupManager] Added cgroup 30052 via bpftool
+[CgroupManager] Added cgroup 30138 via bpftool
+[CgroupManager] Added cgroup 29966 via bpftool
+[CgroupManager] Added cgroup 30224 via bpftool
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb', '/tmp/68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f', '/tmp/52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f']
+[EventRouter] DEBUG: EXEC #33 filename='/bin/true', triggers=['b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342', '/tmp/b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342']
+[EventRouter] DEBUG: EXEC #50 filename='/bin/true', triggers=['6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d', '/tmp/6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d']
+[EventRouter] ARM detected at event 88 for cgroup 30052
+[EventRouter] Discarded 87 pre-ARM events for cgroup 30052
+[EventRouter] ARM detected at event 105 for cgroup 30224
+[EventRouter] Discarded 104 pre-ARM events for cgroup 30224
+[EventRouter] ARM detected at event 88 for cgroup 29966
+[EventRouter] Discarded 87 pre-ARM events for cgroup 29966
+[EventRouter] ARM detected at event 88 for cgroup 30138
+[EventRouter] Discarded 87 pre-ARM events for cgroup 30138
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+
+  Aircrack-ng 1.2 rc1 - (C) 2006-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: aircrack-ng [options] <.cap / .ivs file(s)>
+
+  Common options:
+
+      -a <amode> : force attack mode (1/WEP, 2/WPA-PSK)
+      -e <essid> : target selection: network identifier
+      -b <bssid> : target selection: access point's MAC
+      -p <nbcpu> : # of CPU to use  (default: all CPUs)
+      -q         : enable quiet mode (no status output)
+      -C <macs>  : merge the given APs to a virtual one
+      -l <file>  : write key to file
+
+  Static WEP cracking options:
+
+      -c         : search alpha-numeric characters only
+      -t         : search binary coded decimal chr only
+      -h         : search the numeric key for Fritz!BOX
+      -d <mask>  : use masking of the key (A1:XX:CF:YY)
+      -m <maddr> : MAC address to filter usable packets
+      -n <nbits> : WEP key length :  64/128/152/256/512
+      -i <index> : WEP key index (1 to 4), default: any
+      -f <fudge> : bruteforce fudge factor,  default: 2
+      -k <korek> : disable one attack method  (1 to 17)
+      -x or -x0  : disable bruteforce for last keybytes
+      -x1        : last keybyte bruteforcing  (default)
+      -x2        : enable last  2 keybytes bruteforcing
+      -X         : disable  bruteforce   multithreading
+      -y         : experimental  single bruteforce mode
+      -K         : use only old KoreK attacks (pre-PTW)
+      -s         : show the key in ASCII while cracking
+      -M <num>   : specify maximum number of IVs to use
+      -D         : WEP decloak, skips broken keystreams
+      -P <num>   : PTW debug:  1: disable Klein, 2: PTW
+      -1         : run only 1 try to crack key with PTW
+
+  WEP and WPA-PSK cracking options:
+
+      -w <words> : path to wordlist(s) filename(s)
+
+  WPA-PSK options:
+
+      -E <file>  : create EWSA Project file v3
+      -J <file>  : create Hashcat Capture file
+      -S         : WPA cracking speed test
+
+  Other options:
+
+      -u         : Displays # of CPUs & MMX/SSE support
+      --help     : Displays this usage screen
+
+No file to crack specified.
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d_2025-12-09_13-44-59_4e4a5f92_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+Gimme an interface name dude
+
+  Besside-ng 1.2 rc1 - (C) 2010 Andrea Bittau
+  http://www.aircrack-ng.org
+
+  Usage: /tmp/52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f [options] <interface>
+
+  Options:
+
+       -b <victim mac> : Victim BSSID
+       -R <victim ap regex> : Victim ESSID regex
+       -s <WPA server> : Upload wpa.cap for cracking
+       -c       <chan> : chanlock
+       -p       <pps>  : flood rate
+       -W              : WPA only
+       -v              : verbose, -vv for more, etc.
+       -h              : This help screen
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f_2025-12-09_13-44-59_46c7ab9c_container_stdout.txt
+[DOCKER] Container exit code: 127
+[DOCKER][STDOUT] BEGIN
+/tmp/68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb: error while loading shared libraries: libcurl.so.4: cannot open shared object file: No such file or directory
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb_2025-12-09_13-44-59_e18bc62d_container_stdout.txt
+[DOCKER] Container exit code: 1
+[DOCKER][STDOUT] BEGIN
+Usage: axel [options] url1 [url2] [url...]
+
+--max-speed=x		-s x	Specify maximum speed (bytes per second)
+--num-connections=x	-n x	Specify maximum number of connections
+--output=f		-o f	Specify local output file
+--search[=x]		-S [x]	Search for mirrors and download from x servers
+--header=x		-H x	Add header string
+--user-agent=x		-U x	Set user agent
+--no-proxy		-N	Just don't use any proxy server
+--quiet			-q	Leave stdout alone
+--write-null		-w	don't write data to file
+--verbose		-v	More status information
+--alternate		-a	Alternate progress indicator
+--help			-h	This information
+--version		-V	Version information
+
+Visit http://axel.alioth.debian.org/ to report bugs
+[DOCKER][STDOUT] END
+[DOCKER] Raw stdout saved: analysislog/b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342_2025-12-09_13-44-59_0af4da2d_container_stdout.txt
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15
+[POOL] Analysis completed: 0 findings in 0.00s (14145 events/s)
+[AI-Integration] Submitted task: e442bf68
+[AI] e442bf68 queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 29880 via bpftool
+[POOL] Cleanup scheduled for 806361c96d4d
+[DockerWorker-3] ✓ Completed: c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15 (16 events) (1.07s)
+[POOL] Collected 20 events for analysis (read from log file)
+[POOL] Running analyzers on 20 events for 6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d
+[POOL] Analysis completed: 0 findings in 0.00s (18187 events/s)
+[AI-Integration] Submitted task: 4e4a5f92
+[AI] 4e4a5f92 queued for DeepSeek analysis
+[POOL] Collected 16 events for analysis (read from log file)
+[POOL] Running analyzers on 16 events for 52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f
+[POOL] Analysis completed: 0 findings in 0.00s (15551 events/s)
+[AI-Integration] Submitted task: 46c7ab9c
+[AI] 46c7ab9c queued for DeepSeek analysis
+[POOL] Collected 20 events for analysis (read from log file)
+[POOL] Running analyzers on 20 events for 68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb
+[POOL] Analysis completed: 0 findings in 0.00s (19421 events/s)
+[AI-Integration] Submitted task: e18bc62d
+[AI] e18bc62d queued for DeepSeek analysis
+[POOL] Collected 29 events for analysis (read from log file)
+[POOL] Running analyzers on 29 events for b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342
+[POOL] Analysis completed: 0 findings in 0.00s (27838 events/s)
+[AI-Integration] Submitted task: 0af4da2d
+[AI] 0af4da2d queued for DeepSeek analysis
+[CgroupManager] Removed cgroup 30224 via bpftool
+[POOL] Cleanup scheduled for bf9ca158c3af
+[DockerWorker-6] ✓ Completed: 6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d (20 events) (1.10s)
+[CgroupManager] Removed cgroup 29966 via bpftool
+[POOL] Cleanup scheduled for 31d7acf1dfb8
+[DockerWorker-2] ✓ Completed: 52b0837405fe988fd042a9438015cf9061da8fea6cdc9797b04a31bc3a78980f (16 events) (1.15s)
+[CgroupManager] Removed cgroup 30138 via bpftool
+[POOL] Cleanup scheduled for 5e8b7844182c
+[DockerWorker-4] ✓ Completed: 68a5615e0cab201ae02709c127e785eedffad30c55d9708655274f1ae40d53eb (20 events) (1.15s)
+[CgroupManager] Removed cgroup 30052 via bpftool
+[POOL] Cleanup scheduled for f701347783f9
+[DockerWorker-0] ✓ Completed: b73218f237f56c7cadc45460087013c89d9232ca2103c6f80cf1cbf6a8203342 (29 events) (1.15s)
+[AI-Integration] Job fffd76ca analyzed via deepseek
+[AI-Integration] Job d2556f9f analyzed via deepseek
+[AI-Integration] Job 94bfeeed analyzed via deepseek
+[AI-Integration] Job 24b14b75 analyzed via deepseek
+[AI-Integration] Job 9811adce analyzed via deepseek
+[AI-Integration] Job c5f54592 analyzed via deepseek
+[AI-Integration] Job 1643af3f analyzed via deepseek
+[DOCKER] Failed staged container start: 500 Server Error for http+docker://localhost/v1.50/images/create?tag=latest&fromImage=dockcross%2Flinux-mips-uclibc&platform=linux%2Famd64: Internal Server Error ("Get "https://registry-1.docker.io/v2/": context deadline exceeded")
+[DockerWorker-1] ✗ Failed: ddf262da164ef92c02e6cb10effcd95b2d3f947a0e5eeb9d7cfb9f6ba03ba4e7 - Failed to start container (15.01s)
+[AI-Integration] Job b3f80f2c analyzed via deepseek
+[AI-Integration] Job 7e74214f analyzed via deepseek
+[AI-Integration] Job 76cf2698 analyzed via deepseek
+[AI-Integration] Job 25346ec9 analyzed via deepseek
+[AI-Integration] Job d5a6cd41 analyzed via deepseek
+[AI-Integration] Job 00a4d459 analyzed via deepseek
+[AI-Integration] Job 7c0c269a analyzed via deepseek
+[POOL] Execution timed out for 476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5 after 30s
+[POOL] Killing container 8fc94dbaced5...
+[POOL] Container killed successfully
+[DOCKER] Container exit code: -1
+[POOL] Execution timed out - stopping BPF monitoring for cgroup 28332
+[CgroupManager] Removed cgroup 28332 via bpftool
+[POOL] Collected 250144 events for analysis (read from log file)
+[POOL] Large event count (250144) - applying sampling (limit 90000)
+[POOL] Sampled down to 90000 events (Head:15000 Middle:60000 Tail:15000)
+[POOL] Running analyzers on 90000 events for 476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5
+[POOL] Analysis completed: 0 findings in 0.03s (3201913 events/s)
+[AI-Integration] Submitted task: 4ea5e9fe
+[AI] 4ea5e9fe queued for DeepSeek analysis
+[CgroupManager] bpftool delete failed: Command '['sudo', '/usr/sbin/bpftool', 'map', 'delete', 'id', '132', 'key', 'hex', 'ac', '6e', '00', '00', '00', '00', '00', '00']' returned non-zero exit status 254.
+[POOL] Cleanup scheduled for 8fc94dbaced5
+[DockerWorker-5] ✓ Completed: 476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5 (250144 events) (31.58s)
+[DOCKER_POOL] All tasks completed, stopping workers...
+[POOL] Failed to kill container 8fc94dbaced5: 409 Client Error for http+docker://localhost/v1.50/containers/8fc94dbaced5165a054fbebc46d4323f826137d46053c0a87bfdfac282417de6/kill: Conflict ("cannot kill container: 8fc94dbaced5165a054fbebc46d4323f826137d46053c0a87bfdfac282417de6: container 8fc94dbaced5165a054fbebc46d4323f826137d46053c0a87bfdfac282417de6 is not running")
+[MPK] Stats integrity verified: Python stats match MPK-anchored stats.
+[DOCKER_POOL] All workers stopped
+
+================================================================================
+[DOCKER_POOL] Execution Summary
+================================================================================
+Total tasks:     31
+Successful:      27   (87.1%) - Normal execution
+System Failed:   2    (6.5%) - Docker/Infrastructure errors
+
+Performance:
+  Total time:    78.38s
+  Average time:  2.53s per task
+  Throughput:    0.40 tasks/s
+
+By Architecture:
+  8_32bit     : 27 OK, 0 Crash, 2 Fail / 29 Total
+================================================================================
+
+
+--------------------------------------------------------------------------------
+[WARNING] The following 2 failed:
+--------------------------------------------------------------------------------
+  - ddd84c961048a44431871ef4238544e92c0447be8887b36286e697a1e0f5e953 (8_32bit)
+  - ddf262da164ef92c02e6cb10effcd95b2d3f947a0e5eeb9d7cfb9f6ba03ba4e7 (8_32bit)
+================================================================================
+
+
+
+[EVENT ROUTER STATS]
+  Total events routed: 250771
+  Events compressed: 448245
+  Compression ratio: 64.1% (699016 -> 250771)
+  Events dropped: 0
+  Unknown cgroups: 0
+  Queue overflows: 0
+  Active cgroups: 0
+
+  Shard distribution (16 shards):
+    Shard 0: 72 events, 0 overflows, 3 compressed
+    Shard 2: 73 events, 0 overflows, 8 compressed
+    Shard 4: 127 events, 0 overflows, 20 compressed
+    Shard 6: 50 events, 0 overflows, 0 compressed
+    Shard 8: 78 events, 0 overflows, 22 compressed
+    Shard 10: 94 events, 0 overflows, 24 compressed
+    Shard 12: 250205 events, 0 overflows, 448168 compressed
+    Shard 14: 72 events, 0 overflows, 0 compressed
+[DOCKER_POOL] Saved 2 failed tasks to failed_tasks.json
+[MONITOR_READER] Stopping...
+
+[MONITOR] Stopping global monitor process...
+[AI-Integration] Job a68884aa analyzed via deepseek
+[MONITOR_READER] Monitor process terminated
+[MONITOR_READER] Stopped
+[MONITOR] ✓ Global monitor process terminated
+
+[AI] Waiting for DeepSeek analysis to complete...
+[DEEPSEEK] Waiting for 0 tasks to complete...
+[AI-Integration] Job e2e9ce09 analyzed via deepseek
+[AI-Integration] Job 581530cf analyzed via deepseek
+[AI-Integration] Job 2bd9107f analyzed via deepseek
+[AI-Integration] Job 47f7acf4 analyzed via deepseek
+[AI-Integration] Job d3c99e96 analyzed via deepseek
+[AI-Integration] Job f357425d analyzed via deepseek
+[AI-Integration] Job 0ec27ebd analyzed via deepseek
+[AI-Integration] Job e442bf68 analyzed via deepseek
+[AI-Integration] Job 4e4a5f92 analyzed via deepseek
+[AI-Integration] Job e18bc62d analyzed via deepseek
+[AI-Integration] Job 0af4da2d analyzed via deepseek
+[AI-Integration] Job 46c7ab9c analyzed via deepseek
+[AI-Integration] Job 4ea5e9fe analyzed via deepseek
+[DEEPSEEK] All tasks completed
+[AI] Analysis complete:
+  Total analyzed: 28
+  Successful: 28
+  Failed: 0
+  In progress: 0
+  Queued: 0
+[AI-Integration] Waiting for tasks to complete...
+[AI-Integration] Stopped
+[AI] ✓ DeepSeek integration stopped
+
+[EVENT ROUTER] Statistics:
+  Events routed: 250771
+  Unknown cgroups: 0
+  Queue overflows: 0
+
+[MONITOR READER] Statistics:
+  Lines read: 1217126
+  Events parsed: 1217126
+  Parse errors: 0
+
+[WRAPPER] Total execution time: 71.73 seconds
+Would you like to exit the wrapper? [y/N]: 
+Monitor terminated.
+Terminating report window...
+[WRAPPER] Performing final docker cleanup (prune)...
+[WRAPPER] ✓ Docker container prune completed

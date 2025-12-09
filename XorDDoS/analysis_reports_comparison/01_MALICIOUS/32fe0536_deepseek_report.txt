@@ -1,0 +1,42 @@
+# DeepSeek Malware Analysis Report
+**Target:** `311c93575efd4eeeb9c6674d0ab8de263b72a8fb060d04450daccc78ec095151.elf` | **Job ID:** `32fe0536`
+**Date:** 2025-12-09 17:56:10
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes command-and-control (C2) connections, downloads and executes additional payloads, and performs network reconnaissance. The program successfully executed with exit code 0, showing full malicious functionality including network communication, process creation, and file system access.
+
+### ⚠️ Suspicious Behaviors
+- Multiple network socket creations and connections to external IP addresses
+- Repeated execution of suspicious binaries from /usr/bin with random names
+- Network communication patterns consistent with botnet C2 protocols
+- Process forking and creation of child processes
+- Access to system configuration files (/etc, /etc/daemon.cfg)
+- KILL signals sent to terminate processes
+- Binary data writes suggesting payload delivery
+
+### 🔍 Key Evidence
+- Multiple SOCKET, CONNECT, SENDTO, and RECVFROM events indicating network communication with external C2 servers
+- Repeated EXEC events of suspicious binaries with random names (exzkfupht, zirbivholfzqi, socomvkjbjcxs, etc.) from /usr/bin
+- CONNECT events with hex-encoded IP addresses (e.g., 02000050c6120012fc2a004148320041...) showing external network connections
+- STAT events accessing /etc and /etc/daemon.cfg for system reconnaissance
+- KILL events targeting specific PIDs with SIGKILL (signal 9)
+- WRITE events containing binary data and ELF headers, suggesting payload delivery
+- Multiple TRACK_FORK events showing process creation and propagation
+- SIGNAL_GENERATE events indicating process control
+
+### 💡 Recommendations
+Isolate infected systems immediately. Block identified C2 IP addresses at network perimeter. Analyze downloaded binaries for additional capabilities. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns from infected hosts.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

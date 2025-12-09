@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5d94a674992e90b629b2399d37a8a749c68b5a1c4dee28c17a6624bf070a163c.elf` | **Job ID:** `8237baa2`
+**Date:** 2025-12-09 17:57:15
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program is a Mirai botnet variant that establishes command-and-control (C2) connections, downloads and executes additional payloads, and performs network reconnaissance. It exhibits classic Mirai behaviors including forking multiple processes, connecting to remote servers via raw sockets, and attempting to access system configuration files. The program successfully executed its malicious payloads and terminated cleanly.
+
+### ⚠️ Suspicious Behaviors
+- Multiple network socket connections to non-local addresses
+- Repeated execution of unknown binaries from /usr/bin
+- Access to system configuration files (/etc, /etc/daemon.cfg)
+- Forking multiple child processes
+- Writing binary data to file descriptors
+- Killing processes with SIGKILL (signal 9)
+- Establishing connections with encoded network addresses
+
+### 🔍 Key Evidence
+- Multiple SOCKET/CONNECT/SENDTO/RECVFROM events establishing network communications
+- Execution of numerous unknown binaries (ahaeojyeqqves, shntyrnzanz, xbtdccfirpixfy, etc.) via QEMU emulation
+- STAT operations on /etc and /etc/daemon.cfg suggesting system reconnaissance
+- WRITE events containing binary data and ELF headers indicating payload delivery
+- KILL events targeting specific PIDs with SIGKILL
+- CONNECT events with encoded network addresses (hex strings) suggesting C2 communication
+- Multiple TRACK_FORK events showing process proliferation
+
+### 💡 Recommendations
+Isolate affected systems immediately. Analyze network traffic for connections to the observed addresses. Check for persistence mechanisms in /etc/rc.local or crontab. Monitor for unusual processes and file creations in /tmp and /usr/bin. Consider network segmentation and firewall rules to block outbound connections on unusual ports.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,43 @@
+# DeepSeek Malware Analysis Report
+**Target:** `19f49c94e83ddfebd02212994df5d41b415a117b33cf864cc5571f23d563d86e.elf` | **Job ID:** `98ae898a`
+**Date:** 2025-12-09 17:55:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`, `Evasion`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The analyzed binary is a Mirai botnet variant that establishes command-and-control (C2) connections, downloads and executes additional payloads, kills competing processes, and exhibits persistence behaviors. It operates by forking multiple processes that perform network reconnaissance, connect to C2 servers via raw sockets, and execute downloaded ELF binaries from /usr/bin with random names. The malware shows classic Mirai characteristics including process killing, network scanning, and binary download/execution cycles.
+
+### ⚠️ Suspicious Behaviors
+- Multiple raw socket creation (SOCKET events with domain=2, type=1/2) for network communication
+- Connection attempts to multiple IP addresses via CONNECT events with encoded addresses
+- Execution of multiple binaries from /usr/bin with random, nonsensical names (e.g., tddvuzjfjle, krquqhwbs, stndwaqc)
+- Process killing via KILL events with SIGKILL (signal 9) targeting specific PIDs
+- Repeated network communication patterns with SENDTO/RECVFROM events suggesting C2 protocol
+- File system reconnaissance via STAT events on /etc and /etc/daemon.cfg
+- Memory protection manipulation via MPROTECT events with read/write/exec permission changes
+- Binary data writing that appears to contain ELF headers and executable code
+
+### 🔍 Key Evidence
+- Multiple CONNECT events to different IP addresses (e.g., 02000050c6120012fc2a004148320041...) indicating C2 server connections
+- Execution of 15+ randomly named binaries from /usr/bin directory, all emulated via QEMU
+- KILL events targeting specific PIDs (36, 87, 132, 181, 221, 244) with SIGKILL, characteristic of Mirai's competitor-killing behavior
+- Network communication pattern: SOCKET → SENDTO → RECVFROM → CONNECT → SENDTO, repeated across multiple processes
+- STAT events on /etc/daemon.cfg suggesting configuration file checking
+- WRITE events containing ELF headers ('\x7fELF') and executable code fragments
+- Multiple TRACK_FORK events showing process tree creation for parallel operations
+- Exit code 0 despite extensive malicious activity, indicating successful execution
+
+### 💡 Recommendations
+Isolate infected systems immediately. Block outbound connections to the identified C2 IP addresses. Remove all suspicious binaries from /usr/bin. Check for persistence mechanisms in /etc/rc.local, crontab, or systemd services. Monitor for unusual network traffic patterns and CPU usage. Consider network segmentation to prevent lateral movement.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ea40ecec0b30982fbb1662e67f97f0e9d6f43d2d587f2f588525fae683abea73.elf` | **Job ID:** `ea2d900b`
+**Date:** 2025-12-09 17:55:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Backdoor`
+- **Standard Label:** `Trojan.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> This is a Mirai botnet variant that establishes command-and-control (C2) connections, downloads and executes additional payloads, and performs network reconnaissance. The program successfully executed with exit code 0, showing full malicious functionality including network communication, process forking, and execution of multiple suspicious binaries from /usr/bin.
+
+### ⚠️ Suspicious Behaviors
+- Multiple network socket connections to external addresses
+- Execution of numerous suspicious binaries with random names from /usr/bin
+- Process forking and creation of child processes
+- Network reconnaissance via STAT calls on /etc and /etc/daemon.cfg
+- KILL signals sent to specific target processes
+- Binary data writes suggesting payload delivery
+
+### 🔍 Key Evidence
+- Multiple SOCKET, CONNECT, SENDTO, and RECVFROM events establishing network communications with encoded addresses (e.g., 02000050c6120012fc2a004148320041...)
+- Execution of suspicious binaries: /usr/bin/pikpfrnxsomhek, /usr/bin/daclvaidcc, /usr/bin/qqwtnvwpr, /usr/bin/giexdzgkozn, /usr/bin/bandjqglfydbrr, etc.
+- STAT operations on /etc and /etc/daemon.cfg suggesting configuration reconnaissance
+- KILL events targeting specific PIDs with SIGKILL (signal 9)
+- Binary WRITE operations containing ELF headers and executable code fragments
+- Multiple TRACK_FORK events showing process tree expansion
+- Network pattern consistent with Mirai C2 communication (TCP sockets, specific data lengths)
+
+### 💡 Recommendations
+Isolate infected system immediately. Analyze network traffic to identify C2 servers. Collect all executed binaries for further analysis. Check for persistence mechanisms (crontab, systemd services). Monitor for DDoS attack patterns. Update IoT device credentials and firmware.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

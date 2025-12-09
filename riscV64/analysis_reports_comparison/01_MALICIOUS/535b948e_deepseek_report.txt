@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e06a4525f904a08438d77b776ed49a47a60cbc167a1273109c3406c90bef25a5` | **Job ID:** `535b948e`
+**Date:** 2025-12-09 17:12:16
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Memory Corruption`, `Shellcode Execution`
+- **Standard Label:** `HEUR:Trojan.Linux.Shellcode`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> The program exhibits clear malicious behavior by attempting to execute shellcode through memory manipulation. Despite failing to open a dictionary file (likely a configuration or payload file), it performed multiple mprotect calls to modify memory permissions, including setting executable permissions (PROT_EXEC), which is a strong indicator of shellcode execution. The program successfully started and executed its core malicious logic before exiting with an error due to missing dependencies.
+
+### ⚠️ Suspicious Behaviors
+- Memory permission manipulation for execution
+- Suspicious mprotect pattern with PROT_EXEC flag
+- Forking process during execution
+
+### 🔍 Key Evidence
+- mprotect call with PROT_EXEC permission (evidence: 'Detected mprotect call setting executable permissions')
+- Multiple mprotect calls with varying permission combinations
+- Process forking via CLONE syscall
+- Memory corruption alert with CVSS 9.3 score
+
+### 💡 Recommendations
+Isolate and analyze the binary further in a controlled environment. Extract and examine any embedded shellcode. Check for network activity patterns that may indicate C2 communication attempts. Monitor for persistence mechanisms that may have been attempted before the error occurred.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Error while opening dictionary file
+```
