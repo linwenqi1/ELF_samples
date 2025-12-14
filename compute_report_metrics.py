@@ -100,6 +100,7 @@ class Counters:
 
 
 VERDICT_REGEX = re.compile(r"Verdict:\s*\*\*(.+?)\*\*", re.IGNORECASE)
+RISK_SCORE_REGEX = re.compile(r"Risk\s*Score:[^0-9]*([0-9]+)\s*/\s*100", re.IGNORECASE)
 
 
 def normalize_verdict(text: str) -> Optional[str]:
@@ -108,6 +109,17 @@ def normalize_verdict(text: str) -> Optional[str]:
         return "malicious"
     if "benign" in t or "clean" in t:
         return "benign"
+    return None
+
+
+def parse_risk_score(content: str) -> Optional[int]:
+    """Extract numeric risk score (0-100) if present."""
+    match = RISK_SCORE_REGEX.search(content)
+    if match:
+        try:
+            return int(match.group(1))
+        except ValueError:
+            return None
     return None
 
 
@@ -130,6 +142,12 @@ def parse_report_verdict(report_path: Path) -> Optional[str]:
             maybe = normalize_verdict(line)
             if maybe:
                 return maybe
+
+    # Fallback: infer from risk score when verdict is Unknown/empty
+    risk = parse_risk_score(content)
+    if risk is not None:
+        # Treat any non-trivial risk as malicious, low/zero risk as benign
+        return "malicious" if risk >= 50 else "benign"
     return None
 
 
