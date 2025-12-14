@@ -1,0 +1,845 @@
+{
+  "data": {
+    "id": "fc0f05e57f92ee5cce6e5901871ef7dc80b9c41ee1c30e02ae91071aa5384a04",
+    "type": "file",
+    "links": {
+      "self": "https://www.virustotal.com/api/v3/files/fc0f05e57f92ee5cce6e5901871ef7dc80b9c41ee1c30e02ae91071aa5384a04"
+    },
+    "attributes": {
+      "type_description": "ELF",
+      "unique_sources": 2,
+      "popular_threat_classification": {
+        "popular_threat_name": [
+          {
+            "value": "mirai",
+            "count": 20
+          },
+          {
+            "value": "gafgyt",
+            "count": 2
+          },
+          {
+            "value": "r002c0di725",
+            "count": 2
+          }
+        ],
+        "suggested_threat_label": "trojan.mirai/gafgyt",
+        "popular_threat_category": [
+          {
+            "value": "trojan",
+            "count": 22
+          }
+        ]
+      },
+      "md5": "957ca8868ec9bf790dbd88c7ba5b6e0b",
+      "names": [
+        "957ca8868ec9bf790dbd88c7ba5b6e0b",
+        "374525162"
+      ],
+      "magic": "ELF 32-bit LSB executable, Renesas SH, version 1 (SYSV), statically linked, stripped",
+      "size": 56300,
+      "meaningful_name": "374525162",
+      "type_tag": "elf",
+      "tlsh": "T194439C73C97A1E98E59845B0B4219E345363F94081A75FBB6676C26EA083FDCF6063F0",
+      "last_modification_date": 1762783633,
+      "first_submission_date": 1746549209,
+      "ssdeep": "768:odTqLWQ7u6IBomQ6CxWh3JKnIVfn67vato2U8ACCRGL1afqxcy3yAId:odTqh9YG6fKnIV/67yi2sCCRKxJz",
+      "times_submitted": 2,
+      "reputation": -1,
+      "tags": [
+        "elf",
+        "spreader"
+      ],
+      "last_analysis_stats": {
+        "malicious": 39,
+        "suspicious": 0,
+        "undetected": 24,
+        "harmless": 0,
+        "timeout": 0,
+        "confirmed-timeout": 0,
+        "failure": 1,
+        "type-unsupported": 12
+      },
+      "detectiteasy": {
+        "filetype": "ELF32",
+        "values": [
+          {
+            "info": "EXEC SH-32",
+            "type": "Operation system",
+            "name": "Unix"
+          }
+        ]
+      },
+      "elf_info": {
+        "header": {
+          "type": "EXEC (Executable file)",
+          "hdr_version": "1 (current)",
+          "num_prog_headers": 3,
+          "obj_version": "0x1",
+          "machine": "<unknown>",
+          "num_section_headers": 10,
+          "os_abi": "UNIX - System V",
+          "abi_version": 0,
+          "entrypoint": 4194720,
+          "data": "2's complement, little endian",
+          "class": "ELF32"
+        },
+        "section_list": [
+          {
+            "name": "",
+            "section_type": "NULL",
+            "virtual_address": 0,
+            "physical_offset": 0,
+            "size": 0,
+            "flags": ""
+          },
+          {
+            "name": ".init",
+            "section_type": "PROGBITS",
+            "virtual_address": 4194452,
+            "physical_offset": 148,
+            "size": 48,
+            "flags": "AX"
+          },
+          {
+            "name": ".text",
+            "section_type": "PROGBITS",
+            "virtual_address": 4194528,
+            "physical_offset": 224,
+            "size": 48896,
+            "flags": "AX"
+          },
+          {
+            "name": ".fini",
+            "section_type": "PROGBITS",
+            "virtual_address": 4243424,
+            "physical_offset": 49120,
+            "size": 36,
+            "flags": "AX"
+          },
+          {
+            "name": ".rodata",
+            "section_type": "PROGBITS",
+            "virtual_address": 4243460,
+            "physical_offset": 49156,
+            "size": 5772,
+            "flags": "A"
+          },
+          {
+            "name": ".ctors",
+            "section_type": "PROGBITS",
+            "virtual_address": 4314772,
+            "physical_offset": 54932,
+            "size": 8,
+            "flags": "WA"
+          },
+          {
+            "name": ".dtors",
+            "section_type": "PROGBITS",
+            "virtual_address": 4314780,
+            "physical_offset": 54940,
+            "size": 8,
+            "flags": "WA"
+          },
+          {
+            "name": ".data",
+            "section_type": "PROGBITS",
+            "virtual_address": 4314792,
+            "physical_offset": 54952,
+            "size": 884,
+            "flags": "WA"
+          },
+          {
+            "name": ".bss",
+            "section_type": "NOBITS",
+            "virtual_address": 4315676,
+            "physical_offset": 55836,
+            "size": 8540,
+            "flags": "WA"
+          },
+          {
+            "name": ".shstrtab",
+            "section_type": "STRTAB",
+            "virtual_address": 0,
+            "physical_offset": 55836,
+            "size": 62,
+            "flags": ""
+          }
+        ],
+        "segment_list": [
+          {
+            "segment_type": "LOAD",
+            "resources": [
+              ".init",
+              ".text",
+              ".fini",
+              ".rodata"
+            ]
+          },
+          {
+            "segment_type": "LOAD",
+            "resources": [
+              ".ctors",
+              ".dtors",
+              ".data",
+              ".bss"
+            ]
+          },
+          {
+            "segment_type": "GNU_STACK",
+            "resources": []
+          }
+        ]
+      },
+      "vhash": "e8c00b09f7fb8f889aec356c5f34d052",
+      "last_submission_date": 1746639596,
+      "type_tags": [
+        "executable",
+        "linux",
+        "elf"
+      ],
+      "magika": "ELF",
+      "total_votes": {
+        "harmless": 0,
+        "malicious": 1
+      },
+      "sha1": "8c0f01a78e2923e539cc8e46646f0dc3a084d2e3",
+      "last_analysis_date": 1762776362,
+      "last_analysis_results": {
+        "Bkav": {
+          "method": "blacklist",
+          "engine_name": "Bkav",
+          "engine_version": "2.0.0.1",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Lionic": {
+          "method": "blacklist",
+          "engine_name": "Lionic",
+          "engine_version": "8.16",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.Mirai.K!c"
+        },
+        "Elastic": {
+          "method": "blacklist",
+          "engine_name": "Elastic",
+          "engine_version": "4.0.236",
+          "engine_update": "20251105",
+          "category": "undetected",
+          "result": null
+        },
+        "MicroWorld-eScan": {
+          "method": "blacklist",
+          "engine_name": "MicroWorld-eScan",
+          "engine_version": "14.0.409.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.GenericKD.46107"
+        },
+        "ClamAV": {
+          "method": "blacklist",
+          "engine_name": "ClamAV",
+          "engine_version": "1.5.1.0",
+          "engine_update": "20251109",
+          "category": "malicious",
+          "result": "Unix.Dropper.Mirai-7136288-0"
+        },
+        "CTX": {
+          "method": "blacklist",
+          "engine_name": "CTX",
+          "engine_version": "2024.8.29.1",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "elf.trojan.mirai"
+        },
+        "CAT-QuickHeal": {
+          "method": "blacklist",
+          "engine_name": "CAT-QuickHeal",
+          "engine_version": "22.00",
+          "engine_update": "20251109",
+          "category": "undetected",
+          "result": null
+        },
+        "Skyhigh": {
+          "method": "blacklist",
+          "engine_name": "Skyhigh",
+          "engine_version": "v2021.2.0+4045",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "LINUX/Mirai-ICV!957CA8868EC9"
+        },
+        "ALYac": {
+          "method": "blacklist",
+          "engine_name": "ALYac",
+          "engine_version": "2.0.0.10",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.GenericKD.46107"
+        },
+        "Malwarebytes": {
+          "method": "blacklist",
+          "engine_name": "Malwarebytes",
+          "engine_version": "3.1.0.174",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "VIPRE": {
+          "method": "blacklist",
+          "engine_name": "VIPRE",
+          "engine_version": "6.0.0.35",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.GenericKD.46107"
+        },
+        "Sangfor": {
+          "method": "blacklist",
+          "engine_name": "Sangfor",
+          "engine_version": "2.22.3.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Suspicious.Linux.Save.a"
+        },
+        "CrowdStrike": {
+          "method": "blacklist",
+          "engine_name": "CrowdStrike",
+          "engine_version": "1.0",
+          "engine_update": "20231026",
+          "category": "undetected",
+          "result": null
+        },
+        "K7GW": {
+          "method": "blacklist",
+          "engine_name": "K7GW",
+          "engine_version": "14.17.57625",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan ( 004101ed1 )"
+        },
+        "K7AntiVirus": {
+          "method": "blacklist",
+          "engine_name": "K7AntiVirus",
+          "engine_version": "14.17.57625",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Baidu": {
+          "method": "blacklist",
+          "engine_name": "Baidu",
+          "engine_version": "1.0.0.2",
+          "engine_update": "20190318",
+          "category": "undetected",
+          "result": null
+        },
+        "Symantec": {
+          "method": "blacklist",
+          "engine_name": "Symantec",
+          "engine_version": "1.22.0.0",
+          "engine_update": "20251109",
+          "category": "malicious",
+          "result": "Trojan.Gen.NPE"
+        },
+        "ESET-NOD32": {
+          "method": "blacklist",
+          "engine_name": "ESET-NOD32",
+          "engine_version": "18.2.18.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "a variant of Linux/Mirai.CXJ"
+        },
+        "TrendMicro-HouseCall": {
+          "method": "blacklist",
+          "engine_name": "TrendMicro-HouseCall",
+          "engine_version": "24.550.0.1002",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "TROJ_GEN.R002C0DI725"
+        },
+        "Avast": {
+          "method": "blacklist",
+          "engine_name": "Avast",
+          "engine_version": "23.9.8494.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "ELF:Mirai-CFR [Trj]"
+        },
+        "Cynet": {
+          "method": "blacklist",
+          "engine_name": "Cynet",
+          "engine_version": "4.0.3.4",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Malicious (score: 99)"
+        },
+        "Kaspersky": {
+          "method": "blacklist",
+          "engine_name": "Kaspersky",
+          "engine_version": "22.0.1.28",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "HEUR:Backdoor.Linux.Mirai.gen"
+        },
+        "BitDefender": {
+          "method": "blacklist",
+          "engine_name": "BitDefender",
+          "engine_version": "7.2",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.GenericKD.46107"
+        },
+        "NANO-Antivirus": {
+          "method": "blacklist",
+          "engine_name": "NANO-Antivirus",
+          "engine_version": "1.0.170.26895",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "ViRobot": {
+          "method": "blacklist",
+          "engine_name": "ViRobot",
+          "engine_version": "2014.3.20.0",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Tencent": {
+          "method": "blacklist",
+          "engine_name": "Tencent",
+          "engine_version": "1.0.0.1",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.Mirai.cbf"
+        },
+        "Sophos": {
+          "method": "blacklist",
+          "engine_name": "Sophos",
+          "engine_version": "3.3.1.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Mal/Generic-S"
+        },
+        "F-Secure": {
+          "method": "blacklist",
+          "engine_name": "F-Secure",
+          "engine_version": "18.10.1547.307",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Malware.ANDROID/AVE.Mirai.xharv"
+        },
+        "DrWeb": {
+          "method": "blacklist",
+          "engine_name": "DrWeb",
+          "engine_version": "7.0.72.9030",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Linux.Siggen.9999"
+        },
+        "Zillya": {
+          "method": "blacklist",
+          "engine_name": "Zillya",
+          "engine_version": "2.0.0.5481",
+          "engine_update": "20251107",
+          "category": "undetected",
+          "result": null
+        },
+        "TrendMicro": {
+          "method": "blacklist",
+          "engine_name": "TrendMicro",
+          "engine_version": "24.550.0.1002",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "TROJ_GEN.R002C0DI725"
+        },
+        "McAfeeD": {
+          "method": "blacklist",
+          "engine_name": "McAfeeD",
+          "engine_version": "1.2.0.10275",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "CMC": {
+          "method": "blacklist",
+          "engine_name": "CMC",
+          "engine_version": "2.4.2022.1",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Emsisoft": {
+          "method": "blacklist",
+          "engine_name": "Emsisoft",
+          "engine_version": "2024.8.0.61147",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.GenericKD.46107 (B)"
+        },
+        "Ikarus": {
+          "method": "blacklist",
+          "engine_name": "Ikarus",
+          "engine_version": "6.4.16.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.Mirai"
+        },
+        "Avast-Mobile": {
+          "method": "blacklist",
+          "engine_name": "Avast-Mobile",
+          "engine_version": "251110-00",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "ELF:Mirai-CFS [Trj]"
+        },
+        "Jiangmin": {
+          "method": "blacklist",
+          "engine_name": "Jiangmin",
+          "engine_version": "16.0.100",
+          "engine_update": "20251109",
+          "category": "malicious",
+          "result": "ANDROID.AVE.cz"
+        },
+        "Google": {
+          "method": "blacklist",
+          "engine_name": "Google",
+          "engine_version": "1762772449",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Detected"
+        },
+        "Avira": {
+          "method": "blacklist",
+          "engine_name": "Avira",
+          "engine_version": "8.3.3.24",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "ANDROID/AVE.Mirai.xharv"
+        },
+        "Antiy-AVL": {
+          "method": "blacklist",
+          "engine_name": "Antiy-AVL",
+          "engine_version": "3.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan[Backdoor]/Linux.Gafgyt.p"
+        },
+        "Kingsoft": {
+          "method": "blacklist",
+          "engine_name": "Kingsoft",
+          "engine_version": "None",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Microsoft": {
+          "method": "blacklist",
+          "engine_name": "Microsoft",
+          "engine_version": "1.1.25100.9002",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Backdoor:Linux/Gafgyt.P!MTB"
+        },
+        "Gridinsoft": {
+          "method": "blacklist",
+          "engine_name": "Gridinsoft",
+          "engine_version": "1.0.228.174",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Xcitium": {
+          "method": "blacklist",
+          "engine_name": "Xcitium",
+          "engine_version": "38180",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Arcabit": {
+          "method": "blacklist",
+          "engine_name": "Arcabit",
+          "engine_version": "2025.0.0.23",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.DB41B"
+        },
+        "SUPERAntiSpyware": {
+          "method": "blacklist",
+          "engine_name": "SUPERAntiSpyware",
+          "engine_version": "5.6.0.1032",
+          "engine_update": "20251108",
+          "category": "undetected",
+          "result": null
+        },
+        "ZoneAlarm": {
+          "method": "blacklist",
+          "engine_name": "ZoneAlarm",
+          "engine_version": "6.20-109672604",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "GData": {
+          "method": "blacklist",
+          "engine_name": "GData",
+          "engine_version": "GD:27.42460AVA:64.30115",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan.Linux.GenericKD.46107"
+        },
+        "Varist": {
+          "method": "blacklist",
+          "engine_name": "Varist",
+          "engine_version": "6.6.1.3",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "E32/Mirai.EP.gen!Eldorado"
+        },
+        "AhnLab-V3": {
+          "method": "blacklist",
+          "engine_name": "AhnLab-V3",
+          "engine_version": "3.29.0.10596",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Trojan/Linux.Mirai.SE334"
+        },
+        "Acronis": {
+          "method": "blacklist",
+          "engine_name": "Acronis",
+          "engine_version": "1.2.0.121",
+          "engine_update": "20240328",
+          "category": "undetected",
+          "result": null
+        },
+        "VBA32": {
+          "method": "blacklist",
+          "engine_name": "VBA32",
+          "engine_version": "5.4.1",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "TACHYON": {
+          "method": "blacklist",
+          "engine_name": "TACHYON",
+          "engine_version": "2025-11-10.02",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Zoner": {
+          "method": "blacklist",
+          "engine_name": "Zoner",
+          "engine_version": "2.2.2.0",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Rising": {
+          "method": "blacklist",
+          "engine_name": "Rising",
+          "engine_version": "25.0.0.28",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Backdoor.Mirai/Linux!1.E816 (CLASSIC)"
+        },
+        "Yandex": {
+          "method": "blacklist",
+          "engine_name": "Yandex",
+          "engine_version": "5.5.2.24",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "TrellixENS": {
+          "method": "blacklist",
+          "engine_name": "TrellixENS",
+          "engine_version": "6.0.6.653",
+          "engine_update": "20251109",
+          "category": "malicious",
+          "result": "LINUX/Mirai-ICV!957CA8868EC9"
+        },
+        "huorong": {
+          "method": "blacklist",
+          "engine_name": "huorong",
+          "engine_version": "2b9f820:2b9f820:b6c69a3:b6c69a3",
+          "engine_update": "20251109",
+          "category": "malicious",
+          "result": "Trojan/Linux.Mirai.co"
+        },
+        "MaxSecure": {
+          "method": "blacklist",
+          "engine_name": "MaxSecure",
+          "engine_version": "1.0.0.1",
+          "engine_update": "20251110",
+          "category": "undetected",
+          "result": null
+        },
+        "Fortinet": {
+          "method": "blacklist",
+          "engine_name": "Fortinet",
+          "engine_version": "7.0.30.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "Linux/Mirai.IZ1H9!tr"
+        },
+        "AVG": {
+          "method": "blacklist",
+          "engine_name": "AVG",
+          "engine_version": "23.9.8494.0",
+          "engine_update": "20251110",
+          "category": "malicious",
+          "result": "ELF:Mirai-CFR [Trj]"
+        },
+        "Panda": {
+          "method": "blacklist",
+          "engine_name": "Panda",
+          "engine_version": "4.6.4.2",
+          "engine_update": "20251109",
+          "category": "undetected",
+          "result": null
+        },
+        "alibabacloud": {
+          "method": "blacklist",
+          "engine_name": "alibabacloud",
+          "engine_version": "2.2.0",
+          "engine_update": "20250321",
+          "category": "malicious",
+          "result": "DDOS:Linux/Mirai"
+        },
+        "VirIT": {
+          "method": "blacklist",
+          "engine_name": "VirIT",
+          "engine_version": null,
+          "engine_update": "20251107",
+          "category": "failure",
+          "result": null
+        },
+        "SymantecMobileInsight": {
+          "method": "blacklist",
+          "engine_name": "SymantecMobileInsight",
+          "engine_version": "2.0",
+          "engine_update": "20250124",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "BitDefenderFalx": {
+          "method": "blacklist",
+          "engine_name": "BitDefenderFalx",
+          "engine_version": "2.0.936",
+          "engine_update": "20250416",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "DeepInstinct": {
+          "method": "blacklist",
+          "engine_name": "DeepInstinct",
+          "engine_version": "5.0.0.8",
+          "engine_update": "20251110",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "tehtris": {
+          "method": "blacklist",
+          "engine_name": "tehtris",
+          "engine_version": "v0.1.4",
+          "engine_update": "20251110",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Webroot": {
+          "method": "blacklist",
+          "engine_name": "Webroot",
+          "engine_version": "1.9.0.8",
+          "engine_update": "20250227",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "APEX": {
+          "method": "blacklist",
+          "engine_name": "APEX",
+          "engine_version": "6.710",
+          "engine_update": "20251110",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Paloalto": {
+          "method": "blacklist",
+          "engine_name": "Paloalto",
+          "engine_version": "0.9.0.1003",
+          "engine_update": "20251110",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Alibaba": {
+          "method": "blacklist",
+          "engine_name": "Alibaba",
+          "engine_version": "0.3.0.5",
+          "engine_update": "20190527",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Trapmine": {
+          "method": "blacklist",
+          "engine_name": "Trapmine",
+          "engine_version": "4.0.6.0",
+          "engine_update": "20251023",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Cylance": {
+          "method": "blacklist",
+          "engine_name": "Cylance",
+          "engine_version": "3.0.0.0",
+          "engine_update": "20251027",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "SentinelOne": {
+          "method": "blacklist",
+          "engine_name": "SentinelOne",
+          "engine_version": "7.4.1.3",
+          "engine_update": "20251013",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Trustlook": {
+          "method": "blacklist",
+          "engine_name": "Trustlook",
+          "engine_version": "1.0",
+          "engine_update": "20251110",
+          "category": "type-unsupported",
+          "result": null
+        }
+      },
+      "first_seen_itw_date": 1746549881,
+      "sha256": "fc0f05e57f92ee5cce6e5901871ef7dc80b9c41ee1c30e02ae91071aa5384a04",
+      "filecondis": {
+        "raw_md5": "f4fe179675caa3e606aaed95ac5dd610",
+        "dhash": "fe7c3c1c4c642018"
+      },
+      "trid": [
+        {
+          "file_type": "ELF Executable and Linkable format (Linux)",
+          "probability": 50.1
+        },
+        {
+          "file_type": "ELF Executable and Linkable format (generic)",
+          "probability": 49.8
+        }
+      ],
+      "crowdsourced_ai_results": [
+        {
+          "source": "palm",
+          "analysis": "The ELF binary is a malicious botnet agent, likely targeting RISC-V IoT devices. It performs network discovery by broadcasting SSDP (UPnP) M-SEARCH requests, a technique often used to find vulnerable devices or for DDoS amplification attacks. The binary also enumerates running processes and network connections by reading files in the `/proc` directory (e.g., `/proc/net/tcp`, `/proc/%d/cmdline`). It attempts to masquerade its network traffic using a hardcoded User-Agent string: `Google Chrome/60.0.3112.90 Windows`.",
+          "verdict": "malicious",
+          "category": "code_insight",
+          "id": "fc0f05e57f92ee5cce6e5901871ef7dc80b9c41ee1c30e02ae91071aa5384a04-file-palm"
+        }
+      ]
+    }
+  }
+}

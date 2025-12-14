@@ -1,0 +1,1597 @@
+{
+  "data": {
+    "id": "9876b83ce63edd0a9df541fef95407d95c87a124c4801206c176fe2ed5ed461c",
+    "type": "file",
+    "links": {
+      "self": "https://www.virustotal.com/api/v3/files/9876b83ce63edd0a9df541fef95407d95c87a124c4801206c176fe2ed5ed461c"
+    },
+    "attributes": {
+      "names": [
+        "2025-11-12_85675570d6c913264fb988009222c465_glassworm",
+        "1nf576f1.exe",
+        "aarch64.elf"
+      ],
+      "last_modification_date": 1765120533,
+      "crowdsourced_yara_results": [
+        {
+          "ruleset_id": "01ac6df837",
+          "ruleset_version": "01ac6df837|834366aa118f4e231f6f835e1dd479dab29dc599",
+          "ruleset_name": "miner_lin_xmrig_strings",
+          "rule_name": "miner_lin_xmrig_strings",
+          "match_date": 1765113335,
+          "description": "Detects XMRig ELF",
+          "author": "Sekoia.io",
+          "source": "https://github.com/SEKOIA-IO/Community"
+        }
+      ],
+      "last_analysis_stats": {
+        "malicious": 31,
+        "suspicious": 0,
+        "undetected": 33,
+        "harmless": 0,
+        "timeout": 0,
+        "confirmed-timeout": 0,
+        "failure": 0,
+        "type-unsupported": 12
+      },
+      "filecondis": {
+        "raw_md5": "d60d277e43e157b6a78030fa2b6f06ca",
+        "dhash": "303c3c1e0e1e1500"
+      },
+      "magic": "ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically linked, stripped",
+      "times_submitted": 2,
+      "unique_sources": 2,
+      "elf_info": {
+        "header": {
+          "type": "EXEC (Executable file)",
+          "hdr_version": "1 (current)",
+          "num_prog_headers": 5,
+          "obj_version": "0x1",
+          "machine": "AArch64",
+          "num_section_headers": 17,
+          "os_abi": "UNIX - System V",
+          "abi_version": 0,
+          "entrypoint": 4221740,
+          "data": "2's complement, little endian",
+          "class": "ELF64"
+        },
+        "section_list": [
+          {
+            "name": "",
+            "section_type": "NULL",
+            "virtual_address": 0,
+            "physical_offset": 0,
+            "size": 0,
+            "flags": ""
+          },
+          {
+            "name": ".init",
+            "section_type": "PROGBITS",
+            "virtual_address": 4194648,
+            "physical_offset": 344,
+            "size": 16,
+            "flags": "AX"
+          },
+          {
+            "name": ".text",
+            "section_type": "PROGBITS",
+            "virtual_address": 4194688,
+            "physical_offset": 384,
+            "size": 3195924,
+            "flags": "AX"
+          },
+          {
+            "name": ".fini",
+            "section_type": "PROGBITS",
+            "virtual_address": 7390612,
+            "physical_offset": 3196308,
+            "size": 16,
+            "flags": "AX"
+          },
+          {
+            "name": ".rodata",
+            "section_type": "PROGBITS",
+            "virtual_address": 7393280,
+            "physical_offset": 3198976,
+            "size": 593374,
+            "flags": "A"
+          },
+          {
+            "name": ".eh_frame",
+            "section_type": "PROGBITS",
+            "virtual_address": 7986656,
+            "physical_offset": 3792352,
+            "size": 341760,
+            "flags": "A"
+          },
+          {
+            "name": ".gcc_except_table",
+            "section_type": "PROGBITS",
+            "virtual_address": 8328416,
+            "physical_offset": 4134112,
+            "size": 33077,
+            "flags": "A"
+          },
+          {
+            "name": ".tbss",
+            "section_type": "NOBITS",
+            "virtual_address": 8426144,
+            "physical_offset": 4231840,
+            "size": 9560,
+            "flags": "WAT"
+          },
+          {
+            "name": ".init_array",
+            "section_type": "INIT_ARRAY",
+            "virtual_address": 8426144,
+            "physical_offset": 4231840,
+            "size": 296,
+            "flags": "WA"
+          },
+          {
+            "name": ".fini_array",
+            "section_type": "FINI_ARRAY",
+            "virtual_address": 8426440,
+            "physical_offset": 4232136,
+            "size": 24,
+            "flags": "WA"
+          },
+          {
+            "name": ".data.rel.ro",
+            "section_type": "PROGBITS",
+            "virtual_address": 8426464,
+            "physical_offset": 4232160,
+            "size": 24808,
+            "flags": "WA"
+          },
+          {
+            "name": ".got",
+            "section_type": "PROGBITS",
+            "virtual_address": 8451272,
+            "physical_offset": 4256968,
+            "size": 2840,
+            "flags": "WA"
+          },
+          {
+            "name": ".got.plt",
+            "section_type": "PROGBITS",
+            "virtual_address": 8454120,
+            "physical_offset": 4259816,
+            "size": 24,
+            "flags": "WA"
+          },
+          {
+            "name": ".data",
+            "section_type": "PROGBITS",
+            "virtual_address": 8454144,
+            "physical_offset": 4259840,
+            "size": 8408,
+            "flags": "WA"
+          },
+          {
+            "name": ".bss",
+            "section_type": "NOBITS",
+            "virtual_address": 8462592,
+            "physical_offset": 4268248,
+            "size": 69008,
+            "flags": "WA"
+          },
+          {
+            "name": ".comment",
+            "section_type": "PROGBITS",
+            "virtual_address": 0,
+            "physical_offset": 4268248,
+            "size": 18,
+            "flags": "MS"
+          },
+          {
+            "name": ".shstrtab",
+            "section_type": "STRTAB",
+            "virtual_address": 0,
+            "physical_offset": 4268266,
+            "size": 142,
+            "flags": ""
+          }
+        ],
+        "segment_list": [
+          {
+            "segment_type": "LOAD",
+            "resources": [
+              ".init",
+              ".text",
+              ".fini",
+              ".rodata",
+              ".eh_frame",
+              ".gcc_except_table"
+            ]
+          },
+          {
+            "segment_type": "LOAD",
+            "resources": [
+              ".tbss",
+              ".init_array",
+              ".fini_array",
+              ".data.rel.ro",
+              ".got",
+              ".got.plt",
+              ".data",
+              ".bss"
+            ]
+          },
+          {
+            "segment_type": "TLS",
+            "resources": [
+              ".tbss"
+            ]
+          },
+          {
+            "segment_type": "GNU_STACK",
+            "resources": []
+          },
+          {
+            "segment_type": "GNU_RELRO",
+            "resources": [
+              ".tbss",
+              ".init_array",
+              ".fini_array",
+              ".data.rel.ro",
+              ".got",
+              ".got.plt"
+            ]
+          }
+        ]
+      },
+      "sigma_analysis_summary": {
+        "Sigma Integrated Rule Set (GitHub)": {
+          "critical": 0,
+          "high": 0,
+          "medium": 3,
+          "low": 0
+        }
+      },
+      "type_description": "ELF",
+      "sigma_analysis_stats": {
+        "critical": 0,
+        "high": 0,
+        "medium": 3,
+        "low": 0
+      },
+      "detectiteasy": {
+        "filetype": "ELF64",
+        "values": [
+          {
+            "info": "EXEC AARCH64-64",
+            "type": "Operation system",
+            "name": "Unix"
+          },
+          {
+            "info": "EXEC AARCH64-64",
+            "version": "(GNU) 15.1.0",
+            "type": "Compiler",
+            "name": "gcc"
+          }
+        ]
+      },
+      "md5": "85675570d6c913264fb988009222c465",
+      "size": 4269496,
+      "tlsh": "T1D1166B99ED0F3C12F3C7F23CCE4A97E1761B75A4E32390B279D25249C59E9D0CAA1A11",
+      "last_analysis_date": 1765111087,
+      "tags": [
+        "sets-process-name",
+        "service-scan",
+        "detect-debug-environment",
+        "64bits",
+        "persistence",
+        "elf",
+        "arm"
+      ],
+      "vhash": "58e93fe1d1510d3a8805f22f6ee2bb7a",
+      "ssdeep": "49152:08gQeZQ0Q7a7IaPCdvRIU7O9YpwHdY12oFEYIU6i4kVz:08gQeZQ0Q7SCdOEO9YpwG12oFs+4",
+      "last_analysis_results": {
+        "Bkav": {
+          "method": "blacklist",
+          "engine_name": "Bkav",
+          "engine_version": "2.0.0.1",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Lionic": {
+          "method": "blacklist",
+          "engine_name": "Lionic",
+          "engine_version": "8.16",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Riskware.Linux.BitCoinMiner.1!c"
+        },
+        "Elastic": {
+          "method": "blacklist",
+          "engine_name": "Elastic",
+          "engine_version": "4.0.240",
+          "engine_update": "20251125",
+          "category": "undetected",
+          "result": null
+        },
+        "MicroWorld-eScan": {
+          "method": "blacklist",
+          "engine_name": "MicroWorld-eScan",
+          "engine_version": "14.0.409.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.4499659"
+        },
+        "ClamAV": {
+          "method": "blacklist",
+          "engine_name": "ClamAV",
+          "engine_version": "1.5.1.0",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "CTX": {
+          "method": "blacklist",
+          "engine_name": "CTX",
+          "engine_version": "2024.8.29.1",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "elf.miner.generic"
+        },
+        "CAT-QuickHeal": {
+          "method": "blacklist",
+          "engine_name": "CAT-QuickHeal",
+          "engine_version": "22.00",
+          "engine_update": "20251206",
+          "category": "undetected",
+          "result": null
+        },
+        "Skyhigh": {
+          "method": "blacklist",
+          "engine_name": "Skyhigh",
+          "engine_version": "v2021.2.0+4045",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "ALYac": {
+          "method": "blacklist",
+          "engine_name": "ALYac",
+          "engine_version": "2.0.0.10",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.4499659"
+        },
+        "Malwarebytes": {
+          "method": "blacklist",
+          "engine_name": "Malwarebytes",
+          "engine_version": "3.1.0.181",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "VIPRE": {
+          "method": "blacklist",
+          "engine_name": "VIPRE",
+          "engine_version": "6.0.0.35",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.4499659"
+        },
+        "Sangfor": {
+          "method": "blacklist",
+          "engine_name": "Sangfor",
+          "engine_version": "2.22.3.0",
+          "engine_update": "20251205",
+          "category": "undetected",
+          "result": null
+        },
+        "CrowdStrike": {
+          "method": "blacklist",
+          "engine_name": "CrowdStrike",
+          "engine_version": "1.0",
+          "engine_update": "20230417",
+          "category": "undetected",
+          "result": null
+        },
+        "K7GW": {
+          "method": "blacklist",
+          "engine_name": "K7GW",
+          "engine_version": "14.21.57907",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "K7AntiVirus": {
+          "method": "blacklist",
+          "engine_name": "K7AntiVirus",
+          "engine_version": "14.21.57906",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Baidu": {
+          "method": "blacklist",
+          "engine_name": "Baidu",
+          "engine_version": "1.0.0.2",
+          "engine_update": "20190318",
+          "category": "undetected",
+          "result": null
+        },
+        "VirIT": {
+          "method": "blacklist",
+          "engine_name": "VirIT",
+          "engine_version": "9.5.1100",
+          "engine_update": "20251205",
+          "category": "undetected",
+          "result": null
+        },
+        "Symantec": {
+          "method": "blacklist",
+          "engine_name": "Symantec",
+          "engine_version": "1.22.0.0",
+          "engine_update": "20251206",
+          "category": "malicious",
+          "result": "PUA.Gen.2"
+        },
+        "ESET-NOD32": {
+          "method": "blacklist",
+          "engine_name": "ESET-NOD32",
+          "engine_version": "18.2.18.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Linux/CoinMiner.CP potentially unwanted application"
+        },
+        "TrendMicro-HouseCall": {
+          "method": "blacklist",
+          "engine_name": "TrendMicro-HouseCall",
+          "engine_version": "24.550.0.1002",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "TROJ_GEN.R002C0DKC25"
+        },
+        "Avast": {
+          "method": "blacklist",
+          "engine_name": "Avast",
+          "engine_version": "23.9.8494.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "ELF:Miner-LO [PUP]"
+        },
+        "Cynet": {
+          "method": "blacklist",
+          "engine_name": "Cynet",
+          "engine_version": "4.0.3.4",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Kaspersky": {
+          "method": "blacklist",
+          "engine_name": "Kaspersky",
+          "engine_version": "22.0.1.28",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "not-a-virus:HEUR:RiskTool.Linux.BitCoinMiner.n"
+        },
+        "BitDefender": {
+          "method": "blacklist",
+          "engine_name": "BitDefender",
+          "engine_version": "7.2",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.4499659"
+        },
+        "NANO-Antivirus": {
+          "method": "blacklist",
+          "engine_name": "NANO-Antivirus",
+          "engine_version": "1.0.170.26895",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "ViRobot": {
+          "method": "blacklist",
+          "engine_name": "ViRobot",
+          "engine_version": "2014.3.20.0",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Rising": {
+          "method": "blacklist",
+          "engine_name": "Rising",
+          "engine_version": "25.0.0.28",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "HackTool.XMRMiner!1.FD0F (CLASSIC)"
+        },
+        "Sophos": {
+          "method": "blacklist",
+          "engine_name": "Sophos",
+          "engine_version": "3.3.1.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Generic Reputation PUA (PUA)"
+        },
+        "F-Secure": {
+          "method": "blacklist",
+          "engine_name": "F-Secure",
+          "engine_version": "18.10.1547.307",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "DrWeb": {
+          "method": "blacklist",
+          "engine_name": "DrWeb",
+          "engine_version": "7.0.72.9030",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Tool.Linux.BtcMine.9999"
+        },
+        "Zillya": {
+          "method": "blacklist",
+          "engine_name": "Zillya",
+          "engine_version": "2.0.0.5499",
+          "engine_update": "20251205",
+          "category": "undetected",
+          "result": null
+        },
+        "TrendMicro": {
+          "method": "blacklist",
+          "engine_name": "TrendMicro",
+          "engine_version": "24.550.0.1002",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "TROJ_GEN.R002C0DKC25"
+        },
+        "McAfeeD": {
+          "method": "blacklist",
+          "engine_name": "McAfeeD",
+          "engine_version": "1.2.0.10275",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "CMC": {
+          "method": "blacklist",
+          "engine_name": "CMC",
+          "engine_version": "2.4.2022.1",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Emsisoft": {
+          "method": "blacklist",
+          "engine_name": "Emsisoft",
+          "engine_version": "2024.8.0.61147",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.4499659 (B)"
+        },
+        "huorong": {
+          "method": "blacklist",
+          "engine_name": "huorong",
+          "engine_version": "c78df94:c78df94:71be285:71be285",
+          "engine_update": "20251204",
+          "category": "malicious",
+          "result": "HackTool/Linux.BitCoinMiner.a"
+        },
+        "GData": {
+          "method": "blacklist",
+          "engine_name": "GData",
+          "engine_version": "GD:27.42782AVA:64.30284",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.4499659"
+        },
+        "Jiangmin": {
+          "method": "blacklist",
+          "engine_name": "Jiangmin",
+          "engine_version": "16.0.100",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Varist": {
+          "method": "blacklist",
+          "engine_name": "Varist",
+          "engine_version": "6.6.1.3",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "E64/CoinMiner.B.gen!Camelot"
+        },
+        "Avira": {
+          "method": "blacklist",
+          "engine_name": "Avira",
+          "engine_version": "8.3.3.24",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Antiy-AVL": {
+          "method": "blacklist",
+          "engine_name": "Antiy-AVL",
+          "engine_version": "3.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Trojan[Miner]/Linux.CoinMiner.xmr"
+        },
+        "Kingsoft": {
+          "method": "blacklist",
+          "engine_name": "Kingsoft",
+          "engine_version": "None",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Linux.RiskTool.BitCoinMiner.n"
+        },
+        "Microsoft": {
+          "method": "blacklist",
+          "engine_name": "Microsoft",
+          "engine_version": "1.1.25100.9002",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Trojan:Linux/CoinMiner.C12"
+        },
+        "Gridinsoft": {
+          "method": "blacklist",
+          "engine_name": "Gridinsoft",
+          "engine_version": "1.0.230.174",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Xcitium": {
+          "method": "blacklist",
+          "engine_name": "Xcitium",
+          "engine_version": "38243",
+          "engine_update": "20251206",
+          "category": "undetected",
+          "result": null
+        },
+        "Arcabit": {
+          "method": "blacklist",
+          "engine_name": "Arcabit",
+          "engine_version": "2025.0.0.23",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Application.Generic.D44A8CB"
+        },
+        "SUPERAntiSpyware": {
+          "method": "blacklist",
+          "engine_name": "SUPERAntiSpyware",
+          "engine_version": "5.6.0.1032",
+          "engine_update": "20251206",
+          "category": "undetected",
+          "result": null
+        },
+        "ZoneAlarm": {
+          "method": "blacklist",
+          "engine_name": "ZoneAlarm",
+          "engine_version": "6.21-110947002",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Avast-Mobile": {
+          "method": "blacklist",
+          "engine_name": "Avast-Mobile",
+          "engine_version": "251207-00",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "ELF:Miner-LO [PUP]"
+        },
+        "Google": {
+          "method": "blacklist",
+          "engine_name": "Google",
+          "engine_version": "1765108844",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Detected"
+        },
+        "AhnLab-V3": {
+          "method": "blacklist",
+          "engine_name": "AhnLab-V3",
+          "engine_version": "3.29.1.10604",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Linux/CoinMiner.Gen3"
+        },
+        "Acronis": {
+          "method": "blacklist",
+          "engine_name": "Acronis",
+          "engine_version": "1.2.0.121",
+          "engine_update": "20240328",
+          "category": "undetected",
+          "result": null
+        },
+        "VBA32": {
+          "method": "blacklist",
+          "engine_name": "VBA32",
+          "engine_version": "5.5.0",
+          "engine_update": "20251205",
+          "category": "undetected",
+          "result": null
+        },
+        "TACHYON": {
+          "method": "blacklist",
+          "engine_name": "TACHYON",
+          "engine_version": "2025-12-07.02",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Zoner": {
+          "method": "blacklist",
+          "engine_name": "Zoner",
+          "engine_version": "2.2.2.0",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Tencent": {
+          "method": "blacklist",
+          "engine_name": "Tencent",
+          "engine_version": "1.0.0.1",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Risktool.Linux.Miner.nf"
+        },
+        "Yandex": {
+          "method": "blacklist",
+          "engine_name": "Yandex",
+          "engine_version": "5.5.2.24",
+          "engine_update": "20251206",
+          "category": "undetected",
+          "result": null
+        },
+        "TrellixENS": {
+          "method": "blacklist",
+          "engine_name": "TrellixENS",
+          "engine_version": "6.0.6.653",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "Ikarus": {
+          "method": "blacklist",
+          "engine_name": "Ikarus",
+          "engine_version": "6.4.16.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "PUA.AVE.Miner"
+        },
+        "MaxSecure": {
+          "method": "blacklist",
+          "engine_name": "MaxSecure",
+          "engine_version": "1.0.0.1",
+          "engine_update": "20251205",
+          "category": "undetected",
+          "result": null
+        },
+        "Fortinet": {
+          "method": "blacklist",
+          "engine_name": "Fortinet",
+          "engine_version": "7.0.30.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "Riskware/CoinMiner"
+        },
+        "AVG": {
+          "method": "blacklist",
+          "engine_name": "AVG",
+          "engine_version": "23.9.8494.0",
+          "engine_update": "20251207",
+          "category": "malicious",
+          "result": "ELF:Miner-LO [PUP]"
+        },
+        "Panda": {
+          "method": "blacklist",
+          "engine_name": "Panda",
+          "engine_version": "4.6.4.2",
+          "engine_update": "20251207",
+          "category": "undetected",
+          "result": null
+        },
+        "alibabacloud": {
+          "method": "blacklist",
+          "engine_name": "alibabacloud",
+          "engine_version": "2.2.0",
+          "engine_update": "20250321",
+          "category": "malicious",
+          "result": "Miner:Multi/XmrigGo.SY"
+        },
+        "SymantecMobileInsight": {
+          "method": "blacklist",
+          "engine_name": "SymantecMobileInsight",
+          "engine_version": "2.0",
+          "engine_update": "20250124",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "BitDefenderFalx": {
+          "method": "blacklist",
+          "engine_name": "BitDefenderFalx",
+          "engine_version": "2.0.936",
+          "engine_update": "20250416",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "tehtris": {
+          "method": "blacklist",
+          "engine_name": "tehtris",
+          "engine_version": null,
+          "engine_update": "20251207",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "DeepInstinct": {
+          "method": "blacklist",
+          "engine_name": "DeepInstinct",
+          "engine_version": "5.0.0.8",
+          "engine_update": "20251207",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "APEX": {
+          "method": "blacklist",
+          "engine_name": "APEX",
+          "engine_version": "6.723",
+          "engine_update": "20251207",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Paloalto": {
+          "method": "blacklist",
+          "engine_name": "Paloalto",
+          "engine_version": "0.9.0.1003",
+          "engine_update": "20251207",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Trapmine": {
+          "method": "blacklist",
+          "engine_name": "Trapmine",
+          "engine_version": "4.0.7.0",
+          "engine_update": "20251125",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Alibaba": {
+          "method": "blacklist",
+          "engine_name": "Alibaba",
+          "engine_version": "0.3.0.5",
+          "engine_update": "20190527",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Webroot": {
+          "method": "blacklist",
+          "engine_name": "Webroot",
+          "engine_version": "1.9.0.8",
+          "engine_update": "20250227",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Cylance": {
+          "method": "blacklist",
+          "engine_name": "Cylance",
+          "engine_version": "3.0.0.0",
+          "engine_update": "20251205",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "SentinelOne": {
+          "method": "blacklist",
+          "engine_name": "SentinelOne",
+          "engine_version": "7.4.1.3",
+          "engine_update": "20251013",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Trustlook": {
+          "method": "blacklist",
+          "engine_name": "Trustlook",
+          "engine_version": "1.0",
+          "engine_update": "20251207",
+          "category": "type-unsupported",
+          "result": null
+        }
+      },
+      "type_tags": [
+        "executable",
+        "linux",
+        "elf"
+      ],
+      "last_submission_date": 1762958604,
+      "sha1": "e86e26c2fb1d50ed5ac0697d93f9fbb5d9c71aab",
+      "crowdsourced_ids_stats": {
+        "high": 0,
+        "medium": 28,
+        "low": 5,
+        "info": 0
+      },
+      "sigma_analysis_results": [
+        {
+          "rule_level": "medium",
+          "rule_id": "444cf775e51f1f48a4f280cf4a392d9fa3244628404c303864ad4b00325530c5",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Execution Of Script Located In Potentially Suspicious Directory",
+          "rule_description": "Detects executions of scripts located in potentially suspicious locations such as \"/tmp\" via a shell such as \"bash\", \"sh\", etc.",
+          "rule_author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "/bin/sh sh -c \"crontab -r >/dev/null 2>&1; echo \\\"@reboot /tmp/aarch64.elf\\\" | crontab -\"",
+                "Image": "/bin/sh",
+                "EventID": "1"
+              }
+            }
+          ]
+        },
+        {
+          "rule_level": "medium",
+          "rule_id": "a0e343af9ac4b19a8ff9f0cd81d30a29e473fb0938c05d141f74e93d6b7d8f83",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Remove Scheduled Cron Task/Job",
+          "rule_description": "Detects usage of the 'crontab' utility to remove the current crontab.\nThis is a common occurrence where cryptocurrency miners compete against each other by removing traces of other miners to hijack the maximum amount of resources possible\n",
+          "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "crontab -r",
+                "Image": "crontab",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "/usr/bin/crontab crontab -r",
+                "Image": "/usr/bin/crontab",
+                "EventID": "1"
+              }
+            }
+          ]
+        },
+        {
+          "rule_level": "medium",
+          "rule_id": "f74e8628441aa3b7bcbf82dd77cc025925e34078d02d169dd947db62675dbeaa",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Persistence Via Cron Files",
+          "rule_description": "Detects creation of cron file or files in Cron directories which could indicates potential persistence.",
+          "rule_author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC",
+          "match_context": [
+            {
+              "values": {
+                "TargetFilename": "/var/spool/cron/crontabs/tmp.Vcol1L"
+              }
+            }
+          ]
+        }
+      ],
+      "sha256": "9876b83ce63edd0a9df541fef95407d95c87a124c4801206c176fe2ed5ed461c",
+      "meaningful_name": "2025-11-12_85675570d6c913264fb988009222c465_glassworm",
+      "magika": "ELF",
+      "sandbox_verdicts": {
+        "Zenbox Linux": {
+          "category": "malicious",
+          "malware_classification": [
+            "MALWARE",
+            "TROJAN"
+          ],
+          "sandbox_name": "Zenbox Linux",
+          "malware_names": [
+            "Xmrig"
+          ],
+          "confidence": 76
+        }
+      },
+      "popular_threat_classification": {
+        "popular_threat_name": [
+          {
+            "count": 2,
+            "value": "r002c0dkc25"
+          }
+        ],
+        "popular_threat_category": [
+          {
+            "count": 19,
+            "value": "miner"
+          },
+          {
+            "count": 5,
+            "value": "pua"
+          },
+          {
+            "count": 4,
+            "value": "trojan"
+          }
+        ],
+        "suggested_threat_label": "miner.r002c0dkc25"
+      },
+      "total_votes": {
+        "harmless": 0,
+        "malicious": 2
+      },
+      "trid": [
+        {
+          "file_type": "ELF Executable and Linkable format (Linux)",
+          "probability": 50.1
+        },
+        {
+          "file_type": "ELF Executable and Linkable format (generic)",
+          "probability": 49.8
+        }
+      ],
+      "crowdsourced_ids_results": [
+        {
+          "rule_category": "attempted-recon",
+          "alert_severity": "medium",
+          "rule_msg": "(icmp4) ICMP destination unreachable communication administratively prohibited",
+          "rule_id": "116:441",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert ( gid:116; sid:441; rev:2; msg:\"(icmp4) ICMP destination unreachable communication administratively prohibited\"; metadata: rule-type decode; classtype:attempted-recon;)",
+          "alert_context": [
+            {
+              "src_ip": "184.18.105.199"
+            }
+          ]
+        },
+        {
+          "rule_category": "attempted-recon",
+          "alert_severity": "medium",
+          "rule_msg": "(icmp4) ICMP destination unreachable communication with destination host is administratively prohibited",
+          "rule_id": "116:442",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert ( gid:116; sid:442; rev:2; msg:\"(icmp4) ICMP destination unreachable communication with destination host is administratively prohibited\"; metadata: rule-type decode; classtype:attempted-recon;)",
+          "alert_context": [
+            {
+              "src_ip": "144.168.92.7"
+            }
+          ]
+        },
+        {
+          "rule_category": "attempted-recon",
+          "alert_severity": "medium",
+          "rule_msg": "(icmp4) ICMP destination unreachable communication with destination network is administratively prohibited",
+          "rule_id": "116:443",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert ( gid:116; sid:443; rev:2; msg:\"(icmp4) ICMP destination unreachable communication with destination network is administratively prohibited\"; metadata: rule-type decode; classtype:attempted-recon;)",
+          "alert_context": [
+            {
+              "src_ip": "196.216.150.131"
+            }
+          ]
+        },
+        {
+          "rule_category": "Attempted Information Leak",
+          "alert_severity": "medium",
+          "rule_msg": "ET SCAN Potential SSH Scan OUTBOUND",
+          "rule_id": "1:2003068",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert tcp $HOME_NET any -> $EXTERNAL_NET 22 (msg:\"ET SCAN Potential SSH Scan OUTBOUND\"; flow:to_server; flags:S,12; threshold: type threshold, track by_src, count 5, seconds 120; reference:url,en.wikipedia.org/wiki/Brute_force_attack; classtype:attempted-recon; sid:2003068; rev:7; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)",
+          "rule_references": [
+            "https://en.wikipedia.org/wiki/Brute_force_attack"
+          ],
+          "alert_context": [
+            {
+              "dest_ip": "76.244.192.201",
+              "dest_port": 22
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 2",
+          "rule_id": "1:2400001",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [23.226.54.0/24,23.235.128.0/19,24.137.16.0/20,24.170.208.0/20,24.233.0.0/19,24.236.0.0/19,27.50.63.0/24,27.99.128.0/17,27.112.32.0/19,27.122.32.0/20,27.123.208.0/22,27.124.0.0/18,27.124.17.0/24,27.124.41.0/24,27.126.160.0/20,27.146.0.0/16,31.24.81.0/24,31.40.204.0/24,31.56.213.0/24,31.56.214.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 2\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400001; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "23.235.150.53"
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 3",
+          "rule_id": "1:2400002",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [36.0.128.0/17,36.37.48.0/20,36.116.0.0/16,36.119.0.0/16,36.255.98.0/24,36.255.216.0/22,36.255.236.0/22,37.49.148.0/24,37.77.144.0/24,37.140.251.0/24,37.156.64.0/23,38.92.176.0/21,38.92.184.0/21,41.71.128.0/17,41.71.150.0/24,41.71.222.0/24,41.71.223.0/24,41.71.224.0/24,41.71.225.0/24,41.71.226.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 3\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400002; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "41.71.204.87",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 5",
+          "rule_id": "1:2400004",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [45.86.48.0/22,45.88.186.0/24,45.91.227.0/24,45.92.1.0/24,45.94.31.0/24,45.114.184.0/22,45.114.200.0/22,45.116.224.0/22,45.117.140.0/22,45.121.204.0/22,45.125.66.0/24,45.126.148.0/22,45.131.1.0/24,45.132.49.0/24,45.132.180.0/24,45.133.113.0/24,45.133.246.0/24,45.134.26.0/24,45.135.48.0/22,45.135.193.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 5\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400004; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "45.126.148.97",
+              "src_port": 23
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 6",
+          "rule_id": "1:2400005",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [45.139.104.0/24,45.140.17.0/24,45.141.56.0/24,45.141.58.0/23,45.141.87.0/24,45.141.215.0/24,45.142.155.0/24,45.142.193.0/24,45.143.201.0/24,45.144.212.0/24,45.145.176.0/22,45.146.130.0/24,45.147.10.0/24,45.148.10.0/24,45.148.120.0/24,45.148.121.0/24,45.152.149.0/24,45.153.34.0/24,45.154.98.0/24,45.156.87.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 6\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400005; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "45.148.10.68",
+              "src_port": 21370
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 13",
+          "rule_id": "1:2400012",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [89.34.102.0/24,89.34.104.0/23,89.35.89.0/24,89.35.90.0/24,89.36.136.0/24,89.36.138.0/24,89.36.141.0/24,89.37.96.0/24,89.38.240.0/24,89.39.69.0/24,89.39.215.0/24,89.40.138.0/24,89.40.207.0/24,89.40.209.0/24,89.41.50.0/23,89.43.50.0/24,89.45.34.0/24,89.45.82.0/24,89.46.47.0/24,89.190.156.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 13\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400012; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "89.38.240.74"
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 19",
+          "rule_id": "1:2400018",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [103.185.163.0/24,103.192.228.0/22,103.193.184.0/22,103.195.144.0/22,103.198.36.0/22,103.214.56.0/22,103.215.80.0/22,103.228.60.0/22,103.228.196.0/22,103.229.124.0/22,103.230.24.0/22,103.232.36.0/22,103.232.200.0/22,103.236.32.0/22,103.237.86.0/23,103.240.252.0/22,103.242.4.0/22,103.243.240.0/22,103.248.68.0/22,103.249.72.0/22] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 19\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400018; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "103.229.125.85"
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 20",
+          "rule_id": "1:2400019",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [104.37.1.0/24,104.152.52.0/24,104.168.80.0/24,104.193.228.0/22,104.244.56.0/21,104.244.80.0/22,104.250.163.0/24,104.250.164.0/24,106.48.64.0/18,106.95.0.0/16,107.150.0.0/24,107.155.224.0/22,107.174.46.0/24,107.182.240.0/20,109.107.146.0/24,109.236.50.0/24,110.34.48.0/22,110.34.56.0/22,110.34.60.0/22,110.44.104.0/22] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 20\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400019; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "107.182.251.219",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 21",
+          "rule_id": "1:2400020",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [111.68.64.0/19,111.90.156.0/24,111.90.157.0/24,112.90.143.0/24,112.142.0.0/15,112.142.160.0/22,112.143.0.0/19,112.213.96.0/19,113.212.128.0/19,113.213.128.0/18,114.134.28.0/22,114.231.216.0/22,114.239.188.0/24,115.144.69.0/24,115.167.3.0/24,115.167.9.0/24,115.167.64.0/24,117.18.0.0/24,117.60.11.0/24,118.107.16.0/20] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 21\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400020; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "112.142.44.185",
+              "src_port": 2222
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 23",
+          "rule_id": "1:2400022",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [124.68.0.0/16,124.147.128.0/17,124.157.0.0/18,124.198.131.0/24,124.198.132.0/24,124.242.0.0/16,125.31.192.0/18,125.58.0.0/18,129.56.0.0/16,129.227.90.0/24,130.148.0.0/16,130.196.0.0/16,130.222.0.0/16,131.0.152.0/22,131.108.16.0/22,134.18.0.0/16,134.122.128.0/17,134.122.168.0/24,134.122.188.0/24,134.122.189.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 23\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400022; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "134.122.217.222",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 24",
+          "rule_id": "1:2400023",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [137.220.128.0/17,138.36.92.0/22,138.36.136.0/22,138.59.4.0/22,138.59.204.0/22,138.94.216.0/22,138.97.156.0/22,138.99.36.0/22,138.125.0.0/16,138.185.116.0/22,138.219.172.0/22,138.249.0.0/16,139.183.192.0/18,139.190.234.0/24,140.82.64.0/19,140.82.96.0/20,141.98.10.0/24,141.98.11.0/24,141.98.84.0/24,141.178.0.0/16] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 24\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400023; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "138.59.206.36",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 25",
+          "rule_id": "1:2400024",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [143.92.43.0/24,143.92.48.0/20,144.215.0.0/16,145.231.0.0/16,146.3.0.0/16,146.19.5.0/24,146.19.228.0/24,146.47.0.0/16,146.51.0.0/16,146.106.0.0/16,146.185.222.0/24,146.252.0.0/16,147.7.0.0/16,147.16.0.0/14,147.45.47.0/24,147.45.124.0/23,147.45.222.0/24,147.78.20.0/22,147.78.224.0/22,147.119.0.0/16] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 25\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400024; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "147.45.124.64",
+              "src_port": 2375
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 27",
+          "rule_id": "1:2400026",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [155.73.0.0/16,155.94.155.0/24,155.94.185.0/24,155.94.203.0/24,155.108.0.0/16,155.159.0.0/16,155.233.0.0/16,155.249.0.0/16,156.96.0.0/16,156.253.231.0/24,157.20.182.0/23,157.115.0.0/16,157.119.64.0/22,157.148.116.0/24,157.162.0.0/16,157.186.0.0/16,158.94.208.0/22,158.249.0.0/16,159.34.0.0/16,159.80.0.0/16] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 27\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400026; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "155.108.24.117",
+              "src_port": 23
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 28",
+          "rule_id": "1:2400027",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [160.104.0.0/16,160.116.0.0/16,160.117.0.0/16,160.121.0.0/16,160.122.0.0/16,160.180.0.0/16,160.188.0.0/16,160.240.0.0/16,161.0.0.0/19,161.0.68.0/22,161.1.0.0/16,161.60.0.0/16,161.248.178.0/23,162.71.0.0/19,162.208.124.0/22,162.213.131.0/24,162.249.20.0/22,163.47.19.0/24,163.50.0.0/16,163.123.191.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 28\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400027; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "161.248.178.50",
+              "src_port": 443
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 29",
+          "rule_id": "1:2400028",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [164.88.0.0/16,164.155.0.0/16,164.215.103.0/24,165.3.0.0/16,165.102.0.0/16,165.154.192.0/18,165.154.252.0/24,167.74.0.0/18,167.158.0.0/16,167.160.161.0/24,167.224.48.0/21,167.249.200.0/22,168.0.212.0/22,168.64.0.0/16,168.76.0.0/16,168.80.0.0/15,168.151.0.0/22,168.151.4.0/23,168.151.6.0/24,168.151.9.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 29\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400028; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "168.76.252.45",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 32",
+          "rule_id": "1:2400031",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [170.247.220.0/22,171.26.0.0/16,172.94.96.0/24,172.94.99.0/24,172.111.128.0/17,172.247.38.0/24,173.44.0.0/19,173.44.141.0/24,175.103.64.0/18,175.110.99.0/24,176.46.138.0/24,176.46.141.0/24,176.46.152.0/24,176.46.157.0/24,176.46.158.0/24,176.65.132.0/24,176.65.138.0/24,176.65.148.0/22,176.65.149.0/24,176.98.185.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 32\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400031; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "172.111.186.173",
+              "src_port": 443
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 33",
+          "rule_id": "1:2400032",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [176.223.116.0/23,176.223.118.0/24,177.234.136.0/21,178.16.52.0/22,178.22.24.0/24,179.43.175.0/24,180.178.189.0/24,180.178.192.0/18,180.235.124.0/22,181.177.64.0/18,185.7.214.0/24,185.7.215.0/24,185.14.192.0/24,185.21.8.0/22,185.30.168.0/22,185.36.80.0/24,185.36.81.0/24,185.36.82.0/23,185.37.195.0/24,185.39.19.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 33\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400032; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "177.234.140.49",
+              "src_port": 443
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
+          "rule_id": "1:2400035",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [186.179.0.0/18,187.19.64.0/20,187.60.0.0/20,188.172.160.0/20,188.190.10.0/24,188.208.48.0/22,188.208.52.0/22,188.208.109.0/24,188.213.23.0/24,188.213.206.0/23,188.213.214.0/23,188.213.248.0/22,188.213.252.0/22,188.214.94.0/24,188.214.140.0/24,188.214.155.0/24,188.214.193.0/24,188.215.72.0/24,188.215.95.0/24,188.240.14.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 36\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400035; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "186.179.42.105",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 39",
+          "rule_id": "1:2400038",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [192.203.188.0/24,192.203.252.0/24,192.206.114.0/24,192.226.16.0/20,192.229.32.0/19,192.231.66.0/24,192.231.100.0/24,192.234.156.0/24,192.234.189.0/24,192.245.101.0/24,192.245.188.0/24,192.245.248.0/24,192.251.231.0/24,192.252.16.0/20,192.252.176.0/20,192.253.224.0/20,193.3.164.0/24,193.24.123.0/24,193.26.115.0/24,193.30.30.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 39\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400038; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "192.252.189.208",
+              "src_port": 22
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 41",
+          "rule_id": "1:2400040",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [194.242.22.0/23,195.14.98.0/24,195.22.149.0/24,195.66.27.0/24,195.88.146.0/23,195.96.32.0/19,195.96.129.0/24,195.177.92.0/24,195.178.110.0/24,195.181.224.0/20,195.211.48.0/24,195.216.248.0/24,195.225.108.0/24,195.225.110.0/24,195.248.90.0/24,196.10.61.0/24,196.10.62.0/23,196.10.64.0/19,196.15.64.0/18,196.16.0.0/14] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 41\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400040; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "196.18.167.114",
+              "src_port": 2222
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 48",
+          "rule_id": "1:2400047",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [200.0.60.0/23,200.10.32.0/20,200.13.64.0/20,200.22.0.0/16,200.71.124.0/22,200.189.44.0/22,201.148.168.0/22,201.150.28.0/22,202.12.101.0/24,202.27.100.0/22,202.40.32.0/19,202.40.64.0/18,202.46.96.0/20,202.52.38.0/24,202.61.141.0/24,202.61.144.0/20,202.79.173.0/24,202.95.7.0/24,202.95.8.0/21,202.122.64.0/19] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 48\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400047; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "202.61.151.139",
+              "src_port": 80
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 50",
+          "rule_id": "1:2400049",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [204.75.147.0/24,204.75.174.0/24,204.75.228.0/24,204.76.203.0/24,204.80.164.0/24,204.80.180.0/24,204.80.198.0/24,204.86.16.0/20,204.87.199.0/24,204.88.160.0/20,204.89.202.0/24,204.89.224.0/24,204.91.96.0/20,204.106.128.0/18,204.106.192.0/19,204.107.132.0/24,204.107.208.0/24,204.110.8.0/21,204.110.144.0/20,204.115.128.0/21] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 50\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400049; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "204.76.203.2",
+              "src_port": 23
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 58",
+          "rule_id": "1:2400057",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [209.182.64.0/19,209.186.20.0/22,209.186.24.0/21,209.186.224.0/21,209.186.232.0/22,209.186.236.0/24,209.233.156.0/22,210.56.48.0/21,210.57.128.0/18,211.102.0.0/17,212.11.64.0/24,212.74.227.0/24,212.224.93.0/24,212.237.152.0/21,213.21.232.0/24,213.21.237.0/24,213.130.88.0/22,213.209.129.0/24,213.209.143.0/24,213.209.156.0/24] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 58\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400057; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "213.209.143.51",
+              "src_port": 43782
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 60",
+          "rule_id": "1:2400059",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [223.254.0.0/16] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 60\"; reference:url,www.spamhaus.org/drop/drop.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400059; rev:4522; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "223.254.139.112",
+              "src_port": 443
+            }
+          ]
+        },
+        {
+          "rule_category": "Misc Attack",
+          "alert_severity": "medium",
+          "rule_msg": "ET DROP Dshield Block Listed Source group 1",
+          "rule_id": "1:2402000",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert ip [147.185.132.0/24,64.62.156.0/24,207.90.244.0/24,64.62.197.0/24,193.163.125.0/24,66.132.153.0/24,198.235.24.0/24,205.210.31.0/24,167.94.138.0/24,65.49.1.0/24,204.76.203.0/24,91.224.92.0/24,78.153.140.0/24,196.251.114.0/24,185.242.226.0/24,206.168.34.0/24,45.148.10.0/24,162.216.149.0/24,45.142.154.0/24,91.230.168.0/24] any -> $HOME_NET any (msg:\"ET DROP Dshield Block Listed Source group 1\"; reference:url,feeds.dshield.org/block.txt; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DshieldIP; sid:2402000; rev:7554; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Major, created_at 2010_12_30, updated_at 2025_11_10;)",
+          "rule_references": [
+            "https://feeds.dshield.org/block.txt"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "45.148.10.68",
+              "src_port": 21370
+            }
+          ]
+        },
+        {
+          "rule_category": "Generic Protocol Command Decode",
+          "alert_severity": "low",
+          "rule_msg": "SURICATA STREAM 3way handshake SYNACK with wrong ack",
+          "rule_id": "1:2210007",
+          "rule_source": "Suricata",
+          "rule_url": "https://www.openinfosecfoundation.org/",
+          "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM 3way handshake SYNACK with wrong ack\"; stream-event:3whs_synack_with_wrong_ack; classtype:protocol-command-decode; sid:2210007; rev:2;)",
+          "alert_context": [
+            {
+              "src_ip": "145.226.149.184",
+              "src_port": 443
+            }
+          ]
+        },
+        {
+          "rule_category": "Generic Protocol Command Decode",
+          "alert_severity": "low",
+          "rule_msg": "SURICATA STREAM SHUTDOWN RST invalid ack",
+          "rule_id": "1:2210046",
+          "rule_source": "Suricata",
+          "rule_url": "https://www.openinfosecfoundation.org/",
+          "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM SHUTDOWN RST invalid ack\"; stream-event:rst_invalid_ack; classtype:protocol-command-decode; sid:2210046; rev:2;)",
+          "alert_context": [
+            {
+              "src_ip": "31.219.184.30",
+              "src_port": 2222
+            }
+          ]
+        },
+        {
+          "rule_category": "misc-activity",
+          "alert_severity": "low",
+          "rule_msg": "PROTOCOL-ICMP Destination Unreachable Host Unreachable",
+          "rule_id": "1:399",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP Destination Unreachable Host Unreachable\"; icode:1; itype:3; metadata:ruleset community; classtype:misc-activity; sid:399; rev:9; )",
+          "alert_context": [
+            {
+              "src_ip": "23.244.4.95"
+            }
+          ]
+        },
+        {
+          "rule_category": "misc-activity",
+          "alert_severity": "low",
+          "rule_msg": "PROTOCOL-ICMP Destination Unreachable Network Unreachable",
+          "rule_id": "1:401",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP Destination Unreachable Network Unreachable\"; icode:0; itype:3; metadata:ruleset community; classtype:misc-activity; sid:401; rev:9; )",
+          "alert_context": [
+            {
+              "src_ip": "142.251.61.42"
+            }
+          ]
+        },
+        {
+          "rule_category": "misc-activity",
+          "alert_severity": "low",
+          "rule_msg": "PROTOCOL-ICMP Destination Unreachable Protocol Unreachable",
+          "rule_id": "1:404",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP Destination Unreachable Protocol Unreachable\"; icode:2; itype:3; metadata:policy max-detect-ips drop,ruleset community; reference:cve,2004-0790; reference:cve,2005-0068; classtype:misc-activity; sid:404; rev:14; )",
+          "rule_references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=2004-0790",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=2005-0068"
+          ],
+          "alert_context": [
+            {
+              "src_ip": "153.158.165.154"
+            }
+          ]
+        }
+      ],
+      "first_submission_date": 1762932268,
+      "type_tag": "elf",
+      "reputation": -12
+    }
+  }
+}
