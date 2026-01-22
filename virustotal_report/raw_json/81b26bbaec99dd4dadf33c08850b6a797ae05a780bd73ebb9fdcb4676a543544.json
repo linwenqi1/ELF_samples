@@ -1,0 +1,1448 @@
+{
+  "data": {
+    "id": "81b26bbaec99dd4dadf33c08850b6a797ae05a780bd73ebb9fdcb4676a543544",
+    "type": "file",
+    "links": {
+      "self": "https://www.virustotal.com/api/v3/files/81b26bbaec99dd4dadf33c08850b6a797ae05a780bd73ebb9fdcb4676a543544"
+    },
+    "attributes": {
+      "sigma_analysis_summary": {
+        "Sigma Integrated Rule Set (GitHub)": {
+          "critical": 0,
+          "high": 0,
+          "medium": 1,
+          "low": 0
+        }
+      },
+      "sandbox_verdicts": {
+        "Zenbox Linux": {
+          "category": "malicious",
+          "malware_classification": [
+            "MALWARE",
+            "RANSOM",
+            "TROJAN",
+            "EVADER"
+          ],
+          "sandbox_name": "Zenbox Linux",
+          "malware_names": [
+            "Available For Trial"
+          ],
+          "confidence": 56
+        },
+        "Yomi Hunter": {
+          "category": "malicious",
+          "malware_classification": [
+            "MALWARE"
+          ],
+          "sandbox_name": "Yomi Hunter"
+        }
+      },
+      "magic": "ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.4.0, stripped",
+      "reputation": -2,
+      "type_tags": [
+        "executable",
+        "linux",
+        "elf"
+      ],
+      "last_modification_date": 1766500438,
+      "last_submission_date": 1739290287,
+      "sigma_analysis_stats": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "total_votes": {
+        "harmless": 0,
+        "malicious": 2
+      },
+      "type_tag": "elf",
+      "filecondis": {
+        "raw_md5": "e9bc7553b39003029ac75a6b2a7bc3f6",
+        "dhash": "003c3c3c1e2d0404"
+      },
+      "unique_sources": 3,
+      "vhash": "6b4094cbc3997a5a859d9976ce59f689",
+      "last_analysis_stats": {
+        "malicious": 38,
+        "suspicious": 0,
+        "undetected": 27,
+        "harmless": 0,
+        "timeout": 0,
+        "confirmed-timeout": 0,
+        "failure": 0,
+        "type-unsupported": 11
+      },
+      "last_analysis_results": {
+        "Bkav": {
+          "method": "blacklist",
+          "engine_name": "Bkav",
+          "engine_version": "2.0.0.1",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Lionic": {
+          "method": "blacklist",
+          "engine_name": "Lionic",
+          "engine_version": "8.16",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.Trigona.j!c"
+        },
+        "Elastic": {
+          "method": "blacklist",
+          "engine_name": "Elastic",
+          "engine_version": "4.0.242",
+          "engine_update": "20251219",
+          "category": "undetected",
+          "result": null
+        },
+        "MicroWorld-eScan": {
+          "method": "blacklist",
+          "engine_name": "MicroWorld-eScan",
+          "engine_version": "14.0.409.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.341860"
+        },
+        "ClamAV": {
+          "method": "blacklist",
+          "engine_name": "ClamAV",
+          "engine_version": "1.5.1.0",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "CTX": {
+          "method": "blacklist",
+          "engine_name": "CTX",
+          "engine_version": "2024.8.29.1",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "elf.trojan.trigona"
+        },
+        "CAT-QuickHeal": {
+          "method": "blacklist",
+          "engine_name": "CAT-QuickHeal",
+          "engine_version": "22.00",
+          "engine_update": "20251221",
+          "category": "undetected",
+          "result": null
+        },
+        "Skyhigh": {
+          "method": "blacklist",
+          "engine_name": "Skyhigh",
+          "engine_version": "v2021.2.0+4045",
+          "engine_update": "20251222",
+          "category": "malicious",
+          "result": "Artemis!Trojan"
+        },
+        "ALYac": {
+          "method": "blacklist",
+          "engine_name": "ALYac",
+          "engine_version": "2.0.0.10",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Ransom.Linux.Gen"
+        },
+        "Malwarebytes": {
+          "method": "blacklist",
+          "engine_name": "Malwarebytes",
+          "engine_version": "3.1.0.185",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Zillya": {
+          "method": "blacklist",
+          "engine_name": "Zillya",
+          "engine_version": "2.0.0.5510",
+          "engine_update": "20251222",
+          "category": "undetected",
+          "result": null
+        },
+        "Sangfor": {
+          "method": "blacklist",
+          "engine_name": "Sangfor",
+          "engine_version": "2.22.3.0",
+          "engine_update": "20251222",
+          "category": "undetected",
+          "result": null
+        },
+        "K7AntiVirus": {
+          "method": "blacklist",
+          "engine_name": "K7AntiVirus",
+          "engine_version": "14.25.58073",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "K7GW": {
+          "method": "blacklist",
+          "engine_name": "K7GW",
+          "engine_version": "14.25.58074",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "CrowdStrike": {
+          "method": "blacklist",
+          "engine_name": "CrowdStrike",
+          "engine_version": "1.0",
+          "engine_update": "20231026",
+          "category": "undetected",
+          "result": null
+        },
+        "Baidu": {
+          "method": "blacklist",
+          "engine_name": "Baidu",
+          "engine_version": "1.0.0.2",
+          "engine_update": "20190318",
+          "category": "undetected",
+          "result": null
+        },
+        "VirIT": {
+          "method": "blacklist",
+          "engine_name": "VirIT",
+          "engine_version": "9.5.1110",
+          "engine_update": "20251222",
+          "category": "undetected",
+          "result": null
+        },
+        "Symantec": {
+          "method": "blacklist",
+          "engine_name": "Symantec",
+          "engine_version": "1.22.0.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Gen.MBT"
+        },
+        "ESET-NOD32": {
+          "method": "blacklist",
+          "engine_name": "ESET-NOD32",
+          "engine_version": "18.2.18.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Linux/Filecoder.BR trojan"
+        },
+        "TrendMicro-HouseCall": {
+          "method": "blacklist",
+          "engine_name": "TrendMicro-HouseCall",
+          "engine_version": "24.550.0.1002",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Ransom_Trigona.R002C0DIA25"
+        },
+        "Avast": {
+          "method": "blacklist",
+          "engine_name": "Avast",
+          "engine_version": "23.9.8494.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "ELF:Filecoder-IW [Ransom]"
+        },
+        "Cynet": {
+          "method": "blacklist",
+          "engine_name": "Cynet",
+          "engine_version": "4.0.3.4",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Malicious (score: 99)"
+        },
+        "Kaspersky": {
+          "method": "blacklist",
+          "engine_name": "Kaspersky",
+          "engine_version": "22.0.1.28",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "HEUR:Trojan-Ransom.Linux.Trigona.gen"
+        },
+        "BitDefender": {
+          "method": "blacklist",
+          "engine_name": "BitDefender",
+          "engine_version": "7.2",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.341860"
+        },
+        "NANO-Antivirus": {
+          "method": "blacklist",
+          "engine_name": "NANO-Antivirus",
+          "engine_version": "1.0.170.26895",
+          "engine_update": "20251219",
+          "category": "undetected",
+          "result": null
+        },
+        "ViRobot": {
+          "method": "blacklist",
+          "engine_name": "ViRobot",
+          "engine_version": "2014.3.20.0",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Rising": {
+          "method": "blacklist",
+          "engine_name": "Rising",
+          "engine_version": "25.0.0.28",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Ransom.Agent/Linux!8.138F2 (KTSE)"
+        },
+        "Sophos": {
+          "method": "blacklist",
+          "engine_name": "Sophos",
+          "engine_version": "3.3.1.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Linux/Ransm-BG"
+        },
+        "F-Secure": {
+          "method": "blacklist",
+          "engine_name": "F-Secure",
+          "engine_version": "18.10.1547.307",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Malware.LINUX/Ransom.mewnv"
+        },
+        "DrWeb": {
+          "method": "blacklist",
+          "engine_name": "DrWeb",
+          "engine_version": "7.0.72.9030",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Linux.Encoder.411"
+        },
+        "VIPRE": {
+          "method": "blacklist",
+          "engine_name": "VIPRE",
+          "engine_version": "6.0.0.35",
+          "engine_update": "20251222",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.341860"
+        },
+        "TrendMicro": {
+          "method": "blacklist",
+          "engine_name": "TrendMicro",
+          "engine_version": "24.550.0.1002",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Ransom_Trigona.R002C0DIA25"
+        },
+        "McAfeeD": {
+          "method": "blacklist",
+          "engine_name": "McAfeeD",
+          "engine_version": "1.2.0.10275",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "SentinelOne": {
+          "method": "blacklist",
+          "engine_name": "SentinelOne",
+          "engine_version": "7.4.1.3",
+          "engine_update": "20251013",
+          "category": "malicious",
+          "result": "Static AI - Suspicious ELF"
+        },
+        "CMC": {
+          "method": "blacklist",
+          "engine_name": "CMC",
+          "engine_version": "2.4.2022.1",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Emsisoft": {
+          "method": "blacklist",
+          "engine_name": "Emsisoft",
+          "engine_version": "2024.8.0.61147",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.341860 (B)"
+        },
+        "Ikarus": {
+          "method": "blacklist",
+          "engine_name": "Ikarus",
+          "engine_version": "6.4.16.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan-Ransom.Trigona"
+        },
+        "Avast-Mobile": {
+          "method": "blacklist",
+          "engine_name": "Avast-Mobile",
+          "engine_version": "251223-00",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Jiangmin": {
+          "method": "blacklist",
+          "engine_name": "Jiangmin",
+          "engine_version": "16.0.100",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.epo"
+        },
+        "Varist": {
+          "method": "blacklist",
+          "engine_name": "Varist",
+          "engine_version": "6.6.1.3",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "E64/ABRansom.VHTH-1"
+        },
+        "Avira": {
+          "method": "blacklist",
+          "engine_name": "Avira",
+          "engine_version": "8.3.3.24",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "LINUX/Ransom.mewnv"
+        },
+        "Antiy-AVL": {
+          "method": "blacklist",
+          "engine_name": "Antiy-AVL",
+          "engine_version": "3.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan/Linux.Wacatac.b"
+        },
+        "Kingsoft": {
+          "method": "blacklist",
+          "engine_name": "Kingsoft",
+          "engine_version": "None",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Linux.Trojan-Ransom.Trigona.gen"
+        },
+        "Microsoft": {
+          "method": "blacklist",
+          "engine_name": "Microsoft",
+          "engine_version": "1.1.25110.1",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Ransom:Linux/Trigona.D!MTB"
+        },
+        "Gridinsoft": {
+          "method": "blacklist",
+          "engine_name": "Gridinsoft",
+          "engine_version": "1.0.231.174",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Xcitium": {
+          "method": "blacklist",
+          "engine_name": "Xcitium",
+          "engine_version": "38286",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Malware@#3n3kmjnlrd6vz"
+        },
+        "Arcabit": {
+          "method": "blacklist",
+          "engine_name": "Arcabit",
+          "engine_version": "2025.0.0.23",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.D53764"
+        },
+        "SUPERAntiSpyware": {
+          "method": "blacklist",
+          "engine_name": "SUPERAntiSpyware",
+          "engine_version": "5.6.0.1032",
+          "engine_update": "20251222",
+          "category": "undetected",
+          "result": null
+        },
+        "ZoneAlarm": {
+          "method": "blacklist",
+          "engine_name": "ZoneAlarm",
+          "engine_version": "6.21-110947283",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Linux/Ransm-BG"
+        },
+        "GData": {
+          "method": "blacklist",
+          "engine_name": "GData",
+          "engine_version": "GD:27.42970AVA:64.30371",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Trojan.Linux.Generic.341860"
+        },
+        "Google": {
+          "method": "blacklist",
+          "engine_name": "Google",
+          "engine_version": "1766489486",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Detected"
+        },
+        "AhnLab-V3": {
+          "method": "blacklist",
+          "engine_name": "AhnLab-V3",
+          "engine_version": "3.29.1.10604",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Acronis": {
+          "method": "blacklist",
+          "engine_name": "Acronis",
+          "engine_version": "1.2.0.121",
+          "engine_update": "20240328",
+          "category": "undetected",
+          "result": null
+        },
+        "VBA32": {
+          "method": "blacklist",
+          "engine_name": "VBA32",
+          "engine_version": "5.5.0",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "TACHYON": {
+          "method": "blacklist",
+          "engine_name": "TACHYON",
+          "engine_version": "2025-12-23.02",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Zoner": {
+          "method": "blacklist",
+          "engine_name": "Zoner",
+          "engine_version": "2.2.2.0",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Tencent": {
+          "method": "blacklist",
+          "engine_name": "Tencent",
+          "engine_version": "1.0.0.1",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Malware.Linux.Generic.1c03ce15"
+        },
+        "Yandex": {
+          "method": "blacklist",
+          "engine_name": "Yandex",
+          "engine_version": "5.5.2.24",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "TrellixENS": {
+          "method": "blacklist",
+          "engine_name": "TrellixENS",
+          "engine_version": "6.0.6.653",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "huorong": {
+          "method": "blacklist",
+          "engine_name": "huorong",
+          "engine_version": "e03d6da:e03d6da:4411fb8:4411fb8",
+          "engine_update": "20251222",
+          "category": "malicious",
+          "result": "Trojan/Generic!DF1F934C3B911313"
+        },
+        "MaxSecure": {
+          "method": "blacklist",
+          "engine_name": "MaxSecure",
+          "engine_version": "1.0.0.1",
+          "engine_update": "20251223",
+          "category": "undetected",
+          "result": null
+        },
+        "Fortinet": {
+          "method": "blacklist",
+          "engine_name": "Fortinet",
+          "engine_version": "7.0.30.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "Linux/Filecoder.BR!tr"
+        },
+        "AVG": {
+          "method": "blacklist",
+          "engine_name": "AVG",
+          "engine_version": "23.9.8494.0",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "ELF:Filecoder-IW [Ransom]"
+        },
+        "Panda": {
+          "method": "blacklist",
+          "engine_name": "Panda",
+          "engine_version": "4.6.4.2",
+          "engine_update": "20251223",
+          "category": "malicious",
+          "result": "ELF/TrojanGen.A"
+        },
+        "alibabacloud": {
+          "method": "blacklist",
+          "engine_name": "alibabacloud",
+          "engine_version": "2.2.0",
+          "engine_update": "20250321",
+          "category": "malicious",
+          "result": "Ransomware:Linux/Trigona.D9OKG"
+        },
+        "SymantecMobileInsight": {
+          "method": "blacklist",
+          "engine_name": "SymantecMobileInsight",
+          "engine_version": "2.0",
+          "engine_update": "20250124",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "BitDefenderFalx": {
+          "method": "blacklist",
+          "engine_name": "BitDefenderFalx",
+          "engine_version": "2.0.936",
+          "engine_update": "20251216",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "DeepInstinct": {
+          "method": "blacklist",
+          "engine_name": "DeepInstinct",
+          "engine_version": "5.0.0.8",
+          "engine_update": "20251218",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "tehtris": {
+          "method": "blacklist",
+          "engine_name": "tehtris",
+          "engine_version": "v0.1.4",
+          "engine_update": "20251223",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "APEX": {
+          "method": "blacklist",
+          "engine_name": "APEX",
+          "engine_version": "6.728",
+          "engine_update": "20251222",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Trapmine": {
+          "method": "blacklist",
+          "engine_name": "Trapmine",
+          "engine_version": "4.0.7.0",
+          "engine_update": "20251125",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Paloalto": {
+          "method": "blacklist",
+          "engine_name": "Paloalto",
+          "engine_version": "0.9.0.1003",
+          "engine_update": "20251223",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Alibaba": {
+          "method": "blacklist",
+          "engine_name": "Alibaba",
+          "engine_version": "0.3.0.5",
+          "engine_update": "20190527",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Webroot": {
+          "method": "blacklist",
+          "engine_name": "Webroot",
+          "engine_version": "1.9.0.8",
+          "engine_update": "20250227",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Cylance": {
+          "method": "blacklist",
+          "engine_name": "Cylance",
+          "engine_version": "3.0.0.0",
+          "engine_update": "20251205",
+          "category": "type-unsupported",
+          "result": null
+        },
+        "Trustlook": {
+          "method": "blacklist",
+          "engine_name": "Trustlook",
+          "engine_version": "1.0",
+          "engine_update": "20251223",
+          "category": "type-unsupported",
+          "result": null
+        }
+      },
+      "size": 599474,
+      "tags": [
+        "elf",
+        "persistence",
+        "detect-debug-environment",
+        "64bits"
+      ],
+      "meaningful_name": "81b26bbaec99dd4dadf33c08850b6a797ae05a780bd73ebb9fdcb4676a543544.elf",
+      "telfhash": "t1c5515968e30ace9b65c817596247128244bbf0c53290f571d5d78d74e19a0aebf7ef30",
+      "detectiteasy": {
+        "filetype": "ELF64",
+        "values": [
+          {
+            "info": "EXEC AMD64-64",
+            "type": "Operation system",
+            "name": "Unix"
+          },
+          {
+            "info": "EXEC AMD64-64",
+            "version": "2.2.5",
+            "type": "Library",
+            "name": "GLIBC"
+          },
+          {
+            "info": "EXEC AMD64-64",
+            "version": "2.6.2 [2013/03/17] for x86_64 - Linux",
+            "type": "Compiler",
+            "name": "Free Pascal"
+          },
+          {
+            "info": "EXEC AMD64-64",
+            "version": "(GNU) 4.4.7 20120313 (Red Hat 4.4.7-23)",
+            "type": "Compiler",
+            "name": "gcc"
+          }
+        ]
+      },
+      "last_analysis_date": 1766492992,
+      "sha256": "81b26bbaec99dd4dadf33c08850b6a797ae05a780bd73ebb9fdcb4676a543544",
+      "magika": "ELF",
+      "md5": "56e4b76555c94000cb21a7571dae2715",
+      "popular_threat_classification": {
+        "suggested_threat_label": "trojan.trigona/mewnv",
+        "popular_threat_category": [
+          {
+            "value": "trojan",
+            "count": 18
+          },
+          {
+            "value": "ransomware",
+            "count": 13
+          }
+        ],
+        "popular_threat_name": [
+          {
+            "value": "trigona",
+            "count": 9
+          },
+          {
+            "value": "mewnv",
+            "count": 2
+          },
+          {
+            "value": "r002c0dia25",
+            "count": 2
+          }
+        ]
+      },
+      "type_description": "ELF",
+      "first_submission_date": 1711102111,
+      "ssdeep": "12288:ql//2DisDEM6wL6OrijbnZhk3kZuzqnuVm53up:W/NGTL6OrijbZhk3kZq+uVmIp",
+      "tlsh": "T1A4D4E86331D0C4BDE18AC5B4E99AD1F247B6BC64023472477ED3262A2FB5CA466BD343",
+      "elf_info": {
+        "interp": "/lib64/ld-linux-x86-64.so.2",
+        "header": {
+          "type": "EXEC (Executable file)",
+          "hdr_version": "1 (current)",
+          "num_prog_headers": 7,
+          "obj_version": "0x1",
+          "machine": "Advanced Micro Devices X86-64",
+          "num_section_headers": 26,
+          "os_abi": "UNIX - System V",
+          "abi_version": 0,
+          "entrypoint": 4239232,
+          "data": "2's complement, little endian",
+          "class": "ELF64"
+        },
+        "shared_libraries": [
+          "librt.so.1",
+          "libc.so.6"
+        ],
+        "export_list": [
+          {
+            "name": "RESSTR_SYSCONST_SBUSERROR",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSUTILS_MONTHDAYS",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSTEM_FILEMODE",
+            "type": "OBJECT"
+          },
+          {
+            "name": "SYSTEM_NOBASICEVENTDESTROY$POINTER",
+            "type": "FUNC"
+          },
+          {
+            "name": "SYSTEM_WRITESTRSHORT$TEXTREC",
+            "type": "FUNC"
+          },
+          {
+            "name": "U_UNIX_TYPE_IDXS",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_SYSTEM_ORPHANED_FREELISTS",
+            "type": "OBJECT"
+          },
+          {
+            "name": "operatingsystem_parameter_argv",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSUTILS_GUIDCALLEDRANDOMIZE",
+            "type": "OBJECT"
+          },
+          {
+            "name": "SYSTEM_FILEREADFUNC$TEXTREC",
+            "type": "FUNC"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SINVALIDFILENAME",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld57",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld125",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSUTILS_FPC_ENVCOUNT",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_SYSTEM_VARIANTMANAGER",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld53",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSTEM_MTI",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$UNIX$_Ld15",
+            "type": "OBJECT"
+          },
+          {
+            "name": "SYSTEM_FILECLOSEFUNC$TEXTREC",
+            "type": "FUNC"
+          },
+          {
+            "name": "_$SYSTEM$_Ld45",
+            "type": "OBJECT"
+          },
+          {
+            "name": "UNIX_FLUSHPIPE$TEXT$$LONGINT",
+            "type": "FUNC"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SEXCEPTIONERRORMESSAGE",
+            "type": "OBJECT"
+          },
+          {
+            "name": "SYSTEM_NORELOCATETHREADVAR$LONGWORD$$POINTER",
+            "type": "FUNC"
+          },
+          {
+            "name": "SYSUTILS_GENERICANSISTRLICOMP$PCHAR$PCHAR$QWORD$$INT64",
+            "type": "FUNC"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld92",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSTEM$_Ld49",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SDISKFULL",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SVAROUTOFMEMORY",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SFALLBACKERROR",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SCANNOTCREATEEMPTYDIR",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_UNIX_TRANSITIONS",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SOSERROR",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld129",
+            "type": "OBJECT"
+          },
+          {
+            "name": "VMT_SYSUTILS_EACCESSVIOLATION",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SINVALIDFILEHANDLE",
+            "type": "OBJECT"
+          },
+          {
+            "name": "operatingsystem_isconsole",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSTEM_MAX_FRAME_DUMP",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_SYSTEM_OUTPUT",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld96",
+            "type": "OBJECT"
+          },
+          {
+            "name": "SYSUTILS_SYSBEEP",
+            "type": "FUNC"
+          },
+          {
+            "name": "TC_SYSTEM_fpc_val_currency_shortstr$SHORTSTRING$INT64$$CURRENCY_MAXINT64",
+            "type": "OBJECT"
+          },
+          {
+            "name": "SYSTEM_NORTLEVENTRESETEVENT$PRTLEVENT",
+            "type": "FUNC"
+          },
+          {
+            "name": "INITFINAL",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld104",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld100",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_UNIX_NUM_LEAPS",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_SYSTEM_THREADID",
+            "type": "OBJECT"
+          },
+          {
+            "name": "U_SYSTEM_STDOUT",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSTEM_OLDRANDSEED",
+            "type": "OBJECT"
+          },
+          {
+            "name": "LNFODWRF_DWARFBACKTRACESTR$POINTER$$SHORTSTRING",
+            "type": "FUNC"
+          },
+          {
+            "name": "VMT_SYSUTILS_EINTFCASTERROR",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SVARUNEXPECTED",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSTEM$_Ld3",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSTEM_MODULEISLIB",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$ERRORS$_Ld127",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSTEM$_Ld36",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SNOTHREADSUPPORT",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld108",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld130",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SFILENOTOPENFORINPUT",
+            "type": "OBJECT"
+          },
+          {
+            "name": "VMT_SYSUTILS_EABORT",
+            "type": "OBJECT"
+          },
+          {
+            "name": "FPC_RESOURCESTRINGTABLES",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld89",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_FPC_OLDSIGSEGV",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld81",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$BASEUNIX$_Ld2",
+            "type": "OBJECT"
+          },
+          {
+            "name": "RESSTR_SYSCONST_SMISSINGWSTRINGMANAGER",
+            "type": "OBJECT"
+          },
+          {
+            "name": "VMT_SYSUTILS_ECONTROLC",
+            "type": "OBJECT"
+          },
+          {
+            "name": "TC_SYSUTILS_MAXCURRENCY",
+            "type": "OBJECT"
+          },
+          {
+            "name": "_$SYSUTILS$_Ld85",
+            "type": "OBJECT"
+          }
+        ],
+        "import_list": [
+          {
+            "name": "close",
+            "type": "FUNC"
+          },
+          {
+            "name": "getlogin",
+            "type": "FUNC"
+          },
+          {
+            "name": "read",
+            "type": "FUNC"
+          },
+          {
+            "name": "system",
+            "type": "FUNC"
+          },
+          {
+            "name": "unlink",
+            "type": "FUNC"
+          },
+          {
+            "name": "opendir",
+            "type": "FUNC"
+          },
+          {
+            "name": "__xstat",
+            "type": "FUNC"
+          },
+          {
+            "name": "readdir",
+            "type": "FUNC"
+          },
+          {
+            "name": "setpriority",
+            "type": "FUNC"
+          },
+          {
+            "name": "ftruncate64",
+            "type": "FUNC"
+          },
+          {
+            "name": "gethostname",
+            "type": "FUNC"
+          },
+          {
+            "name": "lseek64",
+            "type": "FUNC"
+          },
+          {
+            "name": "closedir",
+            "type": "FUNC"
+          },
+          {
+            "name": "access",
+            "type": "FUNC"
+          },
+          {
+            "name": "write",
+            "type": "FUNC"
+          },
+          {
+            "name": "clock_gettime",
+            "type": "FUNC"
+          },
+          {
+            "name": "open",
+            "type": "FUNC"
+          },
+          {
+            "name": "rename",
+            "type": "FUNC"
+          }
+        ],
+        "section_list": [
+          {
+            "name": "",
+            "section_type": "NULL",
+            "virtual_address": 0,
+            "physical_offset": 0,
+            "size": 0,
+            "flags": ""
+          },
+          {
+            "name": ".interp",
+            "section_type": "PROGBITS",
+            "virtual_address": 4194760,
+            "physical_offset": 456,
+            "size": 28,
+            "flags": "A"
+          },
+          {
+            "name": ".note.ABI-tag",
+            "section_type": "NOTE",
+            "virtual_address": 4194788,
+            "physical_offset": 484,
+            "size": 32,
+            "flags": "A"
+          },
+          {
+            "name": ".hash",
+            "section_type": "HASH",
+            "virtual_address": 4194824,
+            "physical_offset": 520,
+            "size": 4228,
+            "flags": "A"
+          },
+          {
+            "name": ".dynsym",
+            "section_type": "DYNSYM",
+            "virtual_address": 4199056,
+            "physical_offset": 4752,
+            "size": 12816,
+            "flags": "A"
+          },
+          {
+            "name": ".dynstr",
+            "section_type": "STRTAB",
+            "virtual_address": 4211872,
+            "physical_offset": 17568,
+            "size": 13111,
+            "flags": "A"
+          },
+          {
+            "name": ".gnu.version",
+            "section_type": "VERSYM",
+            "virtual_address": 4224984,
+            "physical_offset": 30680,
+            "size": 1068,
+            "flags": "A"
+          },
+          {
+            "name": ".gnu.version_r",
+            "section_type": "VERNEED",
+            "virtual_address": 4226056,
+            "physical_offset": 31752,
+            "size": 64,
+            "flags": "A"
+          },
+          {
+            "name": ".rela.dyn",
+            "section_type": "RELA",
+            "virtual_address": 4226120,
+            "physical_offset": 31816,
+            "size": 12360,
+            "flags": "A"
+          },
+          {
+            "name": ".rela.plt",
+            "section_type": "RELA",
+            "virtual_address": 4238480,
+            "physical_offset": 44176,
+            "size": 432,
+            "flags": "A"
+          },
+          {
+            "name": ".init",
+            "section_type": "PROGBITS",
+            "virtual_address": 4238912,
+            "physical_offset": 44608,
+            "size": 10,
+            "flags": "AX"
+          },
+          {
+            "name": ".plt",
+            "section_type": "PROGBITS",
+            "virtual_address": 4238924,
+            "physical_offset": 44620,
+            "size": 304,
+            "flags": "AX"
+          },
+          {
+            "name": ".text",
+            "section_type": "PROGBITS",
+            "virtual_address": 4239232,
+            "physical_offset": 44928,
+            "size": 403448,
+            "flags": "AX"
+          },
+          {
+            "name": ".fini",
+            "section_type": "PROGBITS",
+            "virtual_address": 4642680,
+            "physical_offset": 448376,
+            "size": 5,
+            "flags": "AX"
+          },
+          {
+            "name": ".eh_frame",
+            "section_type": "PROGBITS",
+            "virtual_address": 4642688,
+            "physical_offset": 448384,
+            "size": 52,
+            "flags": "A"
+          },
+          {
+            "name": ".ctors",
+            "section_type": "PROGBITS",
+            "virtual_address": 6742016,
+            "physical_offset": 450560,
+            "size": 8,
+            "flags": "WA"
+          },
+          {
+            "name": ".dtors",
+            "section_type": "PROGBITS",
+            "virtual_address": 6742024,
+            "physical_offset": 450568,
+            "size": 8,
+            "flags": "WA"
+          },
+          {
+            "name": ".jcr",
+            "section_type": "PROGBITS",
+            "virtual_address": 6742032,
+            "physical_offset": 450576,
+            "size": 8,
+            "flags": "WA"
+          },
+          {
+            "name": ".dynamic",
+            "section_type": "DYNAMIC",
+            "virtual_address": 6742040,
+            "physical_offset": 450584,
+            "size": 384,
+            "flags": "WA"
+          },
+          {
+            "name": ".got",
+            "section_type": "PROGBITS",
+            "virtual_address": 6742424,
+            "physical_offset": 450968,
+            "size": 4352,
+            "flags": "WA"
+          },
+          {
+            "name": ".got.plt",
+            "section_type": "PROGBITS",
+            "virtual_address": 6746776,
+            "physical_offset": 455320,
+            "size": 168,
+            "flags": "WA"
+          },
+          {
+            "name": ".data",
+            "section_type": "PROGBITS",
+            "virtual_address": 6746944,
+            "physical_offset": 455488,
+            "size": 104032,
+            "flags": "WA"
+          },
+          {
+            "name": ".bss",
+            "section_type": "NOBITS",
+            "virtual_address": 6850976,
+            "physical_offset": 559520,
+            "size": 16864,
+            "flags": "WA"
+          },
+          {
+            "name": ".comment",
+            "section_type": "PROGBITS",
+            "virtual_address": 0,
+            "physical_offset": 559520,
+            "size": 45,
+            "flags": "MS"
+          },
+          {
+            "name": ".gnu_debuglink",
+            "section_type": "PROGBITS",
+            "virtual_address": 0,
+            "physical_offset": 559565,
+            "size": 20,
+            "flags": ""
+          },
+          {
+            "name": ".shstrtab",
+            "section_type": "STRTAB",
+            "virtual_address": 0,
+            "physical_offset": 559585,
+            "size": 208,
+            "flags": ""
+          }
+        ],
+        "segment_list": [
+          {
+            "segment_type": "PHDR",
+            "resources": []
+          },
+          {
+            "segment_type": "INTERP",
+            "resources": [
+              ".interp"
+            ]
+          },
+          {
+            "segment_type": "LOAD",
+            "resources": [
+              ".interp",
+              ".note.ABI-tag",
+              ".hash",
+              ".dynsym",
+              ".dynstr",
+              ".gnu.version",
+              ".gnu.version_r",
+              ".rela.dyn",
+              ".rela.plt",
+              ".init",
+              ".plt",
+              ".text",
+              ".fini",
+              ".eh_frame"
+            ]
+          },
+          {
+            "segment_type": "LOAD",
+            "resources": [
+              ".ctors",
+              ".dtors",
+              ".jcr",
+              ".dynamic",
+              ".got",
+              ".got.plt",
+              ".data",
+              ".bss"
+            ]
+          },
+          {
+            "segment_type": "DYNAMIC",
+            "resources": [
+              ".dynamic"
+            ]
+          },
+          {
+            "segment_type": "NOTE",
+            "resources": [
+              ".note.ABI-tag"
+            ]
+          },
+          {
+            "segment_type": "GNU_STACK",
+            "resources": []
+          }
+        ]
+      },
+      "sha1": "eec28a91e9bea115c50b504f1eba7b8343083b17",
+      "trid": [
+        {
+          "file_type": "ELF Executable and Linkable format (Linux)",
+          "probability": 50.1
+        },
+        {
+          "file_type": "ELF Executable and Linkable format (generic)",
+          "probability": 49.8
+        }
+      ],
+      "times_submitted": 4,
+      "sigma_analysis_results": [
+        {
+          "rule_level": "medium",
+          "rule_id": "f74e8628441aa3b7bcbf82dd77cc025925e34078d02d169dd947db62675dbeaa",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Persistence Via Cron Files",
+          "rule_description": "Detects creation of cron file or files in Cron directories which could indicates potential persistence.",
+          "rule_author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC",
+          "match_context": [
+            {
+              "values": {
+                "TargetFilename": "/var/spool/cron/crontabs/how_to_decrypt.txt"
+              }
+            }
+          ]
+        }
+      ],
+      "names": [
+        "81b26bbaec99dd4dadf33c08850b6a797ae05a780bd73ebb9fdcb4676a543544.elf",
+        "nas_trigona_alert"
+      ],
+      "crowdsourced_ai_results": [
+        {
+          "category": "code_insight",
+          "analysis": "The binary is a ransomware variant targeting VMware ESXi environments. It traverses the filesystem to encrypt files, pointedly avoiding a hardcoded list of critical system directories to ensure the host remains bootable. Its primary malicious activity involves using `vim-cmd` shell commands to enumerate (`vmsvc/getallvms`) and then power off (`vmsvc/power.off`) virtual machines prior to encryption. A ransom note is created at `/tmp/how_to_decrypt.txt`.",
+          "source": "palm",
+          "verdict": "malicious",
+          "id": "81b26bbaec99dd4dadf33c08850b6a797ae05a780bd73ebb9fdcb4676a543544-file-palm"
+        }
+      ]
+    }
+  }
+}
