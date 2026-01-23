@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `565d5fc88728252e6fabe8b243af59d38043516e87e157c4d4f4c4b38bf6b10d` | **Job ID:** `3b0a052c`
+**Date:** 2026-01-23 10:27:57
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performing a simple binary-to-hexadecimal conversion with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Normal execution flow with EXEC and WRITE events
+- TRACK_QEMU event identified as emulation artifact (not evasion)
+- No network activity, file system manipulation, or process injection detected
+- Exit code 0 indicates successful completion
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be a legitimate utility. Continue monitoring if deployed in production environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the binary number: The equivalent hexadecimal value: 2A0
+```

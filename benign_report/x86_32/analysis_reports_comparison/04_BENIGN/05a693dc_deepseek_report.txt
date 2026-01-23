@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2fd0065a3451a02ce4d91e5f0b8dbbd9c920e59881c30b21a95d2ebea2957b0b` | **Job ID:** `05a693dc`
+**Date:** 2026-01-23 11:51:49
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly with exit code -1 and no runtime activity in syscall trace beyond startup and termination events.
+
+### 🔍 Key Evidence
+- Exit code -1
+- No runtime behavioral syscalls in trace
+- Only startup and termination events present
+
+### 💡 Recommendations
+Static analysis of the binary is required since dynamic execution failed. Check for missing dependencies, architecture compatibility, or corrupted binary.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

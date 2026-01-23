@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c94adcfd9831a51a6c0b793a09464e5edbfbce14d210ec39971341782ab8fc15` | **Job ID:** `2dacacb0`
+**Date:** 2026-01-23 11:09:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Security_Tool**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Airserv-ng wireless tool executed in emulated environment, displayed help screen and exited cleanly with no malicious activity observed.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean exit after displaying help screen
+- No network activity, file system modifications, or persistence attempts
+
+### 💡 Recommendations
+No further action needed. This appears to be legitimate security testing software running in an emulated analysis environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Airserv-ng 1.2 rc1 - (C) 2007, 2008, 2009 Andrea Bittau
+  http://www.aircrack-ng.org
+
+  Usage: airserv-ng <options>
+
+  Options:
+
+       -h         : This help screen
+       -p  <port> : TCP port to listen on (default:666)
+       -d <iface> : Wifi interface to use
+       -c  <chan> : Channel to use
+       -v <level> : Debug level (1 to 3; default: 1)
+```

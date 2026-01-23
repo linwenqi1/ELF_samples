@@ -1,0 +1,46 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e87dc2b685140a5471a45ea002c4ae881420910368cd7c2f1191002a61aacbb7.30__df` | **Job ID:** `6cdf3924`
+**Date:** 2026-01-23 10:54:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment with QEMU emulation, showing benign system utility behavior (likely 'df' command) without malicious indicators.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event detected (emulation artifact, not evasion)
+- Execution from /tmp directory (common for analysis environment)
+- Filesystem mount information output matches 'df' command behavior
+- No network activity, persistence attempts, or evasion techniques observed
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be a legitimate system utility. Consider verifying source if execution context is unexpected.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay        199767352 93384640  96162220  50% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        0     65536   0% /dev/shm
+/dev/nvme0n1p9 199767352 93384640  96162220  50% /usr/sbin/docker-init
+tmpfs           15895484        0  15895484   0% /proc/asound
+tmpfs           15895484        0  15895484   0% /proc/acpi
+tmpfs           15895484        0  15895484   0% /proc/scsi
+tmpfs           15895484        0  15895484   0% /sys/firmware
+tmpfs           15895484        0  15895484   0% /sys/devices/virtual/powercap
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu0/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu1/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu2/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu3/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu4/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu5/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu6/thermal_throttle
+tmpfs           15895484        0  15895484   0% /sys/devices/system/cpu/cpu7/thermal_throttle
+```

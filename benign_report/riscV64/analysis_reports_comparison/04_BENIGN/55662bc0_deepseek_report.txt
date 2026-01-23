@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c1ed77b0c84c91ce2521fb73212235fd387c695bad6efcdd06a50945f5c22580` | **Job ID:** `55662bc0`
+**Date:** 2026-01-23 11:15:41
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment with QEMU emulation, displaying expected user prompts for graph algorithm input (vertices and adjacency matrix). No malicious behaviors detected in syscall trace.
+
+### 🔍 Key Evidence
+- Exit code 0 indicates normal termination
+- TRACK_QEMU events are emulation artifacts, not evasion
+- No network activity, file system tampering, or persistence attempts
+- Execution output matches expected benign program behavior
+
+### 💡 Recommendations
+No further action required. Binary appears to be a legitimate graph algorithm utility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the number of vertices: Enter the adj matrix: 
+Node	Dist
+```

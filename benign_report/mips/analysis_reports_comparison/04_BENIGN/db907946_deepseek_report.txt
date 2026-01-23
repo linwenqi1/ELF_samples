@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85` | **Job ID:** `db907946`
+**Date:** 2026-01-23 11:09:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing dependencies or incorrect environment, showing no malicious activity.
+
+### 🔍 Key Evidence
+- EXEC event with exit code 1
+- Output 'applet not found' indicating missing dependencies
+- TRACK_QEMU event (benign emulation artifact)
+- No network, persistence, or evasion activities detected
+
+### 💡 Recommendations
+No further action needed. This appears to be a failed execution in an emulated environment with no malicious indicators.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+cc1113c8d530a17dc32729aeab429a5a6c811dddac99c2282c03760941cc5e85: applet not found
+```

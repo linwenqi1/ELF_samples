@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e06a4525f904a08438d77b776ed49a47a60cbc167a1273109c3406c90bef25a5` | **Job ID:** `d9b88da7`
+**Date:** 2026-01-23 11:15:47
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing dictionary file dependency, showing no malicious activity in trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'Error while opening dictionary file' output
+- No network, persistence, evasion, or exploitation syscalls detected
+- TRACK_QEMU event is environmental artifact per noise filtering rules
+
+### 💡 Recommendations
+Provide required dictionary file for proper execution analysis; current trace shows only benign startup and error handling.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Error while opening dictionary file
+```

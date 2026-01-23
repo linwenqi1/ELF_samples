@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5930d03bc78be0a7fff5a667571a602ea132b63d4ccb40dd6c8733e132eaa3a1` | **Job ID:** `63c10918`
+**Date:** 2026-01-23 11:52:16
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly with no observable malicious activity in trace
+
+### 🔍 Key Evidence
+- Exit code -1
+- No execution output
+- TRACK_QEMU event (benign emulation artifact)
+- SIGNAL_GENERATE events (likely cleanup)
+
+### 💡 Recommendations
+Check binary dependencies and compatibility; analyze static properties for packers/obfuscation
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

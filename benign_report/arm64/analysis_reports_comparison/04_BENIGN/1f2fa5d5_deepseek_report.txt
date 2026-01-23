@@ -1,0 +1,78 @@
+# DeepSeek Malware Analysis Report
+**Target:** `684eb315c37ecebce0ac4383b8d04c9275e9f4e234d02958c779cf6df3a8d471` | **Job ID:** `1f2fa5d5`
+**Date:** 2026-01-23 10:27:42
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, displaying interactive prompts for graph algorithm input (vertices/edges/weights) with no malicious activity detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event identified as emulation artifact (not evasion)
+- Execution output shows standard graph algorithm input prompts
+- No sensitive path access, network activity, or persistence attempts
+
+### 💡 Recommendations
+No further action required. This appears to be a legitimate graph algorithm binary with benign behavior.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter number of vertices: Enter number of edges: 
+Edge 1 
+Enter source: Enter destination: Enter weight: 
+Edge 2 
+Enter source: Enter destination: Enter weight: 
+Edge 3 
+Enter source: Enter destination: Enter weight: 
+Edge 4 
+Enter source: Enter destination: Enter weight: 
+Edge 5 
+Enter source: Enter destination: Enter weight: 
+Edge 6 
+Enter source: Enter destination: Enter weight: 
+Edge 7 
+Enter source: Enter destination: Enter weight: 
+Edge 8 
+Enter source: Enter destination: Enter weight: 
+Edge 9 
+Enter source: Enter destination: Enter weight: 
+Edge 10 
+Enter source: Enter destination: Enter weight: 
+Edge 11 
+Enter source: Enter destination: Enter weight: 
+Edge 12 
+Enter source: Enter destination: Enter weight: 
+Edge 13 
+Enter source: Enter destination: Enter weight: 
+Edge 14 
+Enter source: Enter destination: Enter weight: 
+Edge 15 
+Enter source: Enter destination: Enter weight: 
+Edge 16 
+Enter source: Enter destination: Enter weight: 
+Edge 17 
+Enter source: Enter destination: Enter weight: 
+Edge 18 
+Enter source: Enter destination: Enter weight: 
+Edge 19 
+Enter source: Enter destination: Enter weight: 
+Edge 20 
+Enter source: Enter destination: Enter weight: 
+Edge 21 
+Enter source: Enter destination: Enter weight: 
+Edge 22 
+Enter source: Enter destination: Enter weight: 
+Edge 23 
+Enter source: Enter destination: Enter weight: 
+Edge 24 
+Enter source: Enter destination: Enter weight: 
+Enter source:
+Vertex  Distance
+```

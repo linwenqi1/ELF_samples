@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `663f32f53959705069a451f6614d6fee64c728dac079e424c5b8ae190d1f8405.30__b2sum` | **Job ID:** `5edc323c`
+**Date:** 2026-01-23 10:55:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully, computed and output a BLAKE2 hash (likely b2sum utility), showing no malicious behaviors.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event is an emulation artifact, not evasion
+- No access to sensitive paths outside /tmp
+- No network activity, file encryption, persistence attempts, or process injection
+- Execution output matches expected hash utility behavior
+
+### 💡 Recommendations
+No action required. This appears to be a legitimate hash calculation utility running in a Docker/QEMU environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+786a02f742015903c6c6fd852552d272912f4740e15847618a86e217f71f5419d25e1031afee585313896444934eb04b903a685b1448b755d56f701afe9be2ce  -
+```

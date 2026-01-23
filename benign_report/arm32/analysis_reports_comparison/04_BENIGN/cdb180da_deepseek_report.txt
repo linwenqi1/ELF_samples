@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `94f77fe63fa96fa93a37a5f910599f10462ea26cc7d63cee02e974f72b4f52f6.30__false` | **Job ID:** `cdb180da`
+**Date:** 2026-01-23 10:54:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly with exit code 1 and minimal runtime activity, likely due to missing dependencies or environment incompatibility in the emulated Docker/QEMU environment.
+
+### 🔍 Key Evidence
+- Exit code 1 indicates execution failure
+- Minimal syscall trace with only 14 events
+- No malicious patterns detected in trace
+- TRACK_QEMU event present but benign per guidelines
+
+### 💡 Recommendations
+Re-run analysis with proper dependencies or in native environment to confirm behavior. Check for missing libraries or binary compatibility issues.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

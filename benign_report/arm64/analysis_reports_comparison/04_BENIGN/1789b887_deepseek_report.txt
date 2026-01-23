@@ -1,0 +1,46 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fc9efbb97e742078a4a78049655401d7ad7e4fe3549653f8d026be33c0e5cf5a` | **Job ID:** `1789b887`
+**Date:** 2026-01-23 10:27:50
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performing a simple bucket sort algorithm with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Execution completed with exit code 0
+- TRACK_QEMU event is an emulation artifact (not evasion)
+- No sensitive path access outside emulation
+- No network activity, persistence attempts, or malicious patterns
+
+### 💡 Recommendations
+No further action required. This appears to be a benign algorithmic test program.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Initial array
+29 25 -1 49 9 37 21 43 
+------------
+Bucket["0"] : 9 -1 
+Bucket["1"] : 
+Bucket["2"] : 21 25 29 
+Bucket["3"] : 37 
+Bucket["4"] : 43 49 
+--------------
+Buckets after sorted
+Bucket["0"] : -1 9 
+Bucket["1"] : 
+Bucket["2"] : 21 25 29 
+Bucket["3"] : 37 
+Bucket["4"] : 43 49 
+------------
+Sorted array
+-1 9 21 25 29 37 43 49
+```

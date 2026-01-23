@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0a952b457f15691bbc9cda158e6a2f3a2168c43cf666be61b2e2872574d399fa` | **Job ID:** `7e178f1d`
+**Date:** 2026-01-23 11:15:47
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, displaying a Tic Tac Toe game menu and exiting normally. No malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Normal execution flow with game output
+- TRACK_QEMU event consistent with emulation environment
+- No sensitive file access or network activity
+- Clean exit code 0
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate game binary.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+***************************************
+*************TIC TAC TOE***************
+***************************************
+***********1. YOU vs COMPUTER ***********
+***********2. YOU vs PLAYER ***********
+***********3.EXIT *********************
+Enter your choice : THANK YOU and EXIT!Next game ? : Enter 1 – YES and 0 - NO
+```

@@ -1,0 +1,31 @@
+# DeepSeek Malware Analysis Report
+**Target:** `4fdaecde29ed328835c50653fc59f51eeed3d11e88aae325ac7fbd7d183a5e82` | **Job ID:** `3d901acc`
+**Date:** 2026-01-23 11:52:02
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary crashed during execution due to an assertion failure in test code, with no evidence of malicious behavior. The environment indicates emulation via QEMU, and observed activities are consistent with benign program execution and emulation artifacts.
+
+### 🔍 Key Evidence
+- Assertion failure in test code (pred == expected_val)
+- Abnormal exit (signal 6 - Aborted)
+- Large mmap allocation (1048560 pages) flagged by analyzer but likely related to emulation environment
+- TRACK_QEMU event indicating emulation environment
+
+### 💡 Recommendations
+No immediate threat detected. The crash appears to be a test failure. If this is unexpected production code, review the source (adaline_learning.c) for bugs. The large mmap allocation should be verified against expected program behavior in the emulation context.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+4fdaecde29ed328835c50653fc59f51eeed3d11e88aae325ac7fbd7d183a5e82: ./src/adaline_learning.c:387: test3: Assertion `pred == expected_val' failed.
+qemu: uncaught target signal 6 (Aborted) - core dumped
+Aborted (core dumped)
+```

@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6e8c984a6cf8cbf63bfc5643cd3ef74b773e2687371e861231a966495e03f69c` | **Job ID:** `62c50e63`
+**Date:** 2026-01-23 11:15:48
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing dependencies or file not found error, with no malicious activity observed in the trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'File not found' output
+- No malicious syscall patterns detected
+- TRACK_QEMU event identified as benign emulation artifact
+
+### 💡 Recommendations
+Static analysis of the binary to identify dependencies; re-execute in environment with proper libraries; check for packed/obfuscated code that may require specific conditions.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+File not found.
+```

@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6363ea5d76e033956deee454658b7346e65a7e40bc3b60972e2643e2e9112105` | **Job ID:** `0b833f62`
+**Date:** 2026-01-23 10:27:59
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 50/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary attempted to establish a network connection to an external server but failed, exhibiting backdoor-like behavior without completing a full malicious chain.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation
+- Outbound connection attempt to unspecified address
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- Socket creation (domain 2, type 1)
+- Connect attempt with encoded address data
+- Binary executed from /tmp location
+
+### 💡 Recommendations
+Analyze the binary's code to determine the intended server address and purpose. Check for encoded payloads or additional functionality that may execute under different conditions. Monitor for similar connection attempts in production environments.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Socket successfully created..
+connection with the server failed...
+```

@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b` | **Job ID:** `fd7c1658`
+**Date:** 2026-01-23 11:08:52
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed from /tmp but exited immediately with usage help output, showing no malicious activity. TRACK_QEMU event is an emulation artifact, not evasion. No suspicious behaviors detected in trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with usage output
+- TRACK_QEMU event (benign emulation artifact)
+- No network activity, file manipulation, or persistence attempts
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a standard utility (likely luac Lua compiler) that requires proper arguments to function.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b: no input files given
+usage: /tmp/3dff8a5d2b3c72632aed33b98f68ca30f7e3ea8b8c7908f9c98b7438a9f0993b [options] [filenames].
+Available options are:
+  -        process stdin
+  -l       list
+  -o name  output to file 'name' (default is "luac.out")
+  -p       parse only
+  -s       strip debug information
+  -v       show version information
+  --       stop handling options
+```

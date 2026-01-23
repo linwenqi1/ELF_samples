@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6a96f6cd41419d02bb8b29531f1e76b7e47b3c051546d4c347dcfddb6fcd6b06` | **Job ID:** `65df6b66`
+**Date:** 2026-01-23 10:29:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary executed in QEMU emulation environment, displayed a simple menu interface repeatedly, then was terminated by SIGKILL signal. No malicious behaviors observed.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory (common for benign testing)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Repeated menu display output patterns
+- Termination via SIGKILL (signal 9) after execution
+
+### 💡 Recommendations
+No action required. This appears to be a benign application that crashed or was terminated during emulation testing.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fb847f661062ae81d3d1615dea5f5da42175d0f2ab22925d3e1b3cbbbadcb41e` | **Job ID:** `606a63ac`
+**Date:** 2026-01-23 11:50:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 50/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, created a socket and attempted to connect to a server, but connection failed. No malicious payload delivery observed, but network behavior is suspicious for potential backdoor/C2 activity.
+
+### ⚠️ Suspicious Behaviors
+- Socket creation and connection attempt
+- Execution from /tmp directory
+- Network activity without clear benign purpose
+
+### 🔍 Key Evidence
+- EXEC event from /tmp/
+- SOCKET event (domain: 2/AF_INET, type: 1/SOCK_STREAM)
+- CONNECT event with encoded address data
+- TRACK_QEMU event indicating emulation environment
+
+### 💡 Recommendations
+Further analysis needed: 1) Decode CONNECT address to identify target IP/port, 2) Check if binary attempts to retry connection or has fallback mechanisms, 3) Analyze binary statically for embedded C2 addresses or encryption, 4) Monitor for persistence attempts if execution environment allows.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Socket successfully created..
+connection with the server failed...
+```

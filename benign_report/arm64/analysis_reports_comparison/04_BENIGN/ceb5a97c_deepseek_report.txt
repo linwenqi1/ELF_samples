@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `601cc346cb531b7ef8d608bf1bd255a1c0b0d8614b76c8f9e5301820c7a0e204` | **Job ID:** `ceb5a97c`
+**Date:** 2026-01-23 10:27:42
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, performed basic I/O operation (prompt and output), and exited cleanly with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Clean exit code 0
+- No network activity
+- No file system modifications
+- No process manipulation
+- No persistence attempts
+- No anti-analysis techniques
+- TRACK_QEMU is emulation artifact, not evasion
+
+### 💡 Recommendations
+No further action required. Binary appears to be a simple utility or test program.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the binary no: 
+Octal equivalent is: 0
+```

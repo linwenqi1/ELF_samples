@@ -1,0 +1,60 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f18b6a383959dde6e1645b1b2f5474d3831ad20d7a6619a8c27a9340d2ed10af` | **Job ID:** `55b612b5`
+**Date:** 2026-01-23 11:08:46
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Security_Tool**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Airdecloak-ng security tool executed in emulated environment, displayed help output due to missing mandatory arguments, and exited cleanly with no malicious activity observed.
+
+### 🔍 Key Evidence
+- Execution of known security tool (airdecloak-ng)
+- Clean exit with help output only
+- No network activity, file system modifications, or persistence attempts
+- TRACK_QEMU event consistent with emulation environment
+
+### 💡 Recommendations
+No further action required. This appears to be legitimate security testing software executed in a controlled environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Airdecloak-ng 1.2 rc1 - (C) 2008-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: airdecloak-ng [options]
+
+  options:
+
+   Mandatory:
+     -i <file>             : Input capture file
+     --ssid <ESSID>        : ESSID of the network to filter
+        or
+     --bssid <BSSID>       : BSSID of the network to filter
+
+   Optional:
+     --filters <filters>   : Apply filters (separated by a comma). Filters:
+           signal:               Try to filter based on signal.
+           duplicate_sn:         Remove all duplicate sequence numbers
+                                 for both the AP and the client.
+           duplicate_sn_ap:      Remove duplicate sequence number for
+                                 the AP only.
+           duplicate_sn_client:  Remove duplicate sequence number for the
+                                 client only.
+           consecutive_sn:       Filter based on the fact that IV should
+                                 be consecutive (only for AP).
+           duplicate_iv:         Remove all duplicate IV.
+           signal_dup_consec_sn: Use signal (if available), duplicate and
+                                 consecutive sequence number (filtering is
+                                  much more precise than using all these
+                                  filters one by one).
+     --null-packets        : Assume that null packets can be cloaked.
+     --disable-base_filter : Do not apply base filter.
+     --drop-frag           : Drop fragmented packet
+```

@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `9d00a84e48fb223548b3ecb0108cf8d084669aeb3a47afea49d51e10c0d22f3d` | **Job ID:** `ff1413ea`
+**Date:** 2026-01-23 11:08:45
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, displaying OpenSSL prompt with no malicious activity detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- OpenSSL prompt output
+- No sensitive path access outside emulation
+- No malicious patterns in syscall trace
+
+### 💡 Recommendations
+No further action required. This appears to be a benign OpenSSL binary or utility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+OpenSSL>
+```

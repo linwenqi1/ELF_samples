@@ -1,0 +1,65 @@
+# DeepSeek Malware Analysis Report
+**Target:** `af1eea959f700880da4885c61519e694c809b4ac68ea59b8bb6f5c198b508674` | **Job ID:** `0239ede7`
+**Date:** 2026-01-23 10:28:11
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment, performing mathematical model training and prediction tests with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Execution completed with exit code 0
+- Only standard output writes observed
+- TRACK_QEMU event is emulation artifact, not evasion
+- No network activity, file system manipulation, or process injection
+
+### 💡 Recommendations
+No further action required. This appears to be a legitimate machine learning/algorithm testing binary.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+------- Test 1 -------
+Model before fit: <1, 1, 1>
+	Iter   0: Training weights: <-0.4, 1, 0.6>	Avg error: 0.0400
+	Iter   1: Training weights: <-0.4, 1, 0.6>	Avg error: 0.0000
+Converged after 2 iterations.
+Model after fit: <-0.4, 1, 0.6>
+Predict for x=(5,-3): -1
+ ...passed
+Predict for x=(5, 8):  1
+ ...passed
+Press ENTER to continue...
+------- Test 2 -------
+Model before fit: <1, 1, 1>
+	Iter   0: Training weights: <0.658, 1.56, 0.4>	Avg error: 0.0200
+	Iter   1: Training weights: <0.39, 1.612, 0.6>	Avg error: 0.0040
+	Iter   2: Training weights: <0.39, 1.612, 0.6>	Avg error: 0.0000
+Converged after 3 iterations.
+Model after fit: <0.39, 1.612, 0.6>
+Predict for x=( 0.68, 1.84):  1
+ ...passed
+Predict for x=(-0.95, 2.45):  1
+ ...passed
+Predict for x=(-0.14, 0.82):  1
+ ...passed
+Predict for x=( 0.97,-0.04):  1
+ ...passed
+Predict for x=( 1.66,-1.88): -1
+ ...passed
+Press ENTER to continue...
+------- Test 3 -------
+Model before fit: <1, 1, 1, 1, 1, 1, 1>
+	Iter   0: Training weights: <0.036, -0.014, -0.136, 0.00148, -0.07438, 0.0212, -5.551e-17>	Avg error: 0.1080
+	Iter   1: Training weights: <-0.01, -0.024, -0.24, -0.3032, -0.3625, -0.1612, 0.2>	Avg error: 0.0840
+	Iter   2: Training weights: <-0.056, -0.12, -0.07, -0.7042, -0.66, -0.2673, 0.4>	Avg error: 0.0600
+	Iter   3: Training weights: <-0.026, 0.236, -0.166, -0.6779, -0.7333, -0.4564, 0.6>	Avg error: 0.0360
+	Iter   4: Training weights: <-0.008, -0.136, -0.094, -0.8603, -0.9232, -0.6193, 0.6>	Avg error: 0.0560
+	Iter   5: Training weigh
+```

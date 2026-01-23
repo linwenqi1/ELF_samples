@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e5673c9abd023712c2d7d178f6b6f0e6fef2be472a06875e8a42aa48998a610f.30__dd` | **Job ID:** `98dfcf8c`
+**Date:** 2026-01-23 10:54:52
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performing standard dd command operations with no malicious activity detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event is emulation artifact, not evasion
+- Only standard file operations and output writing observed
+- No network activity, process injection, persistence attempts, or known malware patterns
+
+### 💡 Recommendations
+No further action required. Binary appears to be legitimate dd utility or similar benign tool.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+0+0 records in
+0+0 records out
+0 bytes copied, 0.00191074 s, 0.0 kB/s
+```

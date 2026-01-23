@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `87e72b46bfb3b85dba8efc92ffc039623ee7889571a51b7bb4456193a13f98cc` | **Job ID:** `b92a5c36`
+**Date:** 2026-01-23 11:17:00
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary executed in a Docker/Linux environment via QEMU emulation but failed to start properly, likely due to missing dependencies or environment incompatibility. No malicious activity observed.
+
+### 🔍 Key Evidence
+- Exit code -1 indicates startup failure
+- No network, file system, or process manipulation events
+- TRACK_QEMU event is an emulation artifact, not evasion
+- All WRITE events are benign output fragments (e.g., 'Position unavailable') with no payload
+
+### 💡 Recommendations
+No immediate threat. Review binary for compatibility issues or missing libraries in the emulated environment. Ensure proper environment setup if re-execution is needed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

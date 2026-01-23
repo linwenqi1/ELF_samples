@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b` | **Job ID:** `c434460c`
+**Date:** 2026-01-23 11:09:01
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 65/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary attempted to create raw sockets for potential network spoofing and executed kernel module management tools, but failed due to missing dependencies in the emulated environment.
+
+### ⚠️ Suspicious Behaviors
+- Raw socket creation (SOCK_RAW)
+- Execution of modprobe for kernel module loading
+- Forking processes to execute privileged operations
+
+### 🔍 Key Evidence
+- SOCKET domain=2, type=3 (raw socket)
+- Executed: /sbin/modprobe
+- Attempted to load arp_tables module for network manipulation
+
+### 💡 Recommendations
+Analyze binary in native environment to observe full behavior; check for persistence mechanisms; monitor for network traffic patterns indicative of backdoor activity.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+modprobe: FATAL: Module arp_tables not found in directory /lib/modules/6.17.0-8-generic
+arptables v0.0.4: can't initialize arptables table `filter': arptables who? (do you need to insmod?)
+Perhaps arptables or your kernel needs to be upgraded.
+```

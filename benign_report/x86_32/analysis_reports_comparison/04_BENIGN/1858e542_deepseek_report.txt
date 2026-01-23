@@ -1,0 +1,75 @@
+# DeepSeek Malware Analysis Report
+**Target:** `15f49c5e29d4aea895fb02448d7dcd7e095f2b020e342b9da6b39e2c87a3a39e` | **Job ID:** `1858e542`
+**Date:** 2026-01-23 11:52:04
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performing linked list operations with no malicious behavior detected.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory (benign in this context)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No sensitive path access or malicious syscall patterns
+- Normal program output showing data structure operations
+
+### 💡 Recommendations
+No further action required. Binary appears to be a legitimate test program.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Testing inserting elements:
+
+Contents of your linked list: The list is empty
+
+Contents of your linked list: 2
+
+Contents of your linked list: 3 <-> 2
+
+Contents of your linked list: 4 <-> 3 <-> 2
+
+Contents of your linked list: 5 <-> 4 <-> 3 <-> 2
+
+Testing removing elements:
+
+Contents of your linked list: 6 <-> 5 <-> 4 <-> 3 <-> 2
+
+Contents of your linked list: 5 <-> 4 <-> 3 <-> 2
+
+Contents of your linked list: 4 <-> 3 <-> 2
+
+Contents of your linked list: 3 <-> 2
+
+Contents of your linked list: 2
+
+Testing inserting at tail:
+
+Contents of your linked list: The list is empty
+
+Contents of your linked list: 2
+
+Contents of your linked list: 2 <-> 3
+
+Contents of your linked list: 2 <-> 3 <-> 4
+
+Contents of your linked list: 2 <-> 3 <-> 4 <-> 5
+
+Testing removing from tail:
+
+Contents of your linked list: 2 <-> 3 <-> 4 <-> 5 <-> 6
+
+Contents of your linked list: 2 <-> 3 <-> 4 <-> 5
+
+Contents of your linked list: 2 <-> 3 <-> 4
+
+Contents of your linked list: 2 <-> 3
+
+Contents of your linked list: 2
+```

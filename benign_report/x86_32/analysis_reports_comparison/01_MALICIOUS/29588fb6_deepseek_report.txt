@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d9aeb3e1c050fccbb6c7b2dd52b4d6f8450041206facaef4bbf649f40b90449e` | **Job ID:** `29588fb6`
+**Date:** 2026-01-23 11:52:04
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Privilege Escalation`, `Command Injection`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary exhibits multiple malicious behaviors including seccomp filter manipulation to bypass sandbox restrictions, privilege escalation attempts to root via SETUID, and command injection through shell execution. The process spawns a shell and executes itself from /tmp, indicating potential persistence or dropper activity.
+
+### ⚠️ Suspicious Behaviors
+- Seccomp filter manipulation (SET_MODE_FILTER)
+- Multiple SETUID calls to uid 0 (root)
+- Shell execution (/bin/sh)
+- Execution from /tmp directory
+- Process forking and child process execution
+
+### 🔍 Key Evidence
+- Process 238529 manipulated seccomp filter with op=SET_MODE_FILTER
+- SETUID call attempts to set uid to 0 (root) in process 238529
+- Suspicious shell executed via EXEC: /bin/sh
+- Binary executed from /tmp/d9aeb3e1c050fccbb6c7b2dd52b4d6f8450041206facaef4bbf649f40b90449e
+- Multiple process creations with CLONE and TRACK_FORK events
+
+### 💡 Recommendations
+Isolate affected system immediately. Conduct forensic analysis of /tmp directory and examine any spawned processes. Review system logs for unauthorized access. Consider implementing stricter seccomp policies and monitoring SETUID calls. Update security policies to restrict execution from /tmp.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the binary no: 
+Octal equivalent is: 1836
+```

@@ -1,0 +1,62 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6f0dbe32e0aff91b287d3f651bca74b950065145adad891ffe17d5471faf520d` | **Job ID:** `b386a3e2`
+**Date:** 2026-01-23 11:09:16
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Security_Tool**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Aircrack-ng wireless security assessment tool executed in Docker environment via QEMU emulation, exited with usage help output due to missing required arguments.
+
+### 🔍 Key Evidence
+- Execution of known security tool (Aircrack-ng)
+- TRACK_QEMU event indicating emulation environment
+- No malicious syscall patterns detected
+- Exit code 1 with usage help output
+
+### 💡 Recommendations
+No immediate threat detected. This appears to be legitimate security testing software. If unexpected in your environment, review why this tool was executed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Aircrack-ng 1.2 rc1 - (C) 2006-2013 Thomas d'Otreppe
+  http://www.aircrack-ng.org
+
+  usage: aircrack-ng [options] <.cap / .ivs file(s)>
+
+  Common options:
+
+      -a <amode> : force attack mode (1/WEP, 2/WPA-PSK)
+      -e <essid> : target selection: network identifier
+      -b <bssid> : target selection: access point's MAC
+      -p <nbcpu> : # of CPU to use  (default: all CPUs)
+      -q         : enable quiet mode (no status output)
+      -C <macs>  : merge the given APs to a virtual one
+      -l <file>  : write key to file
+
+  Static WEP cracking options:
+
+      -c         : search alpha-numeric characters only
+      -t         : search binary coded decimal chr only
+      -h         : search the numeric key for Fritz!BOX
+      -d <mask>  : use masking of the key (A1:XX:CF:YY)
+      -m <maddr> : MAC address to filter usable packets
+      -n <nbits> : WEP key length :  64/128/152/256/512
+      -i <index> : WEP key index (1 to 4), default: any
+      -f <fudge> : bruteforce fudge factor,  default: 2
+      -k <korek> : disable one attack method  (1 to 17)
+      -x or -x0  : disable bruteforce for last keybytes
+      -x1        : last keybyte bruteforcing  (default)
+      -x2        : enable last  2 keybytes bruteforcing
+      -X         : disable  bruteforce   multithreading
+      -y         : experimental  single bruteforce mode
+      -K         : use only old KoreK attacks (pre-PTW)
+      -s         : show the key in ASCII while cracking
+      -M <num>   : specify maximum numb
+```

@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `bb80e30140a0bef7ca1067414773a4f283778dc004cf8ee7b135dcff3d9e27a5` | **Job ID:** `53b80d47`
+**Date:** 2026-01-23 11:16:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary executed in Docker/QEMU environment but crashed immediately with SIGKILL (signal 9) after minimal startup activity, showing no malicious behavior patterns.
+
+### 🔍 Key Evidence
+- Early termination via SIGKILL (signal 9)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Minimal syscall activity before crash
+- No access to sensitive paths or malicious patterns
+
+### 💡 Recommendations
+Analyze binary with static analysis to determine crash cause; test in native environment if possible; check for architecture compatibility issues.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

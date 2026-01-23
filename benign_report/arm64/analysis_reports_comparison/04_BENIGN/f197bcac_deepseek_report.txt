@@ -1,0 +1,44 @@
+# DeepSeek Malware Analysis Report
+**Target:** `256ae976eede4db97622db0b8e6d4b8a9f98794dc25d86a753f710c5f1ea23be` | **Job ID:** `f197bcac`
+**Date:** 2026-01-23 10:27:42
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performing simple temperature conversion tests with expected outputs. No malicious behaviors detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event identified as emulation artifact (not evasion)
+- Execution output matches expected test results
+- No sensitive path access or malicious syscall patterns
+
+### 💡 Recommendations
+No further action required. Binary appears to be benign test code.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+TEST 1
+Input: 0.000000
+Expected Output: 32.000000
+Output: 32.000000
+== TEST PASSED ==
+
+TEST 2
+Input: 100.000000
+Expected Output: 212.000000
+Output: 212.000000
+== TEST PASSED ==
+
+TEST 3
+Input: 22.500000
+Expected Output: 72.500000
+Output: 72.500000
+== TEST PASSED ==
+```

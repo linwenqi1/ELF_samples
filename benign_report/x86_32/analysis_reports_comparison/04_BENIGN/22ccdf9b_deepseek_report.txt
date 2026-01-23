@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `28836bafe9b4d6f25c3d73fb33e57de9fbe856151b2d8c507f1b0c6f8a5ca38a` | **Job ID:** `22ccdf9b`
+**Date:** 2026-01-23 11:52:03
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary appears to be a graph algorithm test program that failed due to missing input dependencies in the emulated environment. No malicious behaviors observed.
+
+### 🔍 Key Evidence
+- Exit code -1 indicates execution failure
+- No network activity, file system modifications, or process manipulation detected
+- Only observed behavior is printing graph edge prompts to stdout
+- TRACK_QEMU event is expected emulation artifact per noise filtering rules
+
+### 💡 Recommendations
+No action required. This appears to be a benign program that failed due to environment constraints. If further analysis is needed, provide interactive input to complete execution.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

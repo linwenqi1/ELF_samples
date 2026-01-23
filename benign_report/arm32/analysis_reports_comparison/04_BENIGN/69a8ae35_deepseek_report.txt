@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `7911f744d316086722a69286caf413c21dd17334a95e38bef66d6a4ad59b8231.30__chcon` | **Job ID:** `69a8ae35`
+**Date:** 2026-01-23 10:54:37
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing arguments, showing only basic startup and error output behavior with no malicious activity.
+
+### 🔍 Key Evidence
+- Exit code 1 indicates argument error
+- Output shows 'missing operand' error message
+- No network, persistence, or evasion activity detected
+- TRACK_QEMU event is documented as benign emulation artifact
+
+### 💡 Recommendations
+No further action needed. This appears to be a standard utility failing due to incorrect invocation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/7911f744d316086722a69286caf413c21dd17334a95e38bef66d6a4ad59b8231.30__chcon: missing operand
+Try '/tmp/7911f744d316086722a69286caf413c21dd17334a95e38bef66d6a4ad59b8231.30__chcon --help' for more information.
+```

@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5946d743986d24b17336618ebb7de7c5fbba3463ec1c1befdeecf5c6e17bc9e0` | **Job ID:** `f0409268`
+**Date:** 2026-01-23 11:08:59
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, showing only basic startup activity and TFTP client prompt output with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- TFTP client prompt output
+- No network activity, file system modifications, or process manipulation
+
+### 💡 Recommendations
+No immediate action required. Monitor for any follow-up network connections or file system changes if execution continues beyond initial prompt.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+tftp>
+```

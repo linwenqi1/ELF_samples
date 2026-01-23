@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8d10d9e1640d30c365d543577b0fdfc96f548ee04d327fac9e30b25619e5c935` | **Job ID:** `036c5db6`
+**Date:** 2026-01-23 10:28:52
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary crashed during execution with SIGKILL (signal 9) after minimal benign activity, showing no malicious patterns.
+
+### 🔍 Key Evidence
+- SIGKILL termination (signal 9) to multiple processes
+- No network, file system, or process manipulation observed
+- Only benign output and library/procfs access detected
+
+### 💡 Recommendations
+Investigate crash cause (e.g., memory corruption, infinite loop) but no malware indicators present.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

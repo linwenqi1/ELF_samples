@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fbdca0ecef0a245da06459d96400001cd1e8a8cc775a2a7c7122258066dbcc42` | **Job ID:** `a82038a5`
+**Date:** 2026-01-23 10:27:49
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performing a simple BFS graph algorithm with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event is an emulation artifact (not evasion)
+- Execution output shows standard BFS algorithm prompts
+- No sensitive path access, network activity, or persistence attempts
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a legitimate graph algorithm implementation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Enter the number of vertices
+Enter the number of edges
+Enter source of bfs
+Breadth first traversal from vertex 4849696 is:
+4849696
+```

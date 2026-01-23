@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `be5f0e1cd516872fc86a339bf04af27a30306b8d735715f60c044f74ca02de94` | **Job ID:** `5f3bb347`
+**Date:** 2026-01-23 11:51:02
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary crashed immediately with floating point exception in QEMU emulation environment, showing no malicious runtime behavior.
+
+### 🔍 Key Evidence
+- Floating point exception (SIGFPE) during execution
+- TRACK_QEMU event indicating emulation environment
+- No network, persistence, or evasion behaviors detected
+
+### 💡 Recommendations
+Analyze binary statically for architecture compatibility issues; test on native hardware if possible; check for anti-emulation code that may cause intentional crashes.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+qemu: uncaught target signal 8 (Floating point exception) - core dumped
+Floating point exception (core dumped)
+```

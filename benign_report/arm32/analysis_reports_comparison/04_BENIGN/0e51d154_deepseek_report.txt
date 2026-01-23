@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `dcef032f2093ed738ed1a9fd051690cd730522f3006b4c5230ee0e95b54b5d5f.30__chown` | **Job ID:** `0e51d154`
+**Date:** 2026-01-23 10:55:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing arguments, showing only standard error output and no malicious activity.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'missing operand' error
+- No network activity, file writes, or process manipulation
+- TRACK_QEMU event consistent with emulation environment
+
+### 💡 Recommendations
+No further action needed. This appears to be a standard utility failing due to incorrect usage.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/dcef032f2093ed738ed1a9fd051690cd730522f3006b4c5230ee0e95b54b5d5f.30__chown: missing operand
+Try '/tmp/dcef032f2093ed738ed1a9fd051690cd730522f3006b4c5230ee0e95b54b5d5f.30__chown --help' for more information.
+```

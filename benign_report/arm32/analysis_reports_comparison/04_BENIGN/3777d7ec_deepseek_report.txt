@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `95a88d8a3c1eac950ae3fd141211a4e7ed02cf5a774ed220bc099ff78bb24db4.30__dir` | **Job ID:** `3777d7ec`
+**Date:** 2026-01-23 10:54:52
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performed minimal directory listing activity with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- GETDENTS64 for directory listing
+- WRITE output of binary name to stdout
+- No sensitive path access or malicious patterns
+
+### 💡 Recommendations
+No further action required. This appears to be a benign utility or test binary. Monitor for any future executions with expanded behavior.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+95a88d8a3c1eac950ae3fd141211a4e7ed02cf5a774ed220bc099ff78bb24db4.30__dir
+```

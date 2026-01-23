@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2` | **Job ID:** `a7650e34`
+**Date:** 2026-01-23 11:08:45
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly due to command line argument error, showing no malicious activity in the trace.
+
+### 🔍 Key Evidence
+- Exit code 1
+- Execution output: 'Cmd line: wrong'
+- No malicious syscall patterns detected
+- TRACK_QEMU event is benign emulation artifact
+
+### 💡 Recommendations
+Re-run with correct command line arguments to obtain meaningful behavioral analysis. Check binary dependencies and compatibility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Cmd line: wrong
+```

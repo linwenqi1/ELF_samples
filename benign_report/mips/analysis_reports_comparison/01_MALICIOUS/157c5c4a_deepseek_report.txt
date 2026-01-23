@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `476965ea4e996707b8103314703208de48bfa9d551215d6fdad8c2a6aa9c56d5` | **Job ID:** `157c5c4a`
+**Date:** 2026-01-23 11:10:10
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary exhibits classic Mirai botnet behavior: rapid socket creation and connection attempts to Unix domain sockets (likely /dev/log for local logging evasion), combined with aggressive process forking (CLONE events with flags 4001536 indicating new processes) and memory protection manipulation (MPROTECT). The pattern of repeated socket/connect/read cycles suggests command-and-control communication or DDoS attack preparation.
+
+### ⚠️ Suspicious Behaviors
+- High-volume socket creation (AF_UNIX domain)
+- Aggressive process forking (multiple CLONE/TRACK_FORK events)
+- Memory protection manipulation (MPROTECT with read/write/exec changes)
+- Repeated connection attempts to /dev/log (hex address decodes to /dev/log)
+- Binary executed from /tmp (common malware location)
+- Exit code -1 indicates abnormal termination
+
+### 🔍 Key Evidence
+- Multiple SOCKET/CONNECT events with AF_UNIX domain (1) targeting /dev/log
+- Numerous CLONE events (flags 4001536) creating child processes
+- TRACK_FORK events showing process tree expansion
+- MPROTECT events modifying memory permissions
+- Binary location in /tmp/ with hash name
+- Pattern matches Mirai's rapid socket creation and forking behavior
+
+### 💡 Recommendations
+Isolate affected system immediately. Capture memory dump for forensic analysis. Check for persistence mechanisms (cron jobs, init scripts). Monitor network for outbound DDoS traffic. Update all IoT/embedded device credentials. Consider network segmentation for vulnerable devices.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```
