@@ -46,6 +46,8 @@ class Counters:
     tn: int = 0
     fp: int = 0
     fn: int = 0
+    total_reports: int = 0
+    skipped_reports: int = 0
 
     def update(self, gt: str, pred: str) -> None:
         if gt == "malicious" and pred == "malicious":
@@ -62,6 +64,8 @@ class Counters:
         self.tn += other.tn
         self.fp += other.fp
         self.fn += other.fn
+        self.total_reports += other.total_reports
+        self.skipped_reports += other.skipped_reports
 
     def precision(self) -> float:
         denom = self.tp + self.fp
@@ -197,8 +201,10 @@ def compute_family_counters(family_dir: Path) -> Counters:
             continue
 
         for report_file in iter_report_files(label_dir):
+            counters.total_reports += 1
             pred = parse_report_verdict(report_file)
             if not pred:
+                counters.skipped_reports += 1
                 print(f"[WARN] Could not parse verdict in {report_file}")
                 continue
             counters.update(gt, pred)
@@ -210,8 +216,10 @@ def compute_bucket_family_counters(family_dir: Path, gt: str) -> Counters:
     found = False
     for report_file in iter_report_files_recursive(family_dir):
         found = True
+        counters.total_reports += 1
         pred = parse_report_verdict(report_file)
         if not pred:
+            counters.skipped_reports += 1
             print(f"[WARN] Could not parse verdict in {report_file}")
             continue
         counters.update(gt, pred)
@@ -314,7 +322,7 @@ def main() -> None:
     if not root.is_dir():
         raise SystemExit(f"Root path not found: {root}")
 
-    family_results, overall = collect_metrics(root)
+    family_results, overall, gt_stats = collect_metrics(root)
 
     print("\nPer-family metrics (F1, FRR, FNR):")
     print("-" * 70)
@@ -323,6 +331,14 @@ def main() -> None:
     print("-" * 70)
     print("Overall:")
     print(format_metrics("ALL", overall))
+    if overall.total_reports:
+        parsed = overall.total_reports - overall.skipped_reports
+        print(f"Reports parsed: {parsed}/{overall.total_reports} (skipped {overall.skipped_reports})")
+    if gt_stats:
+        for gt, stats in gt_stats.items():
+            total, skipped = stats
+            parsed = total - skipped
+            print(f"{gt.capitalize()} reports parsed: {parsed}/{total} (skipped {skipped})")
 
     if args.table_out:
         write_table_csv(args.table_out, family_results, overall)
@@ -330,9 +346,10 @@ def main() -> None:
         plot_confusion_matrix(args.confusion_out, overall)
 
 
-def collect_metrics(root: Path) -> tuple[list[tuple[str, Counters]], Counters]:
+def collect_metrics(root: Path) -> tuple[list[tuple[str, Counters]], Counters, dict[str, tuple[int, int]]]:
     overall = Counters()
     family_results: list[tuple[str, Counters]] = []
+    gt_stats: dict[str, tuple[int, int]] = {}
 
     malware_bucket = root / "malware_report"
     benign_bucket = root / "benign_report"
@@ -346,6 +363,8 @@ def collect_metrics(root: Path) -> tuple[list[tuple[str, Counters]], Counters]:
                 counters = compute_bucket_family_counters(family_dir, gt)
                 family_results.append((family_dir.name, counters))
                 overall.merge(counters)
+                total, skipped = gt_stats.get(gt, (0, 0))
+                gt_stats[gt] = (total + counters.total_reports, skipped + counters.skipped_reports)
     else:
         # Legacy layout fallback
         for family_dir in sorted(p for p in root.iterdir() if p.is_dir()):
@@ -358,7 +377,7 @@ def collect_metrics(root: Path) -> tuple[list[tuple[str, Counters]], Counters]:
             family_results.append((family_dir.name, counters))
             overall.merge(counters)
 
-    return family_results, overall
+    return family_results, overall, gt_stats
 
 
 if __name__ == "__main__":

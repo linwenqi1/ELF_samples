@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -40,30 +41,43 @@ def load_json(path: Path) -> Dict[str, Any]:
         return json.load(f)
 
 
-def collect_arch_distribution(data: Dict[str, Any]) -> Counter:
+def collect_arch_distribution(data: Dict[str, Any]) -> Tuple[Counter, int]:
     c: Counter[str] = Counter()
+    unknown_count = 0
     for entry in data.values():
         arch = entry.get("elf_header", {}).get("machine")
-        if arch:
-            c[arch] += 1
-    return c
+        if not arch:
+            continue
+        if arch.strip().lower() in {"<unknown>", "unknown"}:
+            unknown_count += 1
+            continue
+        c[arch] += 1
+    return c, unknown_count
+
+
+def normalize_tokens(text: str) -> list[str]:
+    parts = re.split(r"[^A-Za-z0-9]+|/", text)
+    return [p.lower() for p in parts if p]
 
 
 def collect_label_frequencies(data: Dict[str, Any]) -> Counter:
-    """Count occurrences across suggested_threat_label, threat_category, threat_name."""
+    """Count tokenized occurrences across suggested_threat_label, threat_category, threat_name."""
     c: Counter[str] = Counter()
     for entry in data.values():
         lbl = entry.get("suggested_threat_label")
         if lbl:
-            c[lbl] += 1
+            for tok in normalize_tokens(lbl):
+                c[tok] += 1
 
         for cat in entry.get("threat_category") or []:
             if cat:
-                c[cat] += 1
+                for tok in normalize_tokens(cat):
+                    c[tok] += 1
 
         for name in entry.get("threat_name") or []:
             if name:
-                c[name] += 1
+                for tok in normalize_tokens(name):
+                    c[tok] += 1
     return c
 
 
@@ -129,36 +143,39 @@ def plot_pies(arch_counter: Counter, label_counter: Counter, top_n: int, out_pat
     labels_arch_raw, sizes_arch = top_with_other(arch_counter, top_n)
     labels_label_raw, sizes_label = top_with_other(label_counter, top_n)
 
-    labels_arch = [prettify_label(l, max_len=22) for l in labels_arch_raw]
-    labels_label = [prettify_label(l, max_len=22) for l in labels_label_raw]
+    labels_arch = [prettify_label(l, max_len=28) for l in labels_arch_raw]
+    labels_label = [prettify_label(l, max_len=28) for l in labels_label_raw]
 
-    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    plt.subplots_adjust(wspace=0.3)
 
-    textprops = {"fontsize": 11}
+    # Donut-style pies for cleaner look
+    def make_donut(ax, sizes, labels, title):
+        wedges, _ = ax.pie(
+            sizes,
+            startangle=140,
+            labels=None,
+            wedgeprops={"width": 0.45, "edgecolor": "white"},
+        )
+        ax.set_title(title, fontsize=13)
 
-    # Architecture pie
-    wedges, texts, autotexts = axes[0].pie(
-        sizes_arch,
-        labels=labels_arch,
-        autopct="%1.1f%%",
-        startangle=140,
-        textprops=textprops,
-    )
-    axes[0].set_title("Architecture Distribution", fontsize=13)
+        total = sum(sizes) or 1
+        legend_labels = [f"{lab} ({cnt / total:.1%})" for lab, cnt in zip(labels, sizes)]
+        ax.legend(
+            wedges,
+            legend_labels,
+            loc="center left",
+            bbox_to_anchor=(1.02, 0.5),
+            frameon=False,
+            fontsize=10,
+        )
 
-    # Threat labels/categories/names pie
-    wedges2, texts2, autotexts2 = axes[1].pie(
-        sizes_label,
-        labels=labels_label,
-        autopct="%1.1f%%",
-        startangle=140,
-        textprops=textprops,
-    )
-    axes[1].set_title(f"Top {top_n} Threat Tags (label/category/name)", fontsize=13)
+    make_donut(axes[0], sizes_arch, labels_arch, "Architecture Distribution")
+    make_donut(axes[1], sizes_label, labels_label, f"Top {top_n} Threat Tags")
 
     plt.tight_layout()
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, dpi=200)
+    fig.savefig(out_path, dpi=300)
     plt.close(fig)
     print(f"Saved pie charts -> {out_path}")
 
@@ -173,11 +190,13 @@ def main() -> None:
     data = load_json(args.json)
     print(f"Loaded {len(data)} entries from {args.json}")
 
-    arch_counter = collect_arch_distribution(data)
+    arch_counter, arch_unknown = collect_arch_distribution(data)
     label_counter = collect_label_frequencies(data)
 
     if not arch_counter:
         print("[WARN] No architecture data found.")
+    if arch_unknown:
+        print(f"[INFO] Skipped {arch_unknown} entries with unknown architecture.")
     if not label_counter:
         print("[WARN] No threat label/category/name data found.")
 

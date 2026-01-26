@@ -82,10 +82,9 @@ def sets_overlap_fuzzy(src: Set[str], targets: List[Set[str]], enable_fuzzy: boo
 def overlap_score(src: Set[str], tgt: Set[str], enable_fuzzy: bool) -> float:
     """Return similarity in [0,1] between two token sets.
 
-    Score = matched_tokens / max(len(src), len(tgt), 1)
-    where a report token is counted as matched if it equals (or fuzzily equals)
-    any VT token. This bounds the score, avoids double-counting, and is
-    symmetric when len(src)==len(tgt).
+    Jaccard-style score = matched_tokens / (|src| + |tgt| - matched_tokens).
+    A report token is counted as matched if it equals (or fuzzily equals)
+    any VT token. This is more conservative when one side is much larger.
     """
     if not src or not tgt:
         return 0.0
@@ -101,7 +100,7 @@ def overlap_score(src: Set[str], tgt: Set[str], enable_fuzzy: bool) -> float:
         if any(token_similar(a, b) for b in tgt):
             matched += 1
 
-    denom = max(len(src), len(tgt), 1)
+    denom = max(len(src) + len(tgt) - matched, 1)
     return matched / denom
 
 
@@ -175,13 +174,43 @@ def load_vt(path: Path) -> Dict[str, dict]:
             if not sha:
                 continue
 
+            entry = db.get(sha.lower(), {})
+
+            # 1. Popular Threat Classification
             ptc = attrs.get("popular_threat_classification", {}) or {}
-            # Map VT fields to our simplified schema
-            entry = {
-                "suggested_threat_label": ptc.get("suggested_threat_label"),
-                "threat_category": [x.get("value") for x in (ptc.get("popular_threat_category") or []) if x.get("value")],
-                "threat_name": [x.get("value") for x in (ptc.get("popular_threat_name") or []) if x.get("value")],
-            }
+            if ptc.get("suggested_threat_label"):
+                entry["suggested_threat_label"] = ptc.get("suggested_threat_label")
+
+            cats = set(entry.get("threat_category", []))
+            names = set(entry.get("threat_name", []))
+
+            # Add categories and names from popular threat classification
+            for x in (ptc.get("popular_threat_category") or []):
+                if x.get("value"):
+                    cats.add(x.get("value"))
+            for x in (ptc.get("popular_threat_name") or []):
+                if x.get("value"):
+                    names.add(x.get("value"))
+
+            # 2. Last Analysis Results (AV engines)
+            # Accumulate raw result strings (e.g. "Trojan.Linux.XorDDoS");
+            # they will be tokenized by normalize_list downstream.
+            last_analysis = attrs.get("last_analysis_results", {})
+            for engine_res in last_analysis.values():
+                if engine_res and engine_res.get("result"):
+                    names.add(engine_res.get("result"))
+
+            # 3. CrowdSourced Yara Results
+            yara = attrs.get("crowdsourced_yara_results", []) or []
+            for rule in yara:
+                if rule.get("rule_name"):
+                    names.add(rule.get("rule_name"))
+                # description often contains useful family names
+                if rule.get("description"):
+                    names.add(rule.get("description"))
+
+            entry["threat_category"] = list(cats)
+            entry["threat_name"] = list(names)
             db[sha.lower()] = entry
     return db
 
@@ -195,6 +224,19 @@ def vt_tokens(entry: dict) -> Tuple[Set[str], Set[str], Set[str]]:
 
 def compare_sets(report_set: Set[str], vt_sets: List[Set[str]], enable_fuzzy: bool) -> bool:
     return sets_overlap_fuzzy(report_set, vt_sets, enable_fuzzy)
+
+
+def category_match_ratio(categories: List[str], vt_sets: List[Set[str]], enable_fuzzy: bool) -> float:
+    if not categories:
+        return 0.0
+    matched = 0
+    for c in categories:
+        tokens = normalize_tokens(c)
+        if not tokens:
+            continue
+        if sets_overlap_fuzzy(tokens, vt_sets, enable_fuzzy):
+            matched += 1
+    return matched / max(len(categories), 1)
 
 
 def main() -> None:
@@ -214,6 +256,7 @@ def main() -> None:
     category_match = 0
     any_match = 0
     sim_sum = 0.0
+    cat_ratio_sum = 0.0
     missing_sha = []
 
     for rpt in iter_reports(args.reports_root):
@@ -235,6 +278,7 @@ def main() -> None:
                 "vt_names": "",
                 "family_match": False,
                 "category_match": False,
+                "category_match_ratio": 0.0,
                 "any_match": False,
                 "similarity_score": 0.0,
                 "report_path": str(rpt),
@@ -246,10 +290,12 @@ def main() -> None:
         fuzzy = not args.no_fuzzy
         fam_ok = compare_sets(parsed["family_tokens"], [vt_lbl_set, vt_cat_set, vt_name_set], fuzzy)
         cat_ok = compare_sets(parsed["cat_tokens"], [vt_lbl_set, vt_cat_set, vt_name_set], fuzzy)
+        cat_ratio = category_match_ratio(parsed["cats_raw"], [vt_lbl_set, vt_cat_set, vt_name_set], fuzzy)
         any_ok = fam_ok or cat_ok
         family_match += bool(fam_ok)
         category_match += bool(cat_ok)
         any_match += bool(any_ok)
+        cat_ratio_sum += cat_ratio
 
         # similarity across all tokens (family + categories vs VT label/cat/name)
         report_all = parsed["family_tokens"] | parsed["cat_tokens"]
@@ -267,6 +313,7 @@ def main() -> None:
             "vt_names": ";".join(vt.get("threat_name") or []),
             "family_match": fam_ok,
             "category_match": cat_ok,
+            "category_match_ratio": round(cat_ratio, 3),
             "any_match": any_ok,
             "similarity_score": round(sim, 3),
             "report_path": str(rpt),
@@ -275,7 +322,7 @@ def main() -> None:
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else [
-            "sha", "report_family", "report_categories", "vt_found", "vt_label", "vt_categories", "vt_names", "family_match", "category_match", "any_match", "report_path"
+            "sha", "report_family", "report_categories", "vt_found", "vt_label", "vt_categories", "vt_names", "family_match", "category_match", "category_match_ratio", "any_match", "report_path"
         ])
         writer.writeheader()
         writer.writerows(rows)
@@ -287,6 +334,7 @@ def main() -> None:
     print(f"Any match (family or category): {any_match}/{found}")
     if found:
         print(f"Similarity score avg (family+cats vs VT tokens): {sim_sum / found:.3f}")
+        print(f"Category match ratio avg (per-report): {cat_ratio_sum / found:.3f}")
     if missing_sha:
         print(f"Missing {len(missing_sha)} sha entries (not in all_samples.json). Example: {missing_sha[:5]}")
     print(f"Saved CSV -> {args.out}")
