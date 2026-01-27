@@ -1,0 +1,9 @@
+{"type": "RUN_META", "session": "287d0d87ee0d4634ab03ba6772eb642f", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-mips/4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c", "backend": "cbpf", "arch": {"machine": 8, "bits": 32, "endian": "big", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 42580, "cgroup_inode": 29580, "container_id": "1bd415e54e82addb0aa44e85adf56d7b73776cb9a585b268b9fb09040fdfad3f", "container_name": "jolly_keldysh", "container_image": "dockcross/linux-mips:latest", "qemu_cmd": "native", "start_ts": 1769478053.1366756}
+{"ts": 2291623, "pid": 43179, "cgroup_id": 29580, "event": "EXEC", "filename": "/tmp/4e422e57375de90bcc6c87f191b3f1e64a2f2164b3909b1b5f1b5a86237e242c"}
+{"ts": 2291623, "pid": 43179, "cgroup_id": 29580, "event": "TRACK_QEMU", "bin": "4e422e57375de90", "count": 1}
+{"ts": 2291631, "pid": 43179, "cgroup_id": 29580, "event": "WRITE", "fd": 1, "buf": "Please specify an attack mode.\n\"/tmp/4e422e57375de90bcc6c87f191b", "count": 1}
+{"ts": 2291631, "pid": 43142, "cgroup_id": 29580, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2291631, "pid": 43142, "cgroup_id": 29580, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769478053432, "pid": -1, "cgroup_id": 29580, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769478053432, "pid": -1, "cgroup_id": 29580, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"type": "RUN_END", "end_ts": 1769478053.8497803, "events_count": 7, "analyzed_count": 0, "timeout": false}

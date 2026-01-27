@@ -1,0 +1,25 @@
+{"type": "RUN_META", "session": "846f087cecdf4ba2a351f0e11e882f95", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/X86_32-2/fd3daf6e6273b9c2e5469f91623d8338fbfcd454f10df1657f6e1f048c75d73a", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 100643, "cgroup_inode": 37234, "container_id": "8bb4ef18bd0fb6f1b4df6eb5d3a2c471833a83086e330046fb36ac5b460e94a1", "container_name": "objective_shannon", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769478684.222992}
+{"ts": 2922776, "pid": 100763, "cgroup_id": 37234, "event": "EXEC", "filename": "/tmp/fd3daf6e6273b9c2e5469f91623d8338fbfcd454f10df1657f6e1f048c75d73a"}
+{"ts": 2922776, "pid": 100763, "cgroup_id": 37234, "event": "TRACK_QEMU", "bin": "fd3daf6e6273b9c", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "SIGNAL_GENERATE", "sig": 11, "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001\u0003", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "Sì\bè7\b", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "\u0003", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "\u0004H\u000b\u0003\u0019\u0002\nÃAÆAÇAÅ\f\u0004\u0004L\u000b", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "àÅ\t\b0¡\u0006\bp~\n\bÀ\r\n\b0Þ\t\b \u0015\n\b \u0006\b\u0010j\n\b", "count": 1}
+{"ts": 2922785, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "", "count": 2}
+{"ts": 1769478684551, "pid": -1, "cgroup_id": 37234, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769478684551, "pid": -1, "cgroup_id": 37234, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769478684551, "pid": -1, "cgroup_id": 37234, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769478684551, "pid": -1, "cgroup_id": 37234, "event": "MMAP_SUM", "meta": {"count": 48, "max_pages": 1048560}, "count": 1}
+{"ts": 2922861, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 3, "buf": "", "count": 1}
+{"ts": 2922861, "pid": 100763, "cgroup_id": 37234, "event": "WRITE", "fd": 2, "buf": "qemu: uncaught target signal 11 (Segmentation fault) - core dump", "count": 1}
+{"ts": 2922861, "pid": 100763, "cgroup_id": 37234, "event": "KILL", "target_pid": 26, "sig": 11, "count": 1}
+{"ts": 2922861, "pid": 100763, "cgroup_id": 37234, "event": "SIGNAL_GENERATE", "sig": 11, "count": 1}
+{"ts": 2922940, "pid": 100763, "cgroup_id": 37234, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 2922940, "pid": 100754, "cgroup_id": 37234, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2922940, "pid": 100754, "cgroup_id": 37234, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"type": "ANALYZER", "result": {"level": 2.0, "cvss_vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N", "description": "Abnormal Signal Handling Detected", "pid": "100763", "evidence": "Process handled 1 typically fatal signals (last was SIG=11) within 5 seconds.", "analyzer": "AbnormalSignalHandling"}, "binary": "fd3daf6e6273b9c2e5469f91623d8338fbfcd454f10df1657f6e1f048c75d73a"}
+{"type": "ANALYZER", "result": {"level": 2.0, "cvss_vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N", "description": "Abnormal Signal Handling Detected", "pid": "100763", "evidence": "Process handled 1 typically fatal signals (last was SIG=11) within 5 seconds.", "analyzer": "AbnormalSignalHandling"}, "binary": "fd3daf6e6273b9c2e5469f91623d8338fbfcd454f10df1657f6e1f048c75d73a"}
+{"type": "RUN_END", "end_ts": 1769478684.9817402, "events_count": 21, "analyzed_count": 2, "timeout": false}

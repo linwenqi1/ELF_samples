@@ -1,0 +1,16 @@
+{"type": "RUN_META", "session": "1ef3898d9d854179b9153f3e790965c4", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/riscV64-3/2cb026a376999f73116c41d5355caf3de5f1eee6e8cf021ec0d9c181189cf5dd", "backend": "cbpf", "arch": {"machine": 243, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-riscv64-lp64d.so.1"}, "host_root_pid": 84131, "cgroup_inode": 31171, "container_id": "6705c797da0bb9b21e11018ea6af541eff7485d880a8c812cefd5fcfba7b7b76", "container_name": "festive_roentgen", "container_image": "riscv64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769478285.8194559}
+{"ts": 2524319, "pid": 84479, "cgroup_id": 31171, "event": "EXEC", "filename": "/tmp/2cb026a376999f73116c41d5355caf3de5f1eee6e8cf021ec0d9c181189cf5dd"}
+{"ts": 2524320, "pid": 84479, "cgroup_id": 31171, "event": "TRACK_QEMU", "bin": "2cb026a376999f7", "count": 1}
+{"ts": 2524321, "pid": 84479, "cgroup_id": 31171, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2524352, "pid": 84479, "cgroup_id": 31171, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1769478286068, "pid": -1, "cgroup_id": 31171, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769478286068, "pid": -1, "cgroup_id": 31171, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 3}
+{"ts": 1769478286068, "pid": -1, "cgroup_id": 31171, "event": "MMAP_SUM", "meta": {"count": 32, "max_pages": 32768}, "count": 1}
+{"ts": 2524353, "pid": 84479, "cgroup_id": 31171, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2524353, "pid": 84479, "cgroup_id": 31171, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 2524356, "pid": 84479, "cgroup_id": 31171, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 2524361, "pid": 84479, "cgroup_id": 31171, "event": "WRITE", "fd": 1, "buf": "All tests have successfully passed!\n", "count": 1}
+{"ts": 2524361, "pid": 84434, "cgroup_id": 31171, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2524361, "pid": 84434, "cgroup_id": 31171, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 1769478286173, "pid": -1, "cgroup_id": 31171, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"type": "RUN_END", "end_ts": 1769478286.5811687, "events_count": 14, "analyzed_count": 0, "timeout": false}

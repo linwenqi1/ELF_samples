@@ -1,0 +1,17 @@
+{"type": "RUN_META", "session": "287d0d87ee0d4634ab03ba6772eb642f", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-mips/44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2", "backend": "cbpf", "arch": {"machine": 8, "bits": 32, "endian": "big", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 37976, "cgroup_inode": 28376, "container_id": "74843fc12253db4d4e0dde1d1494767da290c04246d51d1c729abd7ebe567112", "container_name": "zen_pike", "container_image": "dockcross/linux-mips:latest", "qemu_cmd": "native", "start_ts": 1769478047.7729497}
+{"ts": 2286254, "pid": 38306, "cgroup_id": 28376, "event": "EXEC", "filename": "/tmp/44e70de055fd731da53be2068ca77da8029fe1e99bcb1769e1a439dcc804a2a2"}
+{"ts": 2286257, "pid": 38306, "cgroup_id": 28376, "event": "TRACK_QEMU", "bin": "44e70de055fd731", "count": 1}
+{"ts": 2286268, "pid": 38306, "cgroup_id": 28376, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2286273, "pid": 38306, "cgroup_id": 28376, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2286273, "pid": 38306, "cgroup_id": 28376, "event": "READ", "fd": 3, "buf_len": 293, "count": 1}
+{"ts": 2286274, "pid": 38306, "cgroup_id": 28376, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 2286274, "pid": 38306, "cgroup_id": 28376, "event": "CONNECT", "addr": "02000035df0505050000000000000000000000000000000000000000327f000098c49d6955550000e0c49d695555000070a546dafd7f00001c00000003000000", "count": 1}
+{"ts": 2286274, "pid": 38306, "cgroup_id": 28376, "event": "SENDTO", "len": 19, "count": 1}
+{"ts": 2286274, "pid": 38306, "cgroup_id": 28376, "event": "RECVFROM", "size": 512, "count": 1}
+{"ts": 2286275, "pid": 38306, "cgroup_id": 28376, "event": "WRITE", "fd": 2, "buf": "no port[s] to connect to", "count": 1}
+{"ts": 2286275, "pid": 38306, "cgroup_id": 28376, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 1769478048058, "pid": -1, "cgroup_id": 28376, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"ts": 1769478048058, "pid": -1, "cgroup_id": 28376, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769478048058, "pid": -1, "cgroup_id": 28376, "event": "MMAP_SUM", "meta": {"count": 25, "max_pages": 524272}, "count": 1}
+{"ts": 2287277, "pid": 38260, "cgroup_id": 28376, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"type": "RUN_END", "end_ts": 1769478049.4965975, "events_count": 15, "analyzed_count": 0, "timeout": false}

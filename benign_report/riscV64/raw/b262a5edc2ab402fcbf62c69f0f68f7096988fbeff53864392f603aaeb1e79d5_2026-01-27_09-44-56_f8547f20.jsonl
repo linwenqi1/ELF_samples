@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "1ef3898d9d854179b9153f3e790965c4", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/riscV64-3/b262a5edc2ab402fcbf62c69f0f68f7096988fbeff53864392f603aaeb1e79d5", "backend": "cbpf", "arch": {"machine": 243, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-riscv64-lp64d.so.1"}, "host_root_pid": 88021, "cgroup_inode": 32977, "container_id": "1b8ce42db8672932733c1cded420c4c272cd5306a75793d2c4cfb9a2b162e2d2", "container_name": "priceless_nobel", "container_image": "riscv64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769478296.728642}
+{"ts": 2535264, "pid": 88172, "cgroup_id": 32977, "event": "EXEC", "filename": "/tmp/b262a5edc2ab402fcbf62c69f0f68f7096988fbeff53864392f603aaeb1e79d5"}
+{"ts": 2535329, "pid": 88172, "cgroup_id": 32977, "event": "TRACK_QEMU", "bin": "b262a5edc2ab402", "count": 1}
+{"ts": 2535331, "pid": 88172, "cgroup_id": 32977, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2535341, "pid": 88172, "cgroup_id": 32977, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 2535342, "pid": 88172, "cgroup_id": 32977, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 2535352, "pid": 88172, "cgroup_id": 32977, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 2535358, "pid": 88172, "cgroup_id": 32977, "event": "WRITE", "fd": 2, "buf": "learning rate should be > 0 and < 1\n", "count": 1}
+{"ts": 2535361, "pid": 88132, "cgroup_id": 32977, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2535361, "pid": 88132, "cgroup_id": 32977, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769478297080, "pid": -1, "cgroup_id": 32977, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769478297080, "pid": -1, "cgroup_id": 32977, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "RUN_END", "end_ts": 1769478297.584199, "events_count": 11, "analyzed_count": 0, "timeout": false}

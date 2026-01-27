@@ -1,0 +1,15 @@
+{"type": "RUN_META", "session": "242192bc3cfb412e875ff86fea19d241", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-x86_64/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 110481, "cgroup_inode": 39857, "container_id": "81d0cea310dfd0f0b896fbe089981d6f54ba93a0a816d9e4b800f6c5a9a24483", "container_name": "eager_ganguly", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769479036.9829838}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "EXEC", "filename": "/tmp/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot"}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "TRACK_QEMU", "bin": "ade8058cc00bccc", "count": 1}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "CHROOT", "new_root": "1", "count": 1}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "WRITE", "fd": 2, "buf": "/tmp/ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd9", "count": 1}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "WRITE", "fd": 2, "buf": "cannot change root directory to '1'", "count": 1}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "WRITE", "fd": 2, "buf": ": No such file or directory", "count": 1}
+{"ts": 3275468, "pid": 110873, "cgroup_id": 39857, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 3275468, "pid": 110827, "cgroup_id": 39857, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 3275468, "pid": 110827, "cgroup_id": 39857, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769479037193, "pid": -1, "cgroup_id": 39857, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769479037193, "pid": -1, "cgroup_id": 39857, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"type": "ANALYZER", "result": {"level": 8.0, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N", "description": "Root Directory Change Detected (CHROOT)", "pid": 110873, "evidence": "Process 110873 changed root directory to '1'. Potential chroot jail escape.", "analyzer": "ContainerEscape"}, "binary": "ade8058cc00bccc0ad9fc085d253fa2d078e809766ab0dbe2cacff8abd90083c.30__chroot"}
+{"type": "RUN_END", "end_ts": 1769479037.6871078, "events_count": 12, "analyzed_count": 1, "timeout": false}

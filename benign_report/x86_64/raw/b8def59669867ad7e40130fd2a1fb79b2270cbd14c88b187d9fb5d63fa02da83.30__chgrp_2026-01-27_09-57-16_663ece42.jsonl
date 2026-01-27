@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "242192bc3cfb412e875ff86fea19d241", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-x86_64/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 110290, "cgroup_inode": 39685, "container_id": "9f17504faca2181e32e7369fb418a71c61d92874c24c4a8534609d3b304a1637", "container_name": "dreamy_volhard", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769479036.886585}
+{"ts": 3275378, "pid": 110756, "cgroup_id": 39685, "event": "EXEC", "filename": "/tmp/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa02da83.30__chgrp"}
+{"ts": 3275378, "pid": 110756, "cgroup_id": 39685, "event": "TRACK_QEMU", "bin": "b8def59669867ad", "count": 1}
+{"ts": 3275379, "pid": 110756, "cgroup_id": 39685, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 3275379, "pid": 110756, "cgroup_id": 39685, "event": "WRITE", "fd": 2, "buf": "/tmp/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d63fa0", "count": 1}
+{"ts": 3275379, "pid": 110756, "cgroup_id": 39685, "event": "WRITE", "fd": 2, "buf": "missing operand after '1'", "count": 1}
+{"ts": 3275379, "pid": 110756, "cgroup_id": 39685, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 3275379, "pid": 110756, "cgroup_id": 39685, "event": "WRITE", "fd": 2, "buf": "Try '/tmp/b8def59669867ad7e40130fd2a1fb79b2270cbd14c88b187d9fb5d", "count": 1}
+{"ts": 3275379, "pid": 110749, "cgroup_id": 39685, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 3275379, "pid": 110749, "cgroup_id": 39685, "event": "WAIT4_EXITED", "reaped_child": 22, "count": 1}
+{"ts": 1769479037193, "pid": -1, "cgroup_id": 39685, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769479037193, "pid": -1, "cgroup_id": 39685, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769479037.5972981, "events_count": 11, "analyzed_count": 0, "timeout": false}

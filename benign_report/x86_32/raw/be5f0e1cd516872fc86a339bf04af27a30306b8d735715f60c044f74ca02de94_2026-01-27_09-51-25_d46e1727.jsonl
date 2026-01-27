@@ -1,0 +1,21 @@
+{"type": "RUN_META", "session": "846f087cecdf4ba2a351f0e11e882f95", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/X86_32-2/be5f0e1cd516872fc86a339bf04af27a30306b8d735715f60c044f74ca02de94", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 100865, "cgroup_inode": 37320, "container_id": "e00e2499a279be63fba51af4f49aa4fb0239e4dcde56937d3a9604b292bb6b2a", "container_name": "gifted_dhawan", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769478685.3268585}
+{"ts": 2923936, "pid": 100982, "cgroup_id": 37320, "event": "EXEC", "filename": "/tmp/be5f0e1cd516872fc86a339bf04af27a30306b8d735715f60c044f74ca02de94"}
+{"ts": 2923937, "pid": 100982, "cgroup_id": 37320, "event": "TRACK_QEMU", "bin": "be5f0e1cd516872", "count": 1}
+{"ts": 1769478685669, "pid": -1, "cgroup_id": 37320, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769478685669, "pid": -1, "cgroup_id": 37320, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769478685669, "pid": -1, "cgroup_id": 37320, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769478685669, "pid": -1, "cgroup_id": 37320, "event": "MMAP_SUM", "meta": {"count": 48, "max_pages": 1048560}, "count": 1}
+{"ts": 2928637, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001", "count": 1}
+{"ts": 2928637, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001\u0003", "count": 1}
+{"ts": 2928637, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 3, "buf": "Sì\bè\u0007", "count": 1}
+{"ts": 2928637, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 3, "buf": "\u0003", "count": 1}
+{"ts": 2928637, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 3, "buf": "AÆAÇAÅ\f\u0004\u0004", "count": 1}
+{"ts": 2928637, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 3, "buf": "", "count": 4}
+{"ts": 2928642, "pid": 100982, "cgroup_id": 37320, "event": "WRITE", "fd": 2, "buf": "qemu: uncaught target signal 8 (Floating point exception) - core", "count": 1}
+{"ts": 2928642, "pid": 100982, "cgroup_id": 37320, "event": "KILL", "target_pid": 25, "sig": 8, "count": 1}
+{"ts": 2928642, "pid": 100982, "cgroup_id": 37320, "event": "SIGNAL_GENERATE", "sig": 8, "count": 1}
+{"ts": 2928707, "pid": 100982, "cgroup_id": 37320, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 2928707, "pid": 100973, "cgroup_id": 37320, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2928707, "pid": 100973, "cgroup_id": 37320, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "ANALYZER", "result": {"level": 2.0, "cvss_vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N", "description": "Abnormal Signal Handling Detected", "pid": "100982", "evidence": "Process handled 1 typically fatal signals (last was SIG=8) within 5 seconds.", "analyzer": "AbnormalSignalHandling"}, "binary": "be5f0e1cd516872fc86a339bf04af27a30306b8d735715f60c044f74ca02de94"}
+{"type": "RUN_END", "end_ts": 1769478690.939127, "events_count": 18, "analyzed_count": 1, "timeout": false}

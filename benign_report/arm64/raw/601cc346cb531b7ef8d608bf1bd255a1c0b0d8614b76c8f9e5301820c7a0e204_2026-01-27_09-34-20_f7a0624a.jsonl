@@ -1,0 +1,9 @@
+{"type": "RUN_META", "session": "44aab51bf0544eb8b772416a82afa355", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm64/601cc346cb531b7ef8d608bf1bd255a1c0b0d8614b76c8f9e5301820c7a0e204", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 29945, "cgroup_inode": 25366, "container_id": "86cb9b51353405d433325174007f293ca571effabf4d9b531bd7fb6b4adf36f4", "container_name": "quirky_edison", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769477660.8297343}
+{"ts": 1899353, "pid": 30296, "cgroup_id": 25366, "event": "EXEC", "filename": "/tmp/601cc346cb531b7ef8d608bf1bd255a1c0b0d8614b76c8f9e5301820c7a0e204"}
+{"ts": 1899353, "pid": 30296, "cgroup_id": 25366, "event": "TRACK_QEMU", "bin": "601cc346cb531b7", "count": 1}
+{"ts": 1899364, "pid": 30296, "cgroup_id": 25366, "event": "WRITE", "fd": 1, "buf": "Enter the binary no: \nOctal equivalent is: 0", "count": 1}
+{"ts": 1899366, "pid": 30283, "cgroup_id": 25366, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1899366, "pid": 30283, "cgroup_id": 25366, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769477661088, "pid": -1, "cgroup_id": 25366, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769477661088, "pid": -1, "cgroup_id": 25366, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769477661.5972614, "events_count": 7, "analyzed_count": 0, "timeout": false}

@@ -1,0 +1,22 @@
+{"type": "RUN_META", "session": "d772c8f58a4d4e4290238fefa4290bb1", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-arm_32/2898368baa94b4bc648b196aac741235caa3dd70c70acc12092f0ebb0166f571.30__chroot", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 26370, "cgroup_inode": 23990, "container_id": "7c493dfa01798f0969d4a9234e76fffc6a0a02208c242dfabd95f57f7cfaa435", "container_name": "funny_thompson", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769477544.9576077}
+{"ts": 1783532, "pid": 26702, "cgroup_id": 23990, "event": "EXEC", "filename": "/tmp/2898368baa94b4bc648b196aac741235caa3dd70c70acc12092f0ebb0166f571.30__chroot"}
+{"ts": 1783532, "pid": 26702, "cgroup_id": 23990, "event": "TRACK_QEMU", "bin": "2898368baa94b4b", "count": 1}
+{"ts": 1783533, "pid": 26702, "cgroup_id": 23990, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1783538, "pid": 26702, "cgroup_id": 23990, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1783538, "pid": 26702, "cgroup_id": 23990, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1783539, "pid": 26702, "cgroup_id": 23990, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1783540, "pid": 26702, "cgroup_id": 23990, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1783541, "pid": 26702, "cgroup_id": 23990, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1783544, "pid": 26702, "cgroup_id": 23990, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1783621, "pid": 26702, "cgroup_id": 23990, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1769477545337, "pid": -1, "cgroup_id": 23990, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769477545337, "pid": -1, "cgroup_id": 23990, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769477545337, "pid": -1, "cgroup_id": 23990, "event": "MMAP_SUM", "meta": {"count": 28, "max_pages": 1048560}, "count": 1}
+{"ts": 1783621, "pid": 26702, "cgroup_id": 23990, "event": "CHROOT", "new_root": "1", "count": 1}
+{"ts": 1783624, "pid": 26702, "cgroup_id": 23990, "event": "WRITE", "fd": 2, "buf": "/tmp/2898368baa94b4bc648b196aac741235caa3dd70c70acc12092f0ebb016", "count": 1}
+{"ts": 1783624, "pid": 26702, "cgroup_id": 23990, "event": "WRITE", "fd": 2, "buf": "cannot change root directory to '1'", "count": 1}
+{"ts": 1783624, "pid": 26702, "cgroup_id": 23990, "event": "WRITE", "fd": 2, "buf": ": No such file or directory", "count": 1}
+{"ts": 1783624, "pid": 26702, "cgroup_id": 23990, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 1783626, "pid": 26688, "cgroup_id": 23990, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"type": "ANALYZER", "result": {"level": 8.0, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N", "description": "Root Directory Change Detected (CHROOT)", "pid": 26702, "evidence": "Process 26702 changed root directory to '1'. Potential chroot jail escape.", "analyzer": "ContainerEscape"}, "binary": "2898368baa94b4bc648b196aac741235caa3dd70c70acc12092f0ebb0166f571.30__chroot"}
+{"type": "RUN_END", "end_ts": 1769477545.8468096, "events_count": 19, "analyzed_count": 1, "timeout": false}

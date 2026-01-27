@@ -1,0 +1,14 @@
+{"type": "RUN_META", "session": "1ef3898d9d854179b9153f3e790965c4", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/riscV64-3/5154291a615ef95d4ee248456b6d63fbcf718f1966ac0db18f745a26da7807fc", "backend": "cbpf", "arch": {"machine": 243, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-riscv64-lp64d.so.1"}, "host_root_pid": 85382, "cgroup_inode": 31773, "container_id": "2df30e14d39bad48b28e8569754734f0a93c18efd59b55253983a80de1c2995f", "container_name": "vigilant_hodgkin", "container_image": "riscv64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769478288.3113053}
+{"ts": 2526837, "pid": 85558, "cgroup_id": 31773, "event": "EXEC", "filename": "/tmp/5154291a615ef95d4ee248456b6d63fbcf718f1966ac0db18f745a26da7807fc"}
+{"ts": 2526838, "pid": 85558, "cgroup_id": 31773, "event": "TRACK_QEMU", "bin": "5154291a615ef95", "count": 1}
+{"ts": 2526839, "pid": 85558, "cgroup_id": 31773, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2526843, "pid": 85558, "cgroup_id": 31773, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 2526843, "pid": 85558, "cgroup_id": 31773, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 1769478288563, "pid": -1, "cgroup_id": 31773, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769478288563, "pid": -1, "cgroup_id": 31773, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"ts": 1769478288563, "pid": -1, "cgroup_id": 31773, "event": "MMAP_SUM", "meta": {"count": 36, "max_pages": 32768}, "count": 1}
+{"ts": 2526850, "pid": 85558, "cgroup_id": 31773, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 2526920, "pid": 85558, "cgroup_id": 31773, "event": "WRITE", "fd": 1, "buf": "\t\tBalanced parenthesis\n\n\nPlease enter the number of processing r", "count": 1}
+{"ts": 2526922, "pid": 85549, "cgroup_id": 31773, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2526922, "pid": 85549, "cgroup_id": 31773, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "RUN_END", "end_ts": 1769478289.1413867, "events_count": 12, "analyzed_count": 0, "timeout": false}

@@ -1,0 +1,21 @@
+{"type": "RUN_META", "session": "287d0d87ee0d4634ab03ba6772eb642f", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-mips/b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af", "backend": "cbpf", "arch": {"machine": 8, "bits": 32, "endian": "big", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 44766, "cgroup_inode": 30096, "container_id": "84a9c1de5a07352d5a27bf2fd4ceb975154586e180dd8efa00ea2d1c208944a4", "container_name": "optimistic_agnesi", "container_image": "dockcross/linux-mips:latest", "qemu_cmd": "native", "start_ts": 1769478055.355576}
+{"ts": 2293834, "pid": 45190, "cgroup_id": 30096, "event": "EXEC", "filename": "/tmp/b1c37430a2c5f88ba3dd50d70386cf2253bb8bdef8b370e1176eea80f89223af"}
+{"ts": 2293834, "pid": 45190, "cgroup_id": 30096, "event": "TRACK_QEMU", "bin": "b1c37430a2c5f88", "count": 1}
+{"ts": 2293837, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2293837, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 2293837, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2293838, "pid": 45190, "cgroup_id": 30096, "event": "READ", "fd": 3, "buf_len": 4096, "count": 1}
+{"ts": 2293838, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2293839, "pid": 45190, "cgroup_id": 30096, "event": "READ", "fd": 3, "buf_len": 8, "count": 1}
+{"ts": 2293840, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2293840, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 2293840, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "", "mode": 0, "count": 5}
+{"ts": 2293842, "pid": 45190, "cgroup_id": 30096, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 2293843, "pid": 45190, "cgroup_id": 30096, "event": "WRITE", "fd": 2, "buf": "Error opening terminal: ", "count": 1}
+{"ts": 2293843, "pid": 45190, "cgroup_id": 30096, "event": "WRITE", "fd": 2, "buf": "unknown", "count": 1}
+{"ts": 2293843, "pid": 45190, "cgroup_id": 30096, "event": "WRITE", "fd": 2, "buf": ".\n", "count": 1}
+{"ts": 2293843, "pid": 45170, "cgroup_id": 30096, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2293843, "pid": 45170, "cgroup_id": 30096, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769478055625, "pid": -1, "cgroup_id": 30096, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 5}
+{"ts": 1769478055625, "pid": -1, "cgroup_id": 30096, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"type": "RUN_END", "end_ts": 1769478056.0620642, "events_count": 19, "analyzed_count": 0, "timeout": false}

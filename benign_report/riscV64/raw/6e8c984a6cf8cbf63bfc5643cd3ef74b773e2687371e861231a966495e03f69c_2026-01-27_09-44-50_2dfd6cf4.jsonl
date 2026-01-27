@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "1ef3898d9d854179b9153f3e790965c4", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/riscV64-3/6e8c984a6cf8cbf63bfc5643cd3ef74b773e2687371e861231a966495e03f69c", "backend": "cbpf", "arch": {"machine": 243, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-riscv64-lp64d.so.1"}, "host_root_pid": 86013, "cgroup_inode": 32031, "container_id": "ccb394db4f3c815ece7842de4ffca81f81a876c16f2515f6640a381a5ca1c356", "container_name": "awesome_wright", "container_image": "riscv64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769478290.4879503}
+{"ts": 2529094, "pid": 86287, "cgroup_id": 32031, "event": "EXEC", "filename": "/tmp/6e8c984a6cf8cbf63bfc5643cd3ef74b773e2687371e861231a966495e03f69c"}
+{"ts": 2529095, "pid": 86287, "cgroup_id": 32031, "event": "TRACK_QEMU", "bin": "6e8c984a6cf8cbf", "count": 1}
+{"ts": 2529095, "pid": 86287, "cgroup_id": 32031, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2529102, "pid": 86287, "cgroup_id": 32031, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 2529103, "pid": 86287, "cgroup_id": 32031, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 2529105, "pid": 86287, "cgroup_id": 32031, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 2529107, "pid": 86287, "cgroup_id": 32031, "event": "WRITE", "fd": 2, "buf": "File not found.\n", "count": 1}
+{"ts": 2529109, "pid": 86232, "cgroup_id": 32031, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2529109, "pid": 86232, "cgroup_id": 32031, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769478290886, "pid": -1, "cgroup_id": 32031, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769478290886, "pid": -1, "cgroup_id": 32031, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769478291.3284316, "events_count": 11, "analyzed_count": 0, "timeout": false}

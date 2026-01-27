@@ -1,0 +1,48 @@
+{"type": "RUN_META", "session": "846f087cecdf4ba2a351f0e11e882f95", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/X86_32-2/6c290ca72f10a5a3ea9784c9958267e6361e2bb44613e91f573be6435e2fc142", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 98697, "cgroup_inode": 36288, "container_id": "d0d60a52f6680ccc56ab637dcfe127743e6ca3da60fdfac9e8bc2bb1a36e97fb", "container_name": "agitated_robinson", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769478679.21389}
+{"ts": 2917820, "pid": 99087, "cgroup_id": 36288, "event": "EXEC", "filename": "/tmp/6c290ca72f10a5a3ea9784c9958267e6361e2bb44613e91f573be6435e2fc142"}
+{"ts": 2917821, "pid": 99087, "cgroup_id": 36288, "event": "TRACK_QEMU", "bin": "6c290ca72f10a5a", "count": 1}
+{"ts": 2917834, "pid": 99087, "cgroup_id": 36288, "event": "MEMFD_CREATE", "name": "qemu-open", "flags": 0, "count": 1}
+{"ts": 2917834, "pid": 99087, "cgroup_id": 36288, "event": "READ", "fd": 4, "buf_len": 2241, "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "8048000-8049000 r--p 00000000 00:59 7472521", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                              /tmp/6c290ca72f10a5a3ea9784c995826", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "8049000-80b6000 r-xp 00001000 00:59 7472521", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                              /tmp/6c290ca72f10a5a3ea9784c995826", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "80b6000-80e9000 r--p 0006e000 00:59 7472521", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                              /tmp/6c290ca72f10a5a3ea9784c995826", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "80e9000-80ec000 r--p 000a1000 00:59 7472521", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                              /tmp/6c290ca72f10a5a3ea9784c995826", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "80ec000-80ed000 rw-p 000a4000 00:59 7472521", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                              /tmp/6c290ca72f10a5a3ea9784c995826", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "80ed000-8112000 rw-p 00000000 00:00 0", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                                    \n", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "40000000-40001000 ---p 00000000 00:00 0", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                                  \n", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "40001000-40801000 rw-p 00000000 00:00 0", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                                  [stack]\n", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "40801000-40802000 r-xp 00000000 00:00 0", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                                  [vdso]\n", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "40802000-40804000 rw-p 00000000 00:00 0", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "                                  \n", "count": 1}
+{"ts": 2917835, "pid": 99087, "cgroup_id": 36288, "event": "READ", "fd": 3, "buf_len": 1098, "count": 1}
+{"ts": 1769478679569, "pid": -1, "cgroup_id": 36288, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769478679569, "pid": -1, "cgroup_id": 36288, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 5}
+{"ts": 1769478679569, "pid": -1, "cgroup_id": 36288, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769478679569, "pid": -1, "cgroup_id": 36288, "event": "MMAP_SUM", "meta": {"count": 48, "max_pages": 1048560}, "count": 1}
+{"ts": 2917907, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 2, "buf": "6c290ca72f10a5a3ea9784c9958267e6361e2bb44613e91f573be6435e2fc142", "count": 1}
+{"ts": 2917907, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 2, "buf": "atan2(y, x)) < 0.01' failed.\n", "count": 1}
+{"ts": 2917908, "pid": 99087, "cgroup_id": 36288, "event": "SIGNAL_GENERATE", "sig": 35, "count": 1}
+{"ts": 2917909, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001", "count": 1}
+{"ts": 2917909, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001\u0003", "count": 1}
+{"ts": 2917909, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "Sì\bè\u0007\b", "count": 1}
+{"ts": 2917910, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "\u0003", "count": 1}
+{"ts": 2917910, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "", "count": 1}
+{"ts": 2917910, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "`«\u0006\b\u0010í\u0006\b0k\t\b", "count": 1}
+{"ts": 2917910, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 3, "buf": "", "count": 3}
+{"ts": 2917916, "pid": 99087, "cgroup_id": 36288, "event": "WRITE", "fd": 2, "buf": "qemu: uncaught target signal 6 (Aborted) - core dumped\n", "count": 1}
+{"ts": 2917916, "pid": 99087, "cgroup_id": 36288, "event": "KILL", "target_pid": 26, "sig": 6, "count": 1}
+{"ts": 2917916, "pid": 99087, "cgroup_id": 36288, "event": "SIGNAL_GENERATE", "sig": 6, "count": 1}
+{"ts": 1769478679682, "pid": -1, "cgroup_id": 36288, "event": "MMAP_SUM", "meta": {"count": 1, "max_pages": 1}, "count": 1}
+{"ts": 2918020, "pid": 99087, "cgroup_id": 36288, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 2918020, "pid": 99031, "cgroup_id": 36288, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2918020, "pid": 99031, "cgroup_id": 36288, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"type": "RUN_END", "end_ts": 1769478680.241322, "events_count": 46, "analyzed_count": 0, "timeout": false}

@@ -1,0 +1,32 @@
+{"type": "RUN_META", "session": "287d0d87ee0d4634ab03ba6772eb642f", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/benign-mips/a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b", "backend": "cbpf", "arch": {"machine": 8, "bits": 32, "endian": "big", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 41746, "cgroup_inode": 29494, "container_id": "b0e0a5c55f23416338200ddc1e347494321ec52de0ee76601c925e4b41560d4f", "container_name": "pensive_hypatia", "container_image": "dockcross/linux-mips:latest", "qemu_cmd": "native", "start_ts": 1769478052.2190192}
+{"ts": 2290723, "pid": 42242, "cgroup_id": 29494, "event": "EXEC", "filename": "/tmp/a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b"}
+{"ts": 2290723, "pid": 42242, "cgroup_id": 29494, "event": "TRACK_QEMU", "bin": "a7cdc93caf27099", "count": 1}
+{"ts": 2290725, "pid": 42242, "cgroup_id": 29494, "event": "SOCKET", "domain": 2, "type": 3, "count": 1}
+{"ts": 2290725, "pid": 42242, "cgroup_id": 29494, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2290726, "pid": 42242, "cgroup_id": 29494, "event": "TRACK_FORK", "parent": 42242, "child": 42245, "count": 1}
+{"ts": 2290726, "pid": 42245, "cgroup_id": 29494, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 2290726, "pid": 42245, "cgroup_id": 29494, "event": "TRACK_FORK", "parent": 42245, "child": 42246, "count": 1}
+{"ts": 2290726, "pid": 42245, "cgroup_id": 29494, "event": "EXEC", "filename": "/sbin/modprobe", "count": 1}
+{"ts": 2290727, "pid": 42245, "cgroup_id": 29494, "event": "TRACK_QEMU", "bin": "modprobe", "count": 1}
+{"ts": 2290727, "pid": 42245, "cgroup_id": 29494, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 2290732, "pid": 42245, "cgroup_id": 29494, "event": "GETDENTS64", "filename": "\u0004", "count": 4}
+{"ts": 2290734, "pid": 42245, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "modprobe: FATAL: Module arp_tables not found in directory /lib/m", "count": 1}
+{"ts": 2290734, "pid": 42242, "cgroup_id": 29494, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2290734, "pid": 42242, "cgroup_id": 29494, "event": "WAIT4_EXITED", "reaped_child": 23, "count": 1}
+{"ts": 2290735, "pid": 42242, "cgroup_id": 29494, "event": "SOCKET", "domain": 2, "type": 3, "count": 2}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "arptables", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": " v", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "0.0.4", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": ": ", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "can't initialize arptables table `", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "filter", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "': ", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "arptables who? (do you need to insmod?)", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 2290736, "pid": 42242, "cgroup_id": 29494, "event": "WRITE", "fd": 2, "buf": "Perhaps arptables or your kernel needs to be upgraded.\n", "count": 1}
+{"ts": 2290737, "pid": 42183, "cgroup_id": 29494, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2290737, "pid": 42183, "cgroup_id": 29494, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769478052523, "pid": -1, "cgroup_id": 29494, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 31}
+{"ts": 1769478052523, "pid": -1, "cgroup_id": 29494, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"type": "ANALYZER", "result": {"level": 8.5, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Kernel module management tool executed", "pid": 42245, "evidence": "Executed: /sbin/modprobe", "analyzer": "KernelModuleLoad"}, "binary": "a7cdc93caf27099b1d6a50d6c900670cd64d365440c0e90517a5deb9634e683b"}
+{"type": "RUN_END", "end_ts": 1769478052.9556708, "events_count": 29, "analyzed_count": 1, "timeout": false}

@@ -1,0 +1,11 @@
+{"type": "RUN_META", "session": "846f087cecdf4ba2a351f0e11e882f95", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/X86_32-2/fb847f661062ae81d3d1615dea5f5da42175d0f2ab22925d3e1b3cbbbadcb41e", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 99194, "cgroup_inode": 36632, "container_id": "58350dfa595e1484a8e95f9cb84d476f60216e986b5e974645a89e6a790eb448", "container_name": "adoring_dewdney", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769478680.4385574}
+{"ts": 2919053, "pid": 99596, "cgroup_id": 36632, "event": "EXEC", "filename": "/tmp/fb847f661062ae81d3d1615dea5f5da42175d0f2ab22925d3e1b3cbbbadcb41e"}
+{"ts": 2919054, "pid": 99596, "cgroup_id": 36632, "event": "TRACK_QEMU", "bin": "fb847f661062ae8", "count": 1}
+{"ts": 2919062, "pid": 99596, "cgroup_id": 36632, "event": "SOCKET", "domain": 2, "type": 1, "count": 1}
+{"ts": 2919063, "pid": 99596, "cgroup_id": 36632, "event": "CONNECT", "addr": "02001f907f0000010000000000000000000000000000000000efee83ba3c786960057c13fe7f00001000000003000000c0ecb68b5555000000efee83ba3c7869", "count": 1}
+{"ts": 2919064, "pid": 99596, "cgroup_id": 36632, "event": "WRITE", "fd": 1, "buf": "Socket successfully created..\nconnection with the server failed.", "count": 1}
+{"ts": 1769478680780, "pid": -1, "cgroup_id": 36632, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769478680780, "pid": -1, "cgroup_id": 36632, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769478680780, "pid": -1, "cgroup_id": 36632, "event": "MMAP_SUM", "meta": {"count": 24, "max_pages": 1048560}, "count": 1}
+{"ts": 2919065, "pid": 99543, "cgroup_id": 36632, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"type": "RUN_END", "end_ts": 1769478681.2865996, "events_count": 9, "analyzed_count": 0, "timeout": false}

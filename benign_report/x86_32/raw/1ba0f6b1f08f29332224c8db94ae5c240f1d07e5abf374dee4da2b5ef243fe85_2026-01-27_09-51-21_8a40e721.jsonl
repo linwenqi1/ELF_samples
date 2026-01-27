@@ -1,0 +1,10 @@
+{"type": "RUN_META", "session": "846f087cecdf4ba2a351f0e11e882f95", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/X86_32-2/1ba0f6b1f08f29332224c8db94ae5c240f1d07e5abf374dee4da2b5ef243fe85", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 99787, "cgroup_inode": 36976, "container_id": "2a5d100b6ff0ebc8ae7a3d02e3aae3749dd14f76b07fd4b3a8e2ef16bad0b61e", "container_name": "romantic_banach", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769478681.6658971}
+{"ts": 2920220, "pid": 99980, "cgroup_id": 36976, "event": "EXEC", "filename": "/tmp/1ba0f6b1f08f29332224c8db94ae5c240f1d07e5abf374dee4da2b5ef243fe85"}
+{"ts": 2920220, "pid": 99980, "cgroup_id": 36976, "event": "TRACK_QEMU", "bin": "1ba0f6b1f08f293", "count": 1}
+{"ts": 2920229, "pid": 99980, "cgroup_id": 36976, "event": "WRITE", "fd": 1, "buf": "Test 1.... passed recursive... passed iterative...\nTest 2.... pa", "count": 1}
+{"ts": 2920229, "pid": 99948, "cgroup_id": 36976, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2920229, "pid": 99948, "cgroup_id": 36976, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"ts": 1769478681992, "pid": -1, "cgroup_id": 36976, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769478681992, "pid": -1, "cgroup_id": 36976, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769478681992, "pid": -1, "cgroup_id": 36976, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"type": "RUN_END", "end_ts": 1769478682.4491138, "events_count": 8, "analyzed_count": 0, "timeout": false}

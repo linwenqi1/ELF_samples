@@ -1,0 +1,9 @@
+{"type": "RUN_META", "session": "846f087cecdf4ba2a351f0e11e882f95", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/X86_32-2/82aab5bc89838ef2c3301d82b8d1a0069a47c1f35bf101dbe0b3fece9c078bb8", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 103879, "cgroup_inode": 38266, "container_id": "4805ed6f4a044d016ec1d6ccd3f82180b8017a6137f69086c16da7d2e85ace68", "container_name": "gracious_borg", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769478758.0351906}
+{"ts": 2996645, "pid": 104082, "cgroup_id": 38266, "event": "EXEC", "filename": "/tmp/82aab5bc89838ef2c3301d82b8d1a0069a47c1f35bf101dbe0b3fece9c078bb8"}
+{"ts": 2996645, "pid": 104082, "cgroup_id": 38266, "event": "TRACK_QEMU", "bin": "82aab5bc89838ef", "count": 1}
+{"ts": 2996728, "pid": 104082, "cgroup_id": 38266, "event": "WRITE", "fd": 1, "buf": "<<<< TEST FUNCTION >>>>\n<<<< TEST DONE >>>>\nYour number + 5 is 6", "count": 1}
+{"ts": 1769478758444, "pid": -1, "cgroup_id": 38266, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769478758444, "pid": -1, "cgroup_id": 38266, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769478758444, "pid": -1, "cgroup_id": 38266, "event": "MMAP_SUM", "meta": {"count": 21, "max_pages": 1048560}, "count": 1}
+{"ts": 2996729, "pid": 104063, "cgroup_id": 38266, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"type": "RUN_END", "end_ts": 1769478758.9490137, "events_count": 7, "analyzed_count": 0, "timeout": false}

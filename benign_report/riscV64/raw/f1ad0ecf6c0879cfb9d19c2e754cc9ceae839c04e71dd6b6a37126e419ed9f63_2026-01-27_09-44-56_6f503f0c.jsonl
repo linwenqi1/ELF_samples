@@ -1,0 +1,19 @@
+{"type": "RUN_META", "session": "1ef3898d9d854179b9153f3e790965c4", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/riscV64-3/f1ad0ecf6c0879cfb9d19c2e754cc9ceae839c04e71dd6b6a37126e419ed9f63", "backend": "cbpf", "arch": {"machine": 243, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-riscv64-lp64d.so.1"}, "host_root_pid": 88215, "cgroup_inode": 33063, "container_id": "5ae867808604155b583ba79ab3782d5990005075178681a18619ef4714e833ef", "container_name": "elated_lamport", "container_image": "riscv64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769478297.2927322}
+{"ts": 2535825, "pid": 88311, "cgroup_id": 33063, "event": "EXEC", "filename": "/tmp/f1ad0ecf6c0879cfb9d19c2e754cc9ceae839c04e71dd6b6a37126e419ed9f63"}
+{"ts": 2535826, "pid": 88311, "cgroup_id": 33063, "event": "TRACK_QEMU", "bin": "f1ad0ecf6c0879c", "count": 1}
+{"ts": 2535827, "pid": 88311, "cgroup_id": 33063, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2535831, "pid": 88311, "cgroup_id": 33063, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 2535831, "pid": 88311, "cgroup_id": 33063, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 2535833, "pid": 88311, "cgroup_id": 33063, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 2535833, "pid": 88311, "cgroup_id": 33063, "event": "READ", "fd": 3, "buf_len": 832, "count": 1}
+{"ts": 2535906, "pid": 88311, "cgroup_id": 33063, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 1}
+{"ts": 1769478297622, "pid": -1, "cgroup_id": 33063, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769478297622, "pid": -1, "cgroup_id": 33063, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 5}
+{"ts": 1769478297622, "pid": -1, "cgroup_id": 33063, "event": "MMAP_SUM", "meta": {"count": 39, "max_pages": 32768}, "count": 1}
+{"ts": 2535906, "pid": 88311, "cgroup_id": 33063, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 2535914, "pid": 88311, "cgroup_id": 33063, "event": "WRITE", "fd": 3, "buf": "0.475, 0\n0.47283, 0.021911\n0.46636, 0.043345\n0.45567, 0.063831\n0", "count": 1}
+{"ts": 2535915, "pid": 88311, "cgroup_id": 33063, "event": "WRITE", "fd": 3, "buf": " 0.063831\n-0.46636, 0.043345\n-0.47283, 0.021911\n-0.475, 1.8845e-", "count": 1}
+{"ts": 2535915, "pid": 88311, "cgroup_id": 33063, "event": "WRITE", "fd": 3, "buf": "017, -0.11518\n0.42234, -0.10017\n0.44093, -0.082915\n0.45567, -0.0", "count": 1}
+{"ts": 2535917, "pid": 88302, "cgroup_id": 33063, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 2535917, "pid": 88302, "cgroup_id": 33063, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "RUN_END", "end_ts": 1769478298.1371653, "events_count": 17, "analyzed_count": 0, "timeout": false}

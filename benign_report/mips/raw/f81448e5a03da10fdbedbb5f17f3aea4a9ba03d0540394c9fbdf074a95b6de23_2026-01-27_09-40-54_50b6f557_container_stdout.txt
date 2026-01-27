@@ -1,0 +1,10 @@
+Use: /tmp/f81448e5a03da10fdbedbb5f17f3aea4a9ba03d0540394c9fbdf074a95b6de23 <SearchDir> <CapFileOut>
+What does it do?
+
+It recurses the SearchDir directory
+Opens all files in there, searching for pcap-dumpfiles
+Filters out a single beacon and all EAPOL frames from the WPA networks in there
+And saves them to CapFileOut.
+
+This tool is supposed to crawl capfiles for upload to sorbo's WPA statistic server!
+http://wpa.darkircop.org
