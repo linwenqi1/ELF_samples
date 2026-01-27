@@ -54,5 +54,5 @@ def rename_files_in_dir(directory):
 
 if __name__ == "__main__":
     # 修改这里的路径为你想要处理的文件夹
-    target_folder = "./benign/X86_32-2" 
+    target_folder = "./benign/docker-container/arm64" 
     rename_files_in_dir(target_folder)
