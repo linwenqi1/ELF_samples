@@ -1,0 +1,136 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm7.elf, [/root/arm7.elf]"
+    ],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [
+      "/dev/null"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "execve \"/root/arm7.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "clone 2187"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "clone 2188"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "umask"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "gettimeofday"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2186",
+        "pid": "2187"
+      },
+      {
+        "parent": "2187",
+        "pid": "2188"
+      }
+    ],
+    "removed_files": []
+  }
+}

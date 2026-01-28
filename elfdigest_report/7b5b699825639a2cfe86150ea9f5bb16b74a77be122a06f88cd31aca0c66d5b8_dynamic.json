@@ -1,0 +1,156 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/usr/dict/words"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "fork"
+      },
+      {
+        "file": " ",
+        "pid": "110",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "recv"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "select"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "time"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "getppid"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 110"
+      ],
+      "110": [
+        "analyzed_bin ioctl",
+        "analyzed_bin exit",
+        "analyzed_bin fork",
+        "create process 112",
+        "analyzed_bin execve"
+      ],
+      "112": [
+        "analyzed_bin ioctl",
+        "analyzed_bin socket",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin setsockopt",
+        "analyzed_bin recv",
+        "analyzed_bin brk",
+        "analyzed_bin select",
+        "analyzed_bin write",
+        "analyzed_bin nanosleep",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin connect",
+        "analyzed_bin getpid",
+        "analyzed_bin time",
+        "analyzed_bin open",
+        "analyzed_bin getppid"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 110
+      },
+      {
+        "parent": 110,
+        "pid": 112
+      }
+    ],
+    "removed_files": []
+  }
+}

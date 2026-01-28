@@ -1,0 +1,182 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/usr/dict/words",
+      "/etc/hosts",
+      "/etc/resolv.conf"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fork"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 101"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "time"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "send"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "recv"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "getppid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "select"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "poll"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "ioctl"
+      }
+    ],
+    "processes": {
+      "101": [
+        "analyzed_bin open",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin time",
+        "analyzed_bin send",
+        "analyzed_bin read",
+        "analyzed_bin recv",
+        "analyzed_bin setsockopt",
+        "analyzed_bin getppid",
+        "analyzed_bin brk",
+        "analyzed_bin write",
+        "analyzed_bin socket",
+        "analyzed_bin getpid",
+        "analyzed_bin select",
+        "analyzed_bin close",
+        "analyzed_bin connect",
+        "analyzed_bin poll",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin nanosleep",
+        "analyzed_bin ioctl"
+      ],
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        "analyzed_bin exit",
+        "analyzed_bin execve",
+        "analyzed_bin fork",
+        "create process 101",
+        "analyzed_bin ioctl"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      },
+      {
+        "parent": 99,
+        "pid": 101
+      }
+    ],
+    "removed_files": []
+  }
+}

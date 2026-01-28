@@ -1,0 +1,141 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm4.elf, [/root/arm4.elf]"
+    ],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [
+      "/dev/null"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "fork 2184"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "execve \"/root/arm4.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "setrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "fork 2185"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "umask"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "rt_sigprocmask"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2183",
+        "pid": "2184"
+      },
+      {
+        "parent": "2184",
+        "pid": "2185"
+      }
+    ],
+    "removed_files": []
+  }
+}

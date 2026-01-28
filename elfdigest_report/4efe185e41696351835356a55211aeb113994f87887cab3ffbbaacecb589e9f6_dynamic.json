@@ -1,0 +1,719 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/bin/sed, [sed, -i, /\\\\/etc\\\\/cron.hourly\\\\/cron.sh/d, /etc/crontab]",
+      "0x8146203, [0x813db7c, 0x8146200, 0x813da88]"
+    ],
+    "modified_files": [
+      "/etc/cron.hourly/cron.sh",
+      "/tmp/.chinaz{1736160775",
+      "/etc/init.d/.chinaz{1736160775"
+    ],
+    "open_files": [
+      "/lib/tls/libresolv.so.2",
+      "/root/analyzed_bin",
+      "/etc/ld.so.cache",
+      "/lib/libresolv.so.2",
+      "/lib/sse2/libresolv.so.2",
+      "/lib/tls/i686/libresolv.so.2",
+      "/lib/libc.so.6",
+      "/lib/i686/libresolv.so.2",
+      "/lib/tls/i686/sse2/libresolv.so.2",
+      "/lib/tls/sse2/libresolv.so.2",
+      "/lib/i686/sse2/libresolv.so.2"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 109"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "uname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "futex"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "109",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "111",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "lseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 113"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "time"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "umask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 115"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 117"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "unlink"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 121"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "symlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 119"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "113",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": " ",
+        "pid": "113",
+        "syscall": "create process 114"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "113",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "113",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "115",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": " ",
+        "pid": "115",
+        "syscall": "create process 116"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "115",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "115",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "114",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "114",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "116",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "116",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 118"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "exit_group"
+      },
+      {
+        "file": " ",
+        "pid": "119",
+        "syscall": "create process 120"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "119",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "119",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "119",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "118",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "118",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getcwd"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "stat"
+      },
+      {
+        "file": " ",
+        "pid": "121",
+        "syscall": "create process 122"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getuid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "121",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getppid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "121",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "120",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "120",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "close"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "brk"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "read"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "stat"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "openat"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "execve"
+      },
+      {
+        "file": "sed",
+        "pid": "122",
+        "syscall": "access"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 109"
+      ],
+      "109": [
+        "analyzed_bin set_tid_address",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin exit_group",
+        "analyzed_bin uname",
+        "analyzed_bin brk",
+        "analyzed_bin futex",
+        "analyzed_bin execve",
+        "analyzed_bin getrlimit",
+        "create process 111",
+        "analyzed_bin clone",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin set_thread_area",
+        "analyzed_bin rt_sigaction"
+      ],
+      "111": [
+        "analyzed_bin exit_group",
+        "analyzed_bin clone",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin setsid",
+        "create process 112"
+      ],
+      "112": [
+        "analyzed_bin waitpid",
+        "analyzed_bin clone",
+        "analyzed_bin read",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin lseek",
+        "analyzed_bin chdir",
+        "create process 113",
+        "analyzed_bin readlink",
+        "analyzed_bin time",
+        "analyzed_bin write",
+        "analyzed_bin umask",
+        "analyzed_bin open",
+        "analyzed_bin close",
+        "create process 115",
+        "create process 117",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin unlink",
+        "create process 121",
+        "analyzed_bin symlink",
+        "analyzed_bin rt_sigaction",
+        "create process 119"
+      ],
+      "113": [
+        "analyzed_bin set_robust_list",
+        "create process 114",
+        "analyzed_bin clone",
+        "analyzed_bin exit_group"
+      ],
+      "114": [
+        "analyzed_bin set_robust_list",
+        "analyzed_bin close"
+      ],
+      "115": [
+        "analyzed_bin set_robust_list",
+        "create process 116",
+        "analyzed_bin clone",
+        "analyzed_bin exit_group"
+      ],
+      "116": [
+        "analyzed_bin set_robust_list",
+        "analyzed_bin close"
+      ],
+      "117": [
+        "analyzed_bin set_robust_list",
+        "create process 118",
+        "analyzed_bin clone",
+        "analyzed_bin exit_group"
+      ],
+      "118": [
+        "analyzed_bin set_robust_list",
+        "analyzed_bin close"
+      ],
+      "119": [
+        "create process 120",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin clone",
+        "analyzed_bin exit_group"
+      ],
+      "120": [
+        "analyzed_bin set_robust_list",
+        "analyzed_bin close"
+      ],
+      "121": [
+        "sh uname",
+        "sh rt_sigaction",
+        "sh getcwd",
+        "sh mmap2",
+        "sh close",
+        "sh getpid",
+        "sh openat",
+        "sh brk",
+        "sh stat",
+        "create process 122",
+        "sh set_thread_area",
+        "sh getuid",
+        "analyzed_bin rt_sigprocmask",
+        "sh fstat",
+        "sh read",
+        "sh clone",
+        "sh access",
+        "sh execve",
+        "sh mprotect",
+        "sh getppid",
+        "analyzed_bin rt_sigaction"
+      ],
+      "122": [
+        "sh rt_sigaction",
+        "sed fstat",
+        "sed close",
+        "sed set_thread_area",
+        "sed brk",
+        "sed read",
+        "sed mmap2",
+        "sed mprotect",
+        "sed getuid",
+        "sed stat",
+        "sed openat",
+        "sed execve",
+        "sed access"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 109
+      },
+      {
+        "parent": 109,
+        "pid": 111
+      },
+      {
+        "parent": 111,
+        "pid": 112
+      },
+      {
+        "parent": 112,
+        "pid": 113
+      },
+      {
+        "parent": 113,
+        "pid": 114
+      },
+      {
+        "parent": 112,
+        "pid": 115
+      },
+      {
+        "parent": 115,
+        "pid": 116
+      },
+      {
+        "parent": 112,
+        "pid": 117
+      },
+      {
+        "parent": 117,
+        "pid": 118
+      },
+      {
+        "parent": 112,
+        "pid": 119
+      },
+      {
+        "parent": 119,
+        "pid": 120
+      },
+      {
+        "parent": 112,
+        "pid": 121
+      },
+      {
+        "parent": 121,
+        "pid": 122
+      }
+    ],
+    "removed_files": [
+      "/etc/rc.d/rc1.d/S90.chinaz{1736160775",
+      "/root/analyzed_bin",
+      "/etc/rc1.d/S90.chinaz{1736160775",
+      "/etc/rc5.d/S90.chinaz{1736160775",
+      "/etc/rc4.d/S90.chinaz{1736160775",
+      "/etc/rc3.d/S90analyzed_bin",
+      "/etc/rc3.d/S90.chinaz{1736160775",
+      "/etc/rc2.d/S90analyzed_bin",
+      "/etc/rc2.d/S90.chinaz{1736160775",
+      "/etc/rc1.d/S90analyzed_bin",
+      "/etc/rc.d/rc2.d/S90.chinaz{1736160775",
+      "/etc/rc.d/rc3.d/S90.chinaz{1736160775",
+      "/etc/rc.d/rc5.d/S90.chinaz{1736160775",
+      "/etc/rc4.d/S90analyzed_bin",
+      "/etc/rc5.d/S90analyzed_bin",
+      "/etc/rc.d/rc4.d/S90.chinaz{1736160775",
+      "/etc/init.d/analyzed_bin"
+    ]
+  }
+}

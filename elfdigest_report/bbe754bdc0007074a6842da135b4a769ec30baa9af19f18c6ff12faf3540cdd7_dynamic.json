@@ -1,0 +1,202 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 102"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getsockname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 101"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "fork"
+      },
+      {
+        "file": " ",
+        "pid": "101",
+        "syscall": "create process 103"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "103",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "103",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "103",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "103",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "103",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "103",
+        "syscall": "nanosleep"
+      }
+    ],
+    "processes": {
+      "101": [
+        "analyzed_bin fork",
+        "create process 103",
+        "analyzed_bin exit"
+      ],
+      "102": [
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin connect",
+        "analyzed_bin fcntl",
+        "analyzed_bin socket",
+        "analyzed_bin nanosleep"
+      ],
+      "103": [
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin connect",
+        "analyzed_bin fcntl",
+        "analyzed_bin socket",
+        "analyzed_bin nanosleep"
+      ],
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        "analyzed_bin fork",
+        "analyzed_bin close",
+        "create process 102",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin getsockname",
+        "analyzed_bin exit",
+        "analyzed_bin execve",
+        "create process 101",
+        "analyzed_bin ioctl",
+        "analyzed_bin socket",
+        "analyzed_bin connect"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      },
+      {
+        "parent": 99,
+        "pid": 101
+      },
+      {
+        "parent": 99,
+        "pid": 102
+      },
+      {
+        "parent": 101,
+        "pid": 103
+      }
+    ],
+    "removed_files": []
+  }
+}

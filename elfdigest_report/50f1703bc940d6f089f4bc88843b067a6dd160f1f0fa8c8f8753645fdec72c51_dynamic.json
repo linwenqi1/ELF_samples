@@ -1,0 +1,98 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm.elf, [/root/arm.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2177",
+        "syscall": "execve \"/root/arm.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2177",
+        "syscall": "fork 2178"
+      },
+      {
+        "file": " ",
+        "pid": "2177",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "select"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2178",
+        "syscall": "write"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2177",
+        "pid": "2178"
+      }
+    ],
+    "removed_files": []
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [
+      "/etc/resolv.conf"
+    ],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": "",
+        "pid": "99",
+        "syscall": "fork"
+      },
+      {
+        "file": "",
+        "pid": "99",
+        "syscall": "prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 101"
+      },
+      {
+        "file": "",
+        "pid": "99",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "",
+        "pid": "99",
+        "syscall": "exit"
+      },
+      {
+        "file": "",
+        "pid": "99",
+        "syscall": "time"
+      },
+      {
+        "file": "",
+        "pid": "99",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "101",
+        "syscall": "create process 102"
+      },
+      {
+        "file": "",
+        "pid": "101",
+        "syscall": "exit"
+      },
+      {
+        "file": "",
+        "pid": "101",
+        "syscall": "fork"
+      },
+      {
+        "file": "",
+        "pid": "102",
+        "syscall": "setuid"
+      },
+      {
+        "file": "",
+        "pid": "102",
+        "syscall": "fork"
+      },
+      {
+        "file": "",
+        "pid": "102",
+        "syscall": "chdir"
+      },
+      {
+        "file": "",
+        "pid": "102",
+        "syscall": "setresuid"
+      },
+      {
+        "file": "",
+        "pid": "102",
+        "syscall": "exit"
+      },
+      {
+        "file": " ",
+        "pid": "102",
+        "syscall": "create process 103"
+      },
+      {
+        "file": "",
+        "pid": "102",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "open"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "send"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "recv"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "socket"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "select"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "write"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "connect"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "close"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "brk"
+      },
+      {
+        "file": "",
+        "pid": "103",
+        "syscall": "access"
+      }
+    ],
+    "processes": {
+      "101": [
+        "create process 102",
+        " exit",
+        " fork"
+      ],
+      "102": [
+        " setuid",
+        " fork",
+        " chdir",
+        " setresuid",
+        " exit",
+        "create process 103",
+        " rt_sigaction"
+      ],
+      "103": [
+        " open",
+        " fcntl",
+        " send",
+        " recv",
+        " socket",
+        " select",
+        " getsockopt",
+        " write",
+        " connect",
+        " close",
+        " brk",
+        " access"
+      ],
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        " fork",
+        " prctl",
+        "analyzed_bin execve",
+        "create process 101",
+        " getpid",
+        "analyzed_bin ioctl",
+        " exit",
+        " time",
+        " wait4"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      },
+      {
+        "parent": 99,
+        "pid": 101
+      },
+      {
+        "parent": 101,
+        "pid": 102
+      },
+      {
+        "parent": 102,
+        "pid": 103
+      }
+    ],
+    "removed_files": []
+  }
+}

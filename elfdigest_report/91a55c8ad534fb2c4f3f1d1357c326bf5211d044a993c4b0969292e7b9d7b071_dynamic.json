@@ -1,0 +1,125 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/home",
+      "/proc/100/cmdline",
+      "/proc/91/cmdline",
+      "/proc/",
+      "/proc/45/cmdline",
+      "/proc/94/cmdline",
+      "/proc/84/cmdline",
+      "/proc/95/cmdline",
+      "/proc/89/cmdline",
+      "/proc/47/cmdline",
+      "/proc/99/status",
+      "/proc/1/cmdline"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "time"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getppid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "times"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getdents"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getpid"
+      }
+    ],
+    "processes": {
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        "analyzed_bin read",
+        "analyzed_bin time",
+        "analyzed_bin fstat",
+        "analyzed_bin getppid",
+        "analyzed_bin close",
+        "analyzed_bin times",
+        "analyzed_bin ioctl",
+        "analyzed_bin brk",
+        "analyzed_bin fcntl",
+        "analyzed_bin readlink",
+        "analyzed_bin execve",
+        "analyzed_bin getdents",
+        "analyzed_bin open",
+        "analyzed_bin getpid"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      }
+    ],
+    "removed_files": []
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [
+      "/dev/null"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getrandom"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "prlimit64"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clock_gettime"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlinkat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": " ",
+        "pid": "110",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "setsid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "clock_nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "chdir"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "umask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "set_robust_list"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin brk",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin mprotect",
+        "analyzed_bin execve",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin getrandom",
+        "analyzed_bin prlimit64",
+        "analyzed_bin clock_gettime",
+        "analyzed_bin clone",
+        "analyzed_bin exit_group",
+        "create process 110",
+        "analyzed_bin readlinkat",
+        "analyzed_bin set_robust_list"
+      ],
+      "110": [
+        "create process 111",
+        "analyzed_bin exit_group",
+        "analyzed_bin clone",
+        "analyzed_bin setsid",
+        "analyzed_bin set_robust_list"
+      ],
+      "111": [
+        "analyzed_bin socket",
+        "analyzed_bin clock_nanosleep",
+        "analyzed_bin openat",
+        "analyzed_bin chdir",
+        "analyzed_bin connect",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin umask",
+        "analyzed_bin close",
+        "analyzed_bin exit_group",
+        "analyzed_bin set_robust_list"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      },
+      {
+        "parent": 110,
+        "pid": 111
+      }
+    ],
+    "removed_files": []
+  }
+}

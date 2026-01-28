@@ -1,0 +1,7478 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "]",
+      "/usr/bin/crontab, [crontab, /var/run/.x00740882966]",
+      "/bin/uname, [/bin/uname, -n]",
+      "/bin/touch, [touch, -acmr, /bin/ls, /etc/inittab]",
+      "/usr/bin/crontab, [crontab, -l]",
+      "/bin/grep, [grep, -v, no cron]",
+      "/bin/rm, [rm, -rf, /var/run/.x00740882966]",
+      "/usr/bin/killall, [killall, -9, httpd]",
+      "/bin/rm, [rm, -rf, /etc/inittab2]",
+      "/bin/cat, [cat, /var/run/httpd.pid]",
+      "/usr/bin/killall, [killall, -9, minihttpd]",
+      "/bin/grep, [grep, -v, lesshts/run.sh]",
+      "/usr/bin/killall, [killall, -9, telnetd]",
+      "/usr/bin/killall, [killall, -9, dropbear]",
+      "/bin/cat, [cat, /etc/inittab2]",
+      "/bin/cat, [cat, /etc/inittab]",
+      "/bin/cat, [cat, /var/run/thttpd.pid]",
+      "/bin/grep, [grep, -v, /root/analyzed_bin]",
+      "/usr/bin/killall, [killall, -9, mini_httpd]",
+      "/usr/bin/killall, [killall, -9, utelnetd]",
+      "/usr/bin/killall, [killall, -9, sshd]",
+      "/bin/touch, [touch, -acmr, /bin/ls, /root/analyzed_bin]",
+      "/usr/bin/killall, [killall, -9, lighttpd]"
+    ],
+    "modified_files": [
+      "/etc/inittab2",
+      "/dev/null",
+      "/var/run/.x00740882966",
+      "/etc/inittab"
+    ],
+    "open_files": [
+      "/proc/117/cmdline",
+      "/proc/144/cmdline",
+      "/root/analyzed_bin",
+      "/proc/6/cmdline",
+      "/proc/94/stat",
+      "/proc/129/cmdline",
+      "/proc/4/cmdline",
+      "/bin/sh",
+      "/proc/11/cmdline",
+      "/var/run/httpd.pid",
+      "/proc/14/stat",
+      "/proc/7/cmdline",
+      "/proc/131/stat",
+      "/proc/17/stat",
+      "/proc/122/stat",
+      "/var/run/thttpd.pid",
+      "/proc/10/cmdline",
+      "/proc/117/stat",
+      "/proc/3/stat",
+      "/proc/146/stat",
+      "/proc/20/cmdline",
+      "/proc/15/stat",
+      "/lib/libresolv.so.2",
+      "/proc/95/stat",
+      "/proc/96/stat",
+      "/bin/busybox",
+      "/proc/147/stat",
+      "/proc/11/stat",
+      "/proc/92/stat",
+      "/proc/100/cmdline",
+      "/proc/150/stat",
+      "/proc/89/stat",
+      "/etc/inittab2",
+      "/proc/128/stat",
+      "/proc/84/cmdline",
+      "/proc/95/cmdline",
+      "/proc/148/stat",
+      "/proc/96/cmdline",
+      "/proc/140/stat",
+      "/proc/136/stat",
+      "/lib/mips/libresolv.so.2",
+      "/proc/17/cmdline",
+      "/proc/18/stat",
+      "/proc/10/stat",
+      "/etc/ld.so.cache",
+      "/proc/2/stat",
+      "/proc/8/stat",
+      "/usr/bin/compile_time",
+      "/proc/45/cmdline",
+      "/proc/132/stat",
+      "/proc/122/cmdline",
+      "/proc/129/stat",
+      "/proc/20/stat",
+      "/bin/crontab",
+      "/proc/133/stat",
+      "/proc/14/cmdline",
+      "/proc/self/exe",
+      "/lib/tls/libresolv.so.2",
+      "/proc/29/cmdline",
+      "/proc/2/cmdline",
+      "/proc/16/stat",
+      "/proc/8/cmdline",
+      "/proc/136/cmdline",
+      "/proc/145/stat",
+      "/dev/null",
+      "/proc/127/stat",
+      "/proc/91/cmdline",
+      "/proc/146/cmdline",
+      "/proc/142/stat",
+      "/proc",
+      "/proc/48/cmdline",
+      "/bin/uname",
+      "/proc/48/stat",
+      "/proc/89/cmdline",
+      "/etc/rc.local",
+      "/proc/7/stat",
+      "/proc/4/stat",
+      "/proc/138/stat",
+      "/proc/13/cmdline",
+      "/proc/12/cmdline",
+      "/proc/144/stat",
+      "/proc/3/cmdline",
+      "/proc/29/stat",
+      "/proc/19/stat",
+      "/proc/45/stat",
+      "/lib/tls/mips/libresolv.so.2",
+      "/proc/9/cmdline",
+      "/usr/bin/crontab",
+      "/proc/9/stat",
+      "/etc/nsswitch.conf",
+      "/lib/libnss_files.so.2",
+      "/proc/127/cmdline",
+      "/proc/92/cmdline",
+      "/proc/148/cmdline",
+      "/proc/137/stat",
+      "/proc/5/stat",
+      "/proc/1/stat",
+      "/proc/94/cmdline",
+      "/tmp/toexec",
+      "/proc/1/cmdline",
+      "/proc/18/cmdline",
+      "/etc/rc.conf",
+      "/proc/100/stat",
+      "/proc/16/cmdline",
+      "/proc/91/stat",
+      "/proc/19/cmdline",
+      "/proc/142/cmdline",
+      "/proc/12/stat",
+      "/proc/28/stat",
+      "/proc/131/cmdline",
+      "/proc/28/cmdline",
+      "/proc/13/stat",
+      "/proc/version",
+      "/var/run/.x00740882966",
+      "/etc/inittab",
+      "/proc/150/cmdline",
+      "/etc/passwd",
+      "/proc/5/cmdline",
+      "/lib/libc.so.6",
+      "/etc/issue",
+      "/proc/27/cmdline",
+      "/proc/15/cmdline",
+      "/proc/84/stat",
+      "/proc/6/stat",
+      "/proc/27/stat"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 109"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "pipe2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "llseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getpriority"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 115"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "listen"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "access"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "bind"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "wait4"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "readlink"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 102"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 101"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "setpriority"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 117"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 114"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getuid"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 116"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 113"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "clone"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 107"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "stat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "llseek"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "close"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "getuid"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "execve"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "openat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "fstat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "fstat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "stat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "getpid"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "utimes"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "stat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "openat"
+      },
+      {
+        "file": "touch",
+        "pid": "101",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "101",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "102",
+        "syscall": "create process 104"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "102",
+        "syscall": "create process 103"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "102",
+        "syscall": "create process 106"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "102",
+        "syscall": "create process 105"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "102",
+        "syscall": "brk"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "access"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "fstat"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "brk"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "execve"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "connect"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "103",
+        "syscall": "dup2"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "geteuid"
+      },
+      {
+        "file": "sh",
+        "pid": "103",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "stat"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "103",
+        "syscall": "close"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "socket"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "openat"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "prctl"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "write"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "close"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "getuid"
+      },
+      {
+        "file": "crontab",
+        "pid": "103",
+        "syscall": "chdir"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "openat"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "prctl"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "brk"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "stat"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "fstat"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "104",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "104",
+        "syscall": "dup2"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "execve"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "access"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "close"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "llseek"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "104",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "grep",
+        "pid": "104",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "openat"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "prctl"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "brk"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "stat"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "fstat"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "105",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "105",
+        "syscall": "dup2"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "execve"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "access"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "close"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "llseek"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "105",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "grep",
+        "pid": "105",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "openat"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "prctl"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "106",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "stat"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "fstat"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "106",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "106",
+        "syscall": "dup2"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "execve"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "106",
+        "syscall": "openat"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "llseek"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "close"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "106",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "grep",
+        "pid": "106",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "107",
+        "syscall": "brk"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "access"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "connect"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "getuid"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "llseek"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "geteuid"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "stat"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "stat"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "chdir"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "getpid"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "socket"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "getegid"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "setresuid"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "prctl"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "openat"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "crontab",
+        "pid": "108",
+        "syscall": "setresgid"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "getuid"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "access"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "lstat"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "getuid"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "unlink"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "stat"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "getpid"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "stat"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "read"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "prctl"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "uname"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "prctl"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "openat"
+      },
+      {
+        "file": "rm",
+        "pid": "109",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "109",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "clone"
+      },
+      {
+        "file": " ",
+        "pid": "110",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "openat"
+      },
+      {
+        "file": " ",
+        "pid": "110",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "brk"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "llseek"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "brk"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "prctl"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "openat"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "access"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "fstat"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "stat"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "getuid"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "sendfile"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "read"
+      },
+      {
+        "file": "cat",
+        "pid": "111",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "openat"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "prctl"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "112",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "stat"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "fstat"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "112",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "112",
+        "syscall": "dup2"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "execve"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "112",
+        "syscall": "openat"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "llseek"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "close"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "write"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "112",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "grep",
+        "pid": "112",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "brk"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "execve"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "stat"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "read"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "dup2"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "fstat"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "llseek"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "getpid"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "access"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "uname"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "prctl"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "openat"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "getppid"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "openat"
+      },
+      {
+        "file": "cat",
+        "pid": "114",
+        "syscall": "sendfile"
+      },
+      {
+        "file": "sh",
+        "pid": "114",
+        "syscall": "brk"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "getuid"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "access"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "lstat"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "getuid"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "unlink"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "stat"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "getpid"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "stat"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "read"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "prctl"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "uname"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "prctl"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "openat"
+      },
+      {
+        "file": "rm",
+        "pid": "115",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "115",
+        "syscall": "brk"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "llseek"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "close"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "getuid"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "execve"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "openat"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "fstat"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "fstat"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "stat"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "getpid"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "utimes"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "stat"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "openat"
+      },
+      {
+        "file": "touch",
+        "pid": "116",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "116",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "pipe2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "llseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "gettid"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 143"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 149"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "select"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 118"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 123"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 135"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 120"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 147"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 130"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 128"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 141"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 126"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 145"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "recvfrom"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 121"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 134"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 132"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "getuid"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 139"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 137"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 119"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "117",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "fstat"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "getuid"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "llseek"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "prctl"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "getuid"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "stat"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "write"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "close"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "prctl"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "brk"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "openat"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "stat"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "brk"
+      },
+      {
+        "file": "uname",
+        "pid": "118",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "fstat"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "getuid"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "llseek"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "prctl"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "getuid"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "stat"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "write"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "close"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "prctl"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "brk"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "openat"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "stat"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "brk"
+      },
+      {
+        "file": "uname",
+        "pid": "119",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "fstat"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "getuid"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "llseek"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "prctl"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "getuid"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "stat"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "write"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "close"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "prctl"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "brk"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "openat"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "stat"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "brk"
+      },
+      {
+        "file": "uname",
+        "pid": "120",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "121",
+        "syscall": "create process 122"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "121",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "122",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "122",
+        "syscall": "create process 124"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "123",
+        "syscall": "create process 125"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "123",
+        "syscall": "access"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "llseek"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "brk"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "prctl"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "openat"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "access"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "124",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "124",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "fstat"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "stat"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "getuid"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "124",
+        "syscall": "stat"
+      },
+      {
+        "file": "cat",
+        "pid": "124",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "125",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "126",
+        "syscall": "create process 127"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "126",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "127",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "127",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "127",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "127",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "127",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "127",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "127",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "128",
+        "syscall": "create process 129"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "128",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "129",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "129",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "129",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "129",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "129",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "129",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "129",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "130",
+        "syscall": "create process 131"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "130",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "131",
+        "syscall": "create process 133"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "131",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "132",
+        "syscall": "brk"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "llseek"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "brk"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "prctl"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "openat"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "access"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "133",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "133",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "fstat"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "stat"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "close"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "getuid"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "133",
+        "syscall": "stat"
+      },
+      {
+        "file": "cat",
+        "pid": "133",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "134",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "135",
+        "syscall": "create process 136"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "135",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "136",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "136",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "136",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "136",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "136",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "136",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "136",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "137",
+        "syscall": "create process 138"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "137",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "138",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "139",
+        "syscall": "create process 140"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "139",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "dup2"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "140",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "prctl"
+      },
+      {
+        "file": " ",
+        "pid": "141",
+        "syscall": "create process 142"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "141",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "142",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "142",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "142",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "142",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "142",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "142",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "142",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "stat"
+      },
+      {
+        "file": " ",
+        "pid": "143",
+        "syscall": "create process 144"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "143",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "144",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "144",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "144",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "144",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "144",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "144",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "144",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "stat"
+      },
+      {
+        "file": " ",
+        "pid": "145",
+        "syscall": "create process 146"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "145",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "146",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "146",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "146",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "146",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "146",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "146",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "146",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "147",
+        "syscall": "create process 148"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "147",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "148",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "148",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "148",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "148",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "148",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "kill"
+      },
+      {
+        "file": "sh",
+        "pid": "148",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "148",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "149",
+        "syscall": "create process 150"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "llseek"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "149",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "getpid"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "access"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "execve"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "150",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "write"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "getdents"
+      },
+      {
+        "file": "sh",
+        "pid": "150",
+        "syscall": "dup2"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "150",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "150",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "readlink"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "brk"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "150",
+        "syscall": "close"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "llseek"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "getuid"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "150",
+        "syscall": "openat"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "stat"
+      },
+      {
+        "file": "killall",
+        "pid": "150",
+        "syscall": "close"
+      }
+    ],
+    "processes": {
+      "101": [
+        "touch llseek",
+        "touch close",
+        "touch mmap2",
+        "sh getuid",
+        "touch execve",
+        "touch openat",
+        "touch fstat",
+        "touch brk",
+        "sh llseek",
+        "sh fstat",
+        "touch access",
+        "sh rt_sigaction",
+        "sh stat",
+        "touch mprotect",
+        "touch read",
+        "sh getpid",
+        "touch getuid",
+        "sh close",
+        "sh mmap2",
+        "touch utimes",
+        "sh mprotect",
+        "touch stat",
+        "touch exit_group",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "touch prctl",
+        "sh brk"
+      ],
+      "102": [
+        "sh waitpid",
+        "sh exit_group",
+        "sh getuid",
+        "sh dup2",
+        "sh llseek",
+        "sh fstat",
+        "create process 104",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh clone",
+        "sh getpid",
+        "create process 103",
+        "sh close",
+        "create process 106",
+        "sh mmap2",
+        "sh mprotect",
+        "create process 105",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "sh brk"
+      ],
+      "103": [
+        "crontab access",
+        "crontab fstat",
+        "crontab brk",
+        "crontab execve",
+        "crontab connect",
+        "crontab read",
+        "sh dup2",
+        "crontab mmap2",
+        "crontab geteuid",
+        "sh rt_sigaction",
+        "crontab stat",
+        "crontab llseek",
+        "sh close",
+        "crontab socket",
+        "crontab openat",
+        "crontab prctl",
+        "crontab exit_group",
+        "crontab write",
+        "crontab close",
+        "crontab mprotect",
+        "crontab getuid",
+        "crontab chdir"
+      ],
+      "104": [
+        "grep openat",
+        "grep prctl",
+        "grep brk",
+        "grep stat",
+        "grep fstat",
+        "grep getuid",
+        "sh close",
+        "sh dup2",
+        "grep execve",
+        "grep exit_group",
+        "grep access",
+        "grep close",
+        "grep llseek",
+        "grep read",
+        "sh rt_sigaction",
+        "grep mmap2",
+        "grep mprotect"
+      ],
+      "105": [
+        "grep openat",
+        "grep prctl",
+        "grep brk",
+        "grep stat",
+        "grep fstat",
+        "grep getuid",
+        "sh close",
+        "sh dup2",
+        "grep execve",
+        "grep exit_group",
+        "grep access",
+        "grep close",
+        "grep llseek",
+        "grep read",
+        "sh rt_sigaction",
+        "grep mmap2",
+        "grep mprotect"
+      ],
+      "106": [
+        "grep openat",
+        "grep prctl",
+        "grep brk",
+        "sh fcntl",
+        "grep stat",
+        "grep fstat",
+        "grep getuid",
+        "sh close",
+        "sh dup2",
+        "grep execve",
+        "grep exit_group",
+        "grep access",
+        "sh openat",
+        "grep llseek",
+        "grep close",
+        "grep read",
+        "sh rt_sigaction",
+        "grep mmap2",
+        "grep mprotect"
+      ],
+      "107": [
+        "sh waitpid",
+        "sh exit_group",
+        "sh getuid",
+        "sh fcntl",
+        "sh dup2",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh getpid",
+        "sh close",
+        "sh mmap2",
+        "sh mprotect",
+        "sh write",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "sh brk"
+      ],
+      "108": [
+        "crontab access",
+        "crontab fstat",
+        "crontab brk",
+        "crontab execve",
+        "crontab connect",
+        "crontab read",
+        "sh getuid",
+        "crontab mmap2",
+        "sh llseek",
+        "crontab geteuid",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "crontab stat",
+        "crontab chdir",
+        "sh getpid",
+        "crontab llseek",
+        "sh close",
+        "crontab socket",
+        "crontab getegid",
+        "crontab openat",
+        "sh mmap2",
+        "crontab setresuid",
+        "crontab prctl",
+        "sh mprotect",
+        "crontab exit_group",
+        "crontab write",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "crontab close",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "crontab mprotect",
+        "crontab getuid",
+        "sh brk",
+        "crontab setresgid"
+      ],
+      "109": [
+        "rm getuid",
+        "rm access",
+        "rm lstat",
+        "rm exit_group",
+        "sh getuid",
+        "rm unlink",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "rm mprotect",
+        "rm execve",
+        "sh getpid",
+        "rm stat",
+        "rm brk",
+        "sh close",
+        "sh mmap2",
+        "rm read",
+        "rm openat",
+        "sh mprotect",
+        "rm prctl",
+        "rm llseek",
+        "sh access",
+        "sh uname",
+        "rm mmap2",
+        "sh prctl",
+        "rm close",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "rm fstat",
+        "sh brk"
+      ],
+      "110": [
+        "sh waitpid",
+        "sh exit_group",
+        "sh getuid",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh clone",
+        "create process 111",
+        "sh getpid",
+        "sh close",
+        "sh mmap2",
+        "sh mprotect",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "create process 112",
+        "sh brk"
+      ],
+      "111": [
+        "cat llseek",
+        "cat brk",
+        "cat mmap2",
+        "cat prctl",
+        "cat openat",
+        "cat access",
+        "cat execve",
+        "sh dup2",
+        "sh close",
+        "cat fstat",
+        "cat stat",
+        "cat mprotect",
+        "cat close",
+        "cat getuid",
+        "cat sendfile",
+        "cat read",
+        "cat exit_group",
+        "sh rt_sigaction"
+      ],
+      "112": [
+        "grep openat",
+        "grep prctl",
+        "grep brk",
+        "sh fcntl",
+        "grep stat",
+        "grep fstat",
+        "grep getuid",
+        "sh close",
+        "sh dup2",
+        "grep execve",
+        "grep exit_group",
+        "grep access",
+        "sh openat",
+        "grep llseek",
+        "grep close",
+        "grep write",
+        "grep read",
+        "sh rt_sigaction",
+        "grep mmap2",
+        "grep mprotect"
+      ],
+      "113": [
+        "sh waitpid",
+        "sh exit_group",
+        "sh getuid",
+        "sh fcntl",
+        "sh dup2",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh getpid",
+        "sh close",
+        "sh mmap2",
+        "sh mprotect",
+        "sh write",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "sh brk"
+      ],
+      "114": [
+        "cat execve",
+        "cat stat",
+        "cat read",
+        "cat brk",
+        "sh getuid",
+        "sh fcntl",
+        "sh dup2",
+        "cat fstat",
+        "cat getuid",
+        "sh llseek",
+        "cat exit_group",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh getpid",
+        "cat prctl",
+        "sh close",
+        "cat close",
+        "sh mmap2",
+        "sh mprotect",
+        "sh access",
+        "cat llseek",
+        "sh uname",
+        "cat mmap2",
+        "sh prctl",
+        "cat openat",
+        "cat access",
+        "sh execve",
+        "sh getppid",
+        "cat mprotect",
+        "sh read",
+        "sh openat",
+        "cat sendfile",
+        "sh brk"
+      ],
+      "115": [
+        "rm getuid",
+        "rm access",
+        "rm lstat",
+        "rm exit_group",
+        "sh getuid",
+        "rm unlink",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "rm mprotect",
+        "rm execve",
+        "sh getpid",
+        "rm stat",
+        "rm brk",
+        "sh close",
+        "sh mmap2",
+        "rm read",
+        "rm openat",
+        "sh mprotect",
+        "rm prctl",
+        "rm llseek",
+        "sh access",
+        "sh uname",
+        "rm mmap2",
+        "sh prctl",
+        "rm close",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "rm fstat",
+        "sh brk"
+      ],
+      "116": [
+        "touch llseek",
+        "touch close",
+        "touch mmap2",
+        "sh getuid",
+        "touch execve",
+        "touch openat",
+        "touch fstat",
+        "touch brk",
+        "sh llseek",
+        "sh fstat",
+        "touch access",
+        "sh rt_sigaction",
+        "sh stat",
+        "touch mprotect",
+        "touch read",
+        "sh getpid",
+        "touch getuid",
+        "sh close",
+        "sh mmap2",
+        "touch utimes",
+        "sh mprotect",
+        "touch stat",
+        "touch exit_group",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "touch prctl",
+        "sh brk"
+      ],
+      "117": [
+        "analyzed_bin pipe2",
+        "analyzed_bin brk",
+        "analyzed_bin fcntl",
+        "analyzed_bin llseek",
+        "analyzed_bin gettid",
+        "create process 143",
+        "create process 149",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin open",
+        "analyzed_bin ioctl",
+        "analyzed_bin read",
+        "analyzed_bin select",
+        "analyzed_bin getpid",
+        "analyzed_bin rt_sigaction",
+        "create process 118",
+        "analyzed_bin connect",
+        "create process 123",
+        "analyzed_bin wait4",
+        "create process 135",
+        "create process 120",
+        "create process 147",
+        "analyzed_bin write",
+        "analyzed_bin getppid",
+        "create process 130",
+        "analyzed_bin close",
+        "analyzed_bin nanosleep",
+        "create process 128",
+        "create process 141",
+        "analyzed_bin socket",
+        "create process 126",
+        "create process 145",
+        "analyzed_bin recvfrom",
+        "create process 121",
+        "create process 134",
+        "create process 132",
+        "analyzed_bin getuid",
+        "create process 139",
+        "create process 137",
+        "create process 119",
+        "analyzed_bin clone",
+        "analyzed_bin setsockopt"
+      ],
+      "118": [
+        "uname mmap2",
+        "uname fstat",
+        "uname uname",
+        "sh getuid",
+        "uname llseek",
+        "uname prctl",
+        "uname getuid",
+        "uname read",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "uname write",
+        "uname execve",
+        "sh getpid",
+        "sh close",
+        "uname access",
+        "sh mmap2",
+        "sh mprotect",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "uname exit_group",
+        "uname brk",
+        "uname openat",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "uname stat",
+        "uname close",
+        "sh brk",
+        "uname mprotect"
+      ],
+      "119": [
+        "uname mmap2",
+        "uname fstat",
+        "uname uname",
+        "sh getuid",
+        "uname llseek",
+        "uname prctl",
+        "uname getuid",
+        "uname read",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "uname write",
+        "uname execve",
+        "sh getpid",
+        "sh close",
+        "uname access",
+        "sh mmap2",
+        "sh mprotect",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "uname exit_group",
+        "uname brk",
+        "uname openat",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "uname stat",
+        "uname close",
+        "sh brk",
+        "uname mprotect"
+      ],
+      "120": [
+        "uname mmap2",
+        "uname fstat",
+        "uname uname",
+        "sh getuid",
+        "uname llseek",
+        "uname prctl",
+        "uname getuid",
+        "uname read",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "uname write",
+        "uname execve",
+        "sh getpid",
+        "sh close",
+        "uname access",
+        "sh mmap2",
+        "sh mprotect",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "uname exit_group",
+        "uname brk",
+        "uname openat",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "uname stat",
+        "uname close",
+        "sh brk",
+        "uname mprotect"
+      ],
+      "121": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "create process 122",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "122": [
+        "sh exit_group",
+        "sh clone",
+        "sh waitpid",
+        "sh getpid",
+        "sh fcntl",
+        "sh close",
+        "sh dup2",
+        "sh read",
+        "sh openat",
+        "sh rt_sigaction",
+        "sh write",
+        "create process 124"
+      ],
+      "123": [
+        "sh exit_group",
+        "sh uname",
+        "create process 125",
+        "sh prctl",
+        "sh clone",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "124": [
+        "cat llseek",
+        "cat brk",
+        "cat mmap2",
+        "cat prctl",
+        "cat openat",
+        "cat access",
+        "cat execve",
+        "sh dup2",
+        "sh close",
+        "cat fstat",
+        "cat stat",
+        "cat mprotect",
+        "cat close",
+        "cat getuid",
+        "cat exit_group",
+        "cat read",
+        "sh stat",
+        "cat write"
+      ],
+      "125": [
+        "sh exit_group",
+        "sh write",
+        "sh fcntl",
+        "sh close",
+        "sh dup2",
+        "sh openat",
+        "sh rt_sigaction",
+        "sh stat"
+      ],
+      "126": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "create process 127",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "127": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "128": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "create process 129",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "129": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "130": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "create process 131",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "131": [
+        "sh exit_group",
+        "sh clone",
+        "sh waitpid",
+        "sh getpid",
+        "create process 133",
+        "sh fcntl",
+        "sh close",
+        "sh dup2",
+        "sh read",
+        "sh openat",
+        "sh rt_sigaction",
+        "sh write"
+      ],
+      "132": [
+        "sh exit_group",
+        "sh getuid",
+        "sh fcntl",
+        "sh dup2",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh getpid",
+        "sh close",
+        "sh mmap2",
+        "sh mprotect",
+        "sh write",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "sh brk"
+      ],
+      "133": [
+        "cat llseek",
+        "cat brk",
+        "cat mmap2",
+        "cat prctl",
+        "cat openat",
+        "cat access",
+        "cat execve",
+        "sh dup2",
+        "sh close",
+        "cat fstat",
+        "cat stat",
+        "cat mprotect",
+        "cat close",
+        "cat getuid",
+        "cat exit_group",
+        "cat read",
+        "sh stat",
+        "cat write"
+      ],
+      "134": [
+        "sh exit_group",
+        "sh getuid",
+        "sh fcntl",
+        "sh dup2",
+        "sh llseek",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh getpid",
+        "sh close",
+        "sh mmap2",
+        "sh mprotect",
+        "sh write",
+        "sh access",
+        "sh uname",
+        "sh prctl",
+        "sh execve",
+        "sh getppid",
+        "sh read",
+        "sh openat",
+        "sh brk"
+      ],
+      "135": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "create process 136",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "136": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "137": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "create process 138",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "138": [
+        "sh exit_group",
+        "sh write",
+        "sh fcntl",
+        "sh close",
+        "sh dup2",
+        "sh openat",
+        "sh rt_sigaction",
+        "sh stat"
+      ],
+      "139": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "create process 140",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "140": [
+        "sh exit_group",
+        "sh write",
+        "sh fcntl",
+        "sh close",
+        "sh dup2",
+        "sh openat",
+        "sh rt_sigaction",
+        "sh stat"
+      ],
+      "141": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "create process 142",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "142": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "143": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "create process 144",
+        "sh brk",
+        "sh access"
+      ],
+      "144": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "145": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "create process 146",
+        "sh brk",
+        "sh access"
+      ],
+      "146": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "147": [
+        "sh exit_group",
+        "sh uname",
+        "sh clone",
+        "sh prctl",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "create process 148",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "148": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "killall kill",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "149": [
+        "sh exit_group",
+        "sh uname",
+        "create process 150",
+        "sh prctl",
+        "sh clone",
+        "sh getuid",
+        "sh getpid",
+        "sh execve",
+        "sh close",
+        "sh getppid",
+        "sh read",
+        "sh mmap2",
+        "sh llseek",
+        "sh openat",
+        "sh fstat",
+        "sh mprotect",
+        "sh rt_sigaction",
+        "sh stat",
+        "sh brk",
+        "sh access"
+      ],
+      "150": [
+        "killall getpid",
+        "killall access",
+        "killall mmap2",
+        "killall execve",
+        "killall read",
+        "sh fcntl",
+        "killall exit_group",
+        "killall write",
+        "killall getdents",
+        "sh dup2",
+        "killall prctl",
+        "sh rt_sigaction",
+        "sh stat",
+        "killall readlink",
+        "killall brk",
+        "killall fstat",
+        "sh close",
+        "killall mprotect",
+        "killall llseek",
+        "killall getuid",
+        "killall openat",
+        "sh openat",
+        "killall stat",
+        "killall close"
+      ],
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        "create process 109",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin fstat",
+        "analyzed_bin pipe2",
+        "analyzed_bin brk",
+        "analyzed_bin llseek",
+        "analyzed_bin getpriority",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin open",
+        "create process 115",
+        "analyzed_bin listen",
+        "analyzed_bin read",
+        "analyzed_bin getpid",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin exit_group",
+        "analyzed_bin access",
+        "analyzed_bin bind",
+        "analyzed_bin mprotect",
+        "analyzed_bin wait4",
+        "analyzed_bin readlink",
+        "create process 102",
+        "analyzed_bin getppid",
+        "create process 101",
+        "analyzed_bin close",
+        "analyzed_bin setpriority",
+        "create process 117",
+        "analyzed_bin fork",
+        "analyzed_bin mmap2",
+        "create process 108",
+        "analyzed_bin socket",
+        "create process 110",
+        "analyzed_bin execve",
+        "analyzed_bin munmap",
+        "create process 114",
+        "analyzed_bin getuid",
+        "create process 116",
+        "create process 113",
+        "analyzed_bin clone",
+        "create process 107",
+        "analyzed_bin stat"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      },
+      {
+        "parent": 99,
+        "pid": 101
+      },
+      {
+        "parent": 99,
+        "pid": 102
+      },
+      {
+        "parent": 102,
+        "pid": 103
+      },
+      {
+        "parent": 102,
+        "pid": 104
+      },
+      {
+        "parent": 102,
+        "pid": 105
+      },
+      {
+        "parent": 102,
+        "pid": 106
+      },
+      {
+        "parent": 99,
+        "pid": 107
+      },
+      {
+        "parent": 99,
+        "pid": 108
+      },
+      {
+        "parent": 99,
+        "pid": 109
+      },
+      {
+        "parent": 99,
+        "pid": 110
+      },
+      {
+        "parent": 110,
+        "pid": 111
+      },
+      {
+        "parent": 110,
+        "pid": 112
+      },
+      {
+        "parent": 99,
+        "pid": 113
+      },
+      {
+        "parent": 99,
+        "pid": 114
+      },
+      {
+        "parent": 99,
+        "pid": 115
+      },
+      {
+        "parent": 99,
+        "pid": 116
+      },
+      {
+        "parent": 99,
+        "pid": 117
+      },
+      {
+        "parent": 117,
+        "pid": 118
+      },
+      {
+        "parent": 117,
+        "pid": 119
+      },
+      {
+        "parent": 117,
+        "pid": 120
+      },
+      {
+        "parent": 117,
+        "pid": 121
+      },
+      {
+        "parent": 121,
+        "pid": 122
+      },
+      {
+        "parent": 117,
+        "pid": 123
+      },
+      {
+        "parent": 122,
+        "pid": 124
+      },
+      {
+        "parent": 123,
+        "pid": 125
+      },
+      {
+        "parent": 117,
+        "pid": 126
+      },
+      {
+        "parent": 126,
+        "pid": 127
+      },
+      {
+        "parent": 117,
+        "pid": 128
+      },
+      {
+        "parent": 128,
+        "pid": 129
+      },
+      {
+        "parent": 117,
+        "pid": 130
+      },
+      {
+        "parent": 130,
+        "pid": 131
+      },
+      {
+        "parent": 117,
+        "pid": 132
+      },
+      {
+        "parent": 131,
+        "pid": 133
+      },
+      {
+        "parent": 117,
+        "pid": 134
+      },
+      {
+        "parent": 117,
+        "pid": 135
+      },
+      {
+        "parent": 135,
+        "pid": 136
+      },
+      {
+        "parent": 117,
+        "pid": 137
+      },
+      {
+        "parent": 137,
+        "pid": 138
+      },
+      {
+        "parent": 117,
+        "pid": 139
+      },
+      {
+        "parent": 139,
+        "pid": 140
+      },
+      {
+        "parent": 117,
+        "pid": 141
+      },
+      {
+        "parent": 141,
+        "pid": 142
+      },
+      {
+        "parent": 117,
+        "pid": 143
+      },
+      {
+        "parent": 143,
+        "pid": 144
+      },
+      {
+        "parent": 117,
+        "pid": 145
+      },
+      {
+        "parent": 145,
+        "pid": 146
+      },
+      {
+        "parent": 117,
+        "pid": 147
+      },
+      {
+        "parent": 147,
+        "pid": 148
+      },
+      {
+        "parent": 117,
+        "pid": 149
+      },
+      {
+        "parent": 149,
+        "pid": 150
+      }
+    ],
+    "removed_files": [
+      "/etc/inittab2",
+      "0x7fd8cf48",
+      "/var/run/.x00740882966",
+      "0x7ff2d7b8"
+    ]
+  }
+}

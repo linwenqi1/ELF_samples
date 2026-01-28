@@ -1,0 +1,763 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/bin/sed, [sed, -i, /\\\\/etc\\\\/cron.hourly\\\\/gcc4.sh/d, /etc/crontab]",
+      "0x80b0606, [0x80af826, 0x80b0603, 0x80af998]",
+      "/usr/bin/flekowbogm, [/usr/bin/flekowbogm]"
+    ],
+    "modified_files": [
+      "/etc/init.d/flekowbogm",
+      "/etc/cron.hourly/gcc4.sh",
+      "/lib/libudev4.so",
+      "/usr/bin/flekowbogm",
+      "0x80af881"
+    ],
+    "open_files": [
+      "/lib/libc.so.6",
+      "/lib/tls/i686/sse2/libresolv.so.2",
+      "/lib/sse2/libresolv.so.2",
+      "/lib/i686/libresolv.so.2",
+      "/lib/libresolv.so.2",
+      "/lib/tls/sse2/libresolv.so.2",
+      "/etc/ld.so.cache",
+      "/root/analyzed_bin",
+      "/lib/tls/libresolv.so.2",
+      "/lib/i686/sse2/libresolv.so.2",
+      "/lib/tls/i686/libresolv.so.2"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "futex"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "110",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "stat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "setsid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "dup2"
+      },
+      {
+        "file": " ",
+        "pid": "111",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "clone"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "execve"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 113"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "brk"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "futex"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "readlink"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "uname"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "112",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "close"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "open"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "write"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "fstat"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "shmget"
+      },
+      {
+        "file": " ",
+        "pid": "113",
+        "syscall": "create process 118"
+      },
+      {
+        "file": " ",
+        "pid": "113",
+        "syscall": "create process 114"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "close"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "dup2"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "readlink"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "113",
+        "syscall": "create process 116"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "symlink"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "unlink"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "clone"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "shmdt"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "113",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 115"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "114",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "114",
+        "syscall": "clone"
+      },
+      {
+        "file": " ",
+        "pid": "116",
+        "syscall": "create process 117"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "116",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "116",
+        "syscall": "clone"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "115",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "118",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "stat"
+      },
+      {
+        "file": " ",
+        "pid": "118",
+        "syscall": "create process 119"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "close"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "118",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "118",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "flekowbogm",
+        "pid": "117",
+        "syscall": "close"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "brk"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "close"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "execve"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "openat"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "read"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "access"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "stat"
+      },
+      {
+        "file": "sed",
+        "pid": "119",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "rt_sigaction"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin uname",
+        "create process 110",
+        "analyzed_bin clone",
+        "analyzed_bin exit_group",
+        "analyzed_bin getrlimit",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin readlink",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin set_thread_area",
+        "analyzed_bin execve",
+        "analyzed_bin brk",
+        "analyzed_bin futex",
+        "analyzed_bin rt_sigaction"
+      ],
+      "110": [
+        "analyzed_bin clone",
+        "analyzed_bin gettimeofday",
+        "analyzed_bin read",
+        "analyzed_bin open",
+        "analyzed_bin readlink",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin fstat",
+        "analyzed_bin lseek",
+        "create process 111",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin stat",
+        "analyzed_bin setsid",
+        "analyzed_bin close",
+        "analyzed_bin waitpid",
+        "analyzed_bin write",
+        "analyzed_bin dup2"
+      ],
+      "111": [
+        "create process 112",
+        "analyzed_bin exit_group",
+        "analyzed_bin clone"
+      ],
+      "112": [
+        "flekowbogm set_thread_area",
+        "flekowbogm rt_sigaction",
+        "flekowbogm execve",
+        "create process 113",
+        "flekowbogm exit_group",
+        "flekowbogm set_tid_address",
+        "flekowbogm brk",
+        "flekowbogm futex",
+        "flekowbogm getrlimit",
+        "flekowbogm readlink",
+        "flekowbogm uname",
+        "flekowbogm set_robust_list",
+        "flekowbogm rt_sigprocmask",
+        "flekowbogm clone",
+        "analyzed_bin close"
+      ],
+      "113": [
+        "flekowbogm rt_sigaction",
+        "flekowbogm open",
+        "flekowbogm write",
+        "flekowbogm fstat",
+        "flekowbogm shmget",
+        "create process 118",
+        "create process 114",
+        "flekowbogm waitpid",
+        "flekowbogm rt_sigprocmask",
+        "flekowbogm close",
+        "flekowbogm dup2",
+        "flekowbogm readlink",
+        "flekowbogm lseek",
+        "create process 116",
+        "flekowbogm symlink",
+        "flekowbogm unlink",
+        "flekowbogm clone",
+        "flekowbogm shmdt",
+        "flekowbogm setsid"
+      ],
+      "114": [
+        "create process 115",
+        "flekowbogm exit_group",
+        "flekowbogm clone"
+      ],
+      "115": [
+        "flekowbogm close"
+      ],
+      "116": [
+        "create process 117",
+        "flekowbogm exit_group",
+        "flekowbogm clone"
+      ],
+      "117": [
+        "flekowbogm close"
+      ],
+      "118": [
+        "sh mmap2",
+        "flekowbogm rt_sigaction",
+        "sh uname",
+        "sh read",
+        "sh getppid",
+        "sh openat",
+        "sh mprotect",
+        "sh getuid",
+        "sh clone",
+        "sh getpid",
+        "sh stat",
+        "create process 119",
+        "sh set_thread_area",
+        "sh close",
+        "flekowbogm rt_sigprocmask",
+        "sh brk",
+        "sh fstat",
+        "sh access",
+        "sh execve",
+        "sh rt_sigaction"
+      ],
+      "119": [
+        "sed brk",
+        "sed mmap2",
+        "sed close",
+        "sed execve",
+        "sed openat",
+        "sed read",
+        "sed set_thread_area",
+        "sed access",
+        "sed mprotect",
+        "sed stat",
+        "sed fstat",
+        "sh rt_sigaction"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      },
+      {
+        "parent": 110,
+        "pid": 111
+      },
+      {
+        "parent": 111,
+        "pid": 112
+      },
+      {
+        "parent": 112,
+        "pid": 113
+      },
+      {
+        "parent": 113,
+        "pid": 114
+      },
+      {
+        "parent": 114,
+        "pid": 115
+      },
+      {
+        "parent": 113,
+        "pid": 116
+      },
+      {
+        "parent": 116,
+        "pid": 117
+      },
+      {
+        "parent": 113,
+        "pid": 118
+      },
+      {
+        "parent": 118,
+        "pid": 119
+      }
+    ],
+    "removed_files": [
+      "/etc/rc3.d/S90flekowbogm",
+      "/etc/rc.d/rc3.d/S90flekowbogm",
+      "/etc/rc1.d/S90flekowbogm",
+      "/etc/rc.d/rc5.d/S90flekowbogm",
+      "/etc/rc.d/rc1.d/S90flekowbogm",
+      "/etc/rc4.d/S90flekowbogm",
+      "/etc/rc.d/rc4.d/S90flekowbogm",
+      "/etc/rc.d/rc2.d/S90flekowbogm",
+      "/etc/rc2.d/S90flekowbogm",
+      "/etc/rc5.d/S90flekowbogm"
+    ]
+  }
+}

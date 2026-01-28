@@ -1,0 +1,757 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/bin/rm, [rm, analyzed_bin]",
+      "/bin/dd, [dd, if=/dev/urandom, of=analyzed_bin, bs=1M, count=4]",
+      "/bin/sleep, [sleep, 5]",
+      "]"
+    ],
+    "modified_files": [
+      "/dev/null",
+      "analyzed_bin"
+    ],
+    "open_files": [
+      "/lib64/tls/x86_64/x86_64/libresolv.so.2",
+      "/lib64/libc.so.6",
+      "/dev/urandom",
+      "/lib64/libresolv.so.2",
+      "/proc/self/cgroup",
+      "/lib64/tls/x86_64/libresolv.so.2",
+      "/lib64/x86_64/x86_64/libresolv.so.2",
+      "/lib64/tls/libresolv.so.2",
+      "/lib64/x86_64/libresolv.so.2",
+      "/root",
+      "/etc/ld.so.cache"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "futex"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "epoll_ctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getdents"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "lseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "munmap"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "futex"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "poll"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "pipe2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "epoll_pwait"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "getrandom"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "munmap"
+      },
+      {
+        "file": "tokio-runtime-w",
+        "pid": "108",
+        "syscall": "sigaltstack"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getrandom"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getcwd"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "epoll_create1"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "eventfd2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "sched_getaffinity"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "socketpair"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "sigaltstack"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "stat"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "read"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "getpid"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "fstat"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "read"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "unlink"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "wait4"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "execve"
+      },
+      {
+        "file": " ",
+        "pid": "111",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "rt_sigreturn"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "lstat"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "111",
+        "syscall": "create process 113"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "dup2"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "111",
+        "syscall": "getuid"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "rm",
+        "pid": "111",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "execve"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "brk"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "read"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "close"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "access"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "112",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sleep",
+        "pid": "112",
+        "syscall": "openat"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "read"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "dup2"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "getuid"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "openat"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "close"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "execve"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "113",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "stat"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "access"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "brk"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "dd",
+        "pid": "113",
+        "syscall": "write"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "tokio-runtime-w prctl",
+        "analyzed_bin rt_sigaction",
+        "tokio-runtime-w futex",
+        "analyzed_bin epoll_ctl",
+        "analyzed_bin getdents",
+        "tokio-runtime-w exit",
+        "analyzed_bin lseek",
+        "analyzed_bin write",
+        "analyzed_bin open",
+        "tokio-runtime-w close",
+        "tokio-runtime-w munmap",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin futex",
+        "tokio-runtime-w read",
+        "analyzed_bin fstat",
+        "analyzed_bin mmap2",
+        "analyzed_bin poll",
+        "tokio-runtime-w open",
+        "analyzed_bin exit_group",
+        "tokio-runtime-w fcntl",
+        "analyzed_bin pipe2",
+        "analyzed_bin close",
+        "analyzed_bin brk",
+        "analyzed_bin clone",
+        "analyzed_bin read",
+        "tokio-runtime-w epoll_pwait",
+        "tokio-runtime-w getrandom",
+        "tokio-runtime-w rt_sigprocmask",
+        "analyzed_bin munmap",
+        "tokio-runtime-w sigaltstack",
+        "create process 111",
+        "analyzed_bin execve",
+        "analyzed_bin getrandom",
+        "analyzed_bin mprotect",
+        "analyzed_bin getcwd",
+        "analyzed_bin epoll_create1",
+        "create process 110",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin fcntl",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin eventfd2",
+        "analyzed_bin sched_getaffinity",
+        "analyzed_bin socketpair",
+        "analyzed_bin sigaltstack"
+      ],
+      "111": [
+        "sh stat",
+        "rm read",
+        "rm mprotect",
+        "sh fcntl",
+        "sh getpid",
+        "rm close",
+        "rm stat",
+        "sh getppid",
+        "sh fstat",
+        "rm openat",
+        "sh read",
+        "rm unlink",
+        "sh arch_prctl",
+        "sh openat",
+        "sh brk",
+        "sh wait4",
+        "rm fstat",
+        "sh execve",
+        "create process 112",
+        "sh mmap2",
+        "sh rt_sigreturn",
+        "rm brk",
+        "sh mprotect",
+        "rm access",
+        "sh clone",
+        "sh rt_sigaction",
+        "sh close",
+        "rm exit_group",
+        "rm lstat",
+        "sh uname",
+        "sh access",
+        "create process 113",
+        "rm execve",
+        "sh dup2",
+        "rm mmap2",
+        "sh getuid",
+        "rm arch_prctl",
+        "rm getuid"
+      ],
+      "112": [
+        "sleep arch_prctl",
+        "sleep nanosleep",
+        "sleep execve",
+        "sleep brk",
+        "sleep read",
+        "sleep close",
+        "sleep access",
+        "sleep stat",
+        "sh rt_sigaction",
+        "sleep fstat",
+        "sleep mmap2",
+        "sleep mprotect",
+        "sleep getuid",
+        "sleep exit_group",
+        "sleep openat"
+      ],
+      "113": [
+        "dd read",
+        "dd dup2",
+        "dd arch_prctl",
+        "dd mmap2",
+        "dd getuid",
+        "dd openat",
+        "dd close",
+        "dd execve",
+        "dd fstat",
+        "sh rt_sigaction",
+        "dd stat",
+        "dd access",
+        "dd brk",
+        "dd rt_sigaction",
+        "dd exit_group",
+        "dd mprotect",
+        "dd write"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      },
+      {
+        "parent": 108,
+        "pid": 111
+      },
+      {
+        "parent": 111,
+        "pid": 112
+      },
+      {
+        "parent": 111,
+        "pid": 113
+      }
+    ],
+    "removed_files": [
+      "analyzed_bin",
+      "0x7ffd572634d0"
+    ]
+  }
+}

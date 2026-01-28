@@ -1,0 +1,118 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/root/.xmrig.json",
+      "/etc/localtime",
+      "0x7ff308229fec",
+      "/root/config.json",
+      "/root/.config/xmrig.json"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "writev"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin execve",
+        "analyzed_bin readlink",
+        "analyzed_bin mprotect",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin ioctl",
+        "analyzed_bin exit_group",
+        "analyzed_bin writev",
+        "analyzed_bin close",
+        "analyzed_bin brk",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin open",
+        "analyzed_bin read",
+        "analyzed_bin fstat",
+        "analyzed_bin mmap2"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      }
+    ],
+    "removed_files": []
+  }
+}

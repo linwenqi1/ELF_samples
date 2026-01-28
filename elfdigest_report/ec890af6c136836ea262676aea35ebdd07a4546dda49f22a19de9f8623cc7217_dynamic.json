@@ -1,0 +1,154 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/lib64/tls/x86_64/libstdc++.so.6",
+      "/usr/lib64/tls/x86_64/x86_64/libstdc++.so.6",
+      "/usr/lib64/tls/x86_64/libstdc++.so.6",
+      "/usr/lib64/x86_64/libstdc++.so.6",
+      "/lib64/libgcc_s.so.1",
+      "/etc/ld.so.cache",
+      "/lib64/libstdc++.so.6",
+      "/lib64/libm.so.6",
+      "/lib64/x86_64/libstdc++.so.6",
+      "/lib64/tls/x86_64/x86_64/libstdc++.so.6",
+      "/lib64/tls/libstdc++.so.6",
+      "/usr/lib64/x86_64/x86_64/libstdc++.so.6",
+      "/lib64/libc.so.6",
+      "/usr/lib64/tls/libstdc++.so.6",
+      "/usr/lib64/libstdc++.so.6",
+      "/lib64/x86_64/x86_64/libstdc++.so.6",
+      "/lib64/libpthread.so.0"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "stat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "prlimit64"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "access"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin arch_prctl",
+        "analyzed_bin read",
+        "analyzed_bin write",
+        "analyzed_bin brk",
+        "analyzed_bin stat",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin prlimit64",
+        "analyzed_bin mprotect",
+        "analyzed_bin openat",
+        "analyzed_bin access",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin mmap2",
+        "analyzed_bin execve",
+        "analyzed_bin exit_group",
+        "analyzed_bin fstat",
+        "analyzed_bin close"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      }
+    ],
+    "removed_files": []
+  }
+}

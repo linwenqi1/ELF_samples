@@ -1,0 +1,118 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getrandom"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "uname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstatat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "futex"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clock_gettime"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "prlimit64"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin brk",
+        "analyzed_bin readlink",
+        "analyzed_bin getrandom",
+        "analyzed_bin write",
+        "analyzed_bin uname",
+        "analyzed_bin exit_group",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin fstatat",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin futex",
+        "analyzed_bin clock_gettime",
+        "analyzed_bin mprotect",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin execve",
+        "analyzed_bin prlimit64"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      }
+    ],
+    "removed_files": []
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm6.elf, [/root/arm6.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "fork 2182"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "execve \"/root/arm6.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "fork 2183"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "select"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2181",
+        "pid": "2182"
+      },
+      {
+        "parent": "2182",
+        "pid": "2183"
+      }
+    ],
+    "removed_files": []
+  }
+}

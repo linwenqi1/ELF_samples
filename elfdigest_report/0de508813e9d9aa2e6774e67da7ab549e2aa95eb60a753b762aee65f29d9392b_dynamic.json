@@ -1,0 +1,139 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/opsec.arm6.elf, [/root/opsec.arm6.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "fork 2188"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "execve \"/root/opsec.arm6.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fork 2189"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "select"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2187",
+        "pid": "2188"
+      },
+      {
+        "parent": "2188",
+        "pid": "2189"
+      }
+    ],
+    "removed_files": []
+  }
+}

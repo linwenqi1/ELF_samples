@@ -1,0 +1,195 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/usr/dict/words",
+      "/etc/rc.d/rc.local",
+      "/etc/rc.conf",
+      "/proc/self/exe"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "munmap"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "getppid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "open"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin brk",
+        "analyzed_bin fork",
+        "analyzed_bin mmap2",
+        "analyzed_bin munmap",
+        "analyzed_bin readlink",
+        "analyzed_bin close",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin execve",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin exit_group",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin open",
+        "create process 110",
+        "analyzed_bin mprotect"
+      ],
+      "110": [
+        "analyzed_bin getppid",
+        "analyzed_bin mmap2",
+        "analyzed_bin nanosleep",
+        "analyzed_bin socket",
+        "analyzed_bin close",
+        "analyzed_bin getpid",
+        "analyzed_bin ioctl",
+        "analyzed_bin connect",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin brk",
+        "analyzed_bin open"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      }
+    ],
+    "removed_files": []
+  }
+}

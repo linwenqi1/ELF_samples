@@ -1,0 +1,156 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/lib/tls/mips/libresolv.so.2",
+      "/etc/ld.so.cache",
+      "/lib/mips/libresolv.so.2",
+      "/root/analyzed_bin",
+      "/lib/libresolv.so.2",
+      "/lib/libc.so.6",
+      "/lib/tls/libresolv.so.2"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "access"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "brk"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "getpid"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "prctl"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "getuid"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "getppid"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "llseek"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "openat"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "fstat"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "stat"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "close"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "uname"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "write"
+      },
+      {
+        "file": "exe",
+        "pid": "99",
+        "syscall": "read"
+      }
+    ],
+    "processes": {
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        "exe execve",
+        "exe access",
+        "exe brk",
+        "exe getpid",
+        "exe rt_sigaction",
+        "exe prctl",
+        "exe getuid",
+        "exe getppid",
+        "exe llseek",
+        "exe mmap2",
+        "exe openat",
+        "exe fstat",
+        "exe fcntl",
+        "exe mprotect",
+        "exe stat",
+        "exe close",
+        "exe uname",
+        "exe exit_group",
+        "exe write",
+        "exe read"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      }
+    ],
+    "removed_files": []
+  }
+}

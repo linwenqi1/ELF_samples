@@ -1,0 +1,401 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/usr/bin/chmod, [/usr/bin/chmod, +x, /etc/rc.d/rc.local]",
+      "0x7f04dc2ea015, [0x7f04dc2ea01a, 0x7f04dc2ea012, 0x409948]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/lib64/libnss_files.so.2",
+      "/etc/rc.local",
+      "/etc/hosts",
+      "/lib64/x86_64/x86_64/libc.so.6",
+      "/etc/resolv.conf",
+      "/lib64/tls/libresolv.so.2",
+      "/lib64/tls/x86_64/x86_64/libc.so.6",
+      "/lib64/tls/libc.so.6",
+      "/lib64/libnss_dns.so.2",
+      "/lib64/x86_64/x86_64/libresolv.so.2",
+      "/lib64/libc.so.6",
+      "/lib64/libresolv.so.2",
+      "/etc/nsswitch.conf",
+      "/lib64/tls/x86_64/libresolv.so.2",
+      "/usr/share/dict/words",
+      "/lib64/tls/x86_64/libc.so.6",
+      "/lib64/x86_64/libresolv.so.2",
+      "/etc/ld.so.cache",
+      "/lib64/tls/x86_64/x86_64/libresolv.so.2",
+      "/lib64/x86_64/libc.so.6",
+      "/etc/host.conf"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "access"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 111"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "wait4"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "stat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "stat"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "write"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "read"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "110",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "sendto"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "getppid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "uname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "lseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "poll"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "recvfrom"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "stat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "read"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin access",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin openat",
+        "analyzed_bin fstat",
+        "analyzed_bin rt_sigprocmask",
+        "create process 111",
+        "create process 110",
+        "analyzed_bin clone",
+        "analyzed_bin execve",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin mprotect",
+        "analyzed_bin wait4",
+        "analyzed_bin close",
+        "analyzed_bin brk",
+        "analyzed_bin exit_group",
+        "analyzed_bin stat",
+        "analyzed_bin mmap2",
+        "analyzed_bin read"
+      ],
+      "110": [
+        "sh stat",
+        "sh execve",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin rt_sigprocmask",
+        "sh rt_sigaction",
+        "sh exit_group",
+        "sh mprotect",
+        "sh uname",
+        "sh getpid",
+        "sh mmap2",
+        "sh getppid",
+        "sh write",
+        "sh access",
+        "sh close",
+        "sh read",
+        "sh getuid",
+        "sh arch_prctl",
+        "sh brk",
+        "sh fstat",
+        "sh openat"
+      ],
+      "111": [
+        "analyzed_bin sendto",
+        "analyzed_bin ioctl",
+        "analyzed_bin openat",
+        "analyzed_bin fstat",
+        "analyzed_bin connect",
+        "analyzed_bin nanosleep",
+        "analyzed_bin getppid",
+        "analyzed_bin socket",
+        "analyzed_bin mprotect",
+        "analyzed_bin close",
+        "analyzed_bin uname",
+        "analyzed_bin getpid",
+        "analyzed_bin lseek",
+        "analyzed_bin poll",
+        "analyzed_bin recvfrom",
+        "analyzed_bin stat",
+        "analyzed_bin mmap2",
+        "analyzed_bin read"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      },
+      {
+        "parent": 108,
+        "pid": 111
+      }
+    ],
+    "removed_files": []
+  }
+}

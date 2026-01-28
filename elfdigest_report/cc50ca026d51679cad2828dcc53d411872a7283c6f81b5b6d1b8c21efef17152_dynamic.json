@@ -1,0 +1,1184 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/usr/local/bin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/usr/local/sbin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/usr/bin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/usr/local/sbin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/usr/sbin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/bin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/bin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/usr/local/bin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/usr/bin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/bin/sed, [sed, -i, /\\\\/etc\\\\/cron.hourly\\\\/gcc4.sh/d, /etc/crontab]",
+      "/usr/X11R6/bin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/usr/sbin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/sbin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/sbin/chkconfig, [chkconfig, --add, xgwcjwnfcz]",
+      "/usr/X11R6/bin/update-rc.d, [update-rc.d, xgwcjwnfcz, defaults]",
+      "/bin/sh, [sh, -c, sed -i '/\\\\/etc\\\\/cron.hourly\\\\/gcc4.sh/d' /etc/crontab && echo '*/3 * * * * root /etc/cron.hourly/gcc4.sh' >> /etc/crontab]",
+      "/usr/bin/xgwcjwnfcz, [/usr/bin/xgwcjwnfcz]"
+    ],
+    "modified_files": [
+      "/etc/cron.hourly/gcc4.sh",
+      "/dev/null",
+      "/usr/bin/xgwcjwnfcz",
+      "/var/run/gcc4.pid",
+      "/usr/bin/lpsbndywnd",
+      "/etc/init.d/xgwcjwnfcz",
+      "/lib/libudev4.so"
+    ],
+    "open_files": [
+      "/lib/i686/libresolv.so.2",
+      "/root/analyzed_bin",
+      "/lib/tls/i686/libresolv.so.2",
+      "/lib/sse2/libresolv.so.2",
+      "/lib/tls/libresolv.so.2",
+      "/lib/i686/sse2/libresolv.so.2",
+      "/lib/tls/sse2/libresolv.so.2",
+      "/etc/ld.so.cache",
+      "/lib/libresolv.so.2",
+      "/lib/tls/i686/sse2/libresolv.so.2",
+      "/lib/libc.so.6",
+      "/lib/libudev4.so",
+      "/proc/stat"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 109"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "futex"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "109",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "munmap"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "uname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "readlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "setsid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "stat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "lseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "111",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "unlink"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "dup2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "exit_group"
+      },
+      {
+        "file": " ",
+        "pid": "112",
+        "syscall": "create process 113"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "112",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "execve"
+      },
+      {
+        "file": " ",
+        "pid": "113",
+        "syscall": "create process 114"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "futex"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "113",
+        "syscall": "close"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "uname"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "munmap"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "brk"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "113",
+        "syscall": "readlink"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 121"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "open"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "fstat"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 128"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "socket"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "symlink"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 122"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "shmdt"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "dup2"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "sendto"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "shmget"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 124"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 130"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 132"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "stat"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 115"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 123"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "clone"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 126"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "readlink"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 119"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "read"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "114",
+        "syscall": "unlink"
+      },
+      {
+        "file": " ",
+        "pid": "114",
+        "syscall": "create process 117"
+      },
+      {
+        "file": " ",
+        "pid": "115",
+        "syscall": "create process 116"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "115",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "115",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "116",
+        "syscall": "execve"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "116",
+        "syscall": "close"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "116",
+        "syscall": "exit_group"
+      },
+      {
+        "file": " ",
+        "pid": "117",
+        "syscall": "create process 118"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "117",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "117",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "119",
+        "syscall": "create process 120"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "fstat"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "uname"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "getppid"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "clone"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "execve"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "getpid"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "access"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "close"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "brk"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "waitpid"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "stat"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "119",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "119",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sh",
+        "pid": "119",
+        "syscall": "read"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "118",
+        "syscall": "execve"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "118",
+        "syscall": "close"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "118",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "brk"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "access"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "stat"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "openat"
+      },
+      {
+        "file": "sh",
+        "pid": "120",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "execve"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "set_thread_area"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "read"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "close"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "getuid"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "write"
+      },
+      {
+        "file": "sed",
+        "pid": "120",
+        "syscall": "fstat"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "124",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "124",
+        "syscall": "exit_group"
+      },
+      {
+        "file": " ",
+        "pid": "124",
+        "syscall": "create process 125"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "125",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "126",
+        "syscall": "create process 127"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "126",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "126",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "127",
+        "syscall": "close"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "128",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "128",
+        "syscall": "exit_group"
+      },
+      {
+        "file": " ",
+        "pid": "128",
+        "syscall": "create process 129"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "129",
+        "syscall": "close"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "130",
+        "syscall": "clone"
+      },
+      {
+        "file": " ",
+        "pid": "130",
+        "syscall": "create process 131"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "130",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "131",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "132",
+        "syscall": "create process 133"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "132",
+        "syscall": "clone"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "132",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "xgwcjwnfcz",
+        "pid": "133",
+        "syscall": "close"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 109"
+      ],
+      "109": [
+        "analyzed_bin futex",
+        "analyzed_bin rt_sigaction",
+        "create process 111",
+        "analyzed_bin readlink",
+        "analyzed_bin munmap",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin clone",
+        "analyzed_bin execve",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin mprotect",
+        "analyzed_bin uname",
+        "analyzed_bin set_thread_area",
+        "analyzed_bin brk",
+        "analyzed_bin exit_group",
+        "analyzed_bin getrlimit",
+        "analyzed_bin mmap2"
+      ],
+      "111": [
+        "analyzed_bin open",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin readlink",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin write",
+        "analyzed_bin gettimeofday",
+        "analyzed_bin setsid",
+        "analyzed_bin clone",
+        "analyzed_bin waitpid",
+        "analyzed_bin nanosleep",
+        "analyzed_bin stat",
+        "analyzed_bin lseek",
+        "analyzed_bin close",
+        "create process 112",
+        "analyzed_bin unlink",
+        "analyzed_bin exit_group",
+        "analyzed_bin fstat",
+        "analyzed_bin dup2",
+        "analyzed_bin read"
+      ],
+      "112": [
+        "analyzed_bin exit_group",
+        "create process 113",
+        "analyzed_bin clone"
+      ],
+      "113": [
+        "xgwcjwnfcz mprotect",
+        "xgwcjwnfcz execve",
+        "create process 114",
+        "xgwcjwnfcz futex",
+        "xgwcjwnfcz mmap2",
+        "xgwcjwnfcz rt_sigaction",
+        "xgwcjwnfcz set_tid_address",
+        "xgwcjwnfcz rt_sigprocmask",
+        "xgwcjwnfcz getrlimit",
+        "xgwcjwnfcz exit_group",
+        "xgwcjwnfcz set_robust_list",
+        "xgwcjwnfcz set_thread_area",
+        "xgwcjwnfcz clone",
+        "analyzed_bin close",
+        "xgwcjwnfcz uname",
+        "xgwcjwnfcz munmap",
+        "xgwcjwnfcz brk",
+        "xgwcjwnfcz readlink"
+      ],
+      "114": [
+        "xgwcjwnfcz mprotect",
+        "xgwcjwnfcz close",
+        "create process 121",
+        "xgwcjwnfcz open",
+        "xgwcjwnfcz set_robust_list",
+        "xgwcjwnfcz fstat",
+        "xgwcjwnfcz setsid",
+        "create process 128",
+        "xgwcjwnfcz socket",
+        "xgwcjwnfcz symlink",
+        "create process 122",
+        "xgwcjwnfcz shmdt",
+        "xgwcjwnfcz dup2",
+        "xgwcjwnfcz sendto",
+        "xgwcjwnfcz shmget",
+        "create process 124",
+        "xgwcjwnfcz write",
+        "create process 130",
+        "xgwcjwnfcz waitpid",
+        "xgwcjwnfcz lseek",
+        "create process 132",
+        "xgwcjwnfcz gettimeofday",
+        "xgwcjwnfcz stat",
+        "create process 115",
+        "create process 123",
+        "xgwcjwnfcz clone",
+        "create process 126",
+        "xgwcjwnfcz readlink",
+        "xgwcjwnfcz mmap2",
+        "xgwcjwnfcz rt_sigaction",
+        "xgwcjwnfcz rt_sigprocmask",
+        "create process 119",
+        "xgwcjwnfcz read",
+        "xgwcjwnfcz unlink",
+        "create process 117"
+      ],
+      "115": [
+        "create process 116",
+        "xgwcjwnfcz clone",
+        "xgwcjwnfcz exit_group"
+      ],
+      "116": [
+        "xgwcjwnfcz execve",
+        "xgwcjwnfcz close",
+        "xgwcjwnfcz exit_group"
+      ],
+      "117": [
+        "create process 118",
+        "xgwcjwnfcz clone",
+        "xgwcjwnfcz exit_group"
+      ],
+      "118": [
+        "xgwcjwnfcz execve",
+        "xgwcjwnfcz close",
+        "xgwcjwnfcz exit_group"
+      ],
+      "119": [
+        "sh exit_group",
+        "sh mprotect",
+        "create process 120",
+        "sh fstat",
+        "sh rt_sigaction",
+        "sh uname",
+        "sh set_thread_area",
+        "sh getppid",
+        "sh clone",
+        "sh sigreturn",
+        "sh openat",
+        "sh execve",
+        "sh getpid",
+        "sh access",
+        "sh close",
+        "sh getuid",
+        "sh brk",
+        "sh waitpid",
+        "sh stat",
+        "xgwcjwnfcz rt_sigprocmask",
+        "xgwcjwnfcz rt_sigaction",
+        "sh mmap2",
+        "sh read"
+      ],
+      "120": [
+        "sed brk",
+        "sed access",
+        "sed stat",
+        "sed openat",
+        "sh rt_sigaction",
+        "sed exit_group",
+        "sed execve",
+        "sed set_thread_area",
+        "sed read",
+        "sed close",
+        "sed mmap2",
+        "sed getuid",
+        "sed mprotect",
+        "sed write",
+        "sed fstat"
+      ],
+      "124": [
+        "xgwcjwnfcz clone",
+        "xgwcjwnfcz exit_group",
+        "create process 125"
+      ],
+      "125": [
+        "xgwcjwnfcz close"
+      ],
+      "126": [
+        "create process 127",
+        "xgwcjwnfcz clone",
+        "xgwcjwnfcz exit_group"
+      ],
+      "127": [
+        "xgwcjwnfcz close"
+      ],
+      "128": [
+        "xgwcjwnfcz clone",
+        "xgwcjwnfcz exit_group",
+        "create process 129"
+      ],
+      "129": [
+        "xgwcjwnfcz close"
+      ],
+      "130": [
+        "xgwcjwnfcz clone",
+        "create process 131",
+        "xgwcjwnfcz exit_group"
+      ],
+      "131": [
+        "xgwcjwnfcz close"
+      ],
+      "132": [
+        "create process 133",
+        "xgwcjwnfcz clone",
+        "xgwcjwnfcz exit_group"
+      ],
+      "133": [
+        "xgwcjwnfcz close"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 109
+      },
+      {
+        "parent": 109,
+        "pid": 111
+      },
+      {
+        "parent": 111,
+        "pid": 112
+      },
+      {
+        "parent": 112,
+        "pid": 113
+      },
+      {
+        "parent": 113,
+        "pid": 114
+      },
+      {
+        "parent": 114,
+        "pid": 115
+      },
+      {
+        "parent": 115,
+        "pid": 116
+      },
+      {
+        "parent": 114,
+        "pid": 117
+      },
+      {
+        "parent": 117,
+        "pid": 118
+      },
+      {
+        "parent": 114,
+        "pid": 119
+      },
+      {
+        "parent": 119,
+        "pid": 120
+      },
+      {
+        "parent": 114,
+        "pid": 121
+      },
+      {
+        "parent": 114,
+        "pid": 122
+      },
+      {
+        "parent": 114,
+        "pid": 123
+      },
+      {
+        "parent": 114,
+        "pid": 124
+      },
+      {
+        "parent": 124,
+        "pid": 125
+      },
+      {
+        "parent": 114,
+        "pid": 126
+      },
+      {
+        "parent": 126,
+        "pid": 127
+      },
+      {
+        "parent": 114,
+        "pid": 128
+      },
+      {
+        "parent": 128,
+        "pid": 129
+      },
+      {
+        "parent": 114,
+        "pid": 130
+      },
+      {
+        "parent": 130,
+        "pid": 131
+      },
+      {
+        "parent": 114,
+        "pid": 132
+      },
+      {
+        "parent": 132,
+        "pid": 133
+      }
+    ],
+    "removed_files": [
+      "/root/analyzed_bin",
+      "/etc/rc3.d/S90xgwcjwnfcz",
+      "/etc/rc.d/rc5.d/S90xgwcjwnfcz",
+      "/etc/rc4.d/S90xgwcjwnfcz",
+      "/etc/rc.d/rc3.d/S90xgwcjwnfcz",
+      "/etc/rc.d/rc2.d/S90xgwcjwnfcz",
+      "/etc/rc.d/rc4.d/S90xgwcjwnfcz",
+      "/etc/rc2.d/S90xgwcjwnfcz",
+      "/etc/rc5.d/S90xgwcjwnfcz",
+      "/etc/rc.d/rc1.d/S90xgwcjwnfcz",
+      "/etc/rc1.d/S90xgwcjwnfcz"
+    ]
+  }
+}

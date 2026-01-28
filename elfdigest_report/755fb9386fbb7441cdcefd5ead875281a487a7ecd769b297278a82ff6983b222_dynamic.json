@@ -1,0 +1,136 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm6.elf, [/root/arm6.elf]"
+    ],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [
+      "/dev/null"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "fork 2205"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "setrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "execve \"/root/arm6.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "fork 2206"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "umask"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "gettimeofday"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2204",
+        "pid": "2205"
+      },
+      {
+        "parent": "2205",
+        "pid": "2206"
+      }
+    ],
+    "removed_files": []
+  }
+}

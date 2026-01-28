@@ -1,0 +1,144 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm4.elf, [/root/arm4.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fork 2190"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "execve \"/root/arm4.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fork 2191"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "select"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2189",
+        "pid": "2190"
+      },
+      {
+        "parent": "2190",
+        "pid": "2191"
+      }
+    ],
+    "removed_files": []
+  }
+}

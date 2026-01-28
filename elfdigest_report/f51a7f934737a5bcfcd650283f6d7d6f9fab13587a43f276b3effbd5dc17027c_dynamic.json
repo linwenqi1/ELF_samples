@@ -1,0 +1,147 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/61b431f136c68a86e8e3f68600dec671.elf, [/root/61b431f136c68a86e8e3f68600dec671.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/etc/hosts",
+      "/usr/dict/words",
+      "/etc/resolv.conf"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2175",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2175",
+        "syscall": "execve \"/root/61b431f136c68a86e8e3f68600dec671.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2175",
+        "syscall": "fork 2176"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "prctl"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "select"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "poll"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2176",
+        "syscall": "send"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2175",
+        "pid": "2176"
+      }
+    ],
+    "removed_files": []
+  }
+}

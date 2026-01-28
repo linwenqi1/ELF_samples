@@ -1,0 +1,117 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/03e8e1ea6e4b3505fa42d5a59f389b28.elf, [/root/03e8e1ea6e4b3505fa42d5a59f389b28.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/usr/dict/words",
+      "/etc/resolv.conf",
+      "/etc/hosts"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2173",
+        "syscall": "fork 2174"
+      },
+      {
+        "file": " ",
+        "pid": "2173",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2173",
+        "syscall": "execve \"/root/03e8e1ea6e4b3505fa42d5a59f389b28.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "poll"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2174",
+        "syscall": "open"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2173",
+        "pid": "2174"
+      }
+    ],
+    "removed_files": []
+  }
+}

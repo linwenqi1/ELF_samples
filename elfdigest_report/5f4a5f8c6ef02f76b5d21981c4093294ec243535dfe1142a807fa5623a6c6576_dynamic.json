@@ -1,0 +1,137 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/f2e6dbc30a20ad25240e11aaabc888a9.elf, [/root/f2e6dbc30a20ad25240e11aaabc888a9.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/etc/hosts",
+      "/etc/resolv.conf",
+      "/usr/dict/words"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2223",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2223",
+        "syscall": "fork 2224"
+      },
+      {
+        "file": " ",
+        "pid": "2223",
+        "syscall": "execve \"/root/f2e6dbc30a20ad25240e11aaabc888a9.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "stat"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "select"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "poll"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2224",
+        "syscall": "setsockopt"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2223",
+        "pid": "2224"
+      }
+    ],
+    "removed_files": []
+  }
+}

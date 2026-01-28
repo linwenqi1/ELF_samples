@@ -1,0 +1,1360 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/bin/iptables, [/bin/iptables, -A, INPUT, -p, tcp, --dport, 26721, -j, ACCEPT]",
+      "/bin/busybox, [/bin/busybox, iptables, -A, INPUT, -p, tcp, --dport, 26721, -j, ACCEPT]",
+      "/root/karm4.elf, [/root/karm4.elf]",
+      "/sbin/modprobe, [/sbin/modprobe, ip_tables]",
+      "/bin/busybox, [busybox, iptables, -A, INPUT, -p, tcp, --dport, 26721, -j, ACCEPT]",
+      "/bin/sh, [sh, -c, /bin/busybox iptables -A INPUT -p tcp --dport 26721 -j ACCEPT]",
+      "/bin/sh, [sh, -c, /bin/iptables -A INPUT -p tcp --dport 26721 -j ACCEPT]",
+      "/bin/sh, [sh, -c, /usr/bin/iptables -A INPUT -p tcp --dport 26721 -j ACCEPT]",
+      "/usr/bin/iptables, [/usr/bin/iptables, -A, INPUT, -p, tcp, --dport, 26721, -j, ACCEPT]",
+      "/bin/sh, [sh, -c, busybox iptables -A INPUT -p tcp --dport 26721 -j ACCEPT]",
+      "/bin/sh, [sh, -c, iptables -A INPUT -p tcp --dport 26721 -j ACCEPT]",
+      "/sbin/iptables, [iptables, -A, INPUT, -p, tcp, --dport, 26721, -j, ACCEPT]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/lib/v5l/libnss_db.so.2",
+      "/lib/modprobe.d",
+      "/proc/sys/kernel/modprobe",
+      "/lib/arm-linux-gnueabi/tls/v5l/libnss_db.so.2",
+      "/usr/lib/arm-linux-gnueabi/tls/v5l/vfp/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/libdl.so.2",
+      "/lib/tls/vfp/libnss_db.so.2",
+      "/lib/libip6tc.so.0",
+      "/lib/tls/v5l/libnss_db.so.2",
+      "/lib/vfp/libnss_db.so.2",
+      "/etc/modprobe.d",
+      "/sys/module/ip_tables/initstate",
+      "/lib/arm-linux-gnueabi/libc.so.6",
+      "/sys/module/x_tables/initstate",
+      "/usr/lib/v5l/libnss_db.so.2",
+      "/proc/net/tcp",
+      "/usr/lib/arm-linux-gnueabi/tls/vfp/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/libnss_db.so.2",
+      "/usr/lib/arm-linux-gnueabi/vfp/libnss_db.so.2",
+      "/etc/ld.so.cache",
+      "/usr/lib/arm-linux-gnueabi/tls/libnss_db.so.2",
+      "/usr/lib/arm-linux-gnueabi/v5l/libnss_db.so.2",
+      "/lib/libxtables.so.7",
+      "/usr/lib/v5l/vfp/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/vfp/libnss_db.so.2",
+      "/lib/modprobe.d/aliases.conf",
+      "/lib/modules/3.2.0-4-versatile/kernel/net/netfilter/x_tables.ko",
+      "/etc/modprobe.d/fbdev-blacklist.conf",
+      "/lib/arm-linux-gnueabi/tls/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/libkmod.so.2",
+      "/etc/nsswitch.conf",
+      "/lib/modules/3.2.0-4-versatile/modules.alias.bin",
+      "/usr/lib/vfp/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/v5l/libnss_db.so.2",
+      "/usr/lib/arm-linux-gnueabi/libnss_db.so.2",
+      "/lib/modules/3.2.0-4-versatile/modules.builtin.bin",
+      "/lib/arm-linux-gnueabi/libnss_files.so.2",
+      "/lib/xtables/libxt_standard.so",
+      "/lib/modules/3.2.0-4-versatile/modules.symbols.bin",
+      "/usr/lib/arm-linux-gnueabi/v5l/vfp/libnss_db.so.2",
+      "/usr/lib/arm-linux-gnueabi/tls/v5l/libnss_db.so.2",
+      "/proc/",
+      "/lib/v5l/vfp/libnss_db.so.2",
+      "/etc/protocols",
+      "/lib/modules/3.2.0-4-versatile/kernel/net/ipv4/netfilter/ip_tables.ko",
+      "/usr/lib/tls/v5l/vfp/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/v5l/vfp/libnss_db.so.2",
+      "/lib/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/tls/v5l/vfp/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/tls/vfp/libnss_db.so.2",
+      "/usr/lib/tls/v5l/libnss_db.so.2",
+      "/lib/xtables/libxt_tcp.so",
+      "/lib/tls/libnss_db.so.2",
+      "/lib/arm-linux-gnueabi/libm.so.6",
+      "/lib/arm-linux-gnueabi/libgcc_s.so.1",
+      "/proc/cmdline",
+      "/lib/modules/3.2.0-4-versatile/modules.dep.bin",
+      "/lib/tls/v5l/vfp/libnss_db.so.2",
+      "/usr/lib/libnss_db.so.2",
+      "/usr/lib/tls/libnss_db.so.2",
+      "/lib/libip4tc.so.0",
+      "/usr/lib/tls/vfp/libnss_db.so.2"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "setrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "listen"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "times"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "prctl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "execve \"/root/karm4.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "bind"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fork 2189"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fork 2191"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "select"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "readlink"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "recvfrom"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fork 2190"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "sysinfo"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "readlink"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "getdents64"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "accept"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "bind"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "listen"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "vfork"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "execve \"/bin/sh\""
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "getcwd"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "clone 2193"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "lstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "fcntl64"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "vfork"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "execve \"/sbin/iptables\""
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "fcntl64"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "newfstatat"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "getdents64"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "_llseek"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "execve \"/sbin/modprobe\""
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "init_module"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "execve \"/bin/sh\""
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "getcwd"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "clone 2200"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2199",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "execve \"/bin/busybox\""
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "getuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2200",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "execve \"/bin/sh\""
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "getcwd"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "clone 2202"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2201",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2202",
+        "syscall": "execve \"/bin/iptables\""
+      },
+      {
+        "file": " ",
+        "pid": "2202",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "execve \"/bin/sh\""
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "clone 2204"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "getcwd"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2203",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "execve \"/usr/bin/iptables\""
+      },
+      {
+        "file": " ",
+        "pid": "2204",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "execve \"/bin/sh\""
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "getcwd"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "clone 2206"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2205",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "execve \"/bin/busybox\""
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "getuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2206",
+        "syscall": "mmap2"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2188",
+        "pid": "2189"
+      },
+      {
+        "parent": "2189",
+        "pid": "2190"
+      },
+      {
+        "parent": "2189",
+        "pid": "2191"
+      },
+      {
+        "parent": "2192",
+        "pid": "2193"
+      },
+      {
+        "parent": "2199",
+        "pid": "2200"
+      },
+      {
+        "parent": "2201",
+        "pid": "2202"
+      },
+      {
+        "parent": "2203",
+        "pid": "2204"
+      },
+      {
+        "parent": "2205",
+        "pid": "2206"
+      }
+    ],
+    "removed_files": []
+  }
+}

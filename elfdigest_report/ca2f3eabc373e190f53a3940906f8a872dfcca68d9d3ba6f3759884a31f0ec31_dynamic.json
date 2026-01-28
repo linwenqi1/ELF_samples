@@ -1,0 +1,180 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "dup2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "setsid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "gettid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "chdir"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "select"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "110",
+        "syscall": "nanosleep"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin mmap2",
+        "analyzed_bin getpid",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin execve",
+        "analyzed_bin arch_prctl",
+        "create process 110",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin exit_group",
+        "analyzed_bin fork",
+        "analyzed_bin brk"
+      ],
+      "110": [
+        "analyzed_bin dup2",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin close",
+        "analyzed_bin setsid",
+        "analyzed_bin gettid",
+        "analyzed_bin fcntl",
+        "analyzed_bin connect",
+        "analyzed_bin chdir",
+        "analyzed_bin open",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin getsockopt",
+        "analyzed_bin socket",
+        "analyzed_bin select",
+        "analyzed_bin nanosleep"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      }
+    ],
+    "removed_files": []
+  }
+}

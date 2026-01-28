@@ -1,0 +1,35 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm7.elf, [/root/arm7.elf]"
+    ],
+    "modified_files": [
+      "/dev/shm"
+    ],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "SYS_385"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "execve \"/root/arm7.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "write"
+      }
+    ],
+    "ptree": [],
+    "removed_files": []
+  }
+}

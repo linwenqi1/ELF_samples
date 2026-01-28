@@ -1,0 +1,146 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/armv5l.elf, [/root/armv5l.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "execve \"/root/armv5l.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "fork 2180"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "fork 2181"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2179",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2180",
+        "syscall": "fork 2182"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "socket"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2179",
+        "pid": "2180"
+      },
+      {
+        "parent": "2179",
+        "pid": "2181"
+      },
+      {
+        "parent": "2180",
+        "pid": "2182"
+      }
+    ],
+    "removed_files": []
+  }
+}

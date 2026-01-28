@@ -1,0 +1,258 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [
+      "/usr/libexec/how_to_decrypt.txt",
+      "/tmp/how_to_decrypt.txt",
+      "/mnt/how_to_decrypt.txt",
+      "/opt/how_to_decrypt.txt",
+      "/root/how_to_decrypt.txt",
+      "/how_to_decrypt.txt",
+      "/var/how_to_decrypt.txt",
+      "/var/www/how_to_decrypt.txt",
+      "/lost+found/how_to_decrypt.txt",
+      "/usr/how_to_decrypt.txt",
+      "/tmp/unstable_machine_id",
+      "/var/empty/how_to_decrypt.txt",
+      "/var/log/how_to_decrypt.txt",
+      "/stap/how_to_decrypt.txt",
+      "/var/spool/how_to_decrypt.txt",
+      "/var/tmp/how_to_decrypt.txt",
+      "/media/how_to_decrypt.txt",
+      "/usr/libexec/systemtap/how_to_decrypt.txt"
+    ],
+    "open_files": [
+      "/lib64/x86_64/x86_64/librt.so.1",
+      "/usr/libexec/",
+      "/var/www/",
+      "/var/spool/",
+      "/root/analyzed_bin",
+      "/etc/timezone",
+      "/opt/",
+      "/linuxrc",
+      "/var/log/",
+      "/var/empty/",
+      "/root/",
+      "/media/",
+      "/etc/ld.so.cache",
+      "/var/tmp/",
+      "/var/log",
+      "/mnt/",
+      "/lib64/tls/librt.so.1",
+      "/usr/",
+      "/lost+found/",
+      "/etc/machine-id",
+      "/lib64/x86_64/librt.so.1",
+      "0x7f24693a158b",
+      "/var/spool",
+      "/tmp/unstable_machine_id",
+      "/lib64/tls/x86_64/librt.so.1",
+      "/usr/share/zoneinfo/Etc/UTC",
+      "/lib64/tls/x86_64/x86_64/librt.so.1",
+      "/",
+      "/var/tmp",
+      "/stap/",
+      "/lib64/libpthread.so.0",
+      "/var/",
+      "/usr/libexec/systemtap/",
+      "/tmp/",
+      "/lib64/libc.so.6",
+      "/lib64/librt.so.1"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "stat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "access"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_robust_list"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "setpriority"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "prlimit64"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "munmap"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getdents"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "uname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "time"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "lseek"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlink"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin stat",
+        "analyzed_bin access",
+        "analyzed_bin brk",
+        "analyzed_bin set_robust_list",
+        "analyzed_bin read",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin setpriority",
+        "analyzed_bin mprotect",
+        "analyzed_bin ioctl",
+        "analyzed_bin getrlimit",
+        "analyzed_bin prlimit64",
+        "analyzed_bin nanosleep",
+        "analyzed_bin set_tid_address",
+        "analyzed_bin rt_sigprocmask",
+        "analyzed_bin munmap",
+        "analyzed_bin getdents",
+        "analyzed_bin uname",
+        "analyzed_bin open",
+        "analyzed_bin openat",
+        "analyzed_bin fstat",
+        "analyzed_bin execve",
+        "analyzed_bin write",
+        "analyzed_bin time",
+        "analyzed_bin lseek",
+        "analyzed_bin exit_group",
+        "analyzed_bin mmap2",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin close",
+        "analyzed_bin readlink"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      }
+    ],
+    "removed_files": []
+  }
+}

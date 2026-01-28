@@ -1,0 +1,286 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/etc/nsswitch.conf",
+      "/proc/self/mountinfo",
+      "/etc/resolv.conf",
+      "0x9321e0",
+      "/etc/hosts"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getrandom"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "epoll_pwait"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "gettid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "futex"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getsockname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigreturn"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "tgkill"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "arch_prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "uname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "madvise"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "sigaltstack"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "clone"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getpeername"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "epoll_ctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "sched_yield"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "eventfd2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "prlimit64"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "epoll_create1"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "sched_getaffinity"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fstatat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 112"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin fstat",
+        "analyzed_bin socket",
+        "analyzed_bin getrandom",
+        "analyzed_bin epoll_pwait",
+        "analyzed_bin gettid",
+        "analyzed_bin futex",
+        "analyzed_bin getsockname",
+        "analyzed_bin close",
+        "analyzed_bin getpid",
+        "analyzed_bin rt_sigreturn",
+        "analyzed_bin read",
+        "analyzed_bin tgkill",
+        "analyzed_bin arch_prctl",
+        "analyzed_bin uname",
+        "analyzed_bin setsockopt",
+        "analyzed_bin connect",
+        "analyzed_bin madvise",
+        "analyzed_bin sigaltstack",
+        "analyzed_bin clone",
+        "analyzed_bin getpeername",
+        "analyzed_bin openat",
+        "analyzed_bin epoll_ctl",
+        "analyzed_bin nanosleep",
+        "analyzed_bin sched_yield",
+        "create process 110",
+        "analyzed_bin eventfd2",
+        "analyzed_bin prlimit64",
+        "analyzed_bin execve",
+        "analyzed_bin prctl",
+        "analyzed_bin getsockopt",
+        "create process 111",
+        "analyzed_bin mmap2",
+        "analyzed_bin epoll_create1",
+        "analyzed_bin sched_getaffinity",
+        "analyzed_bin write",
+        "analyzed_bin fstatat",
+        "analyzed_bin fcntl",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin rt_sigprocmask",
+        "create process 112"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      },
+      {
+        "parent": 108,
+        "pid": 111
+      },
+      {
+        "parent": 108,
+        "pid": 112
+      }
+    ],
+    "removed_files": []
+  }
+}

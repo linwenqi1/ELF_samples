@@ -1,0 +1,110 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/lib/sse2/libc.so.6",
+      "/lib/tls/i686/libc.so.6",
+      "/etc/ld.so.cache",
+      "/lib/tls/sse2/libc.so.6",
+      "/lib/tls/libc.so.6",
+      "/lib/tls/i686/sse2/libc.so.6",
+      "/lib/i686/sse2/libc.so.6",
+      "/lib/i686/libc.so.6",
+      "/lib/libc.so.6"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 109"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "access"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "fstat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "close"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "writev"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "openat"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "exit_group"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "stat"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 109"
+      ],
+      "109": [
+        "analyzed_bin access",
+        "analyzed_bin fstat",
+        "analyzed_bin close",
+        "analyzed_bin brk",
+        "analyzed_bin writev",
+        "analyzed_bin mmap2",
+        "analyzed_bin mprotect",
+        "analyzed_bin read",
+        "analyzed_bin openat",
+        "analyzed_bin exit_group",
+        "analyzed_bin execve",
+        "analyzed_bin stat"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 109
+      }
+    ],
+    "removed_files": []
+  }
+}

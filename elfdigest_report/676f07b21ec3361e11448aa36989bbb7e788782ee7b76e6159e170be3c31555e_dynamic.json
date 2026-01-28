@@ -1,0 +1,158 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/morte.arm.elf, [/root/morte.arm.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/proc"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "execve \"/root/morte.arm.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "bind"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "times"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "listen"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fork 2189"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fork 2190"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "kill"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fork 2191"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2188",
+        "pid": "2189"
+      },
+      {
+        "parent": "2189",
+        "pid": "2190"
+      },
+      {
+        "parent": "2190",
+        "pid": "2191"
+      }
+    ],
+    "removed_files": []
+  }
+}

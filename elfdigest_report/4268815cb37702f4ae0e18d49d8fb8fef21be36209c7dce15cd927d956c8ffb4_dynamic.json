@@ -1,0 +1,259 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/boatnet.arm.elf, [/root/boatnet.arm.elf]"
+    ],
+    "modified_files": [
+      "/dev/FTWDT101_watchdog",
+      "/bin/watchdog",
+      "/dev/FTWDT101/watchdog",
+      "/dev/watchdog0",
+      "/sbin/watchdog",
+      "/etc/watchdog",
+      "/dev/watchdog",
+      "/dev/misc/watchdog",
+      "/etc/default/watchdog"
+    ],
+    "open_files": [
+      "/proc/2176/cmdline",
+      "/proc/2179/cmdline",
+      "/proc/1874/cmdline",
+      "/proc/2177/cmdline",
+      "/proc/847/cmdline",
+      "/proc/1672/cmdline",
+      "/proc/2207/cmdline",
+      "/proc/1817/cmdline",
+      "/proc/2180/cmdline",
+      "/proc/2216/cmdline",
+      "/proc/2206/cmdline",
+      "/proc/2186/cmdline",
+      "/proc/2188/cmdline",
+      "/proc/2197/cmdline",
+      "/proc/2147/cmdline",
+      "/proc/2178/cmdline",
+      "/proc/2215/cmdline",
+      "/proc/2208/cmdline",
+      "/proc/632/cmdline",
+      "/proc/2209/cmdline",
+      "/proc/2193/cmdline",
+      "/proc/",
+      "/proc/2214/cmdline",
+      "/proc/628/cmdline",
+      "/proc/2175/cmdline",
+      "/proc/2173/cmdline",
+      "/proc/2174/cmdline"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fork 2191"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fork 2193"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fork 2192"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "execve \"/root/boatnet.arm.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "times"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "kill"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "getdents64"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2192",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "select"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2190",
+        "pid": "2191"
+      },
+      {
+        "parent": "2190",
+        "pid": "2192"
+      },
+      {
+        "parent": "2190",
+        "pid": "2193"
+      }
+    ],
+    "removed_files": []
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm4.elf, [/root/arm4.elf]"
+    ],
+    "modified_files": [
+      "/etc/resolv.conf"
+    ],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "prctl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "execve \"/root/arm4.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fork 2189"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fork 2190"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fork 2191"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "setuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "setresuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2191",
+        "syscall": "select"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2188",
+        "pid": "2189"
+      },
+      {
+        "parent": "2189",
+        "pid": "2190"
+      },
+      {
+        "parent": "2190",
+        "pid": "2191"
+      }
+    ],
+    "removed_files": []
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/boatnet.arm.elf, [/root/boatnet.arm.elf]"
+    ],
+    "modified_files": [
+      "/dev/watchdog0",
+      "/dev/watchdog",
+      "/etc/default/watchdog",
+      "/sbin/watchdog",
+      "/bin/watchdog",
+      "/dev/FTWDT101_watchdog",
+      "/dev/FTWDT101/watchdog",
+      "/etc/watchdog",
+      "/dev/misc/watchdog"
+    ],
+    "open_files": [
+      "/proc/2176/cmdline",
+      "/proc/2174/cmdline",
+      "/proc/2190/cmdline",
+      "/proc/655/cmdline",
+      "/proc/809/cmdline",
+      "/proc/2148/cmdline",
+      "/proc/2178/cmdline",
+      "/proc/2184/cmdline",
+      "/proc/1636/cmdline",
+      "/proc/2175/cmdline",
+      "/proc/",
+      "/proc/654/cmdline",
+      "/proc/2171/cmdline",
+      "/proc/1878/cmdline",
+      "/proc/2145/cmdline",
+      "/proc/2173/cmdline",
+      "/proc/2177/cmdline",
+      "/proc/2186/cmdline",
+      "/proc/1820/cmdline",
+      "/proc/2172/cmdline"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "times"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "fork 2189"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "fork 2190"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "fork 2188"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "execve \"/root/boatnet.arm.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fstat"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getdents64"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "kill"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "fcntl"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2187",
+        "pid": "2188"
+      },
+      {
+        "parent": "2187",
+        "pid": "2189"
+      },
+      {
+        "parent": "2187",
+        "pid": "2190"
+      }
+    ],
+    "removed_files": []
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm5.elf, [/root/arm5.elf]"
+    ],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [
+      "/dev/null"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "execve \"/root/arm5.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "fork 2189"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "setrlimit"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2188",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "fork 2190"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2189",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "umask"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2190",
+        "syscall": "rt_sigprocmask"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2188",
+        "pid": "2189"
+      },
+      {
+        "parent": "2189",
+        "pid": "2190"
+      }
+    ],
+    "removed_files": []
+  }
+}

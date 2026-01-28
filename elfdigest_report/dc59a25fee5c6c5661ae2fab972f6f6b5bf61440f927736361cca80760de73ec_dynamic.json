@@ -1,0 +1,212 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/armv4l.elf, [/root/armv4l.elf]"
+    ],
+    "modified_files": [
+      "/dev/misc/watchdog",
+      "/dev/watchdog"
+    ],
+    "open_files": [
+      "/proc/self/exe",
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "readlink"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "fork 2182"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "fork 2183"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "prctl"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "execve \"/root/armv4l.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "cacheflush"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "time"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2181",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2182",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2183",
+        "syscall": "fork 2184"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "fcntl"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "select"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "rt_sigaction"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2181",
+        "pid": "2182"
+      },
+      {
+        "parent": "2181",
+        "pid": "2183"
+      },
+      {
+        "parent": "2183",
+        "pid": "2184"
+      }
+    ],
+    "removed_files": []
+  }
+}

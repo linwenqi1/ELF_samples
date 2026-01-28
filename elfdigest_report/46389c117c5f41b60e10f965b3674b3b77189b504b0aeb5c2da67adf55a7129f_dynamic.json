@@ -1,0 +1,379 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/0abc01de8962867957bca89f6bd4c10e.elf, [/root/0abc01de8962867957bca89f6bd4c10e.elf]",
+      "/bin/pidof, [pidof, -x, strace]",
+      "/bin/sh, [sh, -c, pidof -x strace > /dev/null]"
+    ],
+    "modified_files": [
+      "/dev/null"
+    ],
+    "open_files": [
+      "2210/stat",
+      "711/stat",
+      "4/cmdline",
+      "2212/stat",
+      "105/cmdline",
+      "10/stat",
+      "2212/cmdline",
+      "639/cmdline",
+      "2210/cmdline",
+      "13/stat",
+      "122/cmdline",
+      "2222/cmdline",
+      "269/cmdline",
+      "12/stat",
+      "8/stat",
+      "1667/stat",
+      "22/cmdline",
+      "17/stat",
+      "711/cmdline",
+      "121/cmdline",
+      "11/cmdline",
+      "1/cmdline",
+      "327/cmdline",
+      "327/stat",
+      "2215/stat",
+      "7/stat",
+      "1667/cmdline",
+      "23/stat",
+      "1909/stat",
+      "2182/cmdline",
+      "11/stat",
+      "16/stat",
+      "2216/cmdline",
+      "19/stat",
+      "23/cmdline",
+      "13/cmdline",
+      "1879/cmdline",
+      "6/cmdline",
+      "122/stat",
+      "4/stat",
+      "10/cmdline",
+      "9/stat",
+      "2182/stat",
+      "17/cmdline",
+      "16/cmdline",
+      "15/stat",
+      "3/stat",
+      "1909/cmdline",
+      "/etc/ld.so.cache",
+      "2222/stat",
+      "2211/cmdline",
+      "14/stat",
+      "2211/stat",
+      "639/stat",
+      "8/cmdline",
+      "105/stat",
+      "2215/cmdline",
+      "638/cmdline",
+      "18/stat",
+      "64/cmdline",
+      "2216/stat",
+      "9/cmdline",
+      "2213/stat",
+      "1879/stat",
+      "638/stat",
+      ".",
+      "2214/stat",
+      "2224/stat",
+      "12/cmdline",
+      "64/stat",
+      "2209/stat",
+      "2214/cmdline",
+      "/lib/arm-linux-gnueabi/libc.so.6",
+      "2209/cmdline",
+      "15/cmdline",
+      "2225/cmdline",
+      "3/cmdline",
+      "6/stat",
+      "2225/stat",
+      "2227/cmdline",
+      "2224/cmdline",
+      "121/stat",
+      "1/stat",
+      "2/stat",
+      "2/cmdline",
+      "2213/cmdline",
+      "2226/cmdline",
+      "19/cmdline",
+      "18/cmdline",
+      "22/stat",
+      "269/stat",
+      "5/stat",
+      "5/cmdline",
+      "2227/stat",
+      "2226/stat",
+      "7/cmdline",
+      "14/cmdline"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "execve \"/root/0abc01de8962867957bca89f6bd4c10e.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "clone 2226"
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2225",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "fcntl64"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "clone 2227"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "dup2"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "geteuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "sigreturn"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "mmap2"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "execve \"/bin/sh\""
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2226",
+        "syscall": "getppid"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "fcntl64"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "uname"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "lseek"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "mprotect"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "munmap"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "getdents64"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "execve \"/bin/pidof\""
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "stat64"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "fstat64"
+      },
+      {
+        "file": " ",
+        "pid": "2227",
+        "syscall": "mmap2"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2225",
+        "pid": "2226"
+      },
+      {
+        "parent": "2226",
+        "pid": "2227"
+      }
+    ],
+    "removed_files": []
+  }
+}

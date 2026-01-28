@@ -1,0 +1,46 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "97",
+        "syscall": "create process 100"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "100",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "100",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "100",
+        "syscall": "exit"
+      }
+    ],
+    "processes": {
+      "100": [
+        "analyzed_bin execve",
+        "analyzed_bin ioctl",
+        "analyzed_bin exit"
+      ],
+      "97": [
+        "create process 100"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 97,
+        "pid": 100
+      }
+    ],
+    "removed_files": []
+  }
+}

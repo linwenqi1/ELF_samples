@@ -1,0 +1,298 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [
+      "/dev/watchdog",
+      "/dev/misc/watchdog"
+    ],
+    "open_files": [
+      "/proc/self/exe",
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 108"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "close"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "wait4"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "open"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "write"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "time"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mprotect"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "readlink"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "access"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "getsockname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "geteuid"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "exit"
+      },
+      {
+        "file": " ",
+        "pid": "108",
+        "syscall": "create process 110"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "prctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "mmap2"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "execve"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "108",
+        "syscall": "munmap"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "108",
+        "syscall": "getpid"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "exit"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "fork"
+      },
+      {
+        "file": " ",
+        "pid": "111",
+        "syscall": "create process 112"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "110",
+        "syscall": "open"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "110",
+        "syscall": "exit"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "close"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "select"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "socket"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "connect"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "112",
+        "syscall": "fcntl"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 108"
+      ],
+      "108": [
+        "analyzed_bin close",
+        "/usr/sbin/dropb close",
+        "/usr/sbin/dropb wait4",
+        "/usr/sbin/dropb fork",
+        "analyzed_bin open",
+        "/usr/sbin/dropb open",
+        "/usr/sbin/dropb write",
+        "/usr/sbin/dropb time",
+        "/usr/sbin/dropb ioctl",
+        "analyzed_bin mprotect",
+        "/usr/sbin/dropb read",
+        "analyzed_bin readlink",
+        "/usr/sbin/dropb brk",
+        "analyzed_bin access",
+        "/usr/sbin/dropb getsockname",
+        "analyzed_bin ioctl",
+        "/usr/sbin/dropb connect",
+        "create process 111",
+        "analyzed_bin geteuid",
+        "/usr/sbin/dropb exit",
+        "create process 110",
+        "/usr/sbin/dropb prctl",
+        "analyzed_bin mmap2",
+        "analyzed_bin execve",
+        "/usr/sbin/dropb socket",
+        "analyzed_bin munmap",
+        "/usr/sbin/dropb getpid"
+      ],
+      "110": [
+        "/usr/sbin/dropb open",
+        "/usr/sbin/dropb exit"
+      ],
+      "111": [
+        "/usr/sbin/dropb exit",
+        "/usr/sbin/dropb fork",
+        "create process 112"
+      ],
+      "112": [
+        "/usr/sbin/dropb close",
+        "/usr/sbin/dropb select",
+        "/usr/sbin/dropb nanosleep",
+        "/usr/sbin/dropb rt_sigaction",
+        "/usr/sbin/dropb socket",
+        "/usr/sbin/dropb connect",
+        "/usr/sbin/dropb rt_sigprocmask",
+        "/usr/sbin/dropb getsockopt",
+        "/usr/sbin/dropb fcntl"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 108
+      },
+      {
+        "parent": 108,
+        "pid": 110
+      },
+      {
+        "parent": 108,
+        "pid": 111
+      },
+      {
+        "parent": 111,
+        "pid": 112
+      }
+    ],
+    "removed_files": []
+  }
+}

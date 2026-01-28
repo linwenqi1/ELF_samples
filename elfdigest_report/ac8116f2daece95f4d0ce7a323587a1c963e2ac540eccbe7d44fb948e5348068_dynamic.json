@@ -1,0 +1,194 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/etc/hosts",
+      "/usr/dict/words",
+      "/etc/resolv.conf"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "105",
+        "syscall": "create process 109"
+      },
+      {
+        "file": " ",
+        "pid": "109",
+        "syscall": "create process 111"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "109",
+        "syscall": "execve"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "write"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "recv"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "brk"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "poll"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "getpid"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "getppid"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "close"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "open"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "prctl"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "time"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "socket"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "connect"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "setsockopt"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "111",
+        "syscall": "access"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "send"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "read"
+      },
+      {
+        "file": "/usr/sbin/dropb",
+        "pid": "111",
+        "syscall": "select"
+      }
+    ],
+    "processes": {
+      "105": [
+        "create process 109"
+      ],
+      "109": [
+        "create process 111",
+        "analyzed_bin exit",
+        "analyzed_bin ioctl",
+        "analyzed_bin fork",
+        "analyzed_bin execve"
+      ],
+      "111": [
+        "/usr/sbin/dropb write",
+        "/usr/sbin/dropb recv",
+        "/usr/sbin/dropb brk",
+        "/usr/sbin/dropb poll",
+        "/usr/sbin/dropb getpid",
+        "/usr/sbin/dropb getppid",
+        "/usr/sbin/dropb nanosleep",
+        "/usr/sbin/dropb close",
+        "/usr/sbin/dropb open",
+        "/usr/sbin/dropb rt_sigprocmask",
+        "/usr/sbin/dropb prctl",
+        "/usr/sbin/dropb time",
+        "/usr/sbin/dropb socket",
+        "/usr/sbin/dropb ioctl",
+        "/usr/sbin/dropb rt_sigaction",
+        "/usr/sbin/dropb connect",
+        "/usr/sbin/dropb setsockopt",
+        "analyzed_bin access",
+        "/usr/sbin/dropb send",
+        "/usr/sbin/dropb read",
+        "/usr/sbin/dropb select"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 105,
+        "pid": 109
+      },
+      {
+        "parent": 109,
+        "pid": 111
+      }
+    ],
+    "removed_files": []
+  }
+}

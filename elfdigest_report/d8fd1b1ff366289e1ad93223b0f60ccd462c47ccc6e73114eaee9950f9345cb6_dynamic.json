@@ -1,0 +1,163 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/arm7.elf, [/root/arm7.elf]"
+    ],
+    "modified_files": [
+      "/etc/resolv.conf"
+    ],
+    "open_files": [],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "gettimeofday"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "prctl"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "execve \"/root/arm7.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "clone 2185"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2184",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2185",
+        "syscall": "clone 2186"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "clone 2187"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "setuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2186",
+        "syscall": "setresuid32"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "recv"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "write"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "send"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "access"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "fcntl64"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "brk"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "select"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2187",
+        "syscall": "socket"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2184",
+        "pid": "2185"
+      },
+      {
+        "parent": "2185",
+        "pid": "2186"
+      },
+      {
+        "parent": "2186",
+        "pid": "2187"
+      }
+    ],
+    "removed_files": []
+  }
+}

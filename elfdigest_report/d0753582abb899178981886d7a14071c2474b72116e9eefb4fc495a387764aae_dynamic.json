@@ -1,0 +1,179 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [
+      "/root/bot.arm5.elf, [/root/bot.arm5.elf]"
+    ],
+    "modified_files": [],
+    "open_files": [
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "getpid"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "ioctl"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "clock_gettime"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "getsockname"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "syscall_403"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "set_tls"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "open"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "read"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "set_tid_address"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "fork 2194"
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "execve \"/root/bot.arm5.elf\""
+      },
+      {
+        "file": " ",
+        "pid": "2193",
+        "syscall": "wait4"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "gettid"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "fork 2195"
+      },
+      {
+        "file": " ",
+        "pid": "2194",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "nanosleep"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "setsid"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "gettid"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "fcntl64"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "chdir"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "rt_sigprocmask"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "socket"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "connect"
+      },
+      {
+        "file": " ",
+        "pid": "2195",
+        "syscall": "select"
+      }
+    ],
+    "ptree": [
+      {
+        "parent": "2193",
+        "pid": "2194"
+      },
+      {
+        "parent": "2194",
+        "pid": "2195"
+      }
+    ],
+    "removed_files": []
+  }
+}

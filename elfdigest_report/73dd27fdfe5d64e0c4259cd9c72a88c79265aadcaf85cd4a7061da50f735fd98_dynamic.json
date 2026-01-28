@@ -1,0 +1,210 @@
+{
+  "dynamic_analysis": {
+    "executed_commands": [],
+    "modified_files": [],
+    "open_files": [
+      "/proc/net/route"
+    ],
+    "proc_calls": [
+      {
+        "file": " ",
+        "pid": "96",
+        "syscall": "create process 99"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "ioctl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "close"
+      },
+      {
+        "file": " ",
+        "pid": "99",
+        "syscall": "create process 101"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "execve"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "time"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "open"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "read"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getpid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "fork"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "wait4"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "99",
+        "syscall": "getsockname"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "fork"
+      },
+      {
+        "file": " ",
+        "pid": "101",
+        "syscall": "create process 102"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "101",
+        "syscall": "exit"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "select"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "rt_sigaction"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "fcntl"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "recv"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "getsockopt"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "socket"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "connect"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "send"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "brk"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "setsid"
+      },
+      {
+        "file": "analyzed_bin",
+        "pid": "102",
+        "syscall": "chdir"
+      }
+    ],
+    "processes": {
+      "101": [
+        "analyzed_bin fork",
+        "create process 102",
+        "analyzed_bin exit"
+      ],
+      "102": [
+        "analyzed_bin select",
+        "analyzed_bin rt_sigaction",
+        "analyzed_bin fcntl",
+        "analyzed_bin recv",
+        "analyzed_bin getsockopt",
+        "analyzed_bin socket",
+        "analyzed_bin connect",
+        "analyzed_bin send",
+        "analyzed_bin brk",
+        "analyzed_bin setsid",
+        "analyzed_bin chdir"
+      ],
+      "96": [
+        "create process 99"
+      ],
+      "99": [
+        "analyzed_bin ioctl",
+        "analyzed_bin close",
+        "create process 101",
+        "analyzed_bin exit",
+        "analyzed_bin execve",
+        "analyzed_bin time",
+        "analyzed_bin open",
+        "analyzed_bin socket",
+        "analyzed_bin connect",
+        "analyzed_bin read",
+        "analyzed_bin getpid",
+        "analyzed_bin fork",
+        "analyzed_bin wait4",
+        "analyzed_bin getsockname"
+      ]
+    },
+    "ptree": [
+      {
+        "parent": 96,
+        "pid": 99
+      },
+      {
+        "parent": 99,
+        "pid": 101
+      },
+      {
+        "parent": 101,
+        "pid": 102
+      }
+    ],
+    "removed_files": []
+  }
+}
