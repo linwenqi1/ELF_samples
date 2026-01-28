@@ -181,6 +181,8 @@ def iter_report_files(label_dir: Path) -> Iterable[Path]:
 def iter_report_files_recursive(base: Path) -> Iterable[Path]:
     """Yield report files (.txt/.md) recursively under base."""
     for path in base.rglob("*"):
+        if "raw" in path.parts:
+            continue
         if path.is_file() and path.suffix.lower() in {".txt", ".md"}:
             yield path
 

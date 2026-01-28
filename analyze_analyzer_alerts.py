@@ -28,6 +28,80 @@ def iter_jsonl_files(base: Path) -> Iterable[Path]:
             yield from raw_dir.glob("*.jsonl")
 
 
+def build_malware_sha_index(malware_root: Path) -> dict[str, str]:
+    index: dict[str, str] = {}
+    if not malware_root.exists():
+        return index
+    for family_dir in malware_root.iterdir():
+        if not family_dir.is_dir():
+            continue
+        family = family_dir.name
+        for sample in family_dir.rglob("*"):
+            if not sample.is_file():
+                continue
+            name = sample.name
+            if name.endswith(".elf"):
+                index.setdefault(name[:-4], family)
+            index.setdefault(name, family)
+    return index
+
+
+def reclassify_raw_reports(
+    base: Path,
+    sha_to_family: dict[str, str],
+    dry_run: bool,
+) -> dict[str, int]:
+    moved = 0
+    missing = 0
+    skipped = 0
+    failed = 0
+    errors: list[str] = []
+
+    for raw_dir in base.rglob("raw"):
+        if not raw_dir.is_dir():
+            continue
+        try:
+            current_family = raw_dir.relative_to(base).parts[0]
+        except Exception:
+            current_family = "unknown"
+
+        for path in raw_dir.iterdir():
+            if not path.is_file():
+                continue
+            sha = path.name.split("_", 1)[0]
+            if sha.endswith(".elf"):
+                sha = sha[:-4]
+
+            target_family = sha_to_family.get(sha)
+            if not target_family:
+                missing += 1
+                continue
+            if target_family == current_family:
+                skipped += 1
+                continue
+
+            dest_dir = base / target_family / "raw"
+            dest_dir.mkdir(parents=True, exist_ok=True)
+            dest_path = dest_dir / path.name
+            if dry_run:
+                moved += 1
+                continue
+            try:
+                path.replace(dest_path)
+                moved += 1
+            except OSError:
+                failed += 1
+                if len(errors) < 5:
+                    errors.append(f"{path} -> {dest_path}")
+
+    if errors:
+        print("[WARN] Reclassify failures (sample):")
+        for item in errors:
+            print(f"  - {item}")
+
+    return {"moved": moved, "missing": missing, "skipped": skipped, "failed": failed}
+
+
 def extract_sha256_and_ts(path: Path) -> tuple[str, str]:
     stem = path.name
     sha = stem.split("_", 1)[0]
@@ -36,6 +110,24 @@ def extract_sha256_and_ts(path: Path) -> tuple[str, str]:
         date_part, time_part = match.groups()
         return sha, f"{date_part} {time_part}"
     return sha, "0000-00-00 00-00-00"
+
+
+def extract_raw_key_and_ts(path: Path) -> tuple[tuple[str, str], str]:
+    stem = path.name
+    sha = stem.split("_", 1)[0]
+    if sha.endswith(".elf"):
+        sha = sha[:-4]
+    if "container_stdout" in stem:
+        kind = "stdout"
+    elif "container_stderr" in stem:
+        kind = "stderr"
+    else:
+        kind = "txt"
+    match = DATE_RE.search(stem)
+    if match:
+        date_part, time_part = match.groups()
+        return (sha, kind), f"{date_part} {time_part}"
+    return (sha, kind), "0000-00-00 00-00-00"
 
 
 def select_latest_reports(paths: Iterable[Path]) -> tuple[list[Path], list[Path]]:
@@ -49,6 +141,22 @@ def select_latest_reports(paths: Iterable[Path]) -> tuple[list[Path], list[Path]
         if ts > latest[sha][0]:
             obsolete.append(latest[sha][1])
             latest[sha] = (ts, path)
+        else:
+            obsolete.append(path)
+    return [item[1] for item in latest.values()], obsolete
+
+
+def select_latest_raw_texts(paths: Iterable[Path]) -> tuple[list[Path], list[Path]]:
+    latest: dict[tuple[str, str], tuple[str, Path]] = {}
+    obsolete: list[Path] = []
+    for path in paths:
+        key, ts = extract_raw_key_and_ts(path)
+        if key not in latest:
+            latest[key] = (ts, path)
+            continue
+        if ts > latest[key][0]:
+            obsolete.append(latest[key][1])
+            latest[key] = (ts, path)
         else:
             obsolete.append(path)
     return [item[1] for item in latest.values()], obsolete
@@ -101,8 +209,23 @@ def collect_metrics(base: Path, delete_duplicates: bool = False, dry_run: bool =
     all_jsonl_paths = list(iter_jsonl_files(base))
     latest_paths, obsolete_paths = select_latest_reports(all_jsonl_paths)
 
+    raw_text_paths: list[Path] = []
+    for raw_dir in base.rglob("raw"):
+        if not raw_dir.is_dir():
+            continue
+        raw_text_paths.extend(p for p in raw_dir.glob("*.txt") if p.is_file())
+    _, obsolete_txt = select_latest_raw_texts(raw_text_paths)
+
     if delete_duplicates:
         for path in obsolete_paths:
+            if dry_run:
+                continue
+            try:
+                path.unlink()
+                deleted_count += 1
+            except OSError:
+                continue
+        for path in obsolete_txt:
             if dry_run:
                 continue
             try:
@@ -215,10 +338,20 @@ def main() -> None:
                         help="Delete older duplicate jsonl reports by sha256 prefix.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show metrics without deleting files (default).")
+    parser.add_argument("--reclassify-raw", action="store_true",
+                        help="Move raw reports to correct family based on malware sha256 map.")
     args = parser.parse_args()
 
     delete_duplicates = args.delete_duplicates
-    dry_run = args.dry_run or not delete_duplicates
+    dry_run = args.dry_run
+
+    if args.reclassify_raw:
+        sha_index = build_malware_sha_index(ROOT / "malware")
+        result = reclassify_raw_reports(MALWARE_DIR, sha_index, dry_run)
+        if dry_run:
+            print(f"[DRY RUN] Reclassify raw reports: {result}")
+        else:
+            print(f"Reclassify raw reports: {result}")
 
     malware_metrics = collect_metrics(MALWARE_DIR, delete_duplicates, dry_run)
     benign_metrics = collect_metrics(BENIGN_DIR, delete_duplicates, dry_run)
