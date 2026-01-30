@@ -157,7 +157,7 @@ def plot_pies(arch_counter: Counter, label_counter: Counter, top_n: int, out_pat
             labels=None,
             wedgeprops={"width": 0.45, "edgecolor": "white"},
         )
-        ax.set_title(title, fontsize=13)
+        ax.set_title(title, fontsize=16, fontweight="bold")
 
         total = sum(sizes) or 1
         legend_labels = [f"{lab} ({cnt / total:.1%})" for lab, cnt in zip(labels, sizes)]

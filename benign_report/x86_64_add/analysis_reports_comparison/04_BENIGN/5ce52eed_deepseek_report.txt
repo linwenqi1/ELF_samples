@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e6dae321a54b77f3a727df5e282d269d7df3c807ead967e7a10761f79326fd81.elf` | **Job ID:** `5ce52eed`
+**Date:** 2026-01-29 21:31:22
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly due to incorrect arguments, showing only usage error output. No successful malicious execution observed in trace.
+
+### ⚠️ Suspicious Behaviors
+- System reconnaissance alerts from aggregated events
+
+### 🔍 Key Evidence
+- Exit code 1 with 'bad usage' error
+- TRACK_QEMU event (benign emulation artifact)
+- No successful execution of malicious patterns in syscall trace
+
+### 💡 Recommendations
+Re-execute with proper arguments to observe full behavior. The local_alerts suggest potential reconnaissance intent, but actual execution trace shows no successful malicious activity.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+e6dae321a54b77f3a727df5e282d269d7df3c807ead967e7a10761f79326fd81.elf: bad usage
+Try 'e6dae321a54b77f3a727df5e282d269d7df3c807ead967e7a10761f79326fd81.elf --help' for more information.
+```

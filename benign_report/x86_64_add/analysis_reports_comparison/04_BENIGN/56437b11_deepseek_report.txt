@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6249be572aa2183c4a0ca2744103a099273e57c307272bb97e21e8505ef6a1b5.elf` | **Job ID:** `56437b11`
+**Date:** 2026-01-29 21:32:19
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment, outputting system uptime information. No malicious patterns detected in syscall trace.
+
+### 🔍 Key Evidence
+- Exit code 0 indicates successful execution
+- TRACK_QEMU event is documented emulation artifact (not evasion)
+- Output matches standard uptime command format
+- No access to sensitive paths outside emulation environment
+
+### 💡 Recommendations
+No further action required. Binary appears to be a benign utility (possibly uptime command).
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+13:31:08  up   0:09,  0 users,  load average: 1.80, 0.55, 0.23
+```

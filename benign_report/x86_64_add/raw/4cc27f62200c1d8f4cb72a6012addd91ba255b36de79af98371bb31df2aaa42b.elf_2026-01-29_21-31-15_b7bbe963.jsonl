@@ -1,0 +1,9 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/4cc27f62200c1d8f4cb72a6012addd91ba255b36de79af98371bb31df2aaa42b.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 28474, "cgroup_inode": 29410, "container_id": "6e8eda70cd1eac46efced9635f5a4f63c716322d9ee9d3c138f54c04de0b7017", "container_name": "dazzling_moore", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693476.1933768}
+{"ts": 551363, "pid": 28799, "cgroup_id": 29410, "event": "EXEC", "filename": "/tmp/4cc27f62200c1d8f4cb72a6012addd91ba255b36de79af98371bb31df2aaa42b.elf"}
+{"ts": 551363, "pid": 28799, "cgroup_id": 29410, "event": "TRACK_QEMU", "bin": "4cc27f62200c1d8", "count": 1}
+{"ts": 551363, "pid": 28799, "cgroup_id": 29410, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 551364, "pid": 28782, "cgroup_id": 29410, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 551364, "pid": 28782, "cgroup_id": 29410, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769693476405, "pid": -1, "cgroup_id": 29410, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769693476405, "pid": -1, "cgroup_id": 29410, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"type": "RUN_END", "end_ts": 1769693476.904704, "events_count": 7, "analyzed_count": 0, "timeout": false}

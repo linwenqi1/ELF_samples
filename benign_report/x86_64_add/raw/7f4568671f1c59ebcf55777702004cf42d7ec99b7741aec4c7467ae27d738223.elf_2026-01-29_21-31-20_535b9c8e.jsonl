@@ -1,0 +1,17 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/7f4568671f1c59ebcf55777702004cf42d7ec99b7741aec4c7467ae27d738223.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 31378, "cgroup_inode": 30872, "container_id": "a951dcbcdf915b5aa6cdddb1ca95000b69b40d01ae4d033700009b7813e53b97", "container_name": "modest_elion", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693480.4327724}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "EXEC", "filename": "/tmp/7f4568671f1c59ebcf55777702004cf42d7ec99b7741aec4c7467ae27d738223.elf"}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "TRACK_QEMU", "bin": "7f4568671f1c59e", "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "WRITE", "fd": 2, "buf": "7f4568671f1c59ebcf55777702004cf42d7ec99b7741aec4c7467ae27d738223", "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "WRITE", "fd": 2, "buf": "cannot open /dev/rfkill", "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "WRITE", "fd": 2, "buf": ": No such file or directory\n", "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "WRITE", "fd": 2, "buf": "7f4568671f1c59ebcf55777702004cf42d7ec99b7741aec4c7467ae27d738223", "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "WRITE", "fd": 2, "buf": "cannot read /dev/rfkill", "count": 1}
+{"ts": 555591, "pid": 31721, "cgroup_id": 30872, "event": "WRITE", "fd": 2, "buf": ": Bad file descriptor\n", "count": 1}
+{"ts": 555591, "pid": 31706, "cgroup_id": 30872, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 555591, "pid": 31706, "cgroup_id": 30872, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769693480650, "pid": -1, "cgroup_id": 30872, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693480650, "pid": -1, "cgroup_id": 30872, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 3}
+{"ts": 1769693480650, "pid": -1, "cgroup_id": 30872, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 3}
+{"ts": 1769693480650, "pid": -1, "cgroup_id": 30872, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"type": "RUN_END", "end_ts": 1769693481.1310785, "events_count": 15, "analyzed_count": 0, "timeout": false}

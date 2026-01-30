@@ -1,0 +1,15 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/7821c625ae689b690a0eda7b8cf5056b779ec1e4e93a46a7ce4f3be2a37d5353.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 86832, "cgroup_inode": 51856, "container_id": "e265510c50a089dccc2b4542039a3a7a9cfeb5e0f840e83a6bad8bbfb01ca425", "container_name": "stupefied_pasteur", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694386.2446356}
+{"ts": 1461449, "pid": 87503, "cgroup_id": 51856, "event": "EXEC", "filename": "/tmp/7821c625ae689b690a0eda7b8cf5056b779ec1e4e93a46a7ce4f3be2a37d5353.elf"}
+{"ts": 1461449, "pid": 87503, "cgroup_id": 51856, "event": "TRACK_QEMU", "bin": "7821c625ae689b6", "count": 1}
+{"ts": 1461450, "pid": 87503, "cgroup_id": 51856, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1461454, "pid": 87503, "cgroup_id": 51856, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1461454, "pid": 87503, "cgroup_id": 51856, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1461454, "pid": 87503, "cgroup_id": 51856, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1461455, "pid": 87503, "cgroup_id": 51856, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1461456, "pid": 87503, "cgroup_id": 51856, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1461459, "pid": 87503, "cgroup_id": 51856, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1461465, "pid": 87426, "cgroup_id": 51856, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1461465, "pid": 87426, "cgroup_id": 51856, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769694386581, "pid": -1, "cgroup_id": 51856, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769694386581, "pid": -1, "cgroup_id": 51856, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"type": "RUN_END", "end_ts": 1769694387.0054944, "events_count": 13, "analyzed_count": 0, "timeout": false}

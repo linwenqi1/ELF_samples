@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `bed7f331d5ad86aa7eb2c8a0024508bb045a0dfd69d20355b110c8b7723ca5b4.elf` | **Job ID:** `23eaf59a`
+**Date:** 2026-01-29 21:31:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed but exited immediately due to missing arguments, showing only expected startup behavior with no malicious activity.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'not enough arguments' error
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No access to sensitive paths or malicious patterns
+
+### 💡 Recommendations
+No further action needed; execution appears benign. If suspicious, re-run with proper arguments for full behavioral analysis.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+bed7f331d5ad86aa7eb2c8a0024508bb045a0dfd69d20355b110c8b7723ca5b4.elf: not enough arguments
+Try 'bed7f331d5ad86aa7eb2c8a0024508bb045a0dfd69d20355b110c8b7723ca5b4.elf --help' for more information.
+```

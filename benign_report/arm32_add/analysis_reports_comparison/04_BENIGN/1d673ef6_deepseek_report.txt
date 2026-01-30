@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `14c094b03cfab4566fd428d3e658f2c0c347e69873e42a0dfdb89270c41bba79.elf` | **Job ID:** `1d673ef6`
+**Date:** 2026-01-29 21:46:05
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment with minimal activity - appears to be a simple test or benign utility that printed its own filename and exited cleanly.
+
+### 🔍 Key Evidence
+- Clean exit code 0
+- No malicious patterns detected (no network activity, no persistence attempts, no exploitation)
+- TRACK_QEMU event is expected emulation artifact per noise filtering rules
+- Only basic file operations and memory protection calls observed
+
+### 💡 Recommendations
+No immediate action required. Consider monitoring for similar binaries with expanded execution time or additional system interactions.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+14c094b03cfab4566fd428d3e658f2c0c347e69873e42a0dfdb89270c41bba79.elf
+```

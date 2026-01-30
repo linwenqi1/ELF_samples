@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2c792011ab265d97afcca64e031aea303e4cfb1674dcca4a61c5c2ba4fd85bb9.elf` | **Job ID:** `7aedca47`
+**Date:** 2026-01-29 21:31:00
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, displayed wtmp header information, and exited cleanly with no malicious behaviors observed.
+
+### 🔍 Key Evidence
+- Clean exit code 0
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Only benign file operations observed
+- No network activity, persistence attempts, or exploitation patterns
+
+### 💡 Recommendations
+No further action required. Binary appears to be a standard utility displaying system information.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+wtmp begins Mon Jan 26 07:52:14 2026
+```

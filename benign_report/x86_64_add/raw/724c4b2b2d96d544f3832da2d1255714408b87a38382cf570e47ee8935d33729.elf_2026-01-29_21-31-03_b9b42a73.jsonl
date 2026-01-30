@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/724c4b2b2d96d544f3832da2d1255714408b87a38382cf570e47ee8935d33729.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 19717, "cgroup_inode": 26142, "container_id": "ca1325531a2e71b5b60b3ca8f0d947f44246af0b333e2b6cec3a8f5a0ced7881", "container_name": "strange_mahavira", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693463.551572}
+{"ts": 538703, "pid": 20222, "cgroup_id": 26142, "event": "EXEC", "filename": "/tmp/724c4b2b2d96d544f3832da2d1255714408b87a38382cf570e47ee8935d33729.elf"}
+{"ts": 538703, "pid": 20222, "cgroup_id": 26142, "event": "TRACK_QEMU", "bin": "724c4b2b2d96d54", "count": 1}
+{"ts": 538703, "pid": 20222, "cgroup_id": 26142, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 538704, "pid": 20222, "cgroup_id": 26142, "event": "WRITE", "fd": 2, "buf": "/tmp/724c4b2b2d96d544f3832da2d1255714408b87a38382cf570e47ee8935d", "count": 1}
+{"ts": 538704, "pid": 20222, "cgroup_id": 26142, "event": "WRITE", "fd": 2, "buf": "missing file operand", "count": 1}
+{"ts": 538704, "pid": 20222, "cgroup_id": 26142, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 538704, "pid": 20222, "cgroup_id": 26142, "event": "WRITE", "fd": 2, "buf": "Try '/tmp/724c4b2b2d96d544f3832da2d1255714408b87a38382cf570e47ee", "count": 1}
+{"ts": 538704, "pid": 20139, "cgroup_id": 26142, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 538704, "pid": 20139, "cgroup_id": 26142, "event": "WAIT4_EXITED", "reaped_child": 20, "count": 1}
+{"ts": 1769693463814, "pid": -1, "cgroup_id": 26142, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693463814, "pid": -1, "cgroup_id": 26142, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769693464.246786, "events_count": 11, "analyzed_count": 0, "timeout": false}

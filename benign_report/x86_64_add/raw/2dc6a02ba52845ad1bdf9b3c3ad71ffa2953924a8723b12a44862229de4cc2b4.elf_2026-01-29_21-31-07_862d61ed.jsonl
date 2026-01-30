@@ -1,0 +1,11 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/2dc6a02ba52845ad1bdf9b3c3ad71ffa2953924a8723b12a44862229de4cc2b4.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 23331, "cgroup_inode": 27432, "container_id": "bcf04abfd190c0ef5428dba005081aed3d8c71a7a2f4782b133ba463643181ea", "container_name": "frosty_knuth", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693468.0644946}
+{"ts": 543319, "pid": 23808, "cgroup_id": 27432, "event": "EXEC", "filename": "/tmp/2dc6a02ba52845ad1bdf9b3c3ad71ffa2953924a8723b12a44862229de4cc2b4.elf"}
+{"ts": 543319, "pid": 23808, "cgroup_id": 27432, "event": "TRACK_QEMU", "bin": "2dc6a02ba52845a", "count": 1}
+{"ts": 543319, "pid": 23808, "cgroup_id": 27432, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 543319, "pid": 23808, "cgroup_id": 27432, "event": "WRITE", "fd": 1, "buf": "74c1ee0b-81ec-471d-adff-34848c63fd8f\n", "count": 1}
+{"ts": 543320, "pid": 23781, "cgroup_id": 27432, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 543320, "pid": 23781, "cgroup_id": 27432, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769693468367, "pid": -1, "cgroup_id": 27432, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693468367, "pid": -1, "cgroup_id": 27432, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 3}
+{"ts": 1769693468367, "pid": -1, "cgroup_id": 27432, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 3}
+{"type": "RUN_END", "end_ts": 1769693468.8711467, "events_count": 9, "analyzed_count": 0, "timeout": false}

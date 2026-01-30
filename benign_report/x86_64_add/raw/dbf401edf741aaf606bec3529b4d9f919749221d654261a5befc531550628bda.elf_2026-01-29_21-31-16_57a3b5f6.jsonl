@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/dbf401edf741aaf606bec3529b4d9f919749221d654261a5befc531550628bda.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 29192, "cgroup_inode": 29840, "container_id": "c42e107e4148ec75097e3371030e3157a081f94c9adb64a1dc777072b9a8f796", "container_name": "agitated_villani", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693477.277465}
+{"ts": 552428, "pid": 29522, "cgroup_id": 29840, "event": "EXEC", "filename": "/tmp/dbf401edf741aaf606bec3529b4d9f919749221d654261a5befc531550628bda.elf"}
+{"ts": 552428, "pid": 29522, "cgroup_id": 29840, "event": "TRACK_QEMU", "bin": "dbf401edf741aaf", "count": 1}
+{"ts": 552428, "pid": 29522, "cgroup_id": 29840, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 552428, "pid": 29522, "cgroup_id": 29840, "event": "WRITE", "fd": 2, "buf": "dbf401edf741aaf606bec3529b4d9f919749221d654261a5befc531550628bda", "count": 1}
+{"ts": 552428, "pid": 29522, "cgroup_id": 29840, "event": "WRITE", "fd": 2, "buf": "Cannot open master raw device '/dev/raw/rawctl'", "count": 1}
+{"ts": 552428, "pid": 29522, "cgroup_id": 29840, "event": "WRITE", "fd": 2, "buf": ": No such file or directory\n", "count": 1}
+{"ts": 552428, "pid": 29513, "cgroup_id": 29840, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 552428, "pid": 29513, "cgroup_id": 29840, "event": "WAIT4_EXITED", "reaped_child": 22, "count": 1}
+{"ts": 1769693477516, "pid": -1, "cgroup_id": 29840, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 2}
+{"ts": 1769693477516, "pid": -1, "cgroup_id": 29840, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693477516, "pid": -1, "cgroup_id": 29840, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769693477.9686358, "events_count": 11, "analyzed_count": 0, "timeout": false}

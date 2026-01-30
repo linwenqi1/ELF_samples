@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `9526362da3844266ca7927c22ba6c07a58c9d214ab61111620b1634480b800c6.elf` | **Job ID:** `98937a31`
+**Date:** 2026-01-29 21:47:02
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly with exit code 1 and minimal runtime activity, likely due to missing dependencies or environment incompatibility in QEMU emulation.
+
+### 🔍 Key Evidence
+- Exit code 1
+- Minimal syscall trace (only 15 events)
+- No successful execution patterns
+- TRACK_QEMU event (emulation artifact, not evasion)
+
+### 💡 Recommendations
+Analyze with proper dependencies in native environment or debug missing libraries. Check binary compatibility with emulated architecture.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,12 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/9a791a0ca956b65551260be7b5838571f4e6413b55dbc74b5b2f9fec2fc5c479.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 43633, "cgroup_inode": 36892, "container_id": "766b47058a7b2a59b119e566e80870dc7ca74794b69d8ef135e3a639dc0adac3", "container_name": "keen_bhabha", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693494.778768}
+{"ts": 569942, "pid": 44230, "cgroup_id": 36892, "event": "EXEC", "filename": "/tmp/9a791a0ca956b65551260be7b5838571f4e6413b55dbc74b5b2f9fec2fc5c479.elf"}
+{"ts": 569942, "pid": 44230, "cgroup_id": 36892, "event": "TRACK_QEMU", "bin": "9a791a0ca956b65", "count": 1}
+{"ts": 569942, "pid": 44230, "cgroup_id": 36892, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 569942, "pid": 44230, "cgroup_id": 36892, "event": "WRITE", "fd": 2, "buf": "/tmp/9a791a0ca956b65551260be7b5838571f4e6413b55dbc74b5b2f9fec2fc", "count": 1}
+{"ts": 569942, "pid": 44230, "cgroup_id": 36892, "event": "WRITE", "fd": 2, "buf": "no SHELL environment variable, and no shell type option given", "count": 1}
+{"ts": 569942, "pid": 44230, "cgroup_id": 36892, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 569942, "pid": 44169, "cgroup_id": 36892, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 569942, "pid": 44169, "cgroup_id": 36892, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769693495050, "pid": -1, "cgroup_id": 36892, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693495050, "pid": -1, "cgroup_id": 36892, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769693495.4826052, "events_count": 10, "analyzed_count": 0, "timeout": false}

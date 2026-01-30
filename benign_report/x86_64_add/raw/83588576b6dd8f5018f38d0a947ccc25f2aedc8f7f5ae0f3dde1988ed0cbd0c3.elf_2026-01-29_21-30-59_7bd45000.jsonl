@@ -1,0 +1,14 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/83588576b6dd8f5018f38d0a947ccc25f2aedc8f7f5ae0f3dde1988ed0cbd0c3.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 17079, "cgroup_inode": 24594, "container_id": "a0d635bf96416d4dcc5c85108331a8d37a91284cf65728ec722947e04318418d", "container_name": "thirsty_bhabha", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693460.035598}
+{"ts": 535193, "pid": 17633, "cgroup_id": 24594, "event": "EXEC", "filename": "/tmp/83588576b6dd8f5018f38d0a947ccc25f2aedc8f7f5ae0f3dde1988ed0cbd0c3.elf"}
+{"ts": 535194, "pid": 17633, "cgroup_id": 24594, "event": "TRACK_QEMU", "bin": "83588576b6dd8f5", "count": 1}
+{"ts": 535194, "pid": 17633, "cgroup_id": 24594, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 535194, "pid": 17633, "cgroup_id": 24594, "event": "SOCKET", "domain": 16, "type": 524291, "count": 1}
+{"ts": 535194, "pid": 17633, "cgroup_id": 24594, "event": "WRITE", "fd": 2, "buf": "RTNETLINK1 answers: No such file or directory\n", "count": 1}
+{"ts": 535194, "pid": 17633, "cgroup_id": 24594, "event": "SOCKET", "domain": 16, "type": 524291, "count": 1}
+{"ts": 1769693460292, "pid": -1, "cgroup_id": 24594, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769693460292, "pid": -1, "cgroup_id": 24594, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769693460292, "pid": -1, "cgroup_id": 24594, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769693460292, "pid": -1, "cgroup_id": 24594, "event": "MMAP_SUM", "meta": {"count": 16, "max_pages": 529}, "count": 1}
+{"ts": 550159, "pid": 17595, "cgroup_id": 24594, "event": "SIGNAL_GENERATE", "sig": 9, "count": 1}
+{"ts": 550159, "pid": 17633, "cgroup_id": 24594, "event": "SIGNAL_GENERATE", "sig": 9, "count": 1}
+{"type": "RUN_END", "end_ts": 1769693475.804485, "events_count": 12, "analyzed_count": 0, "timeout": true}

@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d19e9daaa6529d3d3945048b6bc1d6e42396a5f2952b25f9fe60930e38fbb615.elf` | **Job ID:** `6ae63268`
+**Date:** 2026-01-29 21:48:28
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performed minimal system interactions and output 'root', showing no malicious patterns.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Socket connections to /var/run/nscd/socket (local name service cache daemon)
+- Write of 'root' to stdout (normal output)
+
+### 💡 Recommendations
+No immediate action needed. Monitor for unusual network activity or persistence attempts if binary remains in environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+root
+```

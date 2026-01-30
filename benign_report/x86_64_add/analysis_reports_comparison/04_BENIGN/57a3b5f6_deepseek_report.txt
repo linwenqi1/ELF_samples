@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `dbf401edf741aaf606bec3529b4d9f919749221d654261a5befc531550628bda.elf` | **Job ID:** `57a3b5f6`
+**Date:** 2026-01-29 21:32:49
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing raw device file, showing no malicious activity in trace.
+
+### 🔍 Key Evidence
+- Exit code 3 with error 'Cannot open master raw device /dev/raw/rawctl'
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No network, persistence, or exploitation patterns detected
+
+### 💡 Recommendations
+No further action needed. This appears to be a benign binary that requires specific hardware/device access not available in the emulated environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+dbf401edf741aaf606bec3529b4d9f919749221d654261a5befc531550628bda.elf: Cannot open master raw device '/dev/raw/rawctl': No such file or directory
+```

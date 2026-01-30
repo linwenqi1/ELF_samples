@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c56e9340c36b40db35584caa1db4accc2026afd6c5a051997a28eff0b8f90aae.elf` | **Job ID:** `86bd0f1d`
+**Date:** 2026-01-29 21:34:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary crashed immediately with segmentation fault in emulated environment, showing no malicious runtime behavior.
+
+### ⚠️ Suspicious Behaviors
+- Segmentation fault (SIGSEGV) on execution
+
+### 🔍 Key Evidence
+- Exit code 139 (segmentation fault)
+- SIGNAL_GENERATE sig=11 (SIGSEGV) in trace
+- TRACK_QEMU event indicates emulation environment
+- No successful syscalls before crash
+
+### 💡 Recommendations
+Analyze binary with static analysis to determine crash cause (malformed binary, architecture mismatch, or intentional crash). Check if crash is part of anti-analysis technique or simply incompatible with environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Segmentation fault (core dumped)
+```

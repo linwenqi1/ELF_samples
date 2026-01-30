@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `eff9fdba47450bfcc472a83b6243305667345317840ba6b88ee209e626ca54fd.elf` | **Job ID:** `93db144e`
+**Date:** 2026-01-29 21:31:20
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in QEMU emulation environment, performed basic system information gathering (IPC status) and exited cleanly without exhibiting malicious behaviors.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean exit code 0
+- No network activity, file system modifications, or process manipulation
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be a benign system utility. Consider monitoring for future executions with expanded capabilities.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems
+```

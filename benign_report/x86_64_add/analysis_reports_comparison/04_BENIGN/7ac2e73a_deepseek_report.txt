@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `849dc8fac1ccf4dbed3cc77b04fba2b376bc9f41fb9e6b88a4307f826cd1a3fa.elf` | **Job ID:** `7ac2e73a`
+**Date:** 2026-01-29 21:32:28
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing environment permissions (unshare operation not permitted), showing no malicious activity in trace.
+
+### 🔍 Key Evidence
+- EXEC event shows binary execution attempt
+- TRACK_QEMU event indicates emulation environment
+- WRITE events show error output: 'unshare failed: Operation not permitted'
+- No malicious syscall patterns detected (no network, file manipulation, persistence, or evasion behaviors)
+
+### 💡 Recommendations
+Re-run in environment with appropriate permissions to observe full behavior; currently insufficient data for risk assessment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+849dc8fac1ccf4dbed3cc77b04fba2b376bc9f41fb9e6b88a4307f826cd1a3fa.elf: unshare failed: Operation not permitted
+```

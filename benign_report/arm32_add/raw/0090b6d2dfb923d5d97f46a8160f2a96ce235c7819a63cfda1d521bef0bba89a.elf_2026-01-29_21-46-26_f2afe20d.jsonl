@@ -1,0 +1,17 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/0090b6d2dfb923d5d97f46a8160f2a96ce235c7819a63cfda1d521bef0bba89a.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 87122, "cgroup_inode": 52028, "container_id": "dce1062088b050caf98e96ded4fbf244568fbfb18af22ee0cd3be1e610171958", "container_name": "reverent_banach", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694386.4710615}
+{"ts": 1461706, "pid": 87690, "cgroup_id": 52028, "event": "EXEC", "filename": "/tmp/0090b6d2dfb923d5d97f46a8160f2a96ce235c7819a63cfda1d521bef0bba89a.elf"}
+{"ts": 1461706, "pid": 87690, "cgroup_id": 52028, "event": "TRACK_QEMU", "bin": "0090b6d2dfb923d", "count": 1}
+{"ts": 1461708, "pid": 87690, "cgroup_id": 52028, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1461713, "pid": 87690, "cgroup_id": 52028, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1461713, "pid": 87690, "cgroup_id": 52028, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1461713, "pid": 87690, "cgroup_id": 52028, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1461714, "pid": 87690, "cgroup_id": 52028, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1461715, "pid": 87690, "cgroup_id": 52028, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1461719, "pid": 87690, "cgroup_id": 52028, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1769694386799, "pid": -1, "cgroup_id": 52028, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"ts": 1769694386799, "pid": -1, "cgroup_id": 52028, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769694386799, "pid": -1, "cgroup_id": 52028, "event": "MMAP_SUM", "meta": {"count": 53, "max_pages": 1048560}, "count": 1}
+{"ts": 1461796, "pid": 87690, "cgroup_id": 52028, "event": "WRITE", "fd": 1, "buf": "HOSTNAME=dce1062088b0\nHOME=/root\nPATH=/usr/local/sbin:/usr/local", "count": 1}
+{"ts": 1461798, "pid": 87664, "cgroup_id": 52028, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1461798, "pid": 87664, "cgroup_id": 52028, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"type": "RUN_END", "end_ts": 1769694387.3397534, "events_count": 15, "analyzed_count": 0, "timeout": false}

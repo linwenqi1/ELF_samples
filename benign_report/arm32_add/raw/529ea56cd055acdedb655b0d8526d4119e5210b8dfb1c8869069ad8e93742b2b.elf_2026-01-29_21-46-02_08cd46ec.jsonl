@@ -1,0 +1,18 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/529ea56cd055acdedb655b0d8526d4119e5210b8dfb1c8869069ad8e93742b2b.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 65424, "cgroup_inode": 41536, "container_id": "5374b0d97f368a068c453d8fb64b52856fb5f1633637332ba3d5bfd92abbc44c", "container_name": "epic_neumann", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694362.839233}
+{"ts": 1438058, "pid": 66104, "cgroup_id": 41536, "event": "EXEC", "filename": "/tmp/529ea56cd055acdedb655b0d8526d4119e5210b8dfb1c8869069ad8e93742b2b.elf"}
+{"ts": 1438059, "pid": 66104, "cgroup_id": 41536, "event": "TRACK_QEMU", "bin": "529ea56cd055acd", "count": 1}
+{"ts": 1438060, "pid": 66104, "cgroup_id": 41536, "event": "SIGNAL_GENERATE", "sig": 11, "count": 1}
+{"ts": 1438061, "pid": 66104, "cgroup_id": 41536, "event": "WRITE", "fd": 3, "buf": "ELF\u0001\u0001\u0001", "count": 1}
+{"ts": 1438061, "pid": 66104, "cgroup_id": 41536, "event": "WRITE", "fd": 3, "buf": "", "count": 3}
+{"ts": 1438066, "pid": 66104, "cgroup_id": 41536, "event": "WRITE", "fd": 2, "buf": "qemu: uncaught target signal 11 (Segmentation fault) - core dump", "count": 1}
+{"ts": 1438066, "pid": 66104, "cgroup_id": 41536, "event": "KILL", "target_pid": 25, "sig": 11, "count": 1}
+{"ts": 1438066, "pid": 66104, "cgroup_id": 41536, "event": "SIGNAL_GENERATE", "sig": 11, "count": 1}
+{"ts": 1769694363151, "pid": -1, "cgroup_id": 41536, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769694363151, "pid": -1, "cgroup_id": 41536, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769694363151, "pid": -1, "cgroup_id": 41536, "event": "MMAP_SUM", "meta": {"count": 40, "max_pages": 1048560}, "count": 1}
+{"ts": 1438130, "pid": 66104, "cgroup_id": 41536, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 1438131, "pid": 66032, "cgroup_id": 41536, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1438131, "pid": 66032, "cgroup_id": 41536, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "ANALYZER", "result": {"level": 2.0, "cvss_vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N", "description": "Abnormal Signal Handling Detected", "pid": "66104", "evidence": "Process handled 1 typically fatal signals (last was SIG=11) within 5 seconds.", "analyzer": "AbnormalSignalHandling"}, "binary": "529ea56cd055acdedb655b0d8526d4119e5210b8dfb1c8869069ad8e93742b2b.elf"}
+{"type": "ANALYZER", "result": {"level": 2.0, "cvss_vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N", "description": "Abnormal Signal Handling Detected", "pid": "66104", "evidence": "Process handled 1 typically fatal signals (last was SIG=11) within 5 seconds.", "analyzer": "AbnormalSignalHandling"}, "binary": "529ea56cd055acdedb655b0d8526d4119e5210b8dfb1c8869069ad8e93742b2b.elf"}
+{"type": "RUN_END", "end_ts": 1769694363.4821277, "events_count": 14, "analyzed_count": 2, "timeout": false}

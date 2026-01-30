@@ -1,0 +1,15 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/23c822430cb7f56a4bd010bf373c86d70010fd528e390618570eb1f096052d2e.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 88917, "cgroup_inode": 52888, "container_id": "fc577559e47634ba3d77f6214018032ac1d523e139f1fd20445e59894ea28fb4", "container_name": "vigorous_grothendieck", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694388.5876005}
+{"ts": 1463818, "pid": 89726, "cgroup_id": 52888, "event": "EXEC", "filename": "/tmp/23c822430cb7f56a4bd010bf373c86d70010fd528e390618570eb1f096052d2e.elf"}
+{"ts": 1463818, "pid": 89726, "cgroup_id": 52888, "event": "TRACK_QEMU", "bin": "23c822430cb7f56", "count": 1}
+{"ts": 1463819, "pid": 89726, "cgroup_id": 52888, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1463823, "pid": 89726, "cgroup_id": 52888, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1463823, "pid": 89726, "cgroup_id": 52888, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1463824, "pid": 89726, "cgroup_id": 52888, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1463825, "pid": 89726, "cgroup_id": 52888, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1463825, "pid": 89726, "cgroup_id": 52888, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1463828, "pid": 89726, "cgroup_id": 52888, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1769694388870, "pid": -1, "cgroup_id": 52888, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"ts": 1769694388870, "pid": -1, "cgroup_id": 52888, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769694388870, "pid": -1, "cgroup_id": 52888, "event": "MMAP_SUM", "meta": {"count": 54, "max_pages": 1048560}, "count": 1}
+{"ts": 1463836, "pid": 89553, "cgroup_id": 52888, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"type": "RUN_END", "end_ts": 1769694389.3779242, "events_count": 13, "analyzed_count": 0, "timeout": false}

@@ -1,0 +1,12 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/912b47828e50c077f7a1eacd4098c13cc5005fe9f45af8450baa1cfa9a2540fd.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 33726, "cgroup_inode": 31990, "container_id": "f20a6bd945f5502a60dee85ec1d3b14f0a52cffd8e7f9f3bb9591a85f3397636", "container_name": "funny_aryabhata", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693483.3303986}
+{"ts": 558476, "pid": 34242, "cgroup_id": 31990, "event": "EXEC", "filename": "/tmp/912b47828e50c077f7a1eacd4098c13cc5005fe9f45af8450baa1cfa9a2540fd.elf"}
+{"ts": 558476, "pid": 34242, "cgroup_id": 31990, "event": "TRACK_QEMU", "bin": "912b47828e50c07", "count": 1}
+{"ts": 558476, "pid": 34242, "cgroup_id": 31990, "event": "SIGNAL_GENERATE", "sig": 11, "count": 1}
+{"ts": 1769693483517, "pid": -1, "cgroup_id": 31990, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693483517, "pid": -1, "cgroup_id": 31990, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"ts": 1769693483517, "pid": -1, "cgroup_id": 31990, "event": "MMAP_SUM", "meta": {"count": 8, "max_pages": 529}, "count": 1}
+{"ts": 558542, "pid": 34242, "cgroup_id": 31990, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 558542, "pid": 34235, "cgroup_id": 31990, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 558542, "pid": 34235, "cgroup_id": 31990, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"type": "ANALYZER", "result": {"level": 2.0, "cvss_vector": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N", "description": "Abnormal Signal Handling Detected", "pid": "34242", "evidence": "Process handled 1 typically fatal signals (last was SIG=11) within 5 seconds.", "analyzer": "AbnormalSignalHandling"}, "binary": "912b47828e50c077f7a1eacd4098c13cc5005fe9f45af8450baa1cfa9a2540fd.elf"}
+{"type": "RUN_END", "end_ts": 1769693483.898401, "events_count": 9, "analyzed_count": 1, "timeout": false}

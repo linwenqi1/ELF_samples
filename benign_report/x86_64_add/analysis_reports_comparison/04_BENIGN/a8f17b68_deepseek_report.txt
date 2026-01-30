@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d550b8dd829315e579183ec184fb6bc3475c9839c4be868d49d1293abef111a3.elf` | **Job ID:** `a8f17b68`
+**Date:** 2026-01-29 21:31:22
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment, displaying mount information via standard output with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Execution completed with exit code 0
+- Output shows mount table display (typical of utilities like 'mount' or 'findmnt')
+- TRACK_QEMU event is expected emulation artifact per environment specifications
+- No evidence of evasion, persistence, network activity, or malicious patterns
+
+### 💡 Recommendations
+No further action required. This appears to be a benign utility execution.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+TARGET                                            SOURCE                                                                                                                  FSTYPE  OPTIONS
+/                                                 overlay                                                                                                                 overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/MLG76QOM2FB6P67TW5SDMSR3LD:/var/lib/docker/overlay2/l/YEM2OGZ2EBCLOMSIJUFVW633ZZ,upperdir=/var/lib/docker/overlay2/ebb94deacbf1be4e5dcc345e681663aac0c8750412d35f9c0aca9f44979d6d6d/diff,workdir=/var/lib/docker/overlay2/ebb94deacbf1be4e5dcc345e681663aac0c8750412d35f9c0aca9f44979d6d6d/work,nouserxattr
+|-/proc                                           proc                                                                                                                    proc    rw,nosuid,nodev,noexec,relatime
+| |-/proc/bus                                     proc[/bus]                                                                                                              proc    ro,nosuid,nodev,noexec,relatime
+| |-/proc/fs                                      proc[/fs]                                                                                                               proc    ro,nosuid,nodev,noexec,relatime
+| |-/proc/irq                                     proc[/irq]
+```

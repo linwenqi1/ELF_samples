@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `3d3679e2239f6aad932eaa7aa2f533e807816a72db3bc5b35875570e9e782200.elf` | **Job ID:** `94790764`
+**Date:** 2026-01-29 21:47:43
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment with QEMU emulation, showing benign system utility behavior (likely 'ls' command) without malicious indicators.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Socket connections to /var/run/nscd/socket (normal system service communication)
+- GETDENTS64 calls for directory listing
+- WRITE output showing file listing (consistent with 'ls' command)
+
+### 💡 Recommendations
+No further action needed. This appears to be a benign system utility execution. Monitor for any unusual network connections or file system modifications if concerned.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+total 124
+-rwxrwxrwx 1 1000 1000 123464 Jan 29 13:24 3d3679e2239f6aad932eaa7aa2f533e807816a72db3bc5b35875570e9e782200.elf
+```

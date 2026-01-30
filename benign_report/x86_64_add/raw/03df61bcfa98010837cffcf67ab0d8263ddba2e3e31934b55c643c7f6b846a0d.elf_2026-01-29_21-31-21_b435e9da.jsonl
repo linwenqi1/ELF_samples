@@ -1,0 +1,45 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/03df61bcfa98010837cffcf67ab0d8263ddba2e3e31934b55c643c7f6b846a0d.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 32172, "cgroup_inode": 31302, "container_id": "4a007c78b03637da773ad7df8ea3e078e561a724940d9e61e30740ce97de0045", "container_name": "charming_gould", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693481.4598122}
+{"ts": 556627, "pid": 32588, "cgroup_id": 31302, "event": "EXEC", "filename": "/tmp/03df61bcfa98010837cffcf67ab0d8263ddba2e3e31934b55c643c7f6b846a0d.elf"}
+{"ts": 556627, "pid": 32588, "cgroup_id": 31302, "event": "TRACK_QEMU", "bin": "03df61bcfa98010", "count": 1}
+{"ts": 556627, "pid": 32588, "cgroup_id": 31302, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 556627, "pid": 32588, "cgroup_id": 31302, "event": "EXEC", "filename": "/bin/sh", "count": 1}
+{"ts": 556627, "pid": 32588, "cgroup_id": 31302, "event": "TRACK_QEMU", "bin": "sh", "count": 1}
+{"ts": 556627, "pid": 32588, "cgroup_id": 31302, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 556628, "pid": 32589, "cgroup_id": 31302, "event": "DUP2", "oldfd": 4, "newfd": 1, "count": 1}
+{"ts": 556628, "pid": 32589, "cgroup_id": 31302, "event": "EXEC", "filename": "/usr/bin/id", "count": 1}
+{"ts": 556629, "pid": 32589, "cgroup_id": 31302, "event": "TRACK_QEMU", "bin": "id", "count": 1}
+{"ts": 556629, "pid": 32589, "cgroup_id": 31302, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 556629, "pid": 32589, "cgroup_id": 31302, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 556629, "pid": 32589, "cgroup_id": 31302, "event": "WRITE", "fd": 1, "buf": "0\n", "count": 1}
+{"ts": 556629, "pid": 32588, "cgroup_id": 31302, "event": "READ", "fd": 3, "buf_len": 2, "count": 1}
+{"ts": 556629, "pid": 32588, "cgroup_id": 31302, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 556629, "pid": 32588, "cgroup_id": 31302, "event": "WAIT4_EXITED", "reaped_child": 22, "count": 1}
+{"ts": 556629, "pid": 32588, "cgroup_id": 31302, "event": "GETDENTS64", "filename": "\u0003", "count": 2}
+{"ts": 556630, "pid": 32588, "cgroup_id": 31302, "event": "READ", "fd": 11, "buf_len": 96, "count": 1}
+{"ts": 556630, "pid": 32588, "cgroup_id": 31302, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 556630, "pid": 32588, "cgroup_id": 31302, "event": "TRACK_FORK", "parent": 32588, "child": 32590, "count": 1}
+{"ts": 556630, "pid": 32590, "cgroup_id": 31302, "event": "DUP2", "oldfd": 4, "newfd": 1, "count": 1}
+{"ts": 556630, "pid": 32590, "cgroup_id": 31302, "event": "EXEC", "filename": "/usr/bin/locale-check", "count": 1}
+{"ts": 556630, "pid": 32590, "cgroup_id": 31302, "event": "TRACK_QEMU", "bin": "locale-check", "count": 1}
+{"ts": 556630, "pid": 32590, "cgroup_id": 31302, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 556630, "pid": 32588, "cgroup_id": 31302, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 556630, "pid": 32588, "cgroup_id": 31302, "event": "WAIT4_EXITED", "reaped_child": 23, "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "READ", "fd": 10, "buf_len": 161, "count": 1}
+{"ts": 1769693481668, "pid": -1, "cgroup_id": 31302, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 7}
+{"ts": 1769693481668, "pid": -1, "cgroup_id": 31302, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769693481668, "pid": -1, "cgroup_id": 31302, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769693481668, "pid": -1, "cgroup_id": 31302, "event": "MMAP_SUM", "meta": {"count": 49, "max_pages": 529}, "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "DUP2", "oldfd": 3, "newfd": 2, "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "VFORK", "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "TRACK_FORK", "parent": 32588, "child": 32591, "count": 1}
+{"ts": 556631, "pid": 32591, "cgroup_id": 31302, "event": "EXEC", "filename": "/usr/bin/mesg", "count": 1}
+{"ts": 556631, "pid": 32591, "cgroup_id": 31302, "event": "TRACK_QEMU", "bin": "mesg", "count": 1}
+{"ts": 556631, "pid": 32591, "cgroup_id": 31302, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"ts": 556631, "pid": 32588, "cgroup_id": 31302, "event": "DUP2", "oldfd": 11, "newfd": 2, "count": 1}
+{"ts": 556631, "pid": 32574, "cgroup_id": 31302, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 556631, "pid": 32574, "cgroup_id": 31302, "event": "WAIT4_EXITED", "reaped_child": 21, "count": 1}
+{"ts": 1769693481769, "pid": -1, "cgroup_id": 31302, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"type": "ANALYZER", "result": {"level": 9.3, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Potential Command Injection", "pid": 32588, "evidence": "Suspicious shell executed via EXEC: /bin/sh", "analyzer": "CodeInjection"}, "binary": "03df61bcfa98010837cffcf67ab0d8263ddba2e3e31934b55c643c7f6b846a0d.elf"}
+{"type": "RUN_END", "end_ts": 1769693482.1715326, "events_count": 42, "analyzed_count": 1, "timeout": false}

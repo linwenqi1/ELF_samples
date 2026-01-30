@@ -1,0 +1,19 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/fe5ddd201c75c6a784e2f5fcf21836d450357a5e36af9e58df4a3c36f5b869f1.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 79321, "cgroup_inode": 48158, "container_id": "69aff248a07324ccb1988b72fb13a1b0248a6043013c9e2618644a1595ff07eb", "container_name": "nice_spence", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694377.8190393}
+{"ts": 1453026, "pid": 79940, "cgroup_id": 48158, "event": "EXEC", "filename": "/tmp/fe5ddd201c75c6a784e2f5fcf21836d450357a5e36af9e58df4a3c36f5b869f1.elf"}
+{"ts": 1453026, "pid": 79940, "cgroup_id": 48158, "event": "TRACK_QEMU", "bin": "fe5ddd201c75c6a", "count": 1}
+{"ts": 1453027, "pid": 79940, "cgroup_id": 48158, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1453031, "pid": 79940, "cgroup_id": 48158, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1453031, "pid": 79940, "cgroup_id": 48158, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1453032, "pid": 79940, "cgroup_id": 48158, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1453032, "pid": 79940, "cgroup_id": 48158, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1453033, "pid": 79940, "cgroup_id": 48158, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1453036, "pid": 79940, "cgroup_id": 48158, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1453103, "pid": 79940, "cgroup_id": 48158, "event": "WRITE", "fd": 2, "buf": "/tmp/fe5ddd201c75c6a784e2f5fcf21836d450357a5e36af9e58df4a3c36f5b", "count": 1}
+{"ts": 1453103, "pid": 79940, "cgroup_id": 48158, "event": "WRITE", "fd": 2, "buf": "failed to get current context", "count": 1}
+{"ts": 1453103, "pid": 79940, "cgroup_id": 48158, "event": "WRITE", "fd": 2, "buf": ": Operation not supported", "count": 1}
+{"ts": 1453103, "pid": 79940, "cgroup_id": 48158, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 1453105, "pid": 79810, "cgroup_id": 48158, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1453105, "pid": 79810, "cgroup_id": 48158, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769694378148, "pid": -1, "cgroup_id": 48158, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769694378148, "pid": -1, "cgroup_id": 48158, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "RUN_END", "end_ts": 1769694378.64539, "events_count": 17, "analyzed_count": 0, "timeout": false}

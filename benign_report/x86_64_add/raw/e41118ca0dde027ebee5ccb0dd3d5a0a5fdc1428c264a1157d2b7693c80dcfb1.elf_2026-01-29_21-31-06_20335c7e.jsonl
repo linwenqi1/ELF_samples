@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/e41118ca0dde027ebee5ccb0dd3d5a0a5fdc1428c264a1157d2b7693c80dcfb1.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 22798, "cgroup_inode": 27346, "container_id": "a382d38e37ea2b55ff7ef7c54d3b664d9de2f12ec17296274d36385bd32105c9", "container_name": "quirky_bartik", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693467.1924188}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "EXEC", "filename": "/tmp/e41118ca0dde027ebee5ccb0dd3d5a0a5fdc1428c264a1157d2b7693c80dcfb1.elf"}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "TRACK_QEMU", "bin": "e41118ca0dde027", "count": 1}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "WRITE", "fd": 2, "buf": "e41118ca0dde027ebee5ccb0dd3d5a0a5fdc1428c264a1157d2b7693c80dcfb1", "count": 1}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "WRITE", "fd": 2, "buf": "pathname argument is missing", "count": 1}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 542417, "pid": 23236, "cgroup_id": 27346, "event": "WRITE", "fd": 2, "buf": "Try 'e41118ca0dde027ebee5ccb0dd3d5a0a5fdc1428c264a1157d2b7693c80", "count": 1}
+{"ts": 542417, "pid": 23229, "cgroup_id": 27346, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 542417, "pid": 23229, "cgroup_id": 27346, "event": "WAIT4_EXITED", "reaped_child": 20, "count": 1}
+{"ts": 1769693467482, "pid": -1, "cgroup_id": 27346, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769693467482, "pid": -1, "cgroup_id": 27346, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"type": "RUN_END", "end_ts": 1769693467.9753547, "events_count": 11, "analyzed_count": 0, "timeout": false}

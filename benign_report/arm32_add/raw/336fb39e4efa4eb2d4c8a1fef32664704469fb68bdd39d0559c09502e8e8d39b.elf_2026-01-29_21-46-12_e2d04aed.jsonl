@@ -1,0 +1,17 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/336fb39e4efa4eb2d4c8a1fef32664704469fb68bdd39d0559c09502e8e8d39b.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 74989, "cgroup_inode": 46180, "container_id": "23e42f7286bb0f55bf46085c29e09e59816131988901b7ed211941cb0c1a54ee", "container_name": "dazzling_colden", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694373.0752783}
+{"ts": 1448343, "pid": 75613, "cgroup_id": 46180, "event": "EXEC", "filename": "/tmp/336fb39e4efa4eb2d4c8a1fef32664704469fb68bdd39d0559c09502e8e8d39b.elf"}
+{"ts": 1448343, "pid": 75613, "cgroup_id": 46180, "event": "TRACK_QEMU", "bin": "336fb39e4efa4eb", "count": 1}
+{"ts": 1448344, "pid": 75613, "cgroup_id": 46180, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1448348, "pid": 75613, "cgroup_id": 46180, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1448348, "pid": 75613, "cgroup_id": 46180, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1448348, "pid": 75613, "cgroup_id": 46180, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1448349, "pid": 75613, "cgroup_id": 46180, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1448350, "pid": 75613, "cgroup_id": 46180, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1448352, "pid": 75613, "cgroup_id": 46180, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1448356, "pid": 75613, "cgroup_id": 46180, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1448359, "pid": 75613, "cgroup_id": 46180, "event": "WRITE", "fd": 1, "buf": "Thu Jan 29 13:46:13 UTC 2026\n", "count": 1}
+{"ts": 1448360, "pid": 75515, "cgroup_id": 46180, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1448360, "pid": 75515, "cgroup_id": 46180, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769694373443, "pid": -1, "cgroup_id": 46180, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769694373443, "pid": -1, "cgroup_id": 46180, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769694373.9020178, "events_count": 15, "analyzed_count": 0, "timeout": false}

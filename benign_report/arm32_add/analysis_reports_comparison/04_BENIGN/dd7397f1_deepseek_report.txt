@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c1c3ab5d761adc278de3e418b413d5a3d6e851eecb4f66c7e5c8fbf6bb96ca7c.elf` | **Job ID:** `dd7397f1`
+**Date:** 2026-01-29 21:49:41
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment with minimal activity, showing no malicious patterns.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No access to sensitive paths outside /tmp
+- No network activity, persistence attempts, or exploitation patterns
+- Exit code 0 with limited syscall activity
+
+### 💡 Recommendations
+No immediate action required. Monitor for any subsequent executions with expanded behavior.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

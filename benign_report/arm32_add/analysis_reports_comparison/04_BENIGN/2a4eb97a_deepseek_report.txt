@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `95a88d8a3c1eac950ae3fd141211a4e7ed02cf5a774ed220bc099ff78bb24db4.elf` | **Job ID:** `2a4eb97a`
+**Date:** 2026-01-29 21:46:04
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, displayed its own filename, and exited cleanly with no malicious behaviors observed.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean exit code 0
+- No network activity, file writes, persistence attempts, or process manipulation
+- Only benign file operations and memory protection calls
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a simple utility or test program with no malicious functionality.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+95a88d8a3c1eac950ae3fd141211a4e7ed02cf5a774ed220bc099ff78bb24db4.elf
+```

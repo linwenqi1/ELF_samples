@@ -1,0 +1,47 @@
+# DeepSeek Malware Analysis Report
+**Target:** `cf7329844f63c227020939548e85935321082b146815b3786c40cb83818d4a84.elf` | **Job ID:** `dc8e5724`
+**Date:** 2026-01-29 21:33:03
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment with QEMU emulation, showing only benign system initialization and mount operations typical of container startup.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory (expected in sandbox)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No malicious syscall patterns detected
+- No access to sensitive paths outside emulation
+- No evidence of anti-analysis, persistence, or payload delivery
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be benign system utility or test program. Monitor for any subsequent executions with different behavior patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+overlay on / type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/TGRODXX3ELM5AC2RLXZRVO6GCH:/var/lib/docker/overlay2/l/YEM2OGZ2EBCLOMSIJUFVW633ZZ,upperdir=/var/lib/docker/overlay2/f5ef07df72b1fca71ef8e8745ae0312f981d7b5bf1c3d3dd9a969e0e2840c755/diff,workdir=/var/lib/docker/overlay2/f5ef07df72b1fca71ef8e8745ae0312f981d7b5bf1c3d3dd9a969e0e2840c755/work,nouserxattr)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup type cgroup2 (ro,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k,inode64)
+/dev/nvme0n1p9 on /usr/sbin/docker-init type ext4 (ro,relatime)
+/dev/nvme0n1p9 on /etc/resolv.conf type ext4 (rw,relatime)
+/dev/nvme0n1p9 on /etc/hostname type ext4 (rw,relatime)
+/dev/nvme0n1p9 on /etc/hosts type ext4 (rw,relatime)
+proc on /proc/bus type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/fs type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/irq type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sys type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sysrq-trigger type proc (ro,nosuid,nodev,noexec,relatime)
+tmpfs on /proc/asound type tmpfs (ro,relatime,inod
+```

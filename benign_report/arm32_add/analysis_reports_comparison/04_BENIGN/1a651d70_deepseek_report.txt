@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `afb08ed77879f554e0501f5a649ead67b47e5ce693141c4d14f73cfd5d972611.elf` | **Job ID:** `1a651d70`
+**Date:** 2026-01-29 21:49:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing login name dependency, showing no malicious activity before exit.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'no login name' error
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No access to sensitive paths outside emulation
+- No malicious syscall patterns detected
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a legitimate utility with unmet environment dependencies.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/afb08ed77879f554e0501f5a649ead67b47e5ce693141c4d14f73cfd5d972611.elf: no login name
+```

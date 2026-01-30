@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `93016c23bc80a5c7adfe24fc8cc80919224ef4b1e09285a61edf30e78e9e1096.elf` | **Job ID:** `31e4e8c3`
+**Date:** 2026-01-29 21:32:26
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Crash`
+
+## 📝 Analysis Summary
+> Binary crashed immediately with segmentation fault (SIGSEGV) during execution in Docker/Linux environment via QEMU emulation. No successful malicious behaviors observed.
+
+### ⚠️ Suspicious Behaviors
+- Abnormal signal handling (SIGSEGV)
+- Process crash on startup
+
+### 🔍 Key Evidence
+- Exit code 139 (segmentation fault)
+- SIGNAL_GENERATE sig=11 (SIGSEGV) in trace
+- AbnormalSignalHandling alert with CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N
+
+### 💡 Recommendations
+Further static analysis needed to determine if crash is due to anti-emulation, corrupted binary, or architecture incompatibility. Consider debugging core dump if available.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Segmentation fault (core dumped)
+```

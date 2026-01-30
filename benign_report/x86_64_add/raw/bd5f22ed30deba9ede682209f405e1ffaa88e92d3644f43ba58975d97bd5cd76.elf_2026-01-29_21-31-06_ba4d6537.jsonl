@@ -1,0 +1,15 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/bd5f22ed30deba9ede682209f405e1ffaa88e92d3644f43ba58975d97bd5cd76.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 22499, "cgroup_inode": 27088, "container_id": "8ea4194c5e9f28ecfca4d8e662c7ffa386bf02243f1d4a7161e41707a95f269f", "container_name": "awesome_bassi", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693466.919067}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "EXEC", "filename": "/tmp/bd5f22ed30deba9ede682209f405e1ffaa88e92d3644f43ba58975d97bd5cd76.elf"}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "TRACK_QEMU", "bin": "bd5f22ed30deba9", "count": 1}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "WRITE", "fd": 2, "buf": "bd5f22ed30deba9ede682209f405e1ffaa88e92d3644f43ba58975d97bd5cd76", "count": 1}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "WRITE", "fd": 2, "buf": "bad usage", "count": 1}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 542130, "pid": 22914, "cgroup_id": 27088, "event": "WRITE", "fd": 2, "buf": "Try 'bd5f22ed30deba9ede682209f405e1ffaa88e92d3644f43ba58975d97bd", "count": 1}
+{"ts": 542130, "pid": 22894, "cgroup_id": 27088, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 542130, "pid": 22894, "cgroup_id": 27088, "event": "WAIT4_EXITED", "reaped_child": 22, "count": 1}
+{"ts": 1769693467249, "pid": -1, "cgroup_id": 27088, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769693467249, "pid": -1, "cgroup_id": 27088, "event": "AGGREGATED_SUMMARY", "category": "sys_fs", "count": 1}
+{"ts": 1769693467249, "pid": -1, "cgroup_id": 27088, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "ANALYZER", "result": {"level": 7, "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N", "description": "System reconnaissance: scanning /proc, /sys, and /dev simultaneously", "evidence": {"pattern_categories": ["proc_fs", "sys_fs", "dev_node"], "counts": {"proc_fs": 1, "sys_fs": 1, "dev_node": 1}, "total_operations": 3}, "mitigation": "Review process behavior for malicious reconnaissance or data theft", "pid": -1, "ts": 1769693467249, "analyzer": "AggregatedEvents"}, "binary": "bd5f22ed30deba9ede682209f405e1ffaa88e92d3644f43ba58975d97bd5cd76.elf"}
+{"type": "RUN_END", "end_ts": 1769693467.6799984, "events_count": 12, "analyzed_count": 1, "timeout": false}

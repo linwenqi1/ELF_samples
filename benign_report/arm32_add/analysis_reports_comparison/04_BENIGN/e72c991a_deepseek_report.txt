@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `95eea1ca7bb555dd5db137ecb0ed3c45feb8e40294a28b5d1acc3898294a95e4.elf` | **Job ID:** `e72c991a`
+**Date:** 2026-01-29 21:48:07
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, performed minimal system calls, output a SHA-256 hash, and exited cleanly with no malicious patterns detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- MPROTECT calls with read-only permissions (benign memory protection)
+- WRITE to stdout with hash output (d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f)
+- No network activity, file manipulation, persistence attempts, or evasion behaviors
+
+### 💡 Recommendations
+No further action needed. This appears to be a benign utility (possibly a hash calculator). Monitor for any future executions with expanded system call traces if environmental concerns persist.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f  -
+```

@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `60ccc73c913d808417dc058862b202311fa423426e832c675b6122faaa1d94dd.elf` | **Job ID:** `82f4238c`
+**Date:** 2026-01-29 21:32:23
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing shared library dependency (libtinfo.so.5). No malicious activity observed in trace.
+
+### 🔍 Key Evidence
+- Missing library: libtinfo.so.5
+- Exit code 127 (command not found/execution failure)
+- No malicious syscall patterns detected
+
+### 💡 Recommendations
+Analyze with proper library dependencies installed to observe actual behavior. Check binary for obfuscation or anti-analysis techniques that may trigger after successful execution.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/60ccc73c913d808417dc058862b202311fa423426e832c675b6122faaa1d94dd.elf: error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory
+```

@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fee3732f4d3876cd0592926316bd1647b568b9220a9065247be34bc5232cfcb7.elf` | **Job ID:** `03e0d4be`
+**Date:** 2026-01-29 21:32:54
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 100/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Rootkit`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed with root privileges and attempted to connect to Unix domain sockets, indicating potential backdoor or persistence mechanism installation.
+
+### ⚠️ Suspicious Behaviors
+- Execution from /tmp directory
+- Multiple socket connections to Unix domain sockets
+- Root privilege acquisition
+
+### 🔍 Key Evidence
+- uid=0(root) gid=0(root) groups=0(root) output
+- Multiple CONNECT events to /var/run/nscd/socket
+- Binary executed from /tmp location
+
+### 💡 Recommendations
+Isolate affected system, analyze connected sockets for persistence mechanisms, check for unauthorized root access, and examine /tmp for additional malicious files.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+uid=0(root) gid=0(root) groups=0(root)
+```

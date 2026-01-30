@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `17952d321735b82b39f47a3ddeee27f4b7498fd7bc5722258ab7867c700f4ffa.elf` | **Job ID:** `1e1166a9`
+**Date:** 2026-01-29 21:49:17
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly due to environment mismatch (not a tty error), showing minimal benign activity before exit.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'not a tty' output
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Minimal syscall activity before termination
+
+### 💡 Recommendations
+No immediate threat detected. Consider testing in proper terminal environment if functionality verification is needed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+not a tty
+```

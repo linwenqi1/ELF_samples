@@ -1,0 +1,23 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/a28d9ae0d4fcf33b0ee970360c2d472c6f961a74b1b92055a8000df412cd0555.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 82447, "cgroup_inode": 49706, "container_id": "e5225e3c8ebd498033550d3de16c1eb6cb5b06ab5687a09e4c5954311e60f989", "container_name": "happy_zhukovsky", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694381.38354}
+{"ts": 1456623, "pid": 83205, "cgroup_id": 49706, "event": "EXEC", "filename": "/tmp/a28d9ae0d4fcf33b0ee970360c2d472c6f961a74b1b92055a8000df412cd0555.elf"}
+{"ts": 1769694381686, "pid": -1, "cgroup_id": 49706, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769694381686, "pid": -1, "cgroup_id": 49706, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769694381686, "pid": -1, "cgroup_id": 49706, "event": "MMAP_SUM", "meta": {"count": 28, "max_pages": 1048560}, "count": 1}
+{"ts": 1456655, "pid": 83205, "cgroup_id": 49706, "event": "TRACK_QEMU", "bin": "a28d9ae0d4fcf33", "count": 1}
+{"ts": 1456657, "pid": 83205, "cgroup_id": 49706, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1456662, "pid": 83205, "cgroup_id": 49706, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1456662, "pid": 83205, "cgroup_id": 49706, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1456663, "pid": 83205, "cgroup_id": 49706, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1456664, "pid": 83205, "cgroup_id": 49706, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1456664, "pid": 83205, "cgroup_id": 49706, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1456668, "pid": 83205, "cgroup_id": 49706, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1456674, "pid": 83205, "cgroup_id": 49706, "event": "WRITE", "fd": 2, "buf": "/tmp/a28d9ae0d4fcf33b0ee970360c2d472c6f961a74b1b92055a8000df412c", "count": 1}
+{"ts": 1456675, "pid": 83205, "cgroup_id": 49706, "event": "WRITE", "fd": 2, "buf": "missing operand", "count": 1}
+{"ts": 1456675, "pid": 83205, "cgroup_id": 49706, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 1456675, "pid": 83205, "cgroup_id": 49706, "event": "WRITE", "fd": 2, "buf": "Try '/tmp/a28d9ae0d4fcf33b0ee970360c2d472c6f961a74b1b92055a8000d", "count": 1}
+{"ts": 1456677, "pid": 83164, "cgroup_id": 49706, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1456677, "pid": 83164, "cgroup_id": 49706, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769694381794, "pid": -1, "cgroup_id": 49706, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769694381794, "pid": -1, "cgroup_id": 49706, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "ANALYZER", "result": {"level": 9.3, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Memory Corruption (Weak Signal)", "pid": -1, "evidence": "Detected abnormally large page allocation via mmap: 1048560 pages", "analyzer": "MemoryCorruption"}, "binary": "a28d9ae0d4fcf33b0ee970360c2d472c6f961a74b1b92055a8000df412cd0555.elf"}
+{"type": "RUN_END", "end_ts": 1769694382.2195833, "events_count": 20, "analyzed_count": 1, "timeout": false}

@@ -1,0 +1,15 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/fc3ee78cdb87b37117e6f1f2f82ddedd59245f816b96d45562d346a246a662d1.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 61295, "cgroup_inode": 39730, "container_id": "fac48dc83491b1425ee51fa7f65598473889561f838ab52c85b1b1ec19cd18df", "container_name": "clever_tesla", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694357.9211805}
+{"ts": 1433172, "pid": 61935, "cgroup_id": 39730, "event": "EXEC", "filename": "/tmp/fc3ee78cdb87b37117e6f1f2f82ddedd59245f816b96d45562d346a246a662d1.elf"}
+{"ts": 1433173, "pid": 61935, "cgroup_id": 39730, "event": "TRACK_QEMU", "bin": "fc3ee78cdb87b37", "count": 1}
+{"ts": 1433174, "pid": 61935, "cgroup_id": 39730, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1433179, "pid": 61935, "cgroup_id": 39730, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1433179, "pid": 61935, "cgroup_id": 39730, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1433179, "pid": 61935, "cgroup_id": 39730, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1433180, "pid": 61935, "cgroup_id": 39730, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1433181, "pid": 61935, "cgroup_id": 39730, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1433185, "pid": 61935, "cgroup_id": 39730, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1433192, "pid": 61909, "cgroup_id": 39730, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1433192, "pid": 61909, "cgroup_id": 39730, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 1769694358296, "pid": -1, "cgroup_id": 39730, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769694358296, "pid": -1, "cgroup_id": 39730, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769694358.7336092, "events_count": 13, "analyzed_count": 0, "timeout": false}

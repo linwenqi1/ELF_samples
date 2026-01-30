@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `752c5f0a445126cbe74f0008aa9f318cce1bf5190054798ccf4a20138bf2ceba.elf` | **Job ID:** `abd76408`
+**Date:** 2026-01-29 21:33:27
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing arguments, showing only expected error output behavior with no malicious activity detected.
+
+### 🔍 Key Evidence
+- Exit code 1 indicates argument error
+- No network, file system, or process manipulation observed
+- TRACK_QEMU event is environment artifact, not evasion
+
+### 💡 Recommendations
+Re-execute with proper arguments to observe full behavior; current analysis shows no threat indicators.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+752c5f0a445126cbe74f0008aa9f318cce1bf5190054798ccf4a20138bf2ceba.elf: not enough arguments
+Try '752c5f0a445126cbe74f0008aa9f318cce1bf5190054798ccf4a20138bf2ceba.elf --help' for more information.
+```

@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0089171bca81d4c72450b9750b52eaeb6bb8bae9b43b03541e2098b825b40bea.elf` | **Job ID:** `6da25827`
+**Date:** 2026-01-29 21:33:52
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing required arguments (wake time), showing only basic startup and error output behavior with no malicious activity detected.
+
+### 🔍 Key Evidence
+- Exit code 1 with error message about missing wake time arguments
+- No network activity, file system modifications, or process manipulation observed
+- TRACK_QEMU event identified as emulation artifact per noise filtering rules
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a legitimate utility requiring specific arguments. If suspicious, re-run with proper arguments to observe full behavior.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+0089171bca81d4c72450b9750b52eaeb6bb8bae9b43b03541e2098b825b40bea.elf: must provide wake time (see --seconds, --time and --date options)
+0089171bca81d4c72450b9750b52eaeb6bb8bae9b43b03541e2098b825b40bea.elf: assuming RTC uses UTC ...
+```

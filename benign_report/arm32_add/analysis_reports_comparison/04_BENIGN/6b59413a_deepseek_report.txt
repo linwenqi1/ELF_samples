@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fd4b3529db47d243e32e554465076368d1189fc0be34fbd44de0d17e24d6e535.elf` | **Job ID:** `6b59413a`
+**Date:** 2026-01-29 21:49:34
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, performed minimal system operations and output 'root', showing no malicious patterns.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Socket connections to /var/run/nscd/socket (normal system communication)
+- No sensitive path access or malicious patterns detected
+
+### 💡 Recommendations
+No further action required. Binary appears to be a benign utility or test program.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+root
+```

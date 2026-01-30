@@ -1,0 +1,33 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/761722fd7d3715a449c4515526c2f0d1e8c10b06a2788f7145ca905096c8c3db.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 41895, "cgroup_inode": 36032, "container_id": "1bcc8e114f03e556cc9c5c178fb919e204799cd77a0f978df2929f7757a7f0c0", "container_name": "affectionate_bartik", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693492.4547493}
+{"ts": 567626, "pid": 42505, "cgroup_id": 36032, "event": "EXEC", "filename": "/tmp/761722fd7d3715a449c4515526c2f0d1e8c10b06a2788f7145ca905096c8c3db.elf"}
+{"ts": 567626, "pid": 42505, "cgroup_id": 36032, "event": "TRACK_QEMU", "bin": "761722fd7d3715a", "count": 1}
+{"ts": 567626, "pid": 42505, "cgroup_id": 36032, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 567626, "pid": 42505, "cgroup_id": 36032, "event": "WRITE", "fd": 1, "buf": "Script started, file is typescript\n", "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "DUP2", "oldfd": 4, "newfd": 0, "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "DUP2", "oldfd": 4, "newfd": 1, "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "DUP2", "oldfd": 4, "newfd": 2, "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "ACCESS", "filename": "\u0001", "mode": 1, "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "EXEC", "filename": "/bin/sh", "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "TRACK_QEMU", "bin": "sh", "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 567626, "pid": 42508, "cgroup_id": 36032, "event": "WRITE", "fd": 2, "buf": "# ", "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "WRITE", "fd": 3, "buf": "\u0004", "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "READ", "fd": 3, "buf_len": 2, "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "WRITE", "fd": 1, "buf": "# ", "count": 1}
+{"ts": 567636, "pid": 42508, "cgroup_id": 36032, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "READ", "fd": 3, "buf_len": 2, "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "WRITE", "fd": 1, "buf": "\r\n", "count": 1}
+{"ts": 567636, "pid": 42508, "cgroup_id": 36032, "event": "SIGNAL_GENERATE", "sig": 1, "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "READ", "fd": 5, "buf_len": 128, "count": 1}
+{"ts": 567636, "pid": 42505, "cgroup_id": 36032, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"ts": 567647, "pid": 42505, "cgroup_id": 36032, "event": "KILL", "target_pid": 24, "sig": 15, "count": 1}
+{"ts": 567647, "pid": 42505, "cgroup_id": 36032, "event": "WRITE", "fd": 6, "buf": "Script started on 2026-01-29 13:31:32+00:00 [<not executed on te", "count": 1}
+{"ts": 567647, "pid": 42505, "cgroup_id": 36032, "event": "WRITE", "fd": 1, "buf": "Script done, file is typescript\n", "count": 1}
+{"ts": 567647, "pid": 42459, "cgroup_id": 36032, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 567647, "pid": 42459, "cgroup_id": 36032, "event": "WAIT4_EXITED", "reaped_child": 23, "count": 1}
+{"ts": 1769693492734, "pid": -1, "cgroup_id": 36032, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 5}
+{"ts": 1769693492734, "pid": -1, "cgroup_id": 36032, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693492734, "pid": -1, "cgroup_id": 36032, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 2}
+{"type": "ANALYZER", "result": {"level": 9.3, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Potential Command Injection", "pid": 42508, "evidence": "Suspicious shell executed via EXEC: /bin/sh", "analyzer": "CodeInjection"}, "binary": "761722fd7d3715a449c4515526c2f0d1e8c10b06a2788f7145ca905096c8c3db.elf"}
+{"type": "RUN_END", "end_ts": 1769693493.1871445, "events_count": 30, "analyzed_count": 1, "timeout": false}

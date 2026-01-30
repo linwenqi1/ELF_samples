@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `cbfe5a2b870f11eff002077e897f8684f1e13f32dbf78d2316ad0488e08456aa.elf` | **Job ID:** `2bc7bb67`
+**Date:** 2026-01-29 21:31:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing login name dependency, showing no malicious activity before exit.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'no login name' error
+- No malicious syscall patterns detected
+- TRACK_QEMU event is benign emulation artifact
+
+### 💡 Recommendations
+No further action needed; binary appears to be a non-functional or dependency-lacking executable.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/cbfe5a2b870f11eff002077e897f8684f1e13f32dbf78d2316ad0488e08456aa.elf: no login name
+```

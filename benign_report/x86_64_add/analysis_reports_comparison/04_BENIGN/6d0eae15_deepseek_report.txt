@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `bfaf17e7cae1c3bcc608677f65bc19a7e8fd1cb6f40d5de63244c86da6b4c480.elf` | **Job ID:** `6d0eae15`
+**Date:** 2026-01-29 21:33:49
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment with minimal activity, showing no malicious behaviors. Output 'none: prio 0' suggests possible test or diagnostic utility.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Minimal syscall trace with no network, persistence, or exploitation patterns
+- Clean exit code 0 with no errors
+
+### 💡 Recommendations
+No immediate action needed. Consider static analysis of binary for deeper inspection if context suggests higher risk.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+none: prio 0
+```

@@ -1,0 +1,14 @@
+{"type": "RUN_META", "session": "374068addcf44a5881f7d76651bb8608", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86_64_added/10ef5cda28f815e1f6dbe04cb0e1c91ca624e9cbf01f2fd1bb846a98620c0e80.elf", "backend": "cbpf", "arch": {"machine": 62, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib64/ld-linux-x86-64.so.2"}, "host_root_pid": 14941, "cgroup_inode": 23476, "container_id": "d4314f1788b3a8840212b455987263397a71dc8fbee26d2ef37724519045696e", "container_name": "vibrant_roentgen", "container_image": "amd64/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769693457.6825411}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "EXEC", "filename": "/tmp/10ef5cda28f815e1f6dbe04cb0e1c91ca624e9cbf01f2fd1bb846a98620c0e80.elf"}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "TRACK_QEMU", "bin": "10ef5cda28f815e", "count": 1}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "WRITE", "fd": 2, "buf": "10ef5cda28f815e1f6dbe04cb0e1c91ca624e9cbf01f2fd1bb846a98620c0e80", "count": 1}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "WRITE", "fd": 2, "buf": "error: Nowhere to set up swap on?", "count": 1}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 532825, "pid": 15525, "cgroup_id": 23476, "event": "WRITE", "fd": 2, "buf": "Try '10ef5cda28f815e1f6dbe04cb0e1c91ca624e9cbf01f2fd1bb846a98620", "count": 1}
+{"ts": 532826, "pid": 15493, "cgroup_id": 23476, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 532826, "pid": 15493, "cgroup_id": 23476, "event": "WAIT4_EXITED", "reaped_child": 20, "count": 1}
+{"ts": 1769693457942, "pid": -1, "cgroup_id": 23476, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"ts": 1769693457942, "pid": -1, "cgroup_id": 23476, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769693457942, "pid": -1, "cgroup_id": 23476, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 3}
+{"type": "RUN_END", "end_ts": 1769693458.365939, "events_count": 12, "analyzed_count": 0, "timeout": false}

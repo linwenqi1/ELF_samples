@@ -1,0 +1,20 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/573056f372657aa49833f8a6e3d2cb1e8c61dd8220670684f71042fb2b3d2e69.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 69880, "cgroup_inode": 43772, "container_id": "25841db13896215d18e3c18e5fcf10be5f8d3e429d5c026f56f85dd8556c74cf", "container_name": "interesting_gould", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694367.5471342}
+{"ts": 1442796, "pid": 70498, "cgroup_id": 43772, "event": "EXEC", "filename": "/tmp/573056f372657aa49833f8a6e3d2cb1e8c61dd8220670684f71042fb2b3d2e69.elf"}
+{"ts": 1442796, "pid": 70498, "cgroup_id": 43772, "event": "TRACK_QEMU", "bin": "573056f372657aa", "count": 1}
+{"ts": 1442798, "pid": 70498, "cgroup_id": 43772, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1442802, "pid": 70498, "cgroup_id": 43772, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1442802, "pid": 70498, "cgroup_id": 43772, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1442803, "pid": 70498, "cgroup_id": 43772, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1442804, "pid": 70498, "cgroup_id": 43772, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1442805, "pid": 70498, "cgroup_id": 43772, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1442808, "pid": 70498, "cgroup_id": 43772, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1769694367865, "pid": -1, "cgroup_id": 43772, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"ts": 1769694367865, "pid": -1, "cgroup_id": 43772, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769694367865, "pid": -1, "cgroup_id": 43772, "event": "MMAP_SUM", "meta": {"count": 53, "max_pages": 1048560}, "count": 1}
+{"ts": 1442887, "pid": 70498, "cgroup_id": 43772, "event": "WRITE", "fd": 2, "buf": "/tmp/573056f372657aa49833f8a6e3d2cb1e8c61dd8220670684f71042fb2b3", "count": 1}
+{"ts": 1442887, "pid": 70498, "cgroup_id": 43772, "event": "WRITE", "fd": 2, "buf": "you must specify either '--size' or '--reference'", "count": 1}
+{"ts": 1442887, "pid": 70498, "cgroup_id": 43772, "event": "WRITE", "fd": 2, "buf": "\n", "count": 1}
+{"ts": 1442887, "pid": 70498, "cgroup_id": 43772, "event": "WRITE", "fd": 2, "buf": "Try '/tmp/573056f372657aa49833f8a6e3d2cb1e8c61dd8220670684f71042", "count": 1}
+{"ts": 1442889, "pid": 70449, "cgroup_id": 43772, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1442889, "pid": 70449, "cgroup_id": 43772, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "RUN_END", "end_ts": 1769694368.4305718, "events_count": 18, "analyzed_count": 0, "timeout": false}

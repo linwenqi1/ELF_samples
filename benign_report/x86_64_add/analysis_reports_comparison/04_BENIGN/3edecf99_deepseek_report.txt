@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `58dd0733c84402e92e72e8bdc88ef53bfff4029923e148eacfbe01f0bd9a8d99.elf` | **Job ID:** `3edecf99`
+**Date:** 2026-01-29 21:34:43
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to format incompatibility (likely architecture mismatch in QEMU emulation), showing no malicious activity in trace.
+
+### 🔍 Key Evidence
+- Exit code 126 (Exec format error)
+- No successful execution or malicious syscall patterns
+- All activity limited to error output
+
+### 💡 Recommendations
+No further action needed for this sample. Consider testing with correct architecture emulation if binary analysis is required.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/bin/sh: 1: /tmp/58dd0733c84402e92e72e8bdc88ef53bfff4029923e148eacfbe01f0bd9a8d99.elf: Exec format error
+```

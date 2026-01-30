@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `696f406ac840906bdc92c75570e99d3d767637a102190dea1abe7d81b5f9b3b0.elf` | **Job ID:** `abbf3669`
+**Date:** 2026-01-29 21:32:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, displayed system user information via 'who' command output, and exited cleanly with no malicious behaviors observed.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean exit code 0
+- Output matches standard 'who' command
+- No network activity, file manipulation, or persistence attempts
+
+### 💡 Recommendations
+No further action required. Binary appears to be legitimate system utility or test program.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Login    Name                 TTY      Idle   When         Where
+```

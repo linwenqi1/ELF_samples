@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `697fac2d5924a55094714e2c1fe89c168c701ac72d07aafabe852d8c8e99f092.elf` | **Job ID:** `ffa90516`
+**Date:** 2026-01-29 21:33:16
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment, displaying swap file information with no malicious activity detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Normal file access patterns
+- Clean exit code 0
+- No network, persistence, or evasion behaviors
+
+### 💡 Recommendations
+No further action required. Binary appears to be a benign utility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+NAME      TYPE SIZE USED PRIO
+/swap.img file   8G   0B   -2
+```

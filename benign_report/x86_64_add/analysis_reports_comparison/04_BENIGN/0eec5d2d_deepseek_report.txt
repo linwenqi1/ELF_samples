@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `118323b97839a6062d288faaf570bc0b1804ccf1c647a7bba3a5c1f5f34f329e.elf` | **Job ID:** `0eec5d2d`
+**Date:** 2026-01-29 21:33:41
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in QEMU emulation environment, displaying swap file information with no malicious behaviors detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Binary executed from /tmp (common for analysis)
+- Normal write to stdout showing swap information
+- No sensitive path access or malicious patterns
+
+### 💡 Recommendations
+No further action required. This appears to be a benign utility or test binary.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+NAME      TYPE SIZE USED PRIO
+/swap.img file   8G   0B   -2
+```

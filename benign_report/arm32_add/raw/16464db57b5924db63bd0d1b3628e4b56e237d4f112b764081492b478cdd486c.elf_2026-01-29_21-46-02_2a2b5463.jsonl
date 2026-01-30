@@ -1,0 +1,17 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/16464db57b5924db63bd0d1b3628e4b56e237d4f112b764081492b478cdd486c.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 65531, "cgroup_inode": 41708, "container_id": "e106eeac054b27c07782a7dedb6546c8a65595ceddacd284f2e3ebf1a9f45b03", "container_name": "kind_turing", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694362.9107354}
+{"ts": 1438204, "pid": 66234, "cgroup_id": 41708, "event": "EXEC", "filename": "/tmp/16464db57b5924db63bd0d1b3628e4b56e237d4f112b764081492b478cdd486c.elf"}
+{"ts": 1438204, "pid": 66234, "cgroup_id": 41708, "event": "TRACK_QEMU", "bin": "16464db57b5924d", "count": 1}
+{"ts": 1438205, "pid": 66234, "cgroup_id": 41708, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1438210, "pid": 66234, "cgroup_id": 41708, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1438210, "pid": 66234, "cgroup_id": 41708, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1438210, "pid": 66234, "cgroup_id": 41708, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1438211, "pid": 66234, "cgroup_id": 41708, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1438212, "pid": 66234, "cgroup_id": 41708, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1438216, "pid": 66234, "cgroup_id": 41708, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 1}
+{"ts": 1769694363253, "pid": -1, "cgroup_id": 41708, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769694363253, "pid": -1, "cgroup_id": 41708, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 4}
+{"ts": 1769694363253, "pid": -1, "cgroup_id": 41708, "event": "MMAP_SUM", "meta": {"count": 52, "max_pages": 1048560}, "count": 1}
+{"ts": 1438216, "pid": 66234, "cgroup_id": 41708, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 2}
+{"ts": 1438296, "pid": 66206, "cgroup_id": 41708, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1438296, "pid": 66206, "cgroup_id": 41708, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "RUN_END", "end_ts": 1769694363.8362803, "events_count": 15, "analyzed_count": 0, "timeout": false}

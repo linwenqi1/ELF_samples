@@ -1,0 +1,44 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fbc4ae2ea52c02597f3eb667e9f76777f96e017ec0ba81a53364c33eda7dccfd.elf` | **Job ID:** `65cd776c`
+**Date:** 2026-01-29 21:33:17
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, displaying system resource limits (ulimit) and exiting normally. No malicious behaviors detected.
+
+### 🔍 Key Evidence
+- Normal execution flow (EXEC, WRITE output, clean exit)
+- TRACK_QEMU events consistent with emulation environment (not evasion)
+- No sensitive path access, network activity, or persistence attempts
+
+### 💡 Recommendations
+No immediate action needed. Monitor for any future executions with expanded trace data if risk profile changes.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+RESOURCE   DESCRIPTION                             SOFT      HARD UNITS
+AS         address space limit                unlimited unlimited bytes
+CORE       max core file size                 unlimited unlimited bytes
+CPU        CPU time                           unlimited unlimited seconds
+DATA       max data size                      unlimited unlimited bytes
+FSIZE      max file size                      unlimited unlimited bytes
+LOCKS      max number of file locks held      unlimited unlimited locks
+MEMLOCK    max locked-in-memory address space   8388608   8388608 bytes
+MSGQUEUE   max bytes in POSIX mqueues            819200    819200 bytes
+NICE       max nice prio allowed to raise             0         0 
+NOFILE     max number of open files                1024    524288 files
+NPROC      max number of processes            unlimited unlimited processes
+RSS        max resident set size              unlimited unlimited bytes
+RTPRIO     max real-time priority                     0         0 
+RTTIME     timeout for real-time tasks        unlimited unlimited microsecs
+SIGPENDING max number of pending signals         123472    123472 signals
+STACK      max stack size                       8388608 unlimited bytes
+```

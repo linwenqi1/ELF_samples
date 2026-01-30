@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fe5ddd201c75c6a784e2f5fcf21836d450357a5e36af9e58df4a3c36f5b869f1.elf` | **Job ID:** `c2bb2b65`
+**Date:** 2026-01-29 21:48:12
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing dependencies or environment incompatibility, showing no malicious activity before exit.
+
+### 🔍 Key Evidence
+- Exit code 1 with error 'failed to get current context: Operation not supported'
+- TRACK_QEMU event indicating emulation environment
+- No access to sensitive paths or malicious patterns in syscall trace
+
+### 💡 Recommendations
+Test binary in native environment to verify if failure is due to emulation artifacts. If execution succeeds, re-analyze behavior in native context.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/fe5ddd201c75c6a784e2f5fcf21836d450357a5e36af9e58df4a3c36f5b869f1.elf: failed to get current context: Operation not supported
+```

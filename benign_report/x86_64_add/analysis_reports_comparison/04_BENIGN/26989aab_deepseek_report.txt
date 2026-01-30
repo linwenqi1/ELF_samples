@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2eab3a88d8a31c09dd75d75cbe2f6abffc7c0b9a8d4410dc90de9007ee832181.elf` | **Job ID:** `26989aab`
+**Date:** 2026-01-29 21:34:10
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing dependencies or syntax error, showing no malicious activity in trace.
+
+### 🔍 Key Evidence
+- Exit code 2 with error 'missing ']''
+- No syscall activity beyond basic execution and error output
+- TRACK_QEMU event (benign emulation artifact)
+
+### 💡 Recommendations
+Static analysis of binary to identify missing dependencies or syntax issues; no runtime behavioral analysis possible due to early failure.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/2eab3a88d8a31c09dd75d75cbe2f6abffc7c0b9a8d4410dc90de9007ee832181.elf: missing ']'
+```

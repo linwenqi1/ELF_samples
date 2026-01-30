@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `97fbac347357647958c21e03a0385e7ff066ad44423d28d1005213845089a468.elf` | **Job ID:** `544829a0`
+**Date:** 2026-01-29 21:47:23
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly in emulated environment, likely due to missing dependencies or incompatible environment. No malicious activity observed before failure.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'Inappropriate ioctl for device' error
+- TRACK_QEMU event indicating emulation environment
+- No access to sensitive paths or malicious patterns in syscall trace
+
+### 💡 Recommendations
+Analyze binary in native environment or with proper dependencies to determine actual behavior. Check for missing libraries or input requirements.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/97fbac347357647958c21e03a0385e7ff066ad44423d28d1005213845089a468.elf: 'standard input': Inappropriate ioctl for device
+```

@@ -1,0 +1,50 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fa1e6e69202d22bdd35969901fa95adab92cd38709bbcad468ff9ffe4590f1a5.elf` | **Job ID:** `cc0f99da`
+**Date:** 2026-01-29 21:48:12
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 9/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment, displaying filesystem information via df command. No malicious patterns detected in syscall trace.
+
+### ⚠️ Suspicious Behaviors
+- Large mmap allocation (1048560 pages) flagged by analyzer
+- TRACK_QEMU event detected (emulation artifact)
+
+### 🔍 Key Evidence
+- Execution output shows standard df command output
+- No network activity, file encryption, persistence attempts, or process injection detected
+- TRACK_QEMU event consistent with QEMU emulation environment
+- Exit code 0 indicates normal termination
+
+### 💡 Recommendations
+No immediate action required. The large mmap allocation should be investigated further to rule out memory corruption attempts, but current evidence suggests benign utility behavior.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Filesystem     1K-blocks      Used Available Use% Mounted on
+overlay        199767352 108523184  81023676  58% /
+tmpfs              65536         0     65536   0% /dev
+shm                65536         0     65536   0% /dev/shm
+/dev/nvme0n1p9 199767352 108523188  81023672  58% /usr/sbin/docker-init
+tmpfs           15895484         0  15895484   0% /proc/asound
+tmpfs           15895484         0  15895484   0% /proc/acpi
+tmpfs           15895484         0  15895484   0% /proc/scsi
+tmpfs           15895484         0  15895484   0% /sys/firmware
+tmpfs           15895484         0  15895484   0% /sys/devices/virtual/powercap
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu0/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu1/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu2/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu3/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu4/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu5/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu6/thermal_throttle
+tmpfs           15895484         0  15895484   0% /sys/devices/system/cpu/cpu7/thermal_throttle
+```

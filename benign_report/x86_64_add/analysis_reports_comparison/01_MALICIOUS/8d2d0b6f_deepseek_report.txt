@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `a3b57f30751ae836832749f13bea9b503cf55ec1598f6f4b35de93d80328bf9d.elf` | **Job ID:** `8d2d0b6f`
+**Date:** 2026-01-29 21:31:38
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Trojan`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, establishing multiple socket connections and redirecting file descriptors to create a reverse shell backdoor.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket creation and connection attempts
+- File descriptor redirection (dup2) to standard I/O
+- Process forking and execution pattern
+
+### 🔍 Key Evidence
+- Reverse shell detection alert with CVSS 9.4 score
+- DUP2 calls redirecting fd 5 to stdin/stdout/stderr
+- Multiple SOCKET/CONNECT events to /dev/log path
+- Binary executed from /tmp directory
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic for C2 communication, examine memory for additional payloads, and check for persistence mechanisms.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+RTNETLINK1 answers: No such file or directory
+a3b57f30751ae836832749f13bea9b503cf55ec1598f6f4b35de93d80328bf9d.elf: error talking to the kernel via netlink
+```

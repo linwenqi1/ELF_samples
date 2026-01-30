@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `cdccc6ed00e16dd5f66fccb991d0f13e77b069b75088adb57677fcfbc8150885.elf` | **Job ID:** `7b3cd138`
+**Date:** 2026-01-29 21:49:04
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary establishes network connections to Unix domain sockets, suggesting potential backdoor or C2 communication behavior in a containerized environment.
+
+### ⚠️ Suspicious Behaviors
+- SOCKET/CONNECT to Unix domain sockets
+- Execution from /tmp directory
+- Network activity without clear benign purpose
+
+### 🔍 Key Evidence
+- CONNECT to /var/run/nscd/socket (Unix domain socket)
+- CONNECT to another Unix domain socket with encoded address
+- Binary executed from /tmp directory
+
+### 💡 Recommendations
+Isolate and analyze network traffic patterns, examine socket communication content, check for persistence mechanisms, and compare against known botnet signatures.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+11ac0400
+```

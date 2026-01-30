@@ -1,0 +1,20 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/6519f080ad214393e511e6683f7109ba91ed57bc3f82084be8ce6705733b2659.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 67959, "cgroup_inode": 42912, "container_id": "2e85817dca6039df13cf87b47a002b68d106ce1d40c7cbb6b2fc9e34dab22b62", "container_name": "clever_noyce", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694365.319953}
+{"ts": 1440521, "pid": 68386, "cgroup_id": 42912, "event": "EXEC", "filename": "/tmp/6519f080ad214393e511e6683f7109ba91ed57bc3f82084be8ce6705733b2659.elf"}
+{"ts": 1440521, "pid": 68386, "cgroup_id": 42912, "event": "TRACK_QEMU", "bin": "6519f080ad21439", "count": 1}
+{"ts": 1440522, "pid": 68386, "cgroup_id": 42912, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1440525, "pid": 68386, "cgroup_id": 42912, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1440525, "pid": 68386, "cgroup_id": 42912, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1440526, "pid": 68386, "cgroup_id": 42912, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1440526, "pid": 68386, "cgroup_id": 42912, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1440527, "pid": 68386, "cgroup_id": 42912, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1440529, "pid": 68386, "cgroup_id": 42912, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1440534, "pid": 68386, "cgroup_id": 42912, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1440534, "pid": 68386, "cgroup_id": 42912, "event": "READ", "fd": 3, "buf_len": 1024, "count": 3}
+{"ts": 1440537, "pid": 68386, "cgroup_id": 42912, "event": "READ", "fd": 3, "buf_len": 575, "count": 1}
+{"ts": 1440540, "pid": 68386, "cgroup_id": 42912, "event": "ACCESS", "filename": "", "mode": 0, "count": 26}
+{"ts": 1440615, "pid": 68386, "cgroup_id": 42912, "event": "WRITE", "fd": 1, "buf": "Filesystem     1K-blocks      Used Available Use% Mounted on\nove", "count": 1}
+{"ts": 1440616, "pid": 68373, "cgroup_id": 42912, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1440616, "pid": 68373, "cgroup_id": 42912, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769694365673, "pid": -1, "cgroup_id": 42912, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769694365673, "pid": -1, "cgroup_id": 42912, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769694366.1563482, "events_count": 18, "analyzed_count": 0, "timeout": false}

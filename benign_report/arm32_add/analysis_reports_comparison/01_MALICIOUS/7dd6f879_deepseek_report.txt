@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ebf78d7daf35db3c19efc71d8fb37418e6bb8d0184f756308bc067b4968be6dd.elf` | **Job ID:** `7dd6f879`
+**Date:** 2026-01-29 21:50:06
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 100/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Rootkit`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed with root privileges (uid=0) and performed suspicious socket connections to Unix domain sockets, indicating potential backdoor or privilege escalation activity.
+
+### ⚠️ Suspicious Behaviors
+- Execution as root user
+- Multiple socket connections to Unix domain sockets
+- Large memory allocation (1048560 pages)
+- Binary executed from /tmp directory
+
+### 🔍 Key Evidence
+- Execution output shows uid=0(root) gid=0(root) groups=0(root)
+- Multiple CONNECT events to Unix domain sockets (path: /var/run/nscd/socket)
+- Memory corruption alert with CVSS:4.0 score 9.3 for abnormally large mmap allocation
+- Binary executed from /tmp/ebf78d7daf35db3c19efc71d8fb37418e6bb8d0184f756308bc067b4968be6dd.elf
+
+### 💡 Recommendations
+Immediate isolation of affected system. Analyze network traffic for C2 communication. Check for persistence mechanisms. Review system logs for unauthorized root access. Consider memory forensics to identify injected code.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+uid=0(root) gid=0(root) groups=0(root)
+```

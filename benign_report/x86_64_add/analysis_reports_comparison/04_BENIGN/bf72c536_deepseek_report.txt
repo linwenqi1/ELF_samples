@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `49d0a2735e8d2d1a8bbad42c60feb9b45aba868eb97b310eda385a5eb047cc51.elf` | **Job ID:** `bf72c536`
+**Date:** 2026-01-29 21:34:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly in the emulated environment, showing only initialization artifacts with no malicious activity detected.
+
+### 🔍 Key Evidence
+- Exit code -1
+- No successful execution activity
+- Only TRACK_QEMU and socket initialization events
+- RTNETLINK error indicates missing network configuration
+
+### 💡 Recommendations
+Test in native environment with proper dependencies; analyze binary statically for capabilities; check if missing libraries or kernel modules cause failure.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

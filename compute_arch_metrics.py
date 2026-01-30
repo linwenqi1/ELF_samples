@@ -25,6 +25,25 @@ ARCH_MAP = {
     243: "riscV64",
 }
 
+UNIFIED_ARCH_MAP = {
+    "x86_32": "x86",
+    "x86_64": "x86",
+    "arm32": "ARM",
+    "arm64": "ARM",
+    "ppc32": "PowerPC",
+    "ppc64": "PowerPC",
+    "mips": "MIPS",
+    "sparc": "SPARC",
+    "m68k": "m68k",
+    "superh": "SuperH",
+    "riscV64": "RISC-V",
+}
+
+
+def get_unified_arch(arch: str) -> str:
+    return UNIFIED_ARCH_MAP.get(arch, arch)
+
+
 REPORT_DIR_MARKERS = {
     "analysis_reports_comparison",
     "analysis_reports",
@@ -41,38 +60,37 @@ LABEL_DIRS = {
 
 @dataclass
 class ArchCounters:
-    total: int = 0
-    parsed_verdict: int = 0
-    correct: int = 0
+    malicious_total: int = 0
+    benign_total: int = 0
+    
+    tp: int = 0
+    fn: int = 0
+    tn: int = 0
+    fp: int = 0
+    
     crash: int = 0
     failed_deps: int = 0
     arg_error: int = 0
-    success_total: int = 0
-    success_correct: int = 0
-    crash_or_failed_total: int = 0
-    crash_or_failed_correct: int = 0
+
+    @property
+    def total(self) -> int:
+        return self.malicious_total + self.benign_total
+
+    def error_rate(self) -> float:
+        # Error rate only includes crash and failed_deps. arg_error is excluded.
+        return (self.crash + self.failed_deps) / self.total if self.total else 0.0
+
+    def fpr(self) -> float:
+        denom = self.fp + self.tn
+        return self.fp / denom if denom else 0.0
+
+    def fnr(self) -> float:
+        denom = self.fn + self.tp
+        return self.fn / denom if denom else 0.0
 
     def accuracy(self) -> float:
-        return self.correct / self.parsed_verdict if self.parsed_verdict else 0.0
-
-    def crash_rate(self) -> float:
-        return self.crash / self.total if self.total else 0.0
-
-    def failed_deps_rate(self) -> float:
-        return self.failed_deps / self.total if self.total else 0.0
-
-    def arg_error_rate(self) -> float:
-        return self.arg_error / self.total if self.total else 0.0
-
-    def success_accuracy(self) -> float:
-        return self.success_correct / self.success_total if self.success_total else 0.0
-
-    def crash_failed_accuracy(self) -> float:
-        return (
-            self.crash_or_failed_correct / self.crash_or_failed_total
-            if self.crash_or_failed_total
-            else 0.0
-        )
+        denom = self.tp + self.tn + self.fp + self.fn
+        return (self.tp + self.tn) / denom if denom else 0.0
 
 
 def parse_report(report_path: Path) -> tuple[Optional[str], Optional[str]]:
@@ -176,48 +194,37 @@ def update_counters(
     label_dir: Optional[str],
     status: Optional[str],
 ) -> None:
-    counter.total += 1
-
-    if label_dir:
-        counter.parsed_verdict += 1
-        is_correct = False
-        if gt == "malicious" and label_dir in {"01_MALICIOUS", "02_SUSPICIOUS"}:
-            is_correct = True
-        elif gt == "benign" and label_dir in {"03_SECURITY_TOOL", "04_BENIGN"}:
-            is_correct = True
-        if is_correct:
-            counter.correct += 1
+    if gt == "malicious":
+        counter.malicious_total += 1
+    else:
+        counter.benign_total += 1
 
     if status:
         status_upper = status.upper()
-        is_success = "SUCCESS" in status_upper
-        is_crash = "CRASH" in status_upper
-        is_failed_dep = "FAILED_DEPENDENC" in status_upper
-        is_arg_error = "ARGUMENT" in status_upper
-
-        if is_arg_error:
-            is_success = True
-
-        if is_crash:
+        if "CRASH" in status_upper:
             counter.crash += 1
-        if is_failed_dep:
+        elif "FAILED_DEPENDENC" in status_upper:
             counter.failed_deps += 1
-        if is_arg_error:
+        elif "ARGUMENT" in status_upper:
             counter.arg_error += 1
+    
+    # If we have a label_dir, it means we parsed a verdict
+    if label_dir:
+        # Check correctness
+        if gt == "malicious":
+            if label_dir in {"01_MALICIOUS", "02_SUSPICIOUS"}:
+                counter.tp += 1
+            else:
+                counter.fn += 1
+        else:  # gt == "benign"
+            if label_dir in {"03_SECURITY_TOOL", "04_BENIGN"}:
+                counter.tn += 1
+            else:
+                counter.fp += 1
 
-        if is_success:
-            counter.success_total += 1
-            if label_dir and is_correct:
-                counter.success_correct += 1
 
-        if is_crash or is_failed_dep:
-            counter.crash_or_failed_total += 1
-            if label_dir and is_correct:
-                counter.crash_or_failed_correct += 1
-
-
-def compute_arch_metrics(root: Path) -> dict[tuple[str, str], ArchCounters]:
-    results: dict[tuple[str, str], ArchCounters] = {}
+def compute_arch_metrics(root: Path) -> dict[str, ArchCounters]:
+    results: dict[str, ArchCounters] = {}
     malware_index = build_malware_arch_index(root)
 
     malware_bucket = root / "malware_report"
@@ -230,106 +237,117 @@ def compute_arch_metrics(root: Path) -> dict[tuple[str, str], ArchCounters]:
         if not target:
             continue
         arch = infer_malware_arch(root, family, target, malware_index)
+        unified_arch = get_unified_arch(arch)
+        
         label_dir = next((p for p in rel.parts if p in LABEL_DIRS), None)
-        key = (arch, "malicious")
-        results.setdefault(key, ArchCounters())
-        update_counters(results[key], "malicious", label_dir, status)
+        
+        results.setdefault(unified_arch, ArchCounters())
+        update_counters(results[unified_arch], "malicious", label_dir, status)
 
     for report_file in iter_report_files(benign_bucket):
         rel = report_file.relative_to(benign_bucket)
         arch = rel.parts[0] if rel.parts else "unknown"
+        # Benign arch is usually the top folder
+        
+        unified_arch = get_unified_arch(arch)
+        
         target, status = parse_report(report_file)
         if not target:
             continue
         label_dir = next((p for p in rel.parts if p in LABEL_DIRS), None)
-        key = (arch, "benign")
-        results.setdefault(key, ArchCounters())
-        update_counters(results[key], "benign", label_dir, status)
+        
+        results.setdefault(unified_arch, ArchCounters())
+        update_counters(results[unified_arch], "benign", label_dir, status)
 
     return results
 
 
-def print_table(results: dict[tuple[str, str], ArchCounters]) -> None:
+def print_table(results: dict[str, ArchCounters]) -> None:
     header = (
-        f"{'arch':<10} | {'class':<9} | total | parsed | correct | acc | crash | failed_dep | arg_err"
+        f"{'arch':<15} | {'total':<6} | {'mal/ben':<9} | {'acc':<6} | {'err':<6} | {'FPR':<6} | {'FNR':<6}"
     )
     print(header)
     print("-" * len(header))
 
-    for (arch, cls) in sorted(results.keys()):
-        c = results[(arch, cls)]
+    for arch in sorted(results.keys()):
+        c = results[arch]
         print(
-            f"{arch:<10} | {cls:<9} | {c.total:5d} | {c.parsed_verdict:6d} |"
-            f" {c.correct:7d} | {c.accuracy():.3f} | {c.crash_rate():.3f} |"
-            f" {c.failed_deps_rate():.3f} | {c.arg_error_rate():.3f}"
+            f"{arch:<15} | {c.total:<6d} | {c.malicious_total}/{c.benign_total:<5} |"
+            f" {c.accuracy():.3f}  | {c.error_rate():.3f}  | {c.fpr():.3f}  | {c.fnr():.3f}"
         )
 
 
-def write_csv(path: Path, results: dict[tuple[str, str], ArchCounters]) -> None:
+def write_csv(path: Path, results: dict[str, ArchCounters]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(
             [
                 "arch",
-                "class",
                 "total",
-                "parsed_verdict",
-                "correct",
+                "malicious_total",
+                "benign_total",
                 "accuracy",
-                "crash_rate",
-                "failed_dependency_rate",
-                "argument_error_rate",
-                "success_accuracy",
-                "crash_failed_accuracy",
+                "error_rate",
+                "fpr",
+                "fnr",
+                "tp",
+                "tn",
+                "fp",
+                "fn",
+                "crash",
+                "failed_deps",
+                "arg_error",
             ]
         )
-        for (arch, cls) in sorted(results.keys()):
-            c = results[(arch, cls)]
+        for arch in sorted(results.keys()):
+            c = results[arch]
             writer.writerow(
                 [
                     arch,
-                    cls,
                     c.total,
-                    c.parsed_verdict,
-                    c.correct,
+                    c.malicious_total,
+                    c.benign_total,
                     f"{c.accuracy():.6f}",
-                    f"{c.crash_rate():.6f}",
-                    f"{c.failed_deps_rate():.6f}",
-                    f"{c.arg_error_rate():.6f}",
-                    f"{c.success_accuracy():.6f}",
-                    f"{c.crash_failed_accuracy():.6f}",
+                    f"{c.error_rate():.6f}",
+                    f"{c.fpr():.6f}",
+                    f"{c.fnr():.6f}",
+                    c.tp,
+                    c.tn,
+                    c.fp,
+                    c.fn,
+                    c.crash,
+                    c.failed_deps,
+                    c.arg_error,
                 ]
             )
     print(f"Saved arch metrics -> {path}")
 
 
-def print_condition_summary(results: dict[tuple[str, str], ArchCounters]) -> None:
-    totals: dict[str, ArchCounters] = {"malicious": ArchCounters(), "benign": ArchCounters()}
-    for (arch, cls), c in results.items():
-        agg = totals[cls]
-        agg.total += c.total
-        agg.parsed_verdict += c.parsed_verdict
-        agg.correct += c.correct
+def print_condition_summary(results: dict[str, ArchCounters]) -> None:
+    # Aggregate all
+    agg = ArchCounters()
+    for c in results.values():
+        agg.malicious_total += c.malicious_total
+        agg.benign_total += c.benign_total
+        agg.tp += c.tp
+        agg.tn += c.tn
+        agg.fp += c.fp
+        agg.fn += c.fn
         agg.crash += c.crash
         agg.failed_deps += c.failed_deps
         agg.arg_error += c.arg_error
-        agg.success_total += c.success_total
-        agg.success_correct += c.success_correct
-        agg.crash_or_failed_total += c.crash_or_failed_total
-        agg.crash_or_failed_correct += c.crash_or_failed_correct
 
-    print("\nConditional accuracy (by class):")
-    print("-" * 70)
-    for cls in ("malicious", "benign"):
-        c = totals[cls]
-        print(
-            f"{cls:<9} | success acc {c.success_accuracy():.3f} "
-            f"({c.success_correct}/{c.success_total}) | "
-            f"crash/failed acc {c.crash_failed_accuracy():.3f} "
-            f"({c.crash_or_failed_correct}/{c.crash_or_failed_total}) | "
-            f"arg_err {c.arg_error}"
-        )
+    print("\nGlobal Summary:")
+    print("-" * 30)
+    print(f"Total Samples: {agg.total}")
+    print(f"Malicious: {agg.malicious_total}")
+    print(f"Benign:    {agg.benign_total}")
+    print(f"Overall Accuracy:   {agg.accuracy():.4f}")
+    print(f"Overall Error Rate: {agg.error_rate():.4f} (Crash/Dep)")
+    print(f"Overall FPR:        {agg.fpr():.4f}")
+    print(f"Overall FNR:        {agg.fnr():.4f}")
+
 
 
 def main() -> None:

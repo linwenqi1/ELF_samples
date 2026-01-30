@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0ecbde7666c6908ad07ab88479492269aa287983d0b4ad9fc01d93f86d840015.elf` | **Job ID:** `08ce2be7`
+**Date:** 2026-01-29 21:31:49
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Trojan`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary establishes multiple socket connections and redirects standard I/O to a network socket, consistent with reverse shell behavior, though execution appears incomplete due to environment mismatch.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket creation and connection attempts
+- Standard I/O redirection to network socket (dup2)
+- Process forking and signal handling
+- Network error messages indicating attempted communication
+
+### 🔍 Key Evidence
+- Reverse shell detection alert with CVSS 9.4 score
+- DUP2 calls redirecting fd 5 to stdin/stdout/stderr
+- Multiple SOCKET and CONNECT syscalls
+- Process 18457 showing suspicious network behavior
+
+### 💡 Recommendations
+Isolate affected systems, analyze network traffic for C2 communication, examine binary for persistence mechanisms, and check for lateral movement indicators.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+RTNETLINK1 answers: No such file or directory
+0ecbde7666c6908ad07ab88479492269aa287983d0b4ad9fc01d93f86d840015.elf: error talking to the kernel via netlink
+```

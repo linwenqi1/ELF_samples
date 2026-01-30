@@ -1,0 +1,16 @@
+{"type": "RUN_META", "session": "05693b99f50e479082848ae4bca70c7e", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/arm_32_added/32ae9a643857310ebe2e38d456968ea4c2dc1a9908144e82995beb9402d833c6.elf", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": "/lib/ld-linux-armhf.so.3"}, "host_root_pid": 82040, "cgroup_inode": 49620, "container_id": "e5af280b9f3c10bf5168d9a006bd8b0903db560219c313b4c40f69027829790a", "container_name": "hardcore_hodgkin", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769694380.6752353}
+{"ts": 1455895, "pid": 82341, "cgroup_id": 49620, "event": "EXEC", "filename": "/tmp/32ae9a643857310ebe2e38d456968ea4c2dc1a9908144e82995beb9402d833c6.elf"}
+{"ts": 1455896, "pid": 82341, "cgroup_id": 49620, "event": "TRACK_QEMU", "bin": "32ae9a643857310", "count": 1}
+{"ts": 1455897, "pid": 82341, "cgroup_id": 49620, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1455900, "pid": 82341, "cgroup_id": 49620, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1455900, "pid": 82341, "cgroup_id": 49620, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 1455901, "pid": 82341, "cgroup_id": 49620, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 1455901, "pid": 82341, "cgroup_id": 49620, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1455902, "pid": 82341, "cgroup_id": 49620, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 1455905, "pid": 82341, "cgroup_id": 49620, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1455909, "pid": 82341, "cgroup_id": 49620, "event": "WRITE", "fd": 1, "buf": "HOSTNAME=e5af280b9f3c\nHOME=/root\nPATH=/usr/local/sbin:/usr/local", "count": 1}
+{"ts": 1455911, "pid": 82326, "cgroup_id": 49620, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 1455911, "pid": 82326, "cgroup_id": 49620, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769694381049, "pid": -1, "cgroup_id": 49620, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769694381049, "pid": -1, "cgroup_id": 49620, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "RUN_END", "end_ts": 1769694381.4525425, "events_count": 14, "analyzed_count": 0, "timeout": false}

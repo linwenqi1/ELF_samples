@@ -1,0 +1,21 @@
+Evidence Pattern,Frequency,Supported Count,Support Rate
+Execution from /tmp/<SHA256>.elf,2,2,1.0
+Execution output shows XMRig configuration errors,2,1,0.5
+Execution from /tmp directory,2,2,1.0
+"Connects to known Monero mining pool domains: supportxmr.com, c3pool.com, wixerzhongboost.eu, nanopool.org, hashvault.pro, moneroocean.stream",1,1,1.0
+Attempts to disable SELinux and modify kernel.nmi_watchdog parameter,1,1,1.0
+"Process control operations (SET_KEEPCAPS, SET_PDEATHSIG) for privilege maintenance",1,0,0.0
+Multiple writes of ELF-like content to stderr (likely mining binary or configuration),1,1,1.0
+CONNECT to <IP>:<NUM> (output matches port number),1,1,1.0
+CONNECT to <IP>:<NUM> (<HEX> = <NUM>),1,1,1.0
+CONNECT to <IP>:<NUM> (<HEX> = <NUM>) - DNS port scanning,1,1,1.0
+Multiple process forking with CLONE flags <NUM> (CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD),1,1,1.0
+Multiple MEMFD_CREATE events creating anonymous memory files named 'qemu-open' (PID <NUM>),1,1,1.0
+"System reconnaissance alerts showing extensive scanning of /proc (up to <NUM> operations), /sys (up to <NUM> operations), and /dev filesystems",1,1,1.0
+Attempt to write systemd service unit file with content '[Unit]\nDescription=Redtail Service service\n\n[Service]\nExecSt',1,1,1.0
+"Execution of /bin/sh shell (PIDs <NUM>, <NUM>) with subsequent error 'systemctl: not found'",1,1,1.0
+Multiple mprotect calls setting executable permissions (PROT_EXEC) across different processes,1,0,0.0
+prctl(SET_KEEPCAPS) call to maintain capabilities across privilege changes,1,1,1.0
+Socket creation and connection attempts with encoded addresses,1,1,1.0
+Extensive reading from file descriptors with consistent <NUM>/<NUM> byte patterns suggesting data exfiltration or command reception,1,0,0.0
+Created systemd service file with content '[Unit]\nDescription=Redtail Service service\n\n[Service]\nExecSt',1,1,1.0

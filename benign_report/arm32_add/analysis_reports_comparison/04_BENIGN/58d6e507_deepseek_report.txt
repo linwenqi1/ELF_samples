@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2d12db1608cfa36b872e85b5f4ebe8864b84d6287543826a06011d54c4115205.elf` | **Job ID:** `58d6e507`
+**Date:** 2026-01-29 21:48:59
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, performed minimal system calls, and output a SHA-512 hash string before clean exit. No malicious patterns detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean exit code 0
+- No network activity, file writes, or process manipulation
+- Output appears to be cryptographic hash calculation
+
+### 💡 Recommendations
+No immediate action required. Consider verifying hash output matches expected value for legitimate utility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e  -
+```

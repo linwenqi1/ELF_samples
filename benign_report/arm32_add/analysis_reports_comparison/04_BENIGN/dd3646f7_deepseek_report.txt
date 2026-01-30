@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `eb6e14e6d762b6330afb0621d73ea6b8e30380180eec143378ea6f5c00249d1f.elf` | **Job ID:** `dd3646f7`
+**Date:** 2026-01-29 21:46:27
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing command-line arguments, showing only basic startup behavior with no malicious activity.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'missing operand' error
+- No network activity, file writes, or process manipulation
+- TRACK_QEMU event consistent with emulation environment
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a standard utility requiring arguments. If suspicious, re-run with proper arguments to observe full behavior.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/eb6e14e6d762b6330afb0621d73ea6b8e30380180eec143378ea6f5c00249d1f.elf: missing operand
+Try '/tmp/eb6e14e6d762b6330afb0621d73ea6b8e30380180eec143378ea6f5c00249d1f.elf --help' for more information.
+```
