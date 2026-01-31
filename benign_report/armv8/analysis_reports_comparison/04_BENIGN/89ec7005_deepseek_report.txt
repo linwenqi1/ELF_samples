@@ -1,0 +1,48 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5af1ff2c9553677a59364d390fef66c6ae5afb78ae901a12146ac9b429032e94` | **Job ID:** `89ec7005`
+**Date:** 2026-01-31 16:22:04
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, showing minimal network reconnaissance behavior but no malicious payload delivery or persistence mechanisms.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation (AF_UNIX, AF_INET, AF_INET6)
+- File access attempts with empty filename
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Socket creation for multiple protocol families
+- No connection attempts, payload delivery, or persistence activities
+- Exit code 0 with normal termination
+
+### 💡 Recommendations
+Monitor for follow-up network connections or file system modifications. Consider deeper behavioral analysis if binary exhibits additional suspicious activities in future executions.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.3  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether ea:57:74:38:7d:1e  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```

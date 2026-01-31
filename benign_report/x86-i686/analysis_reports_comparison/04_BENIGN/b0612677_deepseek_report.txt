@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b9a129a79b951fbaf5adafa7ea7f325ca65b5da5efc7fcb10ac2aefd8c00c186` | **Job ID:** `b0612677`
+**Date:** 2026-01-31 16:17:06
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment with minimal activity. No malicious patterns detected in syscall trace.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Minimal syscall activity with no malicious patterns
+- No access to sensitive paths outside emulation environment
+
+### 💡 Recommendations
+No immediate action required. Consider monitoring for further activity if binary persists in environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+NAME      TYPE SIZE USED PRIO
+/swap.img file   8G   0B   -2
+```

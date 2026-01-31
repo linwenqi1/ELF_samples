@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `97ad905f17c0374d7577cfd293fa6a3cdac6e926a7830dbc8ddfdfaa5878b61d` | **Job ID:** `69cf1dfe`
+**Date:** 2026-01-31 16:13:48
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing network interface (eth1) in emulated environment, showing no malicious activity before exit.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'eth1: No such device' error
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Single socket creation (domain 17 = AF_PACKET) before failure
+
+### 💡 Recommendations
+Test in environment with proper network interfaces; analyze binary statically for potential network-dependent malware.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+97ad905f17c0374d7577cfd293fa6a3cdac6e926a7830dbc8ddfdfaa5878b61d: eth1: No such device
+```

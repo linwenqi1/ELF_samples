@@ -1,0 +1,19 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/fec0d4c1f368c49392f823162571509e0de15dca0048a4b97e5e27a6407382ff", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 192600, "cgroup_inode": 68118, "container_id": "1db6708c12ec2a5e7c9b21999a9124abb4be6f9e923d46ba500a762d2dc2cea6", "container_name": "reverent_mirzakhani", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847071.439142}
+{"ts": 6517662, "pid": 193149, "cgroup_id": 68118, "event": "EXEC", "filename": "/tmp/fec0d4c1f368c49392f823162571509e0de15dca0048a4b97e5e27a6407382ff"}
+{"ts": 6517663, "pid": 193149, "cgroup_id": 68118, "event": "TRACK_QEMU", "bin": "fec0d4c1f368c49", "count": 1}
+{"ts": 6517667, "pid": 193149, "cgroup_id": 68118, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 6517668, "pid": 193149, "cgroup_id": 68118, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6517668, "pid": 193149, "cgroup_id": 68118, "event": "SOCKET", "domain": 1, "type": 524290, "count": 1}
+{"ts": 6517671, "pid": 193149, "cgroup_id": 68118, "event": "CONNECT", "addr": "01002f6465762f6c6f670000000000000100000030002000600208b9dd7900000083404ffe7f00000c00000003000000e83316945555000000bed64d0c1d7766", "count": 1}
+{"ts": 6517671, "pid": 193149, "cgroup_id": 68118, "event": "SENDTO", "len": 103, "count": 1}
+{"ts": 6517671, "pid": 193149, "cgroup_id": 68118, "event": "CONNECT", "addr": "01002f6465762f6c6f67000000000000010000003000200067d5e5b8dd7900000083404ffe7f00000c00000003000000e82916945555000000bed64d0c1d7766", "count": 1}
+{"ts": 6517671, "pid": 193149, "cgroup_id": 68118, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6517671, "pid": 193149, "cgroup_id": 68118, "event": "SENDTO", "len": 68, "count": 1}
+{"ts": 6517671, "pid": 193149, "cgroup_id": 68118, "event": "CONNECT", "addr": "01002f6465762f6c6f6700000c1d7766010000003000200000000000000000000083404ffe7f00000c00000003000000b0c010945555000000bed64d0c1d7766", "count": 1}
+{"ts": 6517671, "pid": 193105, "cgroup_id": 68118, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6517671, "pid": 193105, "cgroup_id": 68118, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 1769847071747, "pid": -1, "cgroup_id": 68118, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847071747, "pid": -1, "cgroup_id": 68118, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769847071747, "pid": -1, "cgroup_id": 68118, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 3}
+{"type": "ANALYZER", "result": {"level": 7, "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N", "description": "System reconnaissance: scanning /proc, /sys, and /dev simultaneously", "evidence": {"pattern_categories": ["proc_fs", "sys_fs", "dev_node"], "counts": {"proc_fs": 4, "sys_fs": 2, "dev_node": 3}, "total_operations": 9}, "mitigation": "Review process behavior for malicious reconnaissance or data theft", "pid": -1, "ts": 1769847071747, "analyzer": "AggregatedEvents"}, "binary": "fec0d4c1f368c49392f823162571509e0de15dca0048a4b97e5e27a6407382ff"}
+{"type": "RUN_END", "end_ts": 1769847072.1749067, "events_count": 16, "analyzed_count": 1, "timeout": false}

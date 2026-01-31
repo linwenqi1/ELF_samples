@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `aa04e39dff6b7805c769c6ded2c92bd896e628d0bf65be33f23c83a227875c82.static` | **Job ID:** `883b8aab`
+**Date:** 2026-01-31 16:11:34
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 50/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Reconnaissance`
+- **Standard Label:** `Reconnaissance.Linux.None`
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing arguments but exhibited reconnaissance behavior by scanning system directories before exit
+
+### ⚠️ Suspicious Behaviors
+- System reconnaissance scanning of /proc, /sys, and /dev directories
+- Multiple file system operations on sensitive paths
+
+### 🔍 Key Evidence
+- Local alerts show 14 operations scanning /proc, /sys, and /dev simultaneously
+- CVSS 7.1 score for information disclosure risk
+- Binary executed from /tmp directory
+
+### 💡 Recommendations
+Further analysis needed to determine if reconnaissance was intentional malicious activity or part of legitimate tool functionality. Check if binary attempts to access these paths in emulated environment only.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/aa04e39dff6b7805c769c6ded2c92bd896e628d0bf65be33f23c83a227875c82.static: too few arguments
+Usage: find-roots [-a] [-o search_objectid] [ -g search_generation ] [ -l search_level ] <device>
+```

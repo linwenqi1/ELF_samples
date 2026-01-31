@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `7847db79fb759ce4f4d64e5f6f568164070a5b9fcfb2a7f0eeb6615dbb74905a` | **Job ID:** `05513b24`
+**Date:** 2026-01-31 16:17:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed but failed due to incorrect arguments, showing only startup and cleanup activity with no malicious behavior.
+
+### 🔍 Key Evidence
+- Exit code 100 indicates argument error
+- Execution output shows s6-dnsqualify usage message
+- No malicious syscall patterns detected in trace
+- TRACK_QEMU event is benign emulation artifact
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate utility failing due to missing required arguments.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+s6-dnsqualify: usage: s6-dnsqualify name
+```

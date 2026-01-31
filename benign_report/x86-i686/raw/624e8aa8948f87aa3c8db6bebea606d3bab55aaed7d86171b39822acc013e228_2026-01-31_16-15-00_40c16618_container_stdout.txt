@@ -1,0 +1,56 @@
+NcFTPLs 3.2.6
+
+Usages:
+  ncftpls [FTP flags] [-x "ls flags"] ftp://url.style.host/path/name/
+
+ls Flags:
+  -m     Use machine readable (MLSD) list format, if the server supports it.
+  -1     Most basic format, one item per line.
+  -l     Long list format.
+  -C     Columnized list format (default).
+  -R     Long list format, recurse subdirectories if server allows it.
+  -g     Recursive and print one path per line; like "/usr/bin/find . -print"
+  -gg    As above, but append a "/" character to directory pathnames.
+  -a     Show all files, if server allows it (as in "/bin/ls -a").
+  -i XX  Filter the listing (if server supports it) with the wildcard XX.
+  -x XX  List command flags to try on the remote server (without leading dash).
+
+FTP Flags:
+  -u XX  Use username XX instead of anonymous.
+  -p XX  Use password XX with the username.
+  -P XX  Use port number XX instead of the default FTP service port (21).
+  -j XX  Use account XX with the account (deprecated).
+  -d XX  Use the file XX for debug logging.
+  -t XX  Timeout after XX seconds.
+  -f XX  Read the file XX for user and password information.
+         If file XX does not exist, check for bookmark XX in $HOME/.ncftp/bookmarks.
+  -E     Use regular (PORT) data connections.
+  -F     Use passive (PASV) data connections (default).
+  -K     Show disk usage by attempting SITE DF.
+  -o XX  Specify miscellaneous options (see documentation).
+  -W XX  Send raw FTP command XX after logging in.
+  -X XX  Send raw FTP command XX after each listing.
+  -Y XX  Send raw FTP command XX before logging out.
+  -Z     Do not actually perform the directory listing.  Useful with -Y.
+  -r XX  Redial XX times until connected.
+
+Examples:
+  ncftpls ftp://ftp.freebsd.org/pub/FreeBSD/
+  ncftpls -1 ftp://ftp.freebsd.org/pub/FreeBSD/
+  ncftpls -la -i '*.TXT' ftp://ftp.freebsd.org/pub/FreeBSD/
+  ncftpls -m ftp://ftp.ncftp.com/ncftpd/
+  ncftpls -x "lrt" ftp://ftp.freebsd.org/pub/FreeBSD/
+
+Note: The standard specifies that URL pathnames are are relative pathnames.
+  For FTP, this means that URLs specify relative pathnames from the start
+  directory, which for user logins, are typically the user's home directory.
+  If you want to use absolute pathnames, you need to include a literal slash,
+  using the "%2F" code for a "/" character.  Examples:
+
+  ncftpls -u linus ftp://ftp.kernel.org/%2Fusr/src/
+  ncftpls ftp://steve@ftp.apple.com/%2Fetc/
+
+Library version: LibNcFTP 3.2.6 (November 12, 2016).
+
+This is a freeware program by Mike Gleason (http://www.ncftp.com).
+This was built using LibNcFTP (http://www.ncftp.com/libncftp/).

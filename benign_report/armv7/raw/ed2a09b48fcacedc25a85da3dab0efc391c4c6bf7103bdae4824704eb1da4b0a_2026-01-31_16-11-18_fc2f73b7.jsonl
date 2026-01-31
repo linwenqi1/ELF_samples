@@ -1,0 +1,24 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/ed2a09b48fcacedc25a85da3dab0efc391c4c6bf7103bdae4824704eb1da4b0a", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 201466, "cgroup_inode": 70870, "container_id": "40231f1cd2be51611c9fc21737d2c6a5398387ee07aa3e4efa83ab001b85c604", "container_name": "stupefied_sutherland", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847079.1727731}
+{"ts": 6525436, "pid": 202187, "cgroup_id": 70870, "event": "EXEC", "filename": "/tmp/ed2a09b48fcacedc25a85da3dab0efc391c4c6bf7103bdae4824704eb1da4b0a"}
+{"ts": 6525436, "pid": 202187, "cgroup_id": 70870, "event": "TRACK_QEMU", "bin": "ed2a09b48fcaced", "count": 1}
+{"ts": 6525439, "pid": 202187, "cgroup_id": 70870, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6525441, "pid": 202187, "cgroup_id": 70870, "event": "SOCKET", "domain": 1, "type": 524290, "count": 1}
+{"ts": 6525441, "pid": 202187, "cgroup_id": 70870, "event": "CONNECT", "addr": "01002f6465762f6c6f670000000000000100000030002000e003a80d1a780000e07886cbfc7f00000c000000030000002023345855550000004c870a43979c67", "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "SENDTO", "len": 178, "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "CONNECT", "addr": "01002f6465762f6c6f67000000000000010000003000200067d5850d1a780000e07886cbfc7f00000c00000003000000d819345855550000004c870a43979c67", "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "SIGNAL_GENERATE", "sig": 35, "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "WRITE", "fd": 4, "buf": "ELF\u0001\u0001\u0001", "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "WRITE", "fd": 4, "buf": "rday", "count": 1}
+{"ts": 6525442, "pid": 202187, "cgroup_id": 70870, "event": "WRITE", "fd": 4, "buf": "", "count": 3}
+{"ts": 6525447, "pid": 202187, "cgroup_id": 70870, "event": "WRITE", "fd": 2, "buf": "qemu: uncaught target signal 6 (Aborted) - core dumped\n", "count": 1}
+{"ts": 6525447, "pid": 202187, "cgroup_id": 70870, "event": "KILL", "target_pid": 25, "sig": 6, "count": 1}
+{"ts": 6525447, "pid": 202187, "cgroup_id": 70870, "event": "SIGNAL_GENERATE", "sig": 6, "count": 1}
+{"ts": 1769847079488, "pid": -1, "cgroup_id": 70870, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769847079488, "pid": -1, "cgroup_id": 70870, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769847079488, "pid": -1, "cgroup_id": 70870, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 1}
+{"ts": 1769847079488, "pid": -1, "cgroup_id": 70870, "event": "MMAP_SUM", "meta": {"count": 21, "max_pages": 1048560}, "count": 1}
+{"ts": 6525510, "pid": 202187, "cgroup_id": 70870, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 6525510, "pid": 202130, "cgroup_id": 70870, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6525510, "pid": 202130, "cgroup_id": 70870, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "RUN_END", "end_ts": 1769847080.015191, "events_count": 22, "analyzed_count": 0, "timeout": false}

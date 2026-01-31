@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b596cef65dd95a90fdfc07b89c2bb9985a92803542b2183208bc546f134df812` | **Job ID:** `18335261`
+**Date:** 2026-01-31 16:16:41
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Evasion`, `Backdoor`
+- **Standard Label:** `Evasion.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and performed critical security policy manipulation by disabling core dumps, indicating anti-forensic/evasion behavior in a suspicious environment.
+
+### ⚠️ Suspicious Behaviors
+- prctl(SET_DUMPABLE, 0) call to disable core dumps
+- Execution from /tmp directory
+- Emulation environment detection (QEMU)
+
+### 🔍 Key Evidence
+- Process 234493 called prctl(SET_DUMPABLE, 0) - critical security policy manipulation
+- Binary executed from /tmp/b596cef65dd95a90fdfc07b89c2bb9985a92803542b2183208bc546f134df812
+- TRACK_QEMU event detected indicating emulated execution environment
+
+### 💡 Recommendations
+Perform deeper static analysis of the binary, check for additional anti-analysis techniques, monitor for network activity or persistence attempts, and analyze for potential payload delivery mechanisms.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

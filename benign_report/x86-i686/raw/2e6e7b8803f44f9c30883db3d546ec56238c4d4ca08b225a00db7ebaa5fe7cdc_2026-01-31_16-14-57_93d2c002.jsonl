@@ -1,0 +1,12 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/2e6e7b8803f44f9c30883db3d546ec56238c4d4ca08b225a00db7ebaa5fe7cdc", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 234450, "cgroup_inode": 84200, "container_id": "92757a86ed5d89975dbdb22cc54dce8b341824962ce15a2938e4ceea774d3487", "container_name": "pedantic_agnesi", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847297.5062606}
+{"ts": 6743887, "pid": 234715, "cgroup_id": 84200, "event": "EXEC", "filename": "/tmp/2e6e7b8803f44f9c30883db3d546ec56238c4d4ca08b225a00db7ebaa5fe7cdc"}
+{"ts": 1769847297887, "pid": -1, "cgroup_id": 84200, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847297887, "pid": -1, "cgroup_id": 84200, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769847297887, "pid": -1, "cgroup_id": 84200, "event": "MMAP_SUM", "meta": {"count": 31, "max_pages": 1048560}, "count": 1}
+{"ts": 6743888, "pid": 234715, "cgroup_id": 84200, "event": "TRACK_QEMU", "bin": "2e6e7b8803f44f9", "count": 1}
+{"ts": 6743893, "pid": 234574, "cgroup_id": 84200, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6743893, "pid": 234574, "cgroup_id": 84200, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"ts": 1769847297993, "pid": -1, "cgroup_id": 84200, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847297993, "pid": -1, "cgroup_id": 84200, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "ANALYZER", "result": {"level": 9.3, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Memory Corruption (Weak Signal)", "pid": -1, "evidence": "Detected abnormally large page allocation via mmap: 1048560 pages", "analyzer": "MemoryCorruption"}, "binary": "2e6e7b8803f44f9c30883db3d546ec56238c4d4ca08b225a00db7ebaa5fe7cdc"}
+{"type": "RUN_END", "end_ts": 1769847298.3990228, "events_count": 9, "analyzed_count": 1, "timeout": false}

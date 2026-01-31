@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ffb32571ecba4b9cb54b51cbf3f1705dc1c518f766065a38a6288ed6f5ae2795` | **Job ID:** `75f8831a`
+**Date:** 2026-01-31 16:13:38
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly due to missing dependencies or environment incompatibility, showing no malicious activity in the trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'Failed to connect to devlink Netlink' error
+- No malicious syscall patterns detected in trace
+- TRACK_QEMU event identified as benign emulation artifact
+
+### 💡 Recommendations
+Check binary dependencies and compatibility with emulated environment. No immediate threat detected based on available trace data.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Failed to connect to devlink Netlink
+```

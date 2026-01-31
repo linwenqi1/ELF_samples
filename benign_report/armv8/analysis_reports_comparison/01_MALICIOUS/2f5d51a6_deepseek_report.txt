@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `48573a5436307ac867e6301963bc657770145e9f6afa43ed4f3adde8dc75fbe6` | **Job ID:** `2f5d51a6`
+**Date:** 2026-01-31 16:20:13
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, forked a child process that established multiple socket connections to /dev/log (Unix domain socket), suggesting potential C2 communication or log manipulation typical of botnet backdoors.
+
+### ⚠️ Suspicious Behaviors
+- Forked process creating socket connections
+- Multiple CONNECT and SENDTO syscalls to /dev/log
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- Socket domain 1 (AF_UNIX) connections to /dev/log
+- Multiple SENDTO operations with data payloads
+- Binary execution from /tmp with successful exit code 0
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic for C2 communication, check for persistence mechanisms in /etc/rc.local or cron jobs, and scan for additional malware payloads.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

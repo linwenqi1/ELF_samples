@@ -1,0 +1,43 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/e24b38dd233f6a1a0b88a742488e89f1132e2d26dca9a096435e6f3a468303ef", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 190533, "cgroup_inode": 67172, "container_id": "ede378e6be703da1044fe9c5263288c95071e4f6f18652f664a99f2150b88da5", "container_name": "optimistic_benz", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847069.215059}
+{"ts": 6515509, "pid": 191068, "cgroup_id": 67172, "event": "EXEC", "filename": "/tmp/e24b38dd233f6a1a0b88a742488e89f1132e2d26dca9a096435e6f3a468303ef"}
+{"ts": 6515509, "pid": 191068, "cgroup_id": 67172, "event": "TRACK_QEMU", "bin": "e24b38dd233f6a1", "count": 1}
+{"ts": 6515513, "pid": 191071, "cgroup_id": 67172, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6515513, "pid": 191071, "cgroup_id": 67172, "event": "TRACK_FORK", "parent": 191071, "child": 191072, "count": 1}
+{"ts": 6515513, "pid": 191071, "cgroup_id": 67172, "event": "EXEC", "filename": "/bin/sh", "count": 1}
+{"ts": 6515513, "pid": 191071, "cgroup_id": 67172, "event": "TRACK_QEMU", "bin": "sh", "count": 1}
+{"ts": 6515514, "pid": 191071, "cgroup_id": 67172, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6515514, "pid": 191071, "cgroup_id": 67172, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 1}
+{"ts": 6515519, "pid": 191071, "cgroup_id": 67172, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6515519, "pid": 191071, "cgroup_id": 67172, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 6515520, "pid": 191071, "cgroup_id": 67172, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 6515520, "pid": 191071, "cgroup_id": 67172, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 1769847069571, "pid": -1, "cgroup_id": 67172, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847069571, "pid": -1, "cgroup_id": 67172, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769847069571, "pid": -1, "cgroup_id": 67172, "event": "MMAP_SUM", "meta": {"count": 33, "max_pages": 1048560}, "count": 1}
+{"ts": 6515594, "pid": 191071, "cgroup_id": 67172, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 6515598, "pid": 191071, "cgroup_id": 67172, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 6515608, "pid": 191071, "cgroup_id": 67172, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 6515608, "pid": 191071, "cgroup_id": 67172, "event": "TRACK_FORK", "parent": 191071, "child": 191074, "count": 1}
+{"ts": 6515608, "pid": 191074, "cgroup_id": 67172, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6515608, "pid": 191074, "cgroup_id": 67172, "event": "TRACK_FORK", "parent": 191074, "child": 191075, "count": 1}
+{"ts": 6515608, "pid": 191074, "cgroup_id": 67172, "event": "EXEC", "filename": "/bin/uname", "count": 1}
+{"ts": 6515609, "pid": 191074, "cgroup_id": 67172, "event": "TRACK_QEMU", "bin": "uname", "count": 1}
+{"ts": 6515610, "pid": 191074, "cgroup_id": 67172, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6515610, "pid": 191074, "cgroup_id": 67172, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 1}
+{"ts": 6515615, "pid": 191074, "cgroup_id": 67172, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6515615, "pid": 191074, "cgroup_id": 67172, "event": "ACCESS", "filename": "\u0004", "mode": 4, "count": 1}
+{"ts": 6515615, "pid": 191074, "cgroup_id": 67172, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 6515616, "pid": 191074, "cgroup_id": 67172, "event": "READ", "fd": 3, "buf_len": 512, "count": 1}
+{"ts": 6515617, "pid": 191074, "cgroup_id": 67172, "event": "MPROTECT", "read": 0, "write": 0, "exec": 0, "count": 1}
+{"ts": 6515621, "pid": 191074, "cgroup_id": 67172, "event": "MPROTECT", "read": 1, "write": 0, "exec": 0, "count": 3}
+{"ts": 1769847069672, "pid": -1, "cgroup_id": 67172, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847069672, "pid": -1, "cgroup_id": 67172, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769847069672, "pid": -1, "cgroup_id": 67172, "event": "MMAP_SUM", "meta": {"count": 35, "max_pages": 1048560}, "count": 1}
+{"ts": 6515696, "pid": 191074, "cgroup_id": 67172, "event": "WRITE", "fd": 1, "buf": "Linux ede378e6be70 6.17.0-8-generic #8-Ubuntu SMP PREEMPT_DYNAMI", "count": 1}
+{"ts": 6515699, "pid": 191071, "cgroup_id": 67172, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6515699, "pid": 191071, "cgroup_id": 67172, "event": "WAIT4_EXITED", "reaped_child": 30, "count": 1}
+{"ts": 6515700, "pid": 191068, "cgroup_id": 67172, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6515700, "pid": 191068, "cgroup_id": 67172, "event": "WAIT4_EXITED", "reaped_child": 27, "count": 1}
+{"ts": 6515701, "pid": 191041, "cgroup_id": 67172, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"type": "ANALYZER", "result": {"level": 9.3, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Potential Command Injection", "pid": 191071, "evidence": "Suspicious shell executed via EXEC: /bin/sh", "analyzer": "CodeInjection"}, "binary": "e24b38dd233f6a1a0b88a742488e89f1132e2d26dca9a096435e6f3a468303ef"}
+{"type": "RUN_END", "end_ts": 1769847070.206738, "events_count": 40, "analyzed_count": 1, "timeout": false}

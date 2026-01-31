@@ -1,0 +1,31 @@
+# DeepSeek Malware Analysis Report
+**Target:** `23995d827796e8415d6c9590d6c07c61bb526308237be58e66829c903e65add4` | **Job ID:** `9ce53ed5`
+**Date:** 2026-01-31 16:20:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Evasion`, `Backdoor`
+- **Standard Label:** `Evasion.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and performed critical security policy manipulation by disabling core dumps, indicating potential anti-forensic or stealth behavior.
+
+### ⚠️ Suspicious Behaviors
+- prctl(SET_DUMPABLE, 0) call to disable core dumps
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- Process 261771 called prctl(SET_DUMPABLE, 0) - critical security policy manipulation
+- Binary executed from /tmp/23995d827796e8415d6c9590d6c07c61bb526308237be58e66829c903e65add4
+
+### 💡 Recommendations
+Analyze binary statically for additional functionality, check for persistence mechanisms, and monitor for network connections or file system modifications.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

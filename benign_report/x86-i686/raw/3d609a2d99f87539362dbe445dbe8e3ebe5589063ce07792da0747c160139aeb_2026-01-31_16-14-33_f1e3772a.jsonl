@@ -1,0 +1,28 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/3d609a2d99f87539362dbe445dbe8e3ebe5589063ce07792da0747c160139aeb", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 216424, "cgroup_inode": 75600, "container_id": "15aa5fda764190aa5243f4136732dcdc2fb33833f452c1beac29f0b04c45e55b", "container_name": "bold_germain", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847274.3281116}
+{"ts": 6720553, "pid": 217154, "cgroup_id": 75600, "event": "EXEC", "filename": "/tmp/3d609a2d99f87539362dbe445dbe8e3ebe5589063ce07792da0747c160139aeb"}
+{"ts": 6720554, "pid": 217154, "cgroup_id": 75600, "event": "TRACK_QEMU", "bin": "3d609a2d99f8753", "count": 1}
+{"ts": 6720557, "pid": 217154, "cgroup_id": 75600, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6720560, "pid": 217154, "cgroup_id": 75600, "event": "SOCKET", "domain": 1, "type": 524290, "count": 1}
+{"ts": 6720560, "pid": 217154, "cgroup_id": 75600, "event": "CONNECT", "addr": "01002f6465762f6c6f67000000000000000000000000000000f61fee225ea03710bfa6c2ff7f00000c00000004000000c08cc4835555000000f61fee225ea037", "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "SENDTO", "len": 178, "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "CONNECT", "addr": "01002f6465762f6c6f67000000000000000000000000000000f61fee225ea03710bfa6c2ff7f00000c00000004000000c08cc4835555000000f61fee225ea037", "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "SIGNAL_GENERATE", "sig": 35, "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "WRITE", "fd": 5, "buf": "ELF\u0001\u0001\u0001", "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "WRITE", "fd": 5, "buf": "\u0003½\u0001ÃAÆAÇAÅ\f\u0004\u0004", "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "WRITE", "fd": 5, "buf": "\u0004", "count": 1}
+{"ts": 6720562, "pid": 217154, "cgroup_id": 75600, "event": "WRITE", "fd": 5, "buf": "", "count": 1}
+{"ts": 1769847274624, "pid": -1, "cgroup_id": 75600, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769847274624, "pid": -1, "cgroup_id": 75600, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769847274624, "pid": -1, "cgroup_id": 75600, "event": "AGGREGATED_SUMMARY", "category": "dot_dir", "count": 1}
+{"ts": 1769847274624, "pid": -1, "cgroup_id": 75600, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847274624, "pid": -1, "cgroup_id": 75600, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847274624, "pid": -1, "cgroup_id": 75600, "event": "MMAP_SUM", "meta": {"count": 45, "max_pages": 1048560}, "count": 1}
+{"ts": 6720635, "pid": 217154, "cgroup_id": 75600, "event": "WRITE", "fd": 5, "buf": "", "count": 1}
+{"ts": 6720635, "pid": 217154, "cgroup_id": 75600, "event": "WRITE", "fd": 2, "buf": "qemu: uncaught target signal 6 (Aborted) - core dumped\n", "count": 1}
+{"ts": 6720635, "pid": 217154, "cgroup_id": 75600, "event": "KILL", "target_pid": 25, "sig": 6, "count": 1}
+{"ts": 6720635, "pid": 217154, "cgroup_id": 75600, "event": "SIGNAL_GENERATE", "sig": 6, "count": 1}
+{"ts": 6720697, "pid": 217154, "cgroup_id": 75600, "event": "SIGNAL_GENERATE", "sig": 13, "count": 2}
+{"ts": 6720697, "pid": 217140, "cgroup_id": 75600, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6720697, "pid": 217140, "cgroup_id": 75600, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "RUN_END", "end_ts": 1769847275.2017891, "events_count": 26, "analyzed_count": 0, "timeout": false}

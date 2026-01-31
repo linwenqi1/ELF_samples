@@ -1,0 +1,9 @@
+/tmp/2c64b9bd3b613c0d4e3db0cf014a623023f8ce91ee9434e35f9da51d914aae3c.static: too few arguments
+usage: btrfstune [options] device
+	-S value	positive value will enable seeding, zero to disable, negative is not allowed
+	-r 		enable extended inode refs
+	-x 		enable skinny metadata extent refs
+	-n 		enable no-holes feature (more efficient sparse file representation)
+	-f 		force to do dangerous operation, make sure that you are aware of the dangers
+	-u 		change fsid, use a random one
+	-U UUID		change fsid to UUID

@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fa06540d9d1bc8290f1fba651909821633de42a622f262bc85b8b226ea0ff7a5` | **Job ID:** `addb73e1`
+**Date:** 2026-01-31 16:17:23
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 10/100 🟢
+- **Verdict:** **Security_Tool**
+- **Family:** `None`
+- **Threat Categories:** `Reconnaissance`
+- **Standard Label:** `Reconnaissance.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment, performed network reconnaissance by reading routing table and sending/receiving network packets, but showed no malicious payload delivery, persistence, or exploitation behaviors.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation and communication
+- Reading of network routing information
+
+### 🔍 Key Evidence
+- EXEC event from /tmp directory
+- SOCKET and SENDTO/RECVFROM events indicating network activity
+- Execution output shows network routing table
+- TRACK_QEMU event (benign emulation artifact)
+
+### 💡 Recommendations
+Monitor for follow-up network connections or file system writes. Consider sandboxing with network restrictions for further analysis. Check if binary attempts to escalate privileges or modify system files in subsequent runs.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         172.17.0.1      0.0.0.0         UG    0      0        0 eth0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 eth0
+```

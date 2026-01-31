@@ -1,0 +1,42 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ed2a09b48fcacedc25a85da3dab0efc391c4c6bf7103bdae4824704eb1da4b0a` | **Job ID:** `fc2f73b7`
+**Date:** 2026-01-31 16:12:58
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute properly due to environment configuration issues (invalid hostname in QEMU emulation), with no malicious activity observed before termination.
+
+### 🔍 Key Evidence
+- Exit code 134 (SIGABRT)
+- QEMU emulation environment mismatch
+- No malicious syscall patterns detected
+- Execution terminated before establishing any malicious behavior
+
+### 💡 Recommendations
+Test in a properly configured environment with valid hostname. If execution succeeds, re-analyze for malicious behavior patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+whoami: canonical hostname is invalid.
+
+Leafnode must have a fully-qualified domain name,
+not just "40231f1cd2be".
+Edit your /etc/hosts file to add a fully qualified domain name.
+
+Leafnode must have a fully-qualified domain name,
+not just "40231f1cd2be".
+Edit your /etc/hosts file to add a fully qualified domain name.
+
+qemu: uncaught target signal 6 (Aborted) - core dumped
+Aborted (core dumped)
+```

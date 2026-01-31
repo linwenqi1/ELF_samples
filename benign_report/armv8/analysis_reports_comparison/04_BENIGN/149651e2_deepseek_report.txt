@@ -1,0 +1,57 @@
+# DeepSeek Malware Analysis Report
+**Target:** `da001564f852dbaddd84f5c063cff4f45677b42d1c9c1ec73c203ccecc64bb62` | **Job ID:** `149651e2`
+**Date:** 2026-01-31 16:21:21
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed but failed due to missing required command-line arguments for iperf3 network testing tool. No malicious activity observed in trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with iperf3 usage help output
+- No network, persistence, evasion, or payload delivery syscalls in trace
+- TRACK_QEMU event identified as emulation artifact per guidelines
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate iperf3 binary that failed due to incorrect invocation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+iperf3: parameter error - must either be a client (-c) or server (-s)
+
+Usage: iperf3 [-s|-c host] [options]
+       iperf3 [-h|--help] [-v|--version]
+
+Server or Client:
+  -p, --port      #         server port to listen on/connect to
+  -f, --format   [kmgtKMGT] format to report: Kbits, Mbits, Gbits, Tbits
+  -i, --interval  #         seconds between periodic throughput reports
+  -F, --file name           xmit/recv the specified file
+  -A, --affinity n/n,m      set CPU affinity
+  -B, --bind      <host>    bind to the interface associated with the address <host>
+  -V, --verbose             more detailed output
+  -J, --json                output in JSON format
+  --logfile f               send output to a log file
+  --forceflush              force flushing output at every interval
+  -d, --debug               emit debugging output
+  -v, --version             show version information and quit
+  -h, --help                show this message and quit
+Server specific:
+  -s, --server              run in server mode
+  -D, --daemon              run the server as a daemon
+  -I, --pidfile file        write PID file
+  -1, --one-off             handle one client connection then exit
+  --rsa-private-key-path    path to the RSA private key used to decrypt
+                            authentication credentials
+  --authorized-users-path   path to the configuration file containing user
+                            credentials
+Client specific:
+  -c, --client    <host>    run in client mode, connecting t
+```

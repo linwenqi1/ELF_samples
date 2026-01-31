@@ -1,0 +1,32 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/6c1aeefb4f621a8c670a1629f2da61f53c8aebf64bed266dec377ba4456aacf7", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 194044, "cgroup_inode": 68634, "container_id": "bb9aa0419d7523683946199726cdc028dd2f583b1831a774f641b74233300b46", "container_name": "affectionate_lederberg", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847072.7287533}
+{"ts": 6518972, "pid": 194643, "cgroup_id": 68634, "event": "EXEC", "filename": "/tmp/6c1aeefb4f621a8c670a1629f2da61f53c8aebf64bed266dec377ba4456aacf7"}
+{"ts": 6518973, "pid": 194643, "cgroup_id": 68634, "event": "TRACK_QEMU", "bin": "6c1aeefb4f621a8", "count": 1}
+{"ts": 6518976, "pid": 194653, "cgroup_id": 68634, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6518976, "pid": 194653, "cgroup_id": 68634, "event": "TRACK_FORK", "parent": 194653, "child": 194655, "count": 1}
+{"ts": 6518977, "pid": 194653, "cgroup_id": 68634, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1769847072978, "pid": -1, "cgroup_id": 68634, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769847072978, "pid": -1, "cgroup_id": 68634, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847072978, "pid": -1, "cgroup_id": 68634, "event": "MMAP_SUM", "meta": {"count": 40, "max_pages": 1048560}, "count": 1}
+{"ts": 6518978, "pid": 194653, "cgroup_id": 68634, "event": "WRITE", "fd": 3, "buf": "27", "count": 1}
+{"ts": 6518978, "pid": 194653, "cgroup_id": 68634, "event": "WRITE", "fd": 4, "buf": "", "count": 1}
+{"ts": 6518978, "pid": 194643, "cgroup_id": 68634, "event": "READ", "fd": 3, "buf_len": 4, "count": 1}
+{"ts": 6518979, "pid": 194653, "cgroup_id": 68634, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6518979, "pid": 194630, "cgroup_id": 68634, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6518979, "pid": 194630, "cgroup_id": 68634, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"ts": 6518979, "pid": 194653, "cgroup_id": 68634, "event": "DUP2", "oldfd": 4, "newfd": 0, "count": 1}
+{"ts": 6518980, "pid": 194653, "cgroup_id": 68634, "event": "DUP2", "oldfd": 4, "newfd": 1, "count": 1}
+{"ts": 6518980, "pid": 194653, "cgroup_id": 68634, "event": "DUP2", "oldfd": 4, "newfd": 2, "count": 1}
+{"ts": 6518980, "pid": 194653, "cgroup_id": 68634, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 6518980, "pid": 194653, "cgroup_id": 68634, "event": "TRACK_FORK", "parent": 194653, "child": 194665, "count": 1}
+{"ts": 6518980, "pid": 194665, "cgroup_id": 68634, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6518980, "pid": 194665, "cgroup_id": 68634, "event": "TRACK_FORK", "parent": 194665, "child": 194666, "count": 1}
+{"ts": 6518981, "pid": 194665, "cgroup_id": 68634, "event": "SOCKET", "domain": 16, "type": 2, "count": 1}
+{"ts": 6518981, "pid": 194665, "cgroup_id": 68634, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6518981, "pid": 194665, "cgroup_id": 68634, "event": "READ", "fd": 6, "buf_len": 922, "count": 1}
+{"ts": 6518982, "pid": 194665, "cgroup_id": 68634, "event": "SOCKET", "domain": 1, "type": 524289, "count": 1}
+{"ts": 6518982, "pid": 194665, "cgroup_id": 68634, "event": "CONNECT", "addr": "01002f7661722f72756e2f6e7363642f736f636b6574000000000000000000000100000030002000600228e79d720000507c4ef4ff7f00001800000006000000", "count": 1}
+{"ts": 6518982, "pid": 194665, "cgroup_id": 68634, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6518982, "pid": 194665, "cgroup_id": 68634, "event": "READ", "fd": 6, "buf_len": 446, "count": 1}
+{"ts": 6518982, "pid": 194665, "cgroup_id": 68634, "event": "SETUID", "uid": 65534, "count": 1}
+{"ts": 1769847073079, "pid": -1, "cgroup_id": 68634, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 3}
+{"type": "RUN_END", "end_ts": 1769847073.4826176, "events_count": 30, "analyzed_count": 0, "timeout": false}

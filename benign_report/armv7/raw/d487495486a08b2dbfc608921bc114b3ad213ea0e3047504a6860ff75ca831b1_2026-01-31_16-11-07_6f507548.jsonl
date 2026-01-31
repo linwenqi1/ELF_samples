@@ -1,0 +1,22 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/d487495486a08b2dbfc608921bc114b3ad213ea0e3047504a6860ff75ca831b1", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 189504, "cgroup_inode": 66656, "container_id": "b2f5c0c6e18458b16c61fb974e5684d574f5b6cb8c4ed2e17e4c1f1b30675852", "container_name": "optimistic_yalow", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847068.064148}
+{"ts": 6514344, "pid": 189972, "cgroup_id": 66656, "event": "EXEC", "filename": "/tmp/d487495486a08b2dbfc608921bc114b3ad213ea0e3047504a6860ff75ca831b1"}
+{"ts": 6514345, "pid": 189972, "cgroup_id": 66656, "event": "TRACK_QEMU", "bin": "d487495486a08b2", "count": 1}
+{"ts": 6514348, "pid": 189972, "cgroup_id": 66656, "event": "SOCKET", "domain": 16, "type": 524291, "count": 1}
+{"ts": 6514348, "pid": 189972, "cgroup_id": 66656, "event": "SENDTO", "len": 20, "count": 1}
+{"ts": 6514348, "pid": 189972, "cgroup_id": 66656, "event": "RECVFROM", "size": 8192, "count": 2}
+{"ts": 6514348, "pid": 189972, "cgroup_id": 66656, "event": "SENDTO", "len": 20, "count": 1}
+{"ts": 6514348, "pid": 189972, "cgroup_id": 66656, "event": "RECVFROM", "size": 8192, "count": 2}
+{"ts": 6514349, "pid": 189972, "cgroup_id": 66656, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 6514350, "pid": 189972, "cgroup_id": 66656, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6514351, "pid": 189972, "cgroup_id": 66656, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 6514352, "pid": 189972, "cgroup_id": 66656, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 6514352, "pid": 189972, "cgroup_id": 66656, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6514353, "pid": 189972, "cgroup_id": 66656, "event": "TRACK_FORK", "parent": 189972, "child": 189975, "count": 1}
+{"ts": 6514353, "pid": 189972, "cgroup_id": 66656, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 2}
+{"ts": 6514354, "pid": 189972, "cgroup_id": 66656, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6514354, "pid": 189972, "cgroup_id": 66656, "event": "TRACK_FORK", "parent": 189972, "child": 189976, "count": 1}
+{"ts": 6514355, "pid": 189972, "cgroup_id": 66656, "event": "SOCKET", "domain": 1, "type": 3, "count": 1}
+{"ts": 6514357, "pid": 189956, "cgroup_id": 66656, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6514357, "pid": 189956, "cgroup_id": 66656, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769847068457, "pid": -1, "cgroup_id": 66656, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "RUN_END", "end_ts": 1769847068.861454, "events_count": 20, "analyzed_count": 0, "timeout": false}

@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f99a2cd377df2dceb3290bb9347d922db6fa9a5c07b62cc875f67ac3be4ef907` | **Job ID:** `ae049815`
+**Date:** 2026-01-31 16:11:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary establishes reverse shell connection to C2 server via socket communication, consistent with Mirai botnet behavior.
+
+### ⚠️ Suspicious Behaviors
+- Socket creation for network communication
+- Connect attempts to external addresses
+- File descriptor duplication for I/O redirection
+- Process forking for persistence/execution
+
+### 🔍 Key Evidence
+- CONNECT event with encoded address data (likely C2 server)
+- SENDTO event transmitting 95 bytes of data
+- DUP2 operations redirecting file descriptors 0,1,2 (stdin/stdout/stderr)
+- Multiple CLONE/TRACK_FORK events indicating process spawning
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic to identified addresses, check for persistence mechanisms, and scan for related malware artifacts.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f2660dd72b5a4ca824c2c94c4660f97d7673820abbfceaee609e825333cf13cf` | **Job ID:** `d4d5c42a`
+**Date:** 2026-01-31 16:22:11
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to environment mismatch (root execution without -u switch) with no malicious activity observed before exit.
+
+### 🔍 Key Evidence
+- Exit code 64 with error message 'can't run as root without the -u switch'
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No syscall activity indicating malicious intent before exit
+
+### 💡 Recommendations
+Re-run analysis with proper execution environment (non-root or with -u switch). No immediate threat detected based on available trace data.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+can't run as root without the -u switch
+```

@@ -1,0 +1,51 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e14c87872dbf68aaab36456550562d2fcd12c672b8b63b146cd99b3ef1ee3aae` | **Job ID:** `a2316c20`
+**Date:** 2026-01-31 16:15:18
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, displaying help output for a traceroute utility. No malicious behaviors detected in the limited syscall trace.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Help output suggests legitimate network diagnostic tool
+
+### 💡 Recommendations
+No immediate action required. For deeper analysis, run with network access enabled to observe actual traceroute behavior and capture full syscall trace beyond aggregated summaries.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage:
+  /tmp/e14c87872dbf68aaab36456550562d2fcd12c672b8b63b146cd99b3ef1ee3aae [ -46dFITnreAUDV ] [ -f first_ttl ] [ -g gate,... ] [ -i device ] [ -m max_ttl ] [ -N squeries ] [ -p port ] [ -t tos ] [ -l flow_label ] [ -w MAX,HERE,NEAR ] [ -q nqueries ] [ -s src_addr ] [ -z sendwait ] [ --fwmark=num ] host [ packetlen ]
+Options:
+  -4                          Use IPv4
+  -6                          Use IPv6
+  -d  --debug                 Enable socket level debugging
+  -F  --dont-fragment         Do not fragment packets
+  -f first_ttl  --first=first_ttl
+                              Start from the first_ttl hop (instead from 1)
+  -g gate,...  --gateway=gate,...
+                              Route packets through the specified gateway
+                              (maximum 8 for IPv4 and 127 for IPv6)
+  -I  --icmp                  Use ICMP ECHO for tracerouting
+  -T  --tcp                   Use TCP SYN for tracerouting (default port is 80)
+  -i device  --interface=device
+                              Specify a network interface to operate with
+  -m max_ttl  --max-hops=max_ttl
+                              Set the max number of hops (max TTL to be
+                              reached). Default is 30
+  -N squeries  --sim-queries=squeries
+                              Set the number of probes to be tried
+                              simultaneously (default is 16)
+  -n                          Do not resolve IP addresses to their domain names
+  -p port  --port=port        Set the d
+```

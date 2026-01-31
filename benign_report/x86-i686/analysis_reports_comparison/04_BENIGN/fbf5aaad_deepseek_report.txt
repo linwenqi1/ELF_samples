@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `367101afbe6e6e0038a4196f3f7396d0c0d7630383cd95d26c5a0beb49f7019f` | **Job ID:** `fbf5aaad`
+**Date:** 2026-01-31 16:14:56
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment with minimal activity. No malicious behaviors detected in syscall trace. All observed events are consistent with benign startup/teardown processes in emulated environment.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No sensitive path access outside /tmp
+- No network connections, file modifications, or process manipulation
+- Exit code 0 with minimal syscall activity
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be non-functional or benign utility in emulated environment. Consider analyzing native execution if suspicious indicators emerge from other sources.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+FD  type	device	inode	mode	links	uid	gid	rdev	size	blksize	blocks	atime				mtime				ctime				cloexec	flags	sigown	sigio
+   0: chrdev	0,6		Sat Jan 31 10:35:19 2026	Sat Jan 31 10:35:19 2026	Sat Jan 31 10:35:19 2026	0	x008000	0	0	(no STREAMS modules)poll: IN,OUT,
+   1: pipe	0,15		Sat Jan 31 08:14:35 2026	Sat Jan 31 08:14:35 2026	Sat Jan 31 08:14:35 2026	0	x008001	0	0	(no STREAMS modules)poll: OUT,
+   2: pipe	0,15		Sat Jan 31 08:14:35 2026	Sat Jan 31 08:14:35 2026	Sat Jan 31 08:14:35 2026	0	x008001	0	0	(no STREAMS modules)poll: OUT,
+   3: socket	0,9		Thu Jan  1 00:00:00 1970	Thu Jan  1 00:00:00 1970	Thu Jan  1 00:00:00 1970	0	x008002	0	0	(no STREAMS modules)DEBUG=0	REUSEADDR=0	TYPE=2	ERROR=0	DONTROUTE=0	BROADCAST=0	SNDBUF=212992	RCVBUF=212992	KEEPALIVE=0	OOBINLINE=0	NO_CHECK=0	PRIORITY=0	LINGER={0,0}	BSDCOMPAT=0	REUSEPORT=0	PASSCRED=0	PEERCRED={25,0}	RCVLOWAT=1	SNDLOWAT=1	RCVTIMEO={0,0}	SNDTIMEO={0,0}				BINDTODEVICE={0,0}	ATTACH_FILTER={0,0}			AF=1 "<anon>" <-> AF=1 "<anon>"	poll: OUT,
+   4: socket	0,9		Thu Jan  1 00:00:00 1970	Thu Jan  1 00:00:00 1970	Thu Jan  1 00:00:00 1970	0	x008002	0	0	(no STREAMS modules)DEBUG=0	REUSEADDR=0	TYPE=2	ERROR=0	DONTROUTE=0	BROADCAST=0	SNDBUF=212992	RCVBUF=212992	KEEPALIVE=0	OOBINLINE=0	NO_CHECK=0	PRIORITY=0	LINGER={0,0}	BSDCOMPAT=0	REUSEPORT=0	PASSCRED=0	PEERCRED={25,0}	RCVLOWAT=1	SNDLOWAT=1	RCVTIMEO={0,0}	SNDTIMEO={0,0}				BINDTODEVICE={0,0}	ATTACH_FILTER={0,0}			AF=1 "<anon>" <-> AF=1 "<anon>"	poll: OUT,
+```

@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `3113ce0b649daff847a6d4a25f77fccd50d971dfa6970211fa3c7d29ebb440ca` | **Job ID:** `ffe75988`
+**Date:** 2026-01-31 16:22:15
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 80/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Privilege Escalation`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and attempted privilege escalation to root via SETUID call, indicating backdoor or persistence installation intent.
+
+### ⚠️ Suspicious Behaviors
+- SETUID call to uid 0 (root)
+- Socket creation (potential network activity)
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- SETUID call with uid=0
+- Binary executed from /tmp directory
+- Socket creation event
+
+### 💡 Recommendations
+Analyze binary for persistence mechanisms, check for C2 communication patterns, examine for additional privilege escalation attempts, and investigate network connections.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Try "/tmp/3113ce0b649daff847a6d4a25f77fccd50d971dfa6970211fa3c7d29ebb440ca -h" for more information.
+```

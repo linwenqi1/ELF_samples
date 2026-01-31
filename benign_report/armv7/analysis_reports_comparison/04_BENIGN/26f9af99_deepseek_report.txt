@@ -1,0 +1,47 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5eafe6e43c1dc7a82492442fcbbebc15aaecf1f3122b52fa718e77bd5828f81d` | **Job ID:** `26f9af99`
+**Date:** 2026-01-31 16:13:34
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment with minimal activity, showing no malicious behaviors. All observed events are consistent with benign startup or emulation artifacts.
+
+### 🔍 Key Evidence
+- Exit code 0 indicates successful execution
+- No local alerts triggered
+- TRACK_QEMU events are emulation artifacts, not evasion
+- No access to sensitive paths outside emulation
+- No patterns matching known malware families or malicious behaviors
+
+### 💡 Recommendations
+No immediate action required. Monitor for any future executions with expanded trace data if higher fidelity analysis is needed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+overlay on / type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/5DZVPX6VXBLHGSNM5DGME4XIRT:/var/lib/docker/overlay2/l/GL4FBXYDAHSDWZWDKU2DYLGJFQ,upperdir=/var/lib/docker/overlay2/4345eda5ef39edc4f8e323b5a5677dbb35265ae5042d530e6e4a0f909b13485d/diff,workdir=/var/lib/docker/overlay2/4345eda5ef39edc4f8e323b5a5677dbb35265ae5042d530e6e4a0f909b13485d/work,nouserxattr)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup type cgroup2 (ro,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k,inode64)
+/dev/nvme0n1p9 on /usr/sbin/docker-init type ext4 (ro,relatime)
+/dev/nvme0n1p9 on /etc/resolv.conf type ext4 (rw,relatime)
+/dev/nvme0n1p9 on /etc/hostname type ext4 (rw,relatime)
+/dev/nvme0n1p9 on /etc/hosts type ext4 (rw,relatime)
+proc on /proc/bus type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/fs type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/irq type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sys type proc (ro,nosuid,nodev,noexec,relatime)
+proc on /proc/sysrq-trigger type proc (ro,nosuid,nodev,noexec,relatime)
+tmpfs on /proc/asound type tmpfs (ro,relatime,inod
+```

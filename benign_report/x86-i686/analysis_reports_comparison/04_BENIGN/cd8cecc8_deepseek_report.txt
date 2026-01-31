@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e1de67b3e91798433f0df76f45e52026953379795735359849664dd05ab24f5a` | **Job ID:** `cd8cecc8`
+**Date:** 2026-01-31 16:14:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment with minimal activity, showing no malicious behaviors. All observed events are consistent with benign startup and environment artifacts.
+
+### 🔍 Key Evidence
+- EXEC event from /tmp directory
+- TRACK_QEMU event (emulation artifact, not evasion)
+- AGGREGATED_SUMMARY for temp_file and proc_fs (environment monitoring)
+
+### 💡 Recommendations
+No immediate action required. Consider monitoring for subsequent executions or network activity if binary persists in environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,10 @@
+{"type": "RUN_META", "session": "2b0ec6aafff94abf89ebfdcf36bd1621", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv8-aarch64/3113ce0b649daff847a6d4a25f77fccd50d971dfa6970211fa3c7d29ebb440ca", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 277421, "cgroup_inode": 101228, "container_id": "d5de6886ef71987099678814d6cf0c401d2e8e4d29209e9f1f4c1267c2c99fc3", "container_name": "thirsty_visvesvaraya", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769847596.9798384}
+{"ts": 7043197, "pid": 277686, "cgroup_id": 101228, "event": "EXEC", "filename": "/tmp/3113ce0b649daff847a6d4a25f77fccd50d971dfa6970211fa3c7d29ebb440ca"}
+{"ts": 7043198, "pid": 277686, "cgroup_id": 101228, "event": "TRACK_QEMU", "bin": "3113ce0b649daff", "count": 1}
+{"ts": 7043199, "pid": 277686, "cgroup_id": 101228, "event": "SOCKET", "domain": 10, "type": 3, "count": 1}
+{"ts": 7043200, "pid": 277686, "cgroup_id": 101228, "event": "SETUID", "uid": 0, "count": 1}
+{"ts": 7043201, "pid": 277649, "cgroup_id": 101228, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7043201, "pid": 277649, "cgroup_id": 101228, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 1769847597297, "pid": -1, "cgroup_id": 101228, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "ANALYZER", "result": {"level": 8, "description": "Potential Privilege Escalation", "pid": 277686, "evidence": "'SETUID' call attempts to set uid to 0 (root)", "analyzer": "AccessControl"}, "binary": "3113ce0b649daff847a6d4a25f77fccd50d971dfa6970211fa3c7d29ebb440ca"}
+{"type": "RUN_END", "end_ts": 1769847597.704569, "events_count": 7, "analyzed_count": 1, "timeout": false}

@@ -1,0 +1,43 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f1ee30e72fdfcc03a92e26e2f9eb50d0bc82c3238243d762b653f5ac437d6d4e` | **Job ID:** `a761d675`
+**Date:** 2026-01-31 16:20:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed but exited with usage error due to missing required filename argument. No malicious activity observed in trace.
+
+### 🔍 Key Evidence
+- Exit code 2 indicates argument error
+- Usage output shows D-Bus monitoring tool (bustle format)
+- No malicious syscall patterns detected
+- TRACK_QEMU event is emulation artifact, not evasion
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate D-Bus monitoring utility that failed due to incorrect invocation.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+You must specify exactly one output filename
+Usage:
+  f1ee30e72fdfcc03a92e26e2f9eb50d0bc82c3238243d762b653f5ac437d6d4e [OPTION…] FILENAME
+
+Logs D-Bus traffic to FILENAME in a format suitable for bustle
+
+Help Options:
+  -h, --help        Show help options
+
+Application Options:
+  -e, --session     Monitor session bus (default)
+  -y, --system      Monitor system bus
+  -v, --verbose     Print brief summaries of captured messages to stdout
+  -q, --quiet       Don't print out instructions
+  -V, --version     Print version information and exit
+```

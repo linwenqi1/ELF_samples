@@ -1,0 +1,39 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0d0013e41eaad9334d6541f3065723eeab2111bd4736929fd63557679728ec24.static` | **Job ID:** `7d600e05`
+**Date:** 2026-01-31 16:12:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing required arguments, showing usage help for btrfs-image utility. No malicious activity observed in trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with usage help output
+- No malicious syscall patterns in trace
+- TRACK_QEMU event identified as emulation artifact
+
+### 💡 Recommendations
+No further action needed. Binary appears to be legitimate btrfs-image utility that requires proper arguments to function.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/0d0013e41eaad9334d6541f3065723eeab2111bd4736929fd63557679728ec24.static: too few arguments
+usage: btrfs-image [options] source target
+	-r      	restore metadump image
+	-c value	compression level (0 ~ 9)
+	-t value	number of threads (1 ~ 32)
+	-o      	don't mess with the chunk tree when restoring
+	-s      	sanitize file names, use once to just use garbage, use twice if you want crc collisions
+	-w      	walk all trees instead of using extent tree, do this if your extent tree is broken
+	-m	   	restore for multiple devices
+
+	In the dump mode, source is the btrfs device and target is the output file (use '-' for stdout).
+	In the restore mode, source is the dumped image and target is the btrfs device/file.
+```

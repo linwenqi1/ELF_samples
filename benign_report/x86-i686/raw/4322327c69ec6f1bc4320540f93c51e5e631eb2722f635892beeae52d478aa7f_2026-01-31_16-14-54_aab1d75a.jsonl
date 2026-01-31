@@ -1,0 +1,14 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/4322327c69ec6f1bc4320540f93c51e5e631eb2722f635892beeae52d478aa7f", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 232626, "cgroup_inode": 83426, "container_id": "5ffc19f420397fcad0ae7e342e176eba47d449230cfa8d8ce450bfd4f4a69e6e", "container_name": "interesting_yonath", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847294.8537924}
+{"ts": 6741099, "pid": 232961, "cgroup_id": 83426, "event": "EXEC", "filename": "/tmp/4322327c69ec6f1bc4320540f93c51e5e631eb2722f635892beeae52d478aa7f"}
+{"ts": 6741100, "pid": 232961, "cgroup_id": 83426, "event": "TRACK_QEMU", "bin": "4322327c69ec6f1", "count": 1}
+{"ts": 6741103, "pid": 232961, "cgroup_id": 83426, "event": "WRITE", "fd": 1, "buf": "UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spie", "count": 1}
+{"ts": 6741103, "pid": 232961, "cgroup_id": 83426, "event": "WRITE", "fd": 1, "buf": "Usage: unzip [-Z] [-opts[modifiers]] file[.zip] [list] [-x xlist", "count": 1}
+{"ts": 6741103, "pid": 232961, "cgroup_id": 83426, "event": "WRITE", "fd": 1, "buf": "\n  -p  extract files to pipe, no messages     -l  list files (sh", "count": 1}
+{"ts": 6741103, "pid": 232961, "cgroup_id": 83426, "event": "WRITE", "fd": 1, "buf": "modifiers:\n  -n  never overwrite existing files         -q  quie", "count": 1}
+{"ts": 6741103, "pid": 232961, "cgroup_id": 83426, "event": "WRITE", "fd": 1, "buf": "See \"unzip -hh\" or unzip.txt for more help.  Examples:\n  unzip d", "count": 1}
+{"ts": 6741103, "pid": 232946, "cgroup_id": 83426, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6741104, "pid": 232946, "cgroup_id": 83426, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 1769847295154, "pid": -1, "cgroup_id": 83426, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769847295154, "pid": -1, "cgroup_id": 83426, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847295154, "pid": -1, "cgroup_id": 83426, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769847295.6072834, "events_count": 12, "analyzed_count": 0, "timeout": false}

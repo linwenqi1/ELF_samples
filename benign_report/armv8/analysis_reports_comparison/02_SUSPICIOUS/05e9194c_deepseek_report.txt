@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `aa9312639aaa547518588c461137b1a8f4f3a5c4b020cc7afd2f1d4783bc3316` | **Job ID:** `05e9194c`
+**Date:** 2026-01-31 16:19:41
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 60/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, created network sockets, attempted to connect to an external address, and deleted a system socket file, indicating potential backdoor setup with evasion techniques.
+
+### ⚠️ Suspicious Behaviors
+- Network socket creation (AF_UNIX and AF_INET)
+- Attempted external connection to encoded address
+- Deletion of system socket file (/var/run/chrony/chronyc.25.sock)
+
+### 🔍 Key Evidence
+- SOCKET events (domain 1 and 2) indicating network activity
+- CONNECT event with encoded address suggesting potential C2 communication
+- UNLINKAT event targeting system path outside emulation scope
+- Execution from /tmp with TRACK_QEMU artifact
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic for the encoded address, check for persistence mechanisms, and examine /tmp for additional artifacts. Consider sandboxing with network restrictions for further analysis.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

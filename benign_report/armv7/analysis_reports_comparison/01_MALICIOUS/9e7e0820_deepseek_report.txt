@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e9575c760c0c919efa718c94f41205cd7aa10bd8d07c991c3116dc8af87288a5` | **Job ID:** `9e7e0820`
+**Date:** 2026-01-31 16:13:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`, `Worm`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary exhibits classic Mirai botnet behavior: rapid process forking, network socket creation, and connection attempts to multiple IP addresses, consistent with DDoS attack preparation and propagation.
+
+### ⚠️ Suspicious Behaviors
+- Rapid process forking (CLONE/TRACK_FORK events)
+- High-volume network connections (CONNECT/SENDTO events)
+- Memory protection modifications (MPROTECT events)
+- Execution from /tmp directory
+- Exit code -1 indicating abnormal termination
+
+### 🔍 Key Evidence
+- Repeated CONNECT events to multiple IP addresses (pattern consistent with botnet C2 communication)
+- Multiple SENDTO events with varying lengths (potential DDoS payloads)
+- Process forking creating numerous child processes (193160-209466 range)
+- Binary executed from /tmp/e9575c760c0c919efa718c94f41205cd7aa10bd8d07c991c3116dc8af87288a5
+- TRACK_QEMU event indicating emulated environment execution
+
+### 💡 Recommendations
+Isolate affected system immediately. Analyze network traffic for C2 communication patterns. Check for persistence mechanisms in system directories. Consider this part of a larger botnet infrastructure requiring coordinated takedown.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

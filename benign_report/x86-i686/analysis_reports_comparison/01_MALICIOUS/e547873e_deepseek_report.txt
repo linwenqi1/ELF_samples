@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f88d0ff52e7ffc860d36906fb30eb736934d3f92a356e43a0deadf2bd11b7beb` | **Job ID:** `e547873e`
+**Date:** 2026-01-31 16:17:17
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully, performed security policy manipulation to disable core dumps, then established a reverse shell through socket creation, process forking, and file descriptor duplication.
+
+### ⚠️ Suspicious Behaviors
+- prctl(SET_DUMPABLE, 0) call to disable core dumps
+- Socket creation (domain: 1, type: 1) followed by process forking
+- File descriptor duplication (dup2) to redirect stdin/stdout/stderr to socket
+
+### 🔍 Key Evidence
+- Process 239702 called prctl(SET_DUMPABLE, 0) - critical security policy manipulation
+- Socket creation (SOCKET event) with domain 1 (AF_UNIX) or type 1 (SOCK_STREAM)
+- Process forking (CLONE/TRACK_FORK) creating child processes 239715 and 239716
+- DUP2 operations redirecting file descriptor 4 to stdin(0), stdout(1), and stderr(2) - classic reverse shell pattern
+
+### 💡 Recommendations
+Isolate affected system immediately. Analyze network traffic for C2 communication. Check for persistence mechanisms. Review all processes spawned from /tmp directory. Consider this binary as a potential backdoor with reverse shell capabilities.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+SSH_AUTH_SOCK=/tmp/ssh-PVBgMkWaWzWc/agent.25; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=28; export SSH_AGENT_PID;
+echo Agent pid 28;
+```

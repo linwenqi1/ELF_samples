@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6c1aeefb4f621a8c670a1629f2da61f53c8aebf64bed266dec377ba4456aacf7` | **Job ID:** `2bffe401`
+**Date:** 2026-01-31 16:12:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 10/100 🟢
+- **Verdict:** **Security_Tool**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment, showing process forking and socket communication patterns consistent with network probing or backdoor setup, but lacks definitive malicious payload delivery or exploitation.
+
+### ⚠️ Suspicious Behaviors
+- Process forking (CLONE/TRACK_FORK events)
+- Socket creation and connection attempts
+- File descriptor manipulation (DUP2)
+- SETUID to non-root user (uid 65534)
+
+### 🔍 Key Evidence
+- Socket creation with domain 16 (AF_NETLINK) and type 2 (SOCK_RAW)
+- CONNECT to encoded address (possibly /var/run/nscd/socket)
+- SETUID to uid 65534 (nobody user)
+- Multiple process forks creating child processes
+
+### 💡 Recommendations
+Monitor for further network connections, check for persistence mechanisms, analyze binary statically for embedded payloads, and verify if this is part of legitimate security testing.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

@@ -1,0 +1,92 @@
+
+PTPDv2 2.3.1
+
+usage: ptpd2 <options> < --section:key=value...>
+
+WARNING: Any command-line options take priority over options from config file!
+
+Basic options: 
+
+-c --config-file [path] 	Configuration file
+-k --check-config		Check configuration and exit
+-v --version			Print version string
+-h --help			Show this help screen
+-H --long-help			Show detailed help for all settings and behaviours
+-e --explain [section:key]	Show help for a single setting
+-O --default-config		Output default configuration (usable as config file)
+-L --ignore-lock		Skip lock file checks and locking
+-A --auto-lock			Use preset / port mode specific lock files
+-l --lockfile [path]		Specify path to lock file
+-p --print-lockfile		Print path to lock file and exit (useful for init scripts)
+-R --lock-directory [path]	Directory to store lock files
+-f --log-file [path]		global:log_file=[path]		Log file
+-S --statistics-file [path]	global:statistics_file=[path]	Statistics file
+
+Basic PTP protocol and daemon configuration options: 
+
+Command-line option		Config key(s)			Description
+------------------------------------------------------------------------------------
+-i --interface [dev]		ptpengine:interface=<dev>	Interface to use (required)
+-d --domain [n] 		ptpengine:domain=<n>		PTP domain number
+-s --slaveonly	 	 	ptpengine:preset=slaveonly	Slave only mode
+-m --masterslave 		ptpengine:preset=masterslave	Master, slave when not best GM
+-M --masteronly 		ptpengine:preset=masteronly	Master, passive when not best GM
+-y --hybrid			ptpengine:ip_mode=hybrid	Hybrid mode (multicast for sync
+								and announce, unicast for delay
+								request and response)
+-U --unicast			ptpengine:ip_mode=unicast	Unicast mode
+-g --unicast-negotiation	ptpengine:unicast_negotiation=y Enable unicast negotiation (signaling)
+-u --unicast-destinations 	ptpengine:ip_mode=unicast	Unicast destination list
+     [ip/host, ...]		ptpengine:unicast_destinations=<ip/host, ...>
+
+-E --e2e			ptpengine:delay_mechanism=E2E	End to end delay detection
+-P --p2p			ptpengine:delay_mechanism=P2P	Peer to peer delay detection
+
+-a --delay-override 		ptpengine:log_delayreq_override Override delay request interval
+                                                               announced by master
+-r --delay-interval [n] 	ptpengine:log_delayreq_interval=<n>	Delay request interval
+									(log 2)
+
+-n --noadjust			clock:no_adjust			Do not adjust the clock
+-D<DD...> --debug		global:debug_level=<level>	Debug level
+-C --foreground			global:foreground=<Y/N>		Don't run in background
+-V --verbose			global:verbose_foreground=<Y/N>	Run in foreground, log all
+								messages to standard output
+
+------------------------------------------------------------------------------------
+
+ptpd2 accepts a configuration file (.ini style) where settings are either
+grouped into sections:
+
+[section]
+; comment
+key = value
+
+or are specified as:
+
+section:key = value
+
+All settings can also be supplied as command-line parameters (after other options):
+
+--section:key=<value> --section:key <value> -section:key=<value> -section:key <value>
+
+To see the full help for all configurable options, run: ptpd2 with -H or --long-help
+To see help for a single setting only, run: ptpd2 with -e (--explain) [section:key]
+To see all default settings with descriptions, run: ptpd2 with -O (--default-config)
+
+------------------------------------------------------------------------------------
+
+PTPDv2 compatibility options for migration from versions below 2.3.0:
+
+-b [dev]			Network interface to use
+-i [n]				PTP domain number
+-G				'Master mode with NTP' (ptpengine:preset=masteronly)
+-W				'Master mode without NTP' (ptpengine:preset=masterslave) 
+-Y [n]				Delay request interval (log 2)
+-t 				Do not adjust the clock
+
+Note 1: the above parameters are deprecated and their use will issue a warning.
+Note 2: -U and -g options have been re-purposed in 2.3.1
+.
+PTPDv2 startup failed
+

@@ -1,0 +1,31 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f0c9be6e2c3dd432e47aef2bed0daa53bc3cb02820a6a2878d695341051c5501` | **Job ID:** `e2518bb4`
+**Date:** 2026-01-31 16:17:39
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to hardware clock access issues in QEMU emulation environment, showing no malicious activity.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event indicates emulation environment
+- Exit code 1 with hardware clock access error
+- No malicious syscall patterns detected in trace
+
+### 💡 Recommendations
+Test on native hardware to verify actual behavior; current analysis limited by emulation constraints.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+f0c9be6e2c3dd432e47aef2bed0daa53bc3cb02820a6a2878d695341051c5501: Cannot access the Hardware Clock via any known method.
+f0c9be6e2c3dd432e47aef2bed0daa53bc3cb02820a6a2878d695341051c5501: Use the --verbose option to see the details of our search for an access method.
+```

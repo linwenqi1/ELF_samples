@@ -1,0 +1,22 @@
+{"type": "RUN_META", "session": "2b0ec6aafff94abf89ebfdcf36bd1621", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv8-aarch64/ba9957ac7f72909a851e6058bed664afd7ec8ec97be189931bb0d4952005488a", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 270421, "cgroup_inode": 97960, "container_id": "a07f5a178be2563bb5365b1f1742c7b2c5aaa8828154da40857b490dbd06fc7a", "container_name": "objective_nightingale", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769847584.7190273}
+{"ts": 7030946, "pid": 270652, "cgroup_id": 97960, "event": "EXEC", "filename": "/tmp/ba9957ac7f72909a851e6058bed664afd7ec8ec97be189931bb0d4952005488a"}
+{"ts": 7030946, "pid": 270652, "cgroup_id": 97960, "event": "TRACK_QEMU", "bin": "ba9957ac7f72909", "count": 1}
+{"ts": 7030948, "pid": 270652, "cgroup_id": 97960, "event": "SOCKET", "domain": 2, "type": 3, "count": 1}
+{"ts": 7030949, "pid": 270652, "cgroup_id": 97960, "event": "SETUID", "uid": 0, "count": 1}
+{"ts": 7030949, "pid": 270652, "cgroup_id": 97960, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 7030949, "pid": 270652, "cgroup_id": 97960, "event": "CONNECT", "addr": "020007d07f00000100000000000000000100000030002000a780a58c7e7c00004083755efd7f000010000000040000009046e69055550000000566058e153209", "count": 1}
+{"ts": 7030949, "pid": 270652, "cgroup_id": 97960, "event": "SENDTO", "len": 28, "count": 1}
+{"ts": 7030950, "pid": 270652, "cgroup_id": 97960, "event": "RECVFROM", "size": 8192, "count": 1}
+{"ts": 1769847585000, "pid": -1, "cgroup_id": 97960, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847585000, "pid": -1, "cgroup_id": 97960, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769847585000, "pid": -1, "cgroup_id": 97960, "event": "MMAP_SUM", "meta": {"count": 34, "max_pages": 32768}, "count": 1}
+{"ts": 7034954, "pid": 270652, "cgroup_id": 97960, "event": "SENDTO", "len": 28, "count": 1}
+{"ts": 7034954, "pid": 270652, "cgroup_id": 97960, "event": "RECVFROM", "size": 8192, "count": 1}
+{"ts": 7038958, "pid": 270652, "cgroup_id": 97960, "event": "SENDTO", "len": 28, "count": 1}
+{"ts": 7038958, "pid": 270652, "cgroup_id": 97960, "event": "RECVFROM", "size": 8192, "count": 1}
+{"ts": 7042962, "pid": 270652, "cgroup_id": 97960, "event": "SENDTO", "len": 28, "count": 1}
+{"ts": 7042962, "pid": 270652, "cgroup_id": 97960, "event": "RECVFROM", "size": 8192, "count": 1}
+{"ts": 7045884, "pid": 270635, "cgroup_id": 97960, "event": "SIGNAL_GENERATE", "sig": 9, "count": 1}
+{"ts": 7045884, "pid": 270652, "cgroup_id": 97960, "event": "SIGNAL_GENERATE", "sig": 9, "count": 1}
+{"type": "ANALYZER", "result": {"level": 8, "description": "Potential Privilege Escalation", "pid": 270652, "evidence": "'SETUID' call attempts to set uid to 0 (root)", "analyzer": "AccessControl"}, "binary": "ba9957ac7f72909a851e6058bed664afd7ec8ec97be189931bb0d4952005488a"}
+{"type": "RUN_END", "end_ts": 1769847600.462244, "events_count": 19, "analyzed_count": 1, "timeout": true}

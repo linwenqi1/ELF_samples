@@ -1,0 +1,59 @@
+# DeepSeek Malware Analysis Report
+**Target:** `624e8aa8948f87aa3c8db6bebea606d3bab55aaed7d86171b39822acc013e228` | **Job ID:** `40c16618`
+**Date:** 2026-01-31 16:16:56
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and displayed help text for ncftpls FTP client utility. No malicious behaviors observed in system call trace.
+
+### 🔍 Key Evidence
+- Execution of /bin/sh appears to be part of normal process forking for utility execution
+- TRACK_QEMU events are emulation artifacts as specified in noise filtering
+- No network connections, file encryption, persistence attempts, or evasion techniques detected
+
+### 💡 Recommendations
+No action required. This appears to be legitimate ncftpls utility execution in emulated environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+NcFTPLs 3.2.6
+
+Usages:
+  ncftpls [FTP flags] [-x "ls flags"] ftp://url.style.host/path/name/
+
+ls Flags:
+  -m     Use machine readable (MLSD) list format, if the server supports it.
+  -1     Most basic format, one item per line.
+  -l     Long list format.
+  -C     Columnized list format (default).
+  -R     Long list format, recurse subdirectories if server allows it.
+  -g     Recursive and print one path per line; like "/usr/bin/find . -print"
+  -gg    As above, but append a "/" character to directory pathnames.
+  -a     Show all files, if server allows it (as in "/bin/ls -a").
+  -i XX  Filter the listing (if server supports it) with the wildcard XX.
+  -x XX  List command flags to try on the remote server (without leading dash).
+
+FTP Flags:
+  -u XX  Use username XX instead of anonymous.
+  -p XX  Use password XX with the username.
+  -P XX  Use port number XX instead of the default FTP service port (21).
+  -j XX  Use account XX with the account (deprecated).
+  -d XX  Use the file XX for debug logging.
+  -t XX  Timeout after XX seconds.
+  -f XX  Read the file XX for user and password information.
+         If file XX does not exist, check for bookmark XX in $HOME/.ncftp/bookmarks.
+  -E     Use regular (PORT) data connections.
+  -F     Use passive (PASV) data connections (default).
+  -K     Show disk usage by attempting SITE DF.
+  -o XX  Specify miscellaneous options (see documentation).
+  -W XX  Send raw FTP command XX after logging in.
+  -X XX  Send raw FTP command XX after each
+```

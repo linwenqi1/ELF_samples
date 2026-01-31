@@ -1,0 +1,65 @@
+# DeepSeek Malware Analysis Report
+**Target:** `712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf` | **Job ID:** `e6356bc6`
+**Date:** 2026-01-31 16:11:48
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary appears to be a legitimate Wireshark extcap utility for Android debugging, showing only startup and help output with no malicious activity detected in trace.
+
+### 🔍 Key Evidence
+- Execution output shows standard Wireshark extcap interface usage
+- Syscall trace shows only startup events with no malicious patterns
+- TRACK_QEMU event is documented as benign emulation artifact
+- No evidence of evasion, persistence, C2 communication, or payload delivery
+
+### 💡 Recommendations
+No further action needed. Binary appears to be legitimate debugging tool. Consider verifying source if concerned about authenticity.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Wireshark - 712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf v1.1.0
+
+Usage:
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interfaces [--adb-server-ip=<arg>] [--adb-server-tcp-port=<arg>]
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interface=INTERFACE --extcap-dlts
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interface=INTERFACE --extcap-config
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interface=INTERFACE --fifo=PATH_FILENAME --capture
+
+INTERFACE has the form TYPE-DEVICEID:
+	For example: android-bluetooth-btsnoop-net-W3D7N15C29005648
+
+	TYPE is one of:
+	android-logcat-main
+	android-logcat-system
+	android-logcat-radio
+	android-logcat-events
+	android-logcat-text-main
+	android-logcat-text-system
+	android-logcat-text-radio
+	android-logcat-text-events
+	android-logcat-text-crash
+	android-bluetooth-hcidump
+	android-bluetooth-external-parser
+	android-bluetooth-btsnoop-net
+	android-tcpdump
+
+	DEVICEID is the identifier of the device provided by Android SDK (see "adb devices")
+	For example: W3D7N15C29005648
+
+Options:
+	--extcap-interfaces: list the extcap Interfaces
+	--extcap-dlts: list the DLTs
+	--extcap-interface <iface>: specify the extcap interface
+	--extcap-config: list the additional configuration for an interface
+	--capture: run the capture
+	--extcap-capture-filter <filter>: the capture filter
+	--fifo <file>: dump data to fil
+```

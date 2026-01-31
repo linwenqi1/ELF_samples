@@ -1,0 +1,10 @@
+{"type": "RUN_META", "session": "2b0ec6aafff94abf89ebfdcf36bd1621", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv8-aarch64/23995d827796e8415d6c9590d6c07c61bb526308237be58e66829c903e65add4", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 261234, "cgroup_inode": 94262, "container_id": "08456ea188f1b3b10fd951e76eec66f71d2c3461b9b5c2b6bc505100423c8eca", "container_name": "beautiful_thompson", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769847570.9160752}
+{"ts": 7017158, "pid": 261771, "cgroup_id": 94262, "event": "EXEC", "filename": "/tmp/23995d827796e8415d6c9590d6c07c61bb526308237be58e66829c903e65add4"}
+{"ts": 7017161, "pid": 261771, "cgroup_id": 94262, "event": "TRACK_QEMU", "bin": "23995d827796e84", "count": 1}
+{"ts": 7017165, "pid": 261771, "cgroup_id": 94262, "event": "PRCTL", "option": 4, "arg2": 0, "count": 1}
+{"ts": 7017166, "pid": 261737, "cgroup_id": 94262, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7017166, "pid": 261737, "cgroup_id": 94262, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769847571176, "pid": -1, "cgroup_id": 94262, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769847571176, "pid": -1, "cgroup_id": 94262, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "ANALYZER", "result": {"level": 8.5, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N", "description": "Process Control Operation Detected: SET_DUMPABLE", "pid": 261771, "evidence": "Process 261771 called prctl(SET_DUMPABLE, 0). Critical security policy manipulation. Total prctl calls: 1.", "analyzer": "SandboxBypass"}, "binary": "23995d827796e8415d6c9590d6c07c61bb526308237be58e66829c903e65add4"}
+{"type": "RUN_END", "end_ts": 1769847571.6698895, "events_count": 7, "analyzed_count": 1, "timeout": false}

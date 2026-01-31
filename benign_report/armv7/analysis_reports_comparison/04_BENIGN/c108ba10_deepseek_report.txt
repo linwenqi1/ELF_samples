@@ -1,0 +1,53 @@
+# DeepSeek Malware Analysis Report
+**Target:** `648385fd066eb55e04f5e190dd6ba586aff309621b60d9c0df08e6205e2a5974` | **Job ID:** `c108ba10`
+**Date:** 2026-01-31 16:11:27
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary executed in emulated environment but showed no malicious activity; appears to be a test or diagnostic tool that failed due to emulation incompatibility.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event indicating emulation
+- Execution output shows multiple configuration errors (Bad Address, Bad Length, Bad Module ID, etc.)
+- No network activity, file system writes, or process manipulation observed
+
+### 💡 Recommendations
+Test in native environment to verify functionality; if errors persist, analyze as potential security tool or diagnostic utility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x01 "Read Stopped"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x03 "Stopped with Valid Read"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x05 "Reached End"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x07 "Stopped, Valid Read, Reached End - All Done! Go Away!"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x80 "Invalid Index"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x81 "Invalid Word Count"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x82 "No Stop Before Read"
+0x8005 UNKNOWN_MESSAGE_TYPE.CNF         0x83 "Invalid MME"
+0xA005 VS_WR_MEM.CNF                    0x10 "Bad Address"
+0xA005 VS_WR_MEM.CNF                    0x14 "Bad Length"
+0xA009 VS_RD_MEM.CNF                    0x10 "Bad Offset"
+0xA009 VS_RD_MEM.CNF                    0x14 "Bad Length"
+0xA00D VS_ST_MAC.CNF                    0x10 "Bad Module ID"
+0xA00D VS_ST_MAC.CNF                    0x38 "Bad Command"
+0xA00D VS_ST_MAC.CNF                    0x40 "Failed to Lock NVM"
+0xA011 VS_GET_NVM.CNF                   0x10 "No Flash Memory"
+0xA01D UNKNOWN_MESSAGE_TYPE.CNF         0x01 "Device Failed to Reset"
+0xA01D UNKNOWN_MESSAGE_TYPE.CNF         0x02 "Device is Busy"
+0xA021 UNKNOWN_MESSAGE_TYPE.CNF         0x10 "Bad Module"
+0xA021 UNKNOWN_MESSAGE_TYPE.CNF         0x12 "Bad Length"
+0xA021 UNKNOWN_MESSAGE_TYPE.CNF         0x14 "Bad Checksum"
+0xA021 UNKNOWN_MESSAGE_TYPE.CNF         0x20 "Bad Offset"
+0xA021 UNKNOWN_MESSAGE_TYPE.CNF         0x40 "Operation Blocked"
+0xA021 UNKNOWN_MESSAGE_TYPE.CNF         0x5
+```

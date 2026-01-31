@@ -1,0 +1,56 @@
+# DeepSeek Malware Analysis Report
+**Target:** `02cf982ed93e6be9f88be25e1691b1b2af0ca1bd8ec023fd21d227199a2f4a34` | **Job ID:** `93501a8e`
+**Date:** 2026-01-31 16:19:24
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly, showing only help output for the 'whois' command with no malicious activity observed in the trace.
+
+### 🔍 Key Evidence
+- Exit code 1 indicates execution failure
+- Output shows only 'whois' command help text
+- No network, file, or process manipulation in syscall trace
+- TRACK_QEMU event is benign emulation artifact
+
+### 💡 Recommendations
+No further action needed. The binary appears to be a non-functional or misconfigured utility. Consider testing with proper arguments if legitimate whois functionality is expected.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: whois [OPTION]... OBJECT...
+
+-h HOST, --host HOST   connect to server HOST
+-p PORT, --port PORT   connect to PORT
+-H                     hide legal disclaimers
+      --verbose        explain what is being done
+      --help           display this help and exit
+      --version        output version information and exit
+
+These flags are supported by whois.ripe.net and some RIPE-like servers:
+-l                     find the one level less specific match
+-L                     find all levels less specific matches
+-m                     find all one level more specific matches
+-M                     find all levels of more specific matches
+-c                     find the smallest match containing a mnt-irt attribute
+-x                     exact match
+-b                     return brief IP address ranges with abuse contact
+-B                     turn off object filtering (show email addresses)
+-G                     turn off grouping of associated objects
+-d                     return DNS reverse delegation objects too
+-i ATTR[,ATTR]...      do an inverse look-up for specified ATTRibutes
+-T TYPE[,TYPE]...      only look for objects of TYPE
+-K                     only primary keys are returned
+-r                     turn off recursive look-ups for contact information
+-R                     force to show local copy of the domain object even
+                       if it contains referral
+-a                     also search all the mirrored databases
+-s SOURCE[,SOURCE]...  search
+```

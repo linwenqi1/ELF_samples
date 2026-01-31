@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `90f9f03dffcf5f234b10feb7513c86db6bcd7ff8f0f0fd2d31f9e64de3195001` | **Job ID:** `cd8249c5`
+**Date:** 2026-01-31 16:22:01
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `DDoS`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary exhibits classic Mirai botnet behavior with network communication patterns, process forking, and socket operations consistent with DDoS malware. Execution from /tmp with network activity suggests active command-and-control communication.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket creation and connection attempts
+- Process forking and execution of dhclient-script
+- Network communication with hex-encoded addresses
+- Execution from temporary directory (/tmp)
+
+### 🔍 Key Evidence
+- TRACK_QEMU event indicates emulation environment
+- Multiple SOCKET/CONNECT/SENDTO/RECVFROM events in rapid succession
+- CLONE and TRACK_FORK events creating child processes
+- Execution of /sbin/dhclient-script from forked process
+- Network addresses in hex format (01002f6465762f6c6f67...)
+
+### 💡 Recommendations
+Isolate affected system immediately. Analyze network traffic for C2 communication patterns. Check for persistence mechanisms in system directories. Consider this as part of a larger botnet infrastructure requiring coordinated takedown.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

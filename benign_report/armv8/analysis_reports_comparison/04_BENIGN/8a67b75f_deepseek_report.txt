@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `86d2d3fc529e954968c820d7a27020f136bf0ad0264fb1c084aad89821f8eea4` | **Job ID:** `8a67b75f`
+**Date:** 2026-01-31 16:19:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to environment incompatibility (QEMU emulation) with no malicious activity observed.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'Not supported: Want action 'suspend','resume'' error
+- TRACK_QEMU event indicating emulation environment
+- No syscall activity beyond startup and cleanup
+
+### 💡 Recommendations
+Test on native x86 Linux environment to determine actual behavior; current analysis inconclusive due to emulation mismatch.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+86d2d3fc529e954968c820d7a27020f136bf0ad0264fb1c084aad89821f8eea4: Not supported: Want action 'suspend','resume'.
+```

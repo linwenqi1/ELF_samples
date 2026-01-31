@@ -1,0 +1,37 @@
+# DeepSeek Malware Analysis Report
+**Target:** `c71b582ed9df784e3f4f9e2fa5e5d983dd43264f0c0972992c7945539a180830` | **Job ID:** `6c80755e`
+**Date:** 2026-01-31 16:17:21
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary exhibits classic Mirai botnet behavior with network communication, process forking, and configuration reading, likely establishing C2 connectivity.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket creation and connection attempts to various IP addresses and ports
+- Process forking chain (CLONE/TRACK_FORK events)
+- Reading from file descriptor 13 (likely configuration data)
+- Writing binary data to file descriptor 9
+- Network socket operations with both IPv4 (domain 2) and IPv6 (domain 10)
+
+### 🔍 Key Evidence
+- SOCKET and CONNECT events to multiple addresses (including 127.0.0.1 and IPv6 addresses)
+- TRACK_QEMU event indicating emulation environment
+- Binary execution from /tmp directory
+- Multiple MPROTECT calls modifying memory permissions
+- Process forking creating multiple child processes (239802, 239803, 239804, etc.)
+
+### 💡 Recommendations
+Isolate affected system immediately. Capture network traffic for C2 analysis. Check for persistence mechanisms. Analyze binary for specific Mirai variant characteristics and update threat intelligence.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

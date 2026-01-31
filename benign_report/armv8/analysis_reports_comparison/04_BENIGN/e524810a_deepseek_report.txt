@@ -1,0 +1,38 @@
+# DeepSeek Malware Analysis Report
+**Target:** `dff3da28d55df33aeac48b8719a4ed0a0b80da66500d6d44ce5e26e62c7d59ab` | **Job ID:** `e524810a`
+**Date:** 2026-01-31 16:20:00
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment with minimal activity, showing only basic network interface enumeration and no malicious patterns.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Network interface enumeration via ifconfig-like output
+- No malicious syscall patterns detected
+- No persistence, evasion, or payload delivery attempts
+
+### 💡 Recommendations
+No immediate action required. Consider monitoring for further network activity if binary remains in environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+1:	lo
+	inet  224.0.0.1
+	inet6 ff02::1
+	inet6 ff01::1
+2:	eth0
+	link  33:33:00:00:00:01
+	link  01:00:5e:00:00:01
+	inet  224.0.0.1
+	inet6 ff02::1
+	inet6 ff01::1
+```

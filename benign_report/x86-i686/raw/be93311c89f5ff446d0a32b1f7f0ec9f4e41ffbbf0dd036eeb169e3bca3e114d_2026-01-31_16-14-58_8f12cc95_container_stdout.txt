@@ -1,0 +1,15 @@
+EXPERIMENTAL xfs_scrub program in use! Use at your own risk!
+Usage: be93311c89f5ff446d0a32b1f7f0ec9f4e41ffbbf0dd036eeb169e3bca3e114d [OPTIONS] mountpoint
+
+Options:
+  -a count     Stop after this many errors are found.
+  -b           Background mode.
+  -C fd        Print progress information to this fd.
+  -e behavior  What to do if errors are found.
+  -k           Do not FITRIM the free space.
+  -m path      Path to /etc/mtab.
+  -n           Dry run.  Do not modify anything.
+  -T           Display timing/usage information.
+  -v           Verbose output.
+  -V           Print version.
+  -x           Scrub file data too.

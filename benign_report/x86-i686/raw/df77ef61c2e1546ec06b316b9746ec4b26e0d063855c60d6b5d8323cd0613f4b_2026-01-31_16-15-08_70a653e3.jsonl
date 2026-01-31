@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/df77ef61c2e1546ec06b316b9746ec4b26e0d063855c60d6b5d8323cd0613f4b", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 242700, "cgroup_inode": 88242, "container_id": "b5bf8ad24ccc4d2153a2ed79c86a27f3e8095d231e5998a113f6215b39f69494", "container_name": "thirsty_ardinghelli", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847308.9181218}
+{"ts": 6755160, "pid": 243038, "cgroup_id": 88242, "event": "EXEC", "filename": "/tmp/df77ef61c2e1546ec06b316b9746ec4b26e0d063855c60d6b5d8323cd0613f4b"}
+{"ts": 1769847309176, "pid": -1, "cgroup_id": 88242, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847309176, "pid": -1, "cgroup_id": 88242, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769847309176, "pid": -1, "cgroup_id": 88242, "event": "MMAP_SUM", "meta": {"count": 31, "max_pages": 1048560}, "count": 1}
+{"ts": 6755177, "pid": 243038, "cgroup_id": 88242, "event": "TRACK_QEMU", "bin": "df77ef61c2e1546", "count": 1}
+{"ts": 6755179, "pid": 243038, "cgroup_id": 88242, "event": "SOCKET", "domain": 17, "type": 3, "count": 1}
+{"ts": 6755185, "pid": 243017, "cgroup_id": 88242, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6755185, "pid": 243017, "cgroup_id": 88242, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769847309285, "pid": -1, "cgroup_id": 88242, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847309285, "pid": -1, "cgroup_id": 88242, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "ANALYZER", "result": {"level": 9.3, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H", "description": "Memory Corruption (Weak Signal)", "pid": -1, "evidence": "Detected abnormally large page allocation via mmap: 1048560 pages", "analyzer": "MemoryCorruption"}, "binary": "df77ef61c2e1546ec06b316b9746ec4b26e0d063855c60d6b5d8323cd0613f4b"}
+{"type": "RUN_END", "end_ts": 1769847309.6902618, "events_count": 10, "analyzed_count": 1, "timeout": false}

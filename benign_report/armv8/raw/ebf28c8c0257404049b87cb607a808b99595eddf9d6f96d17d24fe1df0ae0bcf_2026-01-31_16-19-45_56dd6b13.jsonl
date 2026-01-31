@@ -1,0 +1,97 @@
+{"type": "RUN_META", "session": "2b0ec6aafff94abf89ebfdcf36bd1621", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv8-aarch64/ebf28c8c0257404049b87cb607a808b99595eddf9d6f96d17d24fe1df0ae0bcf", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 270806, "cgroup_inode": 98132, "container_id": "f3bdcc24308e32035a99c9dbfe30a2a8ef70835fce00c2ec9ecc4af65300bee3", "container_name": "friendly_goldstine", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769847585.3818057}
+{"ts": 7031615, "pid": 271101, "cgroup_id": 98132, "event": "EXEC", "filename": "/tmp/ebf28c8c0257404049b87cb607a808b99595eddf9d6f96d17d24fe1df0ae0bcf"}
+{"ts": 7031616, "pid": 271101, "cgroup_id": 98132, "event": "TRACK_QEMU", "bin": "ebf28c8c0257404", "count": 1}
+{"ts": 7031619, "pid": 271101, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 3}
+{"ts": 7031620, "pid": 271104, "cgroup_id": 98132, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 7031620, "pid": 271104, "cgroup_id": 98132, "event": "TRACK_FORK", "parent": 271104, "child": 271105, "count": 1}
+{"ts": 7031621, "pid": 271078, "cgroup_id": 98132, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7031621, "pid": 271078, "cgroup_id": 98132, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 7031621, "pid": 271104, "cgroup_id": 98132, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 7031621, "pid": 271104, "cgroup_id": 98132, "event": "TRACK_FORK", "parent": 271104, "child": 271106, "count": 1}
+{"ts": 7031621, "pid": 271106, "cgroup_id": 98132, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 7031621, "pid": 271106, "cgroup_id": 98132, "event": "TRACK_FORK", "parent": 271106, "child": 271107, "count": 1}
+{"ts": 7031621, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031622, "pid": 271106, "cgroup_id": 98132, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 7031622, "pid": 271106, "cgroup_id": 98132, "event": "TRACK_FORK", "parent": 271106, "child": 271108, "count": 1}
+{"ts": 1769847585649, "pid": -1, "cgroup_id": 98132, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769847585649, "pid": -1, "cgroup_id": 98132, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"ts": 1769847585649, "pid": -1, "cgroup_id": 98132, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847585649, "pid": -1, "cgroup_id": 98132, "event": "MMAP_SUM", "meta": {"count": 38, "max_pages": 32768}, "count": 1}
+{"ts": 7031689, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 2}
+{"ts": 7031692, "pid": 271106, "cgroup_id": 98132, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 7031693, "pid": 271106, "cgroup_id": 98132, "event": "TRACK_FORK", "parent": 271106, "child": 271114, "count": 1}
+{"ts": 7031693, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031693, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 7031693, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 13, "buf_len": 32, "count": 1}
+{"ts": 7031693, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031693, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 13, "buf_len": 37, "count": 2}
+{"ts": 7031694, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031694, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 13, "buf_len": 172, "count": 1}
+{"ts": 7031695, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031695, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 13, "buf_len": 293, "count": 1}
+{"ts": 7031695, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 2, "type": 526338, "count": 3}
+{"ts": 1769847585777, "pid": -1, "cgroup_id": 98132, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 3}
+{"ts": 1769847585777, "pid": -1, "cgroup_id": 98132, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 2}
+{"ts": 1769847585777, "pid": -1, "cgroup_id": 98132, "event": "MMAP_SUM", "meta": {"count": 4, "max_pages": 32768}, "count": 1}
+{"ts": 7031793, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "r", "count": 1}
+{"ts": 7031793, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "E@", "count": 1}
+{"ts": 7031794, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 1, "count": 1}
+{"ts": 7031794, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 16, "count": 1}
+{"ts": 7031796, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 6}
+{"ts": 7031813, "pid": 271106, "cgroup_id": 98132, "event": "GETDENTS64", "filename": "\u0010", "count": 2}
+{"ts": 7031816, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 4}
+{"ts": 7031818, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031818, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031819, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031819, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 4}
+{"ts": 7031821, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031821, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031821, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 1024, "count": 1}
+{"ts": 7031822, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031822, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 1024, "count": 1}
+{"ts": 7031822, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 567, "count": 1}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 1024, "count": 2}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 567, "count": 1}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 1024, "count": 2}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 567, "count": 1}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 1024, "count": 2}
+{"ts": 7031823, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 16, "buf_len": 567, "count": 1}
+{"ts": 7031824, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 5}
+{"ts": 7031826, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 2, "type": 524290, "count": 1}
+{"ts": 7031826, "pid": 271106, "cgroup_id": 98132, "event": "CONNECT", "addr": "0200ffff7f00000100000000000000000100000030002000a780a5c53d78000000cbdbc43d7800001000000010000000b8e756835555000000876b35963b3499", "count": 1}
+{"ts": 7031826, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 10, "type": 524290, "count": 1}
+{"ts": 7031826, "pid": 271106, "cgroup_id": 98132, "event": "CONNECT", "addr": "0a00ffff0000000000000000000000000000000000000001000000003d7800000800000030002000a780a5c53d780000f0cadbc43d7800001c00000010000000", "count": 1}
+{"ts": 7031826, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 2, "type": 526337, "count": 1}
+{"ts": 7031827, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 2}
+{"ts": 7031827, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 2, "type": 1, "count": 1}
+{"ts": 7031828, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 10, "type": 1, "count": 2}
+{"ts": 7031828, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 2}
+{"ts": 7031829, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 7031829, "pid": 271106, "cgroup_id": 98132, "event": "SOCKET", "domain": 10, "type": 2, "count": 1}
+{"ts": 7031829, "pid": 271106, "cgroup_id": 98132, "event": "CONNECT", "addr": "0a001b39000000002001189011120001000000000000002000000000000000000100000030002000a780a5c53d780000f0cadbc43d7800001c00000014000000", "count": 1}
+{"ts": 7031829, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031829, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031830, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 57}
+{"ts": 7031831, "pid": 271106, "cgroup_id": 98132, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 7031831, "pid": 271114, "cgroup_id": 98132, "event": "TRACK_FORK", "parent": 271114, "child": 271144, "count": 1}
+{"ts": 7031831, "pid": 271106, "cgroup_id": 98132, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 7031832, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "r", "count": 1}
+{"ts": 7031832, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "\u001cË@", "count": 1}
+{"ts": 7031832, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 1, "count": 1}
+{"ts": 7031832, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 16, "count": 1}
+{"ts": 7031845, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031847, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 20, "buf": "{\n    \"alt-speed-down\": 50,\n    \"alt-speed-enabled\": false,\n    ", "count": 1}
+{"ts": 7031847, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "r", "count": 1}
+{"ts": 7031847, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "¸8@", "count": 1}
+{"ts": 7031847, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 1, "count": 1}
+{"ts": 7031847, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 16, "count": 1}
+{"ts": 7031847, "pid": 271106, "cgroup_id": 98132, "event": "GETDENTS64", "filename": "\u0014", "count": 2}
+{"ts": 7031882, "pid": 271106, "cgroup_id": 98132, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7031882, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "r", "count": 1}
+{"ts": 7031882, "pid": 271106, "cgroup_id": 98132, "event": "WRITE", "fd": 9, "buf": "\u001cË@", "count": 1}
+{"ts": 1769847585882, "pid": -1, "cgroup_id": 98132, "event": "MMAP_SUM", "meta": {"count": 7, "max_pages": 16384}, "count": 1}
+{"ts": 7031882, "pid": 271106, "cgroup_id": 98132, "event": "READ", "fd": 8, "buf_len": 1, "count": 1}
+{"type": "ANALYZER", "result": {"level": 7, "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N", "description": "System reconnaissance: scanning /proc, /sys, and /dev simultaneously", "evidence": {"pattern_categories": ["proc_fs", "sys_fs", "dev_node"], "counts": {"proc_fs": 4, "sys_fs": 1, "dev_node": 1}, "total_operations": 6}, "mitigation": "Review process behavior for malicious reconnaissance or data theft", "pid": -1, "ts": 1769847585649, "analyzer": "AggregatedEvents"}, "binary": "ebf28c8c0257404049b87cb607a808b99595eddf9d6f96d17d24fe1df0ae0bcf"}
+{"type": "ANALYZER", "result": {"level": 7, "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N", "description": "System reconnaissance: scanning /proc, /sys, and /dev simultaneously", "evidence": {"pattern_categories": ["proc_fs", "sys_fs", "dev_node"], "counts": {"proc_fs": 4, "sys_fs": 1, "dev_node": 1}, "total_operations": 6}, "mitigation": "Review process behavior for malicious reconnaissance or data theft", "pid": -1, "ts": 1769847585649, "analyzer": "AggregatedEvents"}, "binary": "ebf28c8c0257404049b87cb607a808b99595eddf9d6f96d17d24fe1df0ae0bcf"}
+{"type": "RUN_END", "end_ts": 1769847586.1247191, "events_count": 93, "analyzed_count": 2, "timeout": false}

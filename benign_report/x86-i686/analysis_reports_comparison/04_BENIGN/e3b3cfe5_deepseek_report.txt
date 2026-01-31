@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `a5f874ee321b5c8397c729b5a39b6c2828e8dcff013a615c722fa6465cc77f42` | **Job ID:** `e3b3cfe5`
+**Date:** 2026-01-31 16:16:38
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing DBUS session bus, showing no malicious activity in trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with DBUS error
+- No malicious syscall patterns detected
+- TRACK_QEMU event is benign emulation artifact
+
+### 💡 Recommendations
+Check binary dependencies and execution environment; no immediate threat indicated.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Failed to open connection to session bus: Using X11 for dbus-daemon autolaunch was disabled at compile time, set your DBUS_SESSION_BUS_ADDRESS instead
+```

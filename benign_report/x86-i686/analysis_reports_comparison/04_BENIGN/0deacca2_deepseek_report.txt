@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `57a3bec34427e6c106ae086addba45d5b977f7659df76eb32f727f677f15ab60` | **Job ID:** `0deacca2`
+**Date:** 2026-01-31 16:15:34
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation with minimal system activity. No malicious behaviors detected in trace.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Minimal syscall trace with only startup and aggregated summary events
+- No network activity, file operations, or process manipulation
+
+### 💡 Recommendations
+No immediate action required. Monitor for subsequent executions with expanded behavior patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

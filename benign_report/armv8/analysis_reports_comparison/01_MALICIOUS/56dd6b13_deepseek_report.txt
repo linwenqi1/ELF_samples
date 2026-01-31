@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `ebf28c8c0257404049b87cb607a808b99595eddf9d6f96d17d24fe1df0ae0bcf` | **Job ID:** `56dd6b13`
+**Date:** 2026-01-31 16:21:29
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Botnet`, `Backdoor`
+- **Standard Label:** `Botnet.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary exhibits reconnaissance of system files followed by network socket creation and connection attempts to multiple IP addresses, consistent with botnet C2 communication patterns.
+
+### ⚠️ Suspicious Behaviors
+- System reconnaissance via /proc, /sys, and /dev scanning
+- Multiple socket creation and connection attempts to various addresses
+- Process forking and memory protection changes
+- Network activity from a binary executed from /tmp
+
+### 🔍 Key Evidence
+- Local alerts for system reconnaissance with CVSS:7.0 scores
+- Multiple SOCKET and CONNECT events to different network addresses
+- Binary executed from /tmp directory in Docker environment
+- Process forking (CLONE/TRACK_FORK events) suggesting multi-process architecture
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic for C2 communication, check for persistence mechanisms, and scan for related malware artifacts.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

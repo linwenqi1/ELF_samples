@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `29411a2b8491fb20608476fd48e8df257052dd3e0aa7b0b80c8e39012cc1cdda` | **Job ID:** `649356b0`
+**Date:** 2026-01-31 16:15:45
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and displayed help output for sshpass utility with no malicious activity detected in trace
+
+### 🔍 Key Evidence
+- EXEC event shows binary execution
+- TRACK_QEMU event indicates emulation environment (benign per guidelines)
+- No malicious syscall patterns detected
+- Exit code 0 indicates successful execution
+- Output shows sshpass help text
+
+### 💡 Recommendations
+No further action required. Binary appears to be legitimate sshpass utility executed in emulated environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+```

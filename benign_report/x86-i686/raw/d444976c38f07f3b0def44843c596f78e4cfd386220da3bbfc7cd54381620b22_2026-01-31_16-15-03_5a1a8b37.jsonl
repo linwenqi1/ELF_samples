@@ -1,0 +1,13 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/d444976c38f07f3b0def44843c596f78e4cfd386220da3bbfc7cd54381620b22", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 239363, "cgroup_inode": 86608, "container_id": "dad5b4797e34d19deaf93961785537865ac6722a6a21b4a5ea4ab36b800531e1", "container_name": "naughty_wing", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847304.041963}
+{"ts": 6750256, "pid": 239712, "cgroup_id": 86608, "event": "EXEC", "filename": "/tmp/d444976c38f07f3b0def44843c596f78e4cfd386220da3bbfc7cd54381620b22"}
+{"ts": 6750288, "pid": 239712, "cgroup_id": 86608, "event": "TRACK_QEMU", "bin": "d444976c38f07f3", "count": 1}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86608, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86608, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86608, "event": "MMAP_SUM", "meta": {"count": 31, "max_pages": 1048560}, "count": 1}
+{"ts": 6750291, "pid": 239712, "cgroup_id": 86608, "event": "SETUID", "uid": 0, "count": 1}
+{"ts": 6750292, "pid": 239693, "cgroup_id": 86608, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6750292, "pid": 239693, "cgroup_id": 86608, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769847304401, "pid": -1, "cgroup_id": 86608, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847304401, "pid": -1, "cgroup_id": 86608, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "ANALYZER", "result": {"level": 8, "description": "Potential Privilege Escalation", "pid": 239712, "evidence": "'SETUID' call attempts to set uid to 0 (root)", "analyzer": "AccessControl"}, "binary": "d444976c38f07f3b0def44843c596f78e4cfd386220da3bbfc7cd54381620b22"}
+{"type": "RUN_END", "end_ts": 1769847304.7968204, "events_count": 10, "analyzed_count": 1, "timeout": false}

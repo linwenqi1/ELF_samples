@@ -1,0 +1,31 @@
+# DeepSeek Malware Analysis Report
+**Target:** `12a92e2e7fd4d7770cee50308dc31d025772d57728f73a6889d38e0d35ef7e30` | **Job ID:** `488c4e5c`
+**Date:** 2026-01-31 16:11:39
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary executed in emulated environment but showed no malicious activity. Early exit appears due to environment mismatch (tty issue).
+
+### 🔍 Key Evidence
+- Exit code 0 with 'cannot get tty name: Not a tty' error
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No malicious syscall patterns detected
+- No sensitive path access outside emulation
+
+### 💡 Recommendations
+No immediate action needed. Consider testing in native environment if functionality verification is required.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+12a92e2e7fd4d7770cee50308dc31d025772d57728f73a6889d38e0d35ef7e30: cannot get tty name: Not a tty
+```

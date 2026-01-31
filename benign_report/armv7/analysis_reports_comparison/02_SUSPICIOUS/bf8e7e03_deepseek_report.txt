@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `b28e0d254f0ccc81426d0b4c50dcf393d88713329b979b6ffd34721b6ac8f377` | **Job ID:** `bf8e7e03`
+**Date:** 2026-01-31 16:13:36
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 60/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, showing network socket creation and connection to a Unix domain socket (/dev/log), but lacks clear malicious payload delivery or persistence mechanisms.
+
+### ⚠️ Suspicious Behaviors
+- Socket creation and connection to /dev/log
+- Process forking (CLONE/TRACK_FORK)
+- Aggregated system activity summaries
+
+### 🔍 Key Evidence
+- SOCKET event with domain 1 (AF_UNIX) and CONNECT to /dev/log
+- CLONE and TRACK_FORK events indicating process spawning
+- TRACK_QEMU event confirming emulation environment
+
+### 💡 Recommendations
+Monitor for further network activity, check for payload drops or persistence attempts, and analyze binary statically for embedded commands or C2 addresses.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

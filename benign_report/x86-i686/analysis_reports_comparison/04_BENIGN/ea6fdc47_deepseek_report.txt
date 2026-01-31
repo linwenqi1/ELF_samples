@@ -1,0 +1,56 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f7da8c979c16c6e29ed8b235a04afd010ecd977089f349663cd5851ae387e743` | **Job ID:** `ea6fdc47`
+**Date:** 2026-01-31 16:17:23
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and displayed help output for cdialog utility. No malicious behaviors detected in syscall trace.
+
+### 🔍 Key Evidence
+- Binary executed from /tmp directory
+- TRACK_QEMU event detected (emulation artifact)
+- No network connections, file writes, or process manipulation observed
+- Help output matches legitimate cdialog utility
+
+### 💡 Recommendations
+No further action required. This appears to be a legitimate utility executed in emulated environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+cdialog (ComeOn Dialog!) version 1.3-20170509
+Copyright 2000-2016,2017 Thomas E. Dickey
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+* Display dialog boxes from shell scripts *
+
+Usage: f7da8c979c16c6e29ed8b235a04afd010ecd977089f349663cd5851ae387e743 <options> { --and-widget <options> }
+where options are "common" options, followed by "box" options
+
+Special options:
+  [--create-rc "file"]
+Common options:
+  [--ascii-lines] [--aspect <ratio>] [--backtitle <backtitle>] [--beep]
+  [--beep-after] [--begin <y> <x>] [--cancel-label <str>] [--clear]
+  [--colors] [--column-separator <str>] [--cr-wrap] [--date-format <str>]
+  [--default-button <str>] [--default-item <str>] [--defaultno]
+  [--exit-label <str>] [--extra-button] [--extra-label <str>]
+  [--help-button] [--help-label <str>] [--help-status] [--help-tags]
+  [--hfile <str>] [--hline <str>] [--ignore] [--input-fd <fd>]
+  [--insecure] [--item-help] [--keep-tite] [--keep-window] [--last-key]
+  [--max-input <n>] [--no-cancel] [--no-collapse] [--no-cr-wrap]
+  [--no-items] [--no-kill] [--no-label <str>] [--no-lines] [--no-mouse]
+  [--no-nl-expand] [--no-ok] [--no-shadow] [--no-tags] [--nook]
+  [--ok-label <str>] [--output-fd <fd>] [--output-separator <str>]
+  [--print-maxsize] [--print-size] [--print-version] [--quoted]
+  [--reorder] [--scrollbar] [--separate-output] [--separate-widget <str>]
+  [--shadow] [--single-quoted] [--siz
+```

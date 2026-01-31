@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `da65081f46bb571d36429f02e28b6644603d7e5cf955b68c16eac2b9f24ac1a1` | **Job ID:** `4682c6a8`
+**Date:** 2026-01-31 16:20:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, displaying help output for the 'rarp' utility (Reverse Address Resolution Protocol tool). No malicious behaviors detected in trace.
+
+### 🔍 Key Evidence
+- EXEC event shows binary execution from /tmp
+- TRACK_QEMU event indicates emulation environment (not evasion)
+- Binary output matches standard rarp utility help text
+- No network activity, file manipulation, or persistence attempts detected
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be legitimate network utility. Consider verifying source of binary if unexpected in environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: rarp -a                               list entries in cache.
+       rarp -d <hostname>                    delete entry from cache.
+       rarp [<HW>] -s <hostname> <hwaddr>    add entry to cache.
+       rarp -f                               add entries from /etc/ethers.
+       rarp -V                               display program version.
+
+  <HW>=Use '-H <hw>' to specify hardware address type. Default: ether
+  List of possible hardware types (which support ARP):
+    ash (Ash) ether (Ethernet) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) rose (AMPR ROSE) arcnet (ARCnet) 
+    dlci (Frame Relay DLCI) fddi (Fiber Distributed Data Interface) hippi (HIPPI) 
+    irda (IrLAP) x25 (generic X.25) infiniband (InfiniBand) 
+    eui64 (Generic EUI-64)
+```

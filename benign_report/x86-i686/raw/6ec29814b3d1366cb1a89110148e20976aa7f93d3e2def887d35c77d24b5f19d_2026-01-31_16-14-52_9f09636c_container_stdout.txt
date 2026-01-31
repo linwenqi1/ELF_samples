@@ -1,0 +1,15 @@
+No interface specified
+usage: /tmp/6ec29814b3d1366cb1a89110148e20976aa7f93d3e2def887d35c77d24b5f19d [-VvRrwl] [-A media,... | -F media] [-p addr] <interface ...>
+       -V, --version               display version information
+       -v, --verbose               more verbose output
+       -R, --reset                 reset MII to poweron state
+       -r, --restart               restart autonegotiation
+       -w, --watch                 monitor for link status changes
+       -l, --log                   with -w, write events to syslog
+       -A, --advertise=media,...   advertise only specified media
+       -F, --force=media           force specified media technology
+       -p, --phy=addr              set PHY (MII address) to report
+media: 1000baseTx-HD, 1000baseTx-FD,
+       100baseT4, 100baseTx-FD, 100baseTx-HD,
+       10baseT-FD, 10baseT-HD,
+       (to advertise both HD and FD) 1000baseTx, 100baseTx, 10baseT

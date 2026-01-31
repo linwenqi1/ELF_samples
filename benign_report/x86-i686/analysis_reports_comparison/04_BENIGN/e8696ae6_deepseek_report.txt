@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `8182b05c5452f3b106eb569376177caac8b777bbe45d6b0d5ead76761dbc5a73` | **Job ID:** `e8696ae6`
+**Date:** 2026-01-31 16:16:00
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully as NcFTP client with no malicious activity detected. All observed behaviors are consistent with legitimate FTP utility operations in emulated environment.
+
+### 🔍 Key Evidence
+- Binary identified as NcFTP 3.2.6 via execution output
+- TRACK_QEMU event is emulation artifact (not evasion)
+- No network connections, file modifications, persistence attempts, or malicious patterns in syscall trace
+- Exit code 0 indicates normal termination
+
+### 💡 Recommendations
+No further action required. This appears to be a legitimate FTP client binary. Consider monitoring for any network activity if FTP functionality is unexpected in this context.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+NcFTP 3.2.6 (Dec 04, 2016) by Mike Gleason (http://www.NcFTP.com/contact/).
+
+Copyright (c) 1992-2016 by Mike Gleason.
+All rights reserved.
+```

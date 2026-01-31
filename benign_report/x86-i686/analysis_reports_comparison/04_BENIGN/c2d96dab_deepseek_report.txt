@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `792e7f8b0990fd5f3ce8a6d00dff8b7b4aaf44cce4df774d1079d6ff520b75c9` | **Job ID:** `c2d96dab`
+**Date:** 2026-01-31 16:15:20
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to unsupported action requests in emulated environment, showing no malicious runtime behavior.
+
+### 🔍 Key Evidence
+- Exit code 1 with unsupported action error
+- TRACK_QEMU event (emulation artifact)
+- No malicious syscall patterns detected
+
+### 💡 Recommendations
+Test on native hardware with supported capabilities to determine actual behavior; current analysis limited by emulation constraints.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+792e7f8b0990fd5f3ce8a6d00dff8b7b4aaf44cce4df774d1079d6ff520b75c9: Not supported: Want action 'CAP0','CAP1','CAP2','CAP3','Boost','Drop','DropTX','DropRX','AutoConnect','StripTX','StripRX','TagTX','TagRX'.
+```

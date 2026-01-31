@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `7fc7845dc403c4f734c76cd46f38ffd3f19342730ad19876d666e43f970d1581` | **Job ID:** `49a6bd96`
+**Date:** 2026-01-31 16:21:40
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment with QEMU emulation, displaying standard gapplication help output. No malicious behaviors detected in trace.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean execution with exit code 0
+- Standard gapplication help output
+
+### 💡 Recommendations
+No further action required. Binary appears to be legitimate gapplication utility.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage:
+
+  gapplication COMMAND [ARGS…]
+
+Commands:
+  help           Print help
+  version        Print version
+  list-apps      List applications
+  launch         Launch an application
+  action         Activate an action
+  list-actions   List available actions
+
+Use “gapplication help COMMAND” to get detailed help.
+```

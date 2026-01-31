@@ -1,0 +1,34 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/f99a2cd377df2dceb3290bb9347d922db6fa9a5c07b62cc875f67ac3be4ef907", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 185052, "cgroup_inode": 64420, "container_id": "1ffc7b9d7065078f46f27882080fa661e14910389ab086c1eed6d81d858f69ef", "container_name": "practical_robinson", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847062.9932423}
+{"ts": 6509239, "pid": 185621, "cgroup_id": 64420, "event": "EXEC", "filename": "/tmp/f99a2cd377df2dceb3290bb9347d922db6fa9a5c07b62cc875f67ac3be4ef907"}
+{"ts": 6509240, "pid": 185621, "cgroup_id": 64420, "event": "TRACK_QEMU", "bin": "f99a2cd377df2dc", "count": 1}
+{"ts": 6509242, "pid": 185621, "cgroup_id": 64420, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6509242, "pid": 185621, "cgroup_id": 64420, "event": "DUP2", "oldfd": 3, "newfd": 0, "count": 1}
+{"ts": 6509242, "pid": 185621, "cgroup_id": 64420, "event": "DUP2", "oldfd": 3, "newfd": 1, "count": 1}
+{"ts": 6509242, "pid": 185621, "cgroup_id": 64420, "event": "DUP2", "oldfd": 3, "newfd": 2, "count": 1}
+{"ts": 6509242, "pid": 185621, "cgroup_id": 64420, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 6509243, "pid": 185621, "cgroup_id": 64420, "event": "TRACK_FORK", "parent": 185621, "child": 185627, "count": 1}
+{"ts": 6509243, "pid": 185627, "cgroup_id": 64420, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6509243, "pid": 185627, "cgroup_id": 64420, "event": "TRACK_FORK", "parent": 185627, "child": 185628, "count": 1}
+{"ts": 6509243, "pid": 185521, "cgroup_id": 64420, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6509243, "pid": 185521, "cgroup_id": 64420, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 6509243, "pid": 185627, "cgroup_id": 64420, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 6509243, "pid": 185627, "cgroup_id": 64420, "event": "TRACK_FORK", "parent": 185627, "child": 185629, "count": 1}
+{"ts": 6509243, "pid": 185629, "cgroup_id": 64420, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6509243, "pid": 185629, "cgroup_id": 64420, "event": "TRACK_FORK", "parent": 185629, "child": 185630, "count": 1}
+{"ts": 6509247, "pid": 185629, "cgroup_id": 64420, "event": "ACCESS", "filename": "", "mode": 0, "count": 2}
+{"ts": 6509249, "pid": 185629, "cgroup_id": 64420, "event": "READ", "fd": 3, "buf_len": 1024, "count": 1}
+{"ts": 6509249, "pid": 185629, "cgroup_id": 64420, "event": "READ", "fd": 3, "buf_len": 591, "count": 1}
+{"ts": 6509249, "pid": 185629, "cgroup_id": 64420, "event": "ACCESS", "filename": "", "mode": 0, "count": 3}
+{"ts": 6509250, "pid": 185629, "cgroup_id": 64420, "event": "READ", "fd": 3, "buf_len": 1024, "count": 4}
+{"ts": 6509250, "pid": 185629, "cgroup_id": 64420, "event": "READ", "fd": 3, "buf_len": 652, "count": 1}
+{"ts": 6509250, "pid": 185629, "cgroup_id": 64420, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 6509250, "pid": 185629, "cgroup_id": 64420, "event": "SOCKET", "domain": 2, "type": 1, "count": 1}
+{"ts": 6509250, "pid": 185629, "cgroup_id": 64420, "event": "SOCKET", "domain": 1, "type": 524290, "count": 1}
+{"ts": 6509250, "pid": 185629, "cgroup_id": 64420, "event": "CONNECT", "addr": "01002f6465762f6c6f6700000000000001000000300020006002e87ce574000000fd2481fc7f00000c000000050000001824d179555500000042e52c2a849afd", "count": 1}
+{"ts": 6509251, "pid": 185629, "cgroup_id": 64420, "event": "SENDTO", "len": 95, "count": 1}
+{"ts": 6509251, "pid": 185629, "cgroup_id": 64420, "event": "CONNECT", "addr": "01002f6465762f6c6f6700000000000001000000300020006002e87ce574000000fd2481fc7f00000c000000050000001819d179555500000042e52c2a849afd", "count": 1}
+{"ts": 6509251, "pid": 185629, "cgroup_id": 64420, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 1769847063294, "pid": -1, "cgroup_id": 64420, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 2}
+{"ts": 1769847063294, "pid": -1, "cgroup_id": 64420, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 9}
+{"ts": 1769847063294, "pid": -1, "cgroup_id": 64420, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"type": "RUN_END", "end_ts": 1769847063.747373, "events_count": 32, "analyzed_count": 0, "timeout": false}

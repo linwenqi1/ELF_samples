@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `601c1da1f5ae3cf9c8b6e8449022a16e24fffce6acca8c10f9a88afac88fd67e` | **Job ID:** `3799cf3e`
+**Date:** 2026-01-31 16:13:22
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary attempted to run dumpcap network capture tool but failed due to Docker/QEMU environment constraints (no network interfaces available). No malicious activity observed.
+
+### 🔍 Key Evidence
+- Exit code 2 with dumpcap error about missing network interfaces
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No evidence of malicious patterns in syscall trace
+
+### 💡 Recommendations
+Test in environment with proper network interfaces to determine actual behavior. Current failure appears to be environmental, not malicious.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+dumpcap: Can't get list of interfaces: eth0: SIOCETHTOOL(ETHTOOL_GLINK) ioctl failed: Not a tty
+```

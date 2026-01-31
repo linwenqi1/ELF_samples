@@ -1,0 +1,56 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2184c43346d7aaeeea9198a820ce0271f8bef02a2355cb590b5d10758223d7e9` | **Job ID:** `28f48917`
+**Date:** 2026-01-31 16:11:06
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> OpenVPN binary executed in emulated ARM environment, displayed help output and exited normally without malicious activity.
+
+### 🔍 Key Evidence
+- Binary executed from /tmp (normal for analysis environment)
+- TRACK_QEMU event detected (expected emulation artifact)
+- No network connections, file modifications, or persistence attempts
+- Exit code 1 with help output suggests argument error
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate OpenVPN binary that failed due to missing configuration in the analysis environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+OpenVPN 2.4.6 arm-buildroot-linux-musleabihf [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [MH/PKTINFO] [AEAD] built on Jul  9 2019
+
+General Options:
+--config file   : Read configuration options from file.
+--help          : Show options.
+--version       : Show copyright and version information.
+
+Tunnel Options:
+--local host    : Local host name or ip address. Implies --bind.
+--remote host [port] : Remote host name or ip address.
+--remote-random : If multiple --remote options specified, choose one randomly.
+--remote-random-hostname : Add a random string to remote DNS name.
+--mode m        : Major mode, m = 'p2p' (default, point-to-point) or 'server'.
+--proto p       : Use protocol p for communicating with peer.
+                  p = udp (default), tcp-server, or tcp-client
+--proto-force p : only consider protocol p in list of connection profiles.
+                  p = udp6, tcp6-server, or tcp6-client (ipv6)
+--connect-retry n [m] : For client, number of seconds to wait between
+                  connection retries (default=5). On repeated retries
+                  the wait time is exponentially increased to a maximum of m
+                  (default=300).
+--connect-retry-max n : Maximum connection attempt retries, default infinite.
+--http-proxy s p [up] [auth] : Connect to remote host
+                  through an HTTP proxy at address s and port p.
+                  If proxy authentication is required,
+                  up is a file containing username/password on 2 lines, or
+```

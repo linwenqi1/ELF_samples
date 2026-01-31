@@ -1,0 +1,35 @@
+# DeepSeek Malware Analysis Report
+**Target:** `eacdd633da4bd13a4f5ab3f8eac4e40e0a8b001b1a6dee84dc9fe08d8c3bdf2b` | **Job ID:** `8604d61b`
+**Date:** 2026-01-31 16:14:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 95/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Privilege Escalation`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed from /tmp, attempted privilege escalation to root via SETUID, then spawned a shell (/bin/bash) and established socket connections, indicating potential backdoor/command injection behavior.
+
+### ⚠️ Suspicious Behaviors
+- SETUID call to uid 0 (root)
+- Execution of /bin/bash shell
+- Multiple socket connections
+- Binary execution from /tmp directory
+
+### 🔍 Key Evidence
+- SETUID event with uid=0
+- EXEC event for /bin/bash
+- SOCKET and CONNECT events establishing connections
+- Local alerts for privilege escalation (level 8) and command injection (level 9.3)
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic from connections, examine /bin/bash process for injected commands, check for persistence mechanisms, and review system logs for related activity.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

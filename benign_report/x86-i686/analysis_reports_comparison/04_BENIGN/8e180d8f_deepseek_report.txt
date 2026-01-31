@@ -1,0 +1,33 @@
+# DeepSeek Malware Analysis Report
+**Target:** `70103bcdfebc68f2b2ae9833b0d63598be386eced43cb8fb4b66e774a4f7fe77` | **Job ID:** `8e180d8f`
+**Date:** 2026-01-31 16:14:42
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment with QEMU emulation but showed no malicious activity. Limited system calls observed with no evidence of payload delivery, persistence, evasion, or known malware patterns.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Minimal system call activity (EXEC, ACCESS, READ only)
+- No network activity, file writes, or process manipulation
+
+### 💡 Recommendations
+No immediate action required. Consider monitoring for subsequent executions or additional payloads if this is part of a multi-stage attack. The binary may be a benign component or failed to activate due to environmental conditions.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+TARGET                                            SOURCE                                                                                                                  FSTYPE  OPTIONS
+/                                                 overlay                                                                                                                 overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/PFWZGYODMKVHVABILW27TOFWWQ:/var/lib/docker/overlay2/l/5QE3NEDNMLGPKJY4UTAX7X7KHR:/var/lib/docker/overlay2/l/2MINEIDYTVD7DTKSNST4WL774H:/var/lib/docker/overlay2/l/CONTOOYWUMWD35GYWGVXKHBNY6:/var/lib/docker/overlay2/l/BKIRNB2B7UI66HLUYZYBYKQ3F4:/var/lib/docker/overlay2/l/6OY5YBJU4COACYI4L6X6Z57BYP:/var/lib/docker/overlay2/l/DW6AFWBZLB7QAEY4CWLT6J7ZFT,upperdir=/var/lib/docker/overlay2/683d0b24d75fb16f1a03d21dbd78b4a0d11912f272950ac4110c6fbfe4cfa06f/diff,workdir=/var/lib/docker/overlay2/683d0b24d75fb16f1a03d21dbd78b4a0d11912f272950ac4110c6fbfe4cfa06f/work,nouserxattr
+|-/usr/sbin/docker-init                           /dev/nvme0n1p9[/usr/bin/docker-init]                                                                                    ext4    ro,relatime
+|-/etc/resolv.conf                                /dev/nvme0n1p9[/var/lib/docker/containers/bd5afa9793c20b232a2e03971e1cd52e33f8d9a184dbf66fc40023385599a68a/resolv.conf] ext4    rw,relatime
+|-/etc/hostname                                   /dev/nvme0n1p9[/var/lib/docker/containers/bd5afa9793c20b232a2e03971e1cd52e33f8d9a184dbf6
+```

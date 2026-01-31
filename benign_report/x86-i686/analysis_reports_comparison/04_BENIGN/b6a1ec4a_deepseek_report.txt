@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `f58dbb187342e33019331c76cbd338723de5c2e921659a82dcbf3a1414a29ed5` | **Job ID:** `b6a1ec4a`
+**Date:** 2026-01-31 16:16:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Failed_Dependencies`
+
+## 📝 Analysis Summary
+> Binary failed to execute properly with exit code -1 and no runtime activity observed in syscall trace beyond startup and aggregated summaries.
+
+### 🔍 Key Evidence
+- Exit code -1 indicates execution failure
+- No meaningful syscall activity beyond EXEC and TRACK_QEMU events
+- Empty execution output
+
+### 💡 Recommendations
+Check binary dependencies and compatibility with QEMU emulation environment. Verify if binary requires specific libraries or system resources not available in sandbox.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

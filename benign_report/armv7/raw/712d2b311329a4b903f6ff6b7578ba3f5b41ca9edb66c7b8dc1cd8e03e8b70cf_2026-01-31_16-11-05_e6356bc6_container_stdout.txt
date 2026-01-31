@@ -1,0 +1,52 @@
+
+Wireshark - 712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf v1.1.0
+
+Usage:
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interfaces [--adb-server-ip=<arg>] [--adb-server-tcp-port=<arg>]
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interface=INTERFACE --extcap-dlts
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interface=INTERFACE --extcap-config
+ /tmp/712d2b311329a4b903f6ff6b7578ba3f5b41ca9edb66c7b8dc1cd8e03e8b70cf --extcap-interface=INTERFACE --fifo=PATH_FILENAME --capture
+
+INTERFACE has the form TYPE-DEVICEID:
+	For example: android-bluetooth-btsnoop-net-W3D7N15C29005648
+
+	TYPE is one of:
+	android-logcat-main
+	android-logcat-system
+	android-logcat-radio
+	android-logcat-events
+	android-logcat-text-main
+	android-logcat-text-system
+	android-logcat-text-radio
+	android-logcat-text-events
+	android-logcat-text-crash
+	android-bluetooth-hcidump
+	android-bluetooth-external-parser
+	android-bluetooth-btsnoop-net
+	android-tcpdump
+
+	DEVICEID is the identifier of the device provided by Android SDK (see "adb devices")
+	For example: W3D7N15C29005648
+
+Options:
+	--extcap-interfaces: list the extcap Interfaces
+	--extcap-dlts: list the DLTs
+	--extcap-interface <iface>: specify the extcap interface
+	--extcap-config: list the additional configuration for an interface
+	--capture: run the capture
+	--extcap-capture-filter <filter>: the capture filter
+	--fifo <file>: dump data to file or fifo
+	--extcap-version: print tool version
+	--debug: print additional messages
+	--debug-file: print debug messages to file
+	--help: print this help
+	--adb-server-ip <IP>: the IP address of the ADB server
+	--adb-server-tcp-port <port>: the TCP port of the ADB server
+	--logcat-text: use logcat text format
+	--logcat-ignore-log-buffer: ignore log buffer
+	--logcat-custom-options <text>: use custom logcat parameters
+	--bt-server-tcp-port <port>: bluetooth server TCP port
+	--bt-forward-socket <path>: bluetooth forward socket
+	--bt-local-ip <IP>: the bluetooth local IP
+	--bt-local-tcp-port <port>: the bluetooth local TCP port
+

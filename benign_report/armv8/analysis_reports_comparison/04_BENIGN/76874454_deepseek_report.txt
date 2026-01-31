@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0e07405ea568814b8db5294b9c54c93c8530b9d51c67a5cec6eced9fdc0bc0f3` | **Job ID:** `76874454`
+**Date:** 2026-01-31 16:21:07
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/QEMU environment with minimal activity - appears to be a cleanup or diagnostic utility with no malicious behaviors observed.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Clean exit code (0)
+- No network activity, file writes, persistence attempts, or process manipulation
+- Execution output indicates socket cleanup in /tmp
+
+### 💡 Recommendations
+No immediate action required. Monitor for any subsequent executions with expanded behavior patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Cleaned up 0 sockets in /tmp; 0 sockets are still in use; 0 in unknown state
+```

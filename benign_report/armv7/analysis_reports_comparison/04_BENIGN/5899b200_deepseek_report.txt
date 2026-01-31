@@ -1,0 +1,40 @@
+# DeepSeek Malware Analysis Report
+**Target:** `5489d6bc95fcc7bf7323f4897ef4ff4a94c51b603a01773809f621b4d9a83b6d` | **Job ID:** `5899b200`
+**Date:** 2026-01-31 16:12:44
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and displayed help text for the rarp utility, showing no malicious activity in the provided trace.
+
+### 🔍 Key Evidence
+- Execution output shows standard rarp utility usage help
+- No malicious syscall patterns detected in trace
+- TRACK_QEMU event is an emulation artifact, not evasion
+
+### 💡 Recommendations
+No further action needed. This appears to be a legitimate network utility binary.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: rarp -a                               list entries in cache.
+       rarp -d <hostname>                    delete entry from cache.
+       rarp [<HW>] -s <hostname> <hwaddr>    add entry to cache.
+       rarp -f                               add entries from /etc/ethers.
+       rarp -V                               display program version.
+
+  <HW>=Use '-H <hw>' to specify hardware address type. Default: ether
+  List of possible hardware types (which support ARP):
+    ash (Ash) ether (Ethernet) ax25 (AMPR AX.25) 
+    netrom (AMPR NET/ROM) rose (AMPR ROSE) arcnet (ARCnet) 
+    dlci (Frame Relay DLCI) fddi (Fiber Distributed Data Interface) hippi (HIPPI) 
+    irda (IrLAP) x25 (generic X.25) infiniband (InfiniBand) 
+    eui64 (Generic EUI-64)
+```

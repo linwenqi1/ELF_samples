@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `0bec8270f8a2ef8099e0ae2b90a2fce9bb15f32fd90e3982aa9bf72ad3484ae4` | **Job ID:** `b96d4d2b`
+**Date:** 2026-01-31 16:12:55
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 50/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed in emulated environment, attempted privilege escalation to root via SETUID call, but exited early with argument error. No network communication or payload delivery observed.
+
+### ⚠️ Suspicious Behaviors
+- SETUID call to root (uid 0)
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- SETUID call with uid=0 (root)
+- Binary executed from /tmp
+- TRACK_QEMU event indicating emulation
+
+### 💡 Recommendations
+Analyze full binary for persistence mechanisms, check for encoded payloads, monitor for follow-up execution attempts, and examine parent process context.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: mtrace [-lMnpsv] [-g gateway] [-i if_addr] [-m max_hops] [-q nqueries]
+              [-r host] [-S stat_int] [-t ttl] [-w waittime] source [receiver]
+              [group]
+```

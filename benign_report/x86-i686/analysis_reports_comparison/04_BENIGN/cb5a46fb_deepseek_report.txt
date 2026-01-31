@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `6d4d07b9b8cedc40e20f4139bc2b3864b3dfa8ed6c1cbda156ee15d0b4f1a48b` | **Job ID:** `cb5a46fb`
+**Date:** 2026-01-31 16:15:27
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed but immediately exited with usage help output, showing no malicious runtime behavior. Environment artifacts (TRACK_QEMU) are benign emulation noise.
+
+### 🔍 Key Evidence
+- Exit code 2 with usage help output
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No syscalls indicating malicious intent
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a legitimate utility requiring proper arguments. If suspicious, analyze with correct arguments in controlled environment.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: 6d4d07b9b8cedc40e20f4139bc2b3864b3dfa8ed6c1cbda156ee15d0b4f1a48b [-v] [-h] [-c] [-s] [-f] [-D] [-u user] [-t chrootdir] [-d device] [-m mtu] [-z context] [-l ip address to listen on] [-p port] [-n external ip] [-b dnsport] [-P password] [-F pidfile] [-i max idle time] tunnel_ip[/netmask] topdomain
+```

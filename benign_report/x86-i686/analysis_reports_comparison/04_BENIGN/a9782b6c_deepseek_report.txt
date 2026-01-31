@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fc136a7182bbfe2beafcf053ece2ea88d72b1dd7f4702ec2e5c76d3bcfa6d53a` | **Job ID:** `a9782b6c`
+**Date:** 2026-01-31 16:17:17
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, showing minimal activity consistent with benign startup scripts. No malicious patterns detected in syscall trace.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory (common for benign scripts)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Exit code 0 with minimal output
+- No sensitive path access or malicious syscall patterns
+
+### 💡 Recommendations
+No immediate action needed. Monitor for any subsequent executions with expanded trace data if risk profile changes.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+dbus-daemon-activation-helper service.to.activate
+```

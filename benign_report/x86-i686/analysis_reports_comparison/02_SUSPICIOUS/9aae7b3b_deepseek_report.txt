@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `e3a057215062d3de7f9064b069c6f9d49fe260454c0544f1239db5b9f59c25d2` | **Job ID:** `9aae7b3b`
+**Date:** 2026-01-31 16:16:03
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 60/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, established multiple socket connections to encoded addresses, but terminated early without completing typical malware payload delivery patterns.
+
+### ⚠️ Suspicious Behaviors
+- Multiple socket connections to encoded/obfuscated addresses
+- Execution from /tmp directory
+- Early termination after network activity
+
+### 🔍 Key Evidence
+- EXEC from /tmp/e3a057215062d3de7f9064b069c6f9d49fe260454c0544f1239db5b9f59c25d2
+- Two SOCKET/CONNECT events with encoded addresses (domain 2, type 2 = AF_INET, SOCK_STREAM)
+- TRACK_QEMU indicates emulation but no anti-analysis detected
+- Exit code 2 suggests argument/input error
+
+### 💡 Recommendations
+Analyze network traffic to decode connection addresses, examine binary for command-and-control logic, check for persistence mechanisms, and compare against known botnet signatures.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Line {} is invalid.
+```

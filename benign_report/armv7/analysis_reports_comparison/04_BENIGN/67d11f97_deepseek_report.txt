@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `81b62b5cd0db288c8731811fe6acef58a9639b6d1ad2cfe360053004e81eb6f9` | **Job ID:** `67d11f97`
+**Date:** 2026-01-31 16:12:02
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment with QEMU emulation but showed no malicious activity. Behavior limited to basic file operations and directory reads within expected paths.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No access to sensitive paths outside emulation
+- No network activity, process injection, persistence attempts, or known malware patterns
+
+### 💡 Recommendations
+No immediate action required. Monitor for any subsequent executions with expanded behavior patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+NS TYPE   NPROCS PID USER COMMAND
+4026531837 user        4   1 root /sbin/docker-init -- sleep 300
+4026533600 mnt         4   1 root /sbin/docker-init -- sleep 300
+4026533604 uts         4   1 root /sbin/docker-init -- sleep 300
+4026533606 ipc         4   1 root /sbin/docker-init -- sleep 300
+4026533608 pid         4   1 root /sbin/docker-init -- sleep 300
+4026533612 cgroup      4   1 root /sbin/docker-init -- sleep 300
+4026533615 net         4   1 root /sbin/docker-init -- sleep 300
+```

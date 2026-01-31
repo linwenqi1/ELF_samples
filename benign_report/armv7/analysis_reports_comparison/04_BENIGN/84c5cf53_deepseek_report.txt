@@ -1,0 +1,29 @@
+# DeepSeek Malware Analysis Report
+**Target:** `d3d712220c6015dba8a8efa036da7331e01ac4746ffc32b99566271530aaeb38` | **Job ID:** `84c5cf53`
+**Date:** 2026-01-31 16:13:55
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker/Linux environment via QEMU emulation, showing minimal network activity and process forking typical of benign startup scripts, with no malicious patterns detected.
+
+### 🔍 Key Evidence
+- Execution from /tmp directory (common for benign scripts)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Socket creation and forking without malicious payload delivery or persistence attempts
+- No access to sensitive paths or anti-analysis behaviors
+
+### 💡 Recommendations
+No immediate action required. Monitor for further activity if binary origin is untrusted, as /tmp execution could be leveraged for malicious purposes in other contexts.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+
+```

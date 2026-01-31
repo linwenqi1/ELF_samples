@@ -1,0 +1,28 @@
+# DeepSeek Malware Analysis Report
+**Target:** `1461494161cd997f69b913fe95affb33e9fd1ac17e1dad8bd610dc8f33d07932` | **Job ID:** `9c013305`
+**Date:** 2026-01-31 16:11:13
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment with minimal activity, showing only startup and benign QEMU tracking events. No malicious patterns detected.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- Successful execution with exit code 0
+- No sensitive path access or malicious syscall patterns
+
+### 💡 Recommendations
+No immediate action required. Monitor for further execution attempts or changes in behavior patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+OpenSSL>
+```

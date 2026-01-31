@@ -1,0 +1,26 @@
+transmission-cli 2.94 (d8e60ee44f)
+A fast and easy BitTorrent client
+
+Usage: transmission-cli [options] <file|url|magnet>
+
+Options:
+ -h  --help                          Display this help page and exit
+ -b  --blocklist                     Enable peer blocklists
+ -B  --no-blocklist                  Disable peer blocklists
+ -d  --downlimit            <speed>  Set max download speed in kB/s
+ -D  --no-downlimit                  Don't limit the download speed
+ -er --encryption-required           Encrypt all peer connections
+ -ep --encryption-preferred          Prefer encrypted peer connections
+ -et --encryption-tolerated          Prefer unencrypted peer connections
+ -f  --finish               <script> Run a script when the torrent finishes
+ -g  --config-dir           <path>   Where to find configuration files
+ -m  --portmap                       Enable portmapping via NAT-PMP or UPnP
+ -M  --no-portmap                    Disable portmapping
+ -p  --port                 <port>   Port for incoming peers (Default: 51413)
+ -t  --tos                  <tos>    Peer socket TOS (0 to 255,
+                                     default=default)
+ -u  --uplimit              <speed>  Set max upload speed in kB/s
+ -U  --no-uplimit                    Don't limit the upload speed
+ -v  --verify                        Verify the specified torrent
+ -V  --version                       Show version number and exit
+ -w  --download-dir         <path>   Where to save downloaded data

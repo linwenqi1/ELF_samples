@@ -1,0 +1,8 @@
+{"type": "RUN_META", "session": "8efcbdc80cd8438693dc805e06de80ef", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv7l-eabihf/54ac4d7806f79d8018e1232599c2859c617dee6a765d664b153ad20bff9a4ae8", "backend": "cbpf", "arch": {"machine": 40, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 206662, "cgroup_inode": 72504, "container_id": "e02ff04b29a2b688684fa51a2025a6d4d2ec88efc1fe4d34968019345ab4644b", "container_name": "cranky_antonelli", "container_image": "arm32v7/ubuntu:22.04", "qemu_cmd": "native", "start_ts": 1769847083.987639}
+{"ts": 6530247, "pid": 207116, "cgroup_id": 72504, "event": "EXEC", "filename": "/tmp/54ac4d7806f79d8018e1232599c2859c617dee6a765d664b153ad20bff9a4ae8"}
+{"ts": 6530247, "pid": 207116, "cgroup_id": 72504, "event": "TRACK_QEMU", "bin": "54ac4d7806f79d8", "count": 1}
+{"ts": 6530250, "pid": 207116, "cgroup_id": 72504, "event": "WRITE", "fd": 3, "buf": "A\u0002", "count": 1}
+{"ts": 6530250, "pid": 207107, "cgroup_id": 72504, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6530250, "pid": 207107, "cgroup_id": 72504, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"ts": 1769847084368, "pid": -1, "cgroup_id": 72504, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "RUN_END", "end_ts": 1769847084.7543676, "events_count": 6, "analyzed_count": 0, "timeout": false}

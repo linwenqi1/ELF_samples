@@ -1,0 +1,67 @@
+# DeepSeek Malware Analysis Report
+**Target:** `40c022dc94a2547ceacfbce3865f4df370962e4d1a4a8dafd0b06cdba577be6c` | **Job ID:** `f6986a18`
+**Date:** 2026-01-31 16:11:51
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 10/100 🟢
+- **Verdict:** **Security_Tool**
+- **Family:** `None`
+- **Threat Categories:** `Security_Tool`
+- **Standard Label:** `Security_Tool.Linux.Pixiewps`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully and displayed help/usage information for Pixiewps, a legitimate WPS security assessment tool. No malicious behaviors observed in the trace.
+
+### 🔍 Key Evidence
+- Binary is Pixiewps tool (WPS pixie-dust attack utility)
+- Execution completed with exit code 3 (typically usage/help display)
+- No network, persistence, evasion, or payload delivery behaviors in syscall trace
+- TRACK_QEMU event is environment artifact, not evasion
+
+### 💡 Recommendations
+No immediate threat. Verify tool is from legitimate source. Monitor for actual exploitation attempts if provided with WPS attack parameters.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Pixiewps 1.4 WPS pixie-dust attack tool
+ Copyright (c) 2015-2017, wiire <wi7ire@gmail.com>
+
+ Usage: /tmp/40c022dc94a2547ceacfbce3865f4df370962e4d1a4a8dafd0b06cdba577be6c <arguments>
+
+ Required arguments:
+
+   -e, --pke         : Enrollee public key
+   -r, --pkr         : Registrar public key
+   -s, --e-hash1     : Enrollee hash-1
+   -z, --e-hash2     : Enrollee hash-2
+   -a, --authkey     : Authentication session key
+   -n, --e-nonce     : Enrollee nonce
+
+ Optional arguments:
+
+   -m, --r-nonce     : Registrar nonce
+   -b, --e-bssid     : Enrollee BSSID
+   -v, --verbosity   : Verbosity level 1-3, 1 is quietest           [3]
+   -o, --output      : Write output to file
+   -j, --jobs        : Number of parallel threads to use         [Auto]
+
+   -h                : Display this usage screen
+   --help            : Verbose help and more usage examples
+   -V, --version     : Display version
+
+   --mode N[,... N]  : Mode selection, comma separated           [Auto]
+   --start [mm/]yyyy : Starting date             (only mode 3) [+1 day]
+   --end   [mm/]yyyy : Ending date               (only mode 3) [-1 day]
+   -f, --force       : Bruteforce full range     (only mode 3)
+
+ Miscellaneous arguments:
+
+   -7, --m7-enc      : Recover encrypted settings from M7 (only mode 3)
+   -5, --m5-enc      : Recover secret nonce from M5       (only mode 3)
+
+ Example (use --help for more):
+
+ pixiewps -e <pke> -r <pkr> -s <e-hash1> -z <e-hash2> -a <authkey> -n <e-nonce>
+```

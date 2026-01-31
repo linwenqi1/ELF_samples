@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fe0bb9ccb0a7163c1800aead68c6339dac16bb790f0c26d3380e469812df3444` | **Job ID:** `196d6c15`
+**Date:** 2026-01-31 16:15:35
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary appears to be a legitimate SSDP daemon (minissdpd) that failed due to missing required command-line arguments. No malicious activity observed in the trace.
+
+### 🔍 Key Evidence
+- Usage output indicates legitimate SSDP daemon functionality
+- No network, file, or process manipulation observed in syscall trace
+- TRACK_QEMU event is an emulation artifact as specified in noise filtering
+
+### 💡 Recommendations
+No further action needed. This appears to be a benign utility that requires proper command-line arguments to execute.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: /tmp/fe0bb9ccb0a7163c1800aead68c6339dac16bb790f0c26d3380e469812df3444 [-d] [-6] [-s socket] [-p pidfile] [-t TTL] [-f device] -i <interface> [-i <interface2>] ...
+
+  <interface> is either an IPv4 address with mask such as
+  192.168.1.42/255.255.255.0, or an interface name such as eth0.
+
+  By default, socket will be open as /var/run/minissdpd.sock
+  and pid written to file /var/run/minissdpd.pid
+```

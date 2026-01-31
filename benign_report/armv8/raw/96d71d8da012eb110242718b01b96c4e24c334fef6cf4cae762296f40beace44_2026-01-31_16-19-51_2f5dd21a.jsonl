@@ -1,0 +1,12 @@
+{"type": "RUN_META", "session": "2b0ec6aafff94abf89ebfdcf36bd1621", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv8-aarch64/96d71d8da012eb110242718b01b96c4e24c334fef6cf4cae762296f40beace44", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 274345, "cgroup_inode": 99766, "container_id": "70f6d69120ef178306b277ebfbfbdf577a91e0602e6eb128175bbaba8214d756", "container_name": "jovial_shtern", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769847592.0692585}
+{"ts": 7038339, "pid": 274700, "cgroup_id": 99766, "event": "EXEC", "filename": "/tmp/96d71d8da012eb110242718b01b96c4e24c334fef6cf4cae762296f40beace44"}
+{"ts": 7038339, "pid": 274700, "cgroup_id": 99766, "event": "TRACK_QEMU", "bin": "96d71d8da012eb1", "count": 1}
+{"ts": 7038343, "pid": 274700, "cgroup_id": 99766, "event": "SOCKET", "domain": 1, "type": 524290, "count": 1}
+{"ts": 7038343, "pid": 274700, "cgroup_id": 99766, "event": "CONNECT", "addr": "01002f6465762f6c6f670000000000000100000030002000a780c5eca6720000f0ca130dff7f00000c00000003000000c006f45a555500000071f93a5406b3c9", "count": 1}
+{"ts": 7038343, "pid": 274700, "cgroup_id": 99766, "event": "SOCKET", "domain": 2, "type": 2, "count": 3}
+{"ts": 7038344, "pid": 274700, "cgroup_id": 99766, "event": "SENDTO", "len": 12, "count": 1}
+{"ts": 1769847592421, "pid": -1, "cgroup_id": 99766, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769847592421, "pid": -1, "cgroup_id": 99766, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847592421, "pid": -1, "cgroup_id": 99766, "event": "MMAP_SUM", "meta": {"count": 33, "max_pages": 32768}, "count": 1}
+{"ts": 7053241, "pid": 274586, "cgroup_id": 99766, "event": "SIGNAL_GENERATE", "sig": 9, "count": 1}
+{"type": "RUN_END", "end_ts": 1769847607.8272069, "events_count": 10, "analyzed_count": 0, "timeout": true}

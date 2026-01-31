@@ -1,0 +1,22 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/f88d0ff52e7ffc860d36906fb30eb736934d3f92a356e43a0deadf2bd11b7beb", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 239235, "cgroup_inode": 86436, "container_id": "5c79a55a8c27868f75f2fe679098017c4c4f62b90afa64efe20c2232c1a0bf5e", "container_name": "reverent_greider", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847303.9717636}
+{"ts": 6750240, "pid": 239702, "cgroup_id": 86436, "event": "EXEC", "filename": "/tmp/f88d0ff52e7ffc860d36906fb30eb736934d3f92a356e43a0deadf2bd11b7beb"}
+{"ts": 6750241, "pid": 239702, "cgroup_id": 86436, "event": "TRACK_QEMU", "bin": "f88d0ff52e7ffc8", "count": 1}
+{"ts": 6750243, "pid": 239702, "cgroup_id": 86436, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 6750243, "pid": 239702, "cgroup_id": 86436, "event": "PRCTL", "option": 4, "arg2": 0, "count": 1}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86436, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86436, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86436, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86436, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 3}
+{"ts": 1769847304288, "pid": -1, "cgroup_id": 86436, "event": "MMAP_SUM", "meta": {"count": 51, "max_pages": 1048560}, "count": 1}
+{"ts": 6750327, "pid": 239702, "cgroup_id": 86436, "event": "SOCKET", "domain": 1, "type": 1, "count": 1}
+{"ts": 6750327, "pid": 239702, "cgroup_id": 86436, "event": "CLONE", "flags": 18874385, "count": 1}
+{"ts": 6750327, "pid": 239702, "cgroup_id": 86436, "event": "TRACK_FORK", "parent": 239702, "child": 239715, "count": 1}
+{"ts": 6750328, "pid": 239715, "cgroup_id": 86436, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6750328, "pid": 239715, "cgroup_id": 86436, "event": "TRACK_FORK", "parent": 239715, "child": 239716, "count": 1}
+{"ts": 6750328, "pid": 239715, "cgroup_id": 86436, "event": "DUP2", "oldfd": 4, "newfd": 0, "count": 1}
+{"ts": 6750328, "pid": 239715, "cgroup_id": 86436, "event": "DUP2", "oldfd": 4, "newfd": 1, "count": 1}
+{"ts": 6750328, "pid": 239715, "cgroup_id": 86436, "event": "DUP2", "oldfd": 4, "newfd": 2, "count": 1}
+{"ts": 6750331, "pid": 239651, "cgroup_id": 86436, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6750331, "pid": 239651, "cgroup_id": 86436, "event": "WAIT4_EXITED", "reaped_child": 25, "count": 1}
+{"type": "ANALYZER", "result": {"level": 8.5, "cvss_vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N", "description": "Process Control Operation Detected: SET_DUMPABLE", "pid": 239702, "evidence": "Process 239702 called prctl(SET_DUMPABLE, 0). Critical security policy manipulation. Total prctl calls: 1.", "analyzer": "SandboxBypass"}, "binary": "f88d0ff52e7ffc860d36906fb30eb736934d3f92a356e43a0deadf2bd11b7beb"}
+{"type": "RUN_END", "end_ts": 1769847304.8344014, "events_count": 19, "analyzed_count": 1, "timeout": false}

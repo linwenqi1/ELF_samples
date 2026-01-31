@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2c64b9bd3b613c0d4e3db0cf014a623023f8ce91ee9434e35f9da51d914aae3c.static` | **Job ID:** `bb35f4a7`
+**Date:** 2026-01-31 16:15:53
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing required arguments, showing only help text for btrfstune utility. No malicious activity observed in trace.
+
+### 🔍 Key Evidence
+- Exit code 1 with usage help output
+- No malicious syscall patterns detected
+- TRACK_QEMU event identified as emulation artifact per guidelines
+
+### 💡 Recommendations
+No further action needed. Binary appears to be a legitimate btrfstune utility that requires proper arguments to function.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+/tmp/2c64b9bd3b613c0d4e3db0cf014a623023f8ce91ee9434e35f9da51d914aae3c.static: too few arguments
+usage: btrfstune [options] device
+	-S value	positive value will enable seeding, zero to disable, negative is not allowed
+	-r 		enable extended inode refs
+	-x 		enable skinny metadata extent refs
+	-n 		enable no-holes feature (more efficient sparse file representation)
+	-f 		force to do dangerous operation, make sure that you are aware of the dangers
+	-u 		change fsid, use a random one
+	-U UUID		change fsid to UUID
+```

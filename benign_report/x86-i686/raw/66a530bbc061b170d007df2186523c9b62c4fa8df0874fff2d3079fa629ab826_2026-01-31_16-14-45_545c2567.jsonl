@@ -1,0 +1,17 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/66a530bbc061b170d007df2186523c9b62c4fa8df0874fff2d3079fa629ab826", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 226515, "cgroup_inode": 80330, "container_id": "2119e1584663b64bd3de51392fb6df2cfeb95262988d7327fde06b387ec52854", "container_name": "keen_buck", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847285.780477}
+{"ts": 6732062, "pid": 227150, "cgroup_id": 80330, "event": "EXEC", "filename": "/tmp/66a530bbc061b170d007df2186523c9b62c4fa8df0874fff2d3079fa629ab826"}
+{"ts": 6732063, "pid": 227150, "cgroup_id": 80330, "event": "TRACK_QEMU", "bin": "66a530bbc061b17", "count": 1}
+{"ts": 6732066, "pid": 227150, "cgroup_id": 80330, "event": "SOCKET", "domain": 2, "type": 1, "count": 1}
+{"ts": 6732066, "pid": 227150, "cgroup_id": 80330, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 6732067, "pid": 227150, "cgroup_id": 80330, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 6732067, "pid": 227150, "cgroup_id": 80330, "event": "TRACK_FORK", "parent": 227150, "child": 227165, "count": 1}
+{"ts": 6732067, "pid": 227150, "cgroup_id": 80330, "event": "MPROTECT", "read": 1, "write": 1, "exec": 0, "count": 1}
+{"ts": 6732068, "pid": 227150, "cgroup_id": 80330, "event": "SOCKET", "domain": 2, "type": 2, "count": 1}
+{"ts": 6732068, "pid": 227150, "cgroup_id": 80330, "event": "CONNECT", "addr": "0200a410ac11ffff000000000000000000000000000000000078266232fb291170cbd75ed675000010000000050000004063c28b555500000078266232fb2911", "count": 1}
+{"ts": 6732069, "pid": 227150, "cgroup_id": 80330, "event": "SENDTO", "len": 138, "count": 1}
+{"ts": 1769847286162, "pid": -1, "cgroup_id": 80330, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847286162, "pid": -1, "cgroup_id": 80330, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"ts": 1769847286162, "pid": -1, "cgroup_id": 80330, "event": "MMAP_SUM", "meta": {"count": 18, "max_pages": 1048560}, "count": 1}
+{"ts": 6735069, "pid": 227150, "cgroup_id": 80330, "event": "SENDTO", "len": 138, "count": 4}
+{"ts": 6746993, "pid": 227041, "cgroup_id": 80330, "event": "SIGNAL_GENERATE", "sig": 9, "count": 1}
+{"type": "RUN_END", "end_ts": 1769847301.5714679, "events_count": 15, "analyzed_count": 0, "timeout": true}

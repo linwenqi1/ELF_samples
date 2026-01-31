@@ -1,0 +1,32 @@
+# DeepSeek Malware Analysis Report
+**Target:** `2e6e7b8803f44f9c30883db3d546ec56238c4d4ca08b225a00db7ebaa5fe7cdc` | **Job ID:** `93d2c002`
+**Date:** 2026-01-31 16:16:42
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Argument_Error`
+
+## 📝 Analysis Summary
+> Binary executed but exited with usage error, showing no malicious runtime behavior beyond a large memory allocation flagged by analyzer.
+
+### ⚠️ Suspicious Behaviors
+- Large memory allocation (1048560 pages) via mmap
+
+### 🔍 Key Evidence
+- Exit code 2 with usage output
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No malicious syscall patterns detected
+- No family-specific indicators
+
+### 💡 Recommendations
+Review binary source/functionality; large allocation may be false positive in emulated environment. No immediate threat observed.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Usage: gpg-error [options] error-numbers
+```

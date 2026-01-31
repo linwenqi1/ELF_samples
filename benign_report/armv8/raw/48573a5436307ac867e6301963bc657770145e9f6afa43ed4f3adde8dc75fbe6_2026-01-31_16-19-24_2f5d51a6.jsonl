@@ -1,0 +1,18 @@
+{"type": "RUN_META", "session": "2b0ec6aafff94abf89ebfdcf36bd1621", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/armv8-aarch64/48573a5436307ac867e6301963bc657770145e9f6afa43ed4f3adde8dc75fbe6", "backend": "cbpf", "arch": {"machine": 183, "bits": 64, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 255887, "cgroup_inode": 92714, "container_id": "98edc05ca070d3407a6753744b83af03d316d4c71eded9d79d592e931285a446", "container_name": "confident_gates", "container_image": "arm64v8/ubuntu:24.04", "qemu_cmd": "native", "start_ts": 1769847565.178929}
+{"ts": 7011509, "pid": 256473, "cgroup_id": 92714, "event": "EXEC", "filename": "/tmp/48573a5436307ac867e6301963bc657770145e9f6afa43ed4f3adde8dc75fbe6"}
+{"ts": 7011509, "pid": 256473, "cgroup_id": 92714, "event": "TRACK_QEMU", "bin": "48573a5436307ac", "count": 1}
+{"ts": 7011512, "pid": 256473, "cgroup_id": 92714, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7011513, "pid": 256476, "cgroup_id": 92714, "event": "CLONE", "flags": 4001536, "count": 1}
+{"ts": 7011513, "pid": 256476, "cgroup_id": 92714, "event": "TRACK_FORK", "parent": 256476, "child": 256477, "count": 1}
+{"ts": 7011514, "pid": 256427, "cgroup_id": 92714, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 7011514, "pid": 256427, "cgroup_id": 92714, "event": "WAIT4_EXITED", "reaped_child": 24, "count": 1}
+{"ts": 7011514, "pid": 256476, "cgroup_id": 92714, "event": "ACCESS", "filename": "", "mode": 0, "count": 1}
+{"ts": 7011515, "pid": 256476, "cgroup_id": 92714, "event": "SOCKET", "domain": 1, "type": 524290, "count": 1}
+{"ts": 7011515, "pid": 256476, "cgroup_id": 92714, "event": "CONNECT", "addr": "01002f6465762f6c6f670000000000000100000030002000a780e5c8697a00006071e3fdfd7f00000c00000005000000b8c7c176555500000057b11c84b6da6d", "count": 1}
+{"ts": 7011517, "pid": 256476, "cgroup_id": 92714, "event": "SENDTO", "len": 128, "count": 1}
+{"ts": 7011517, "pid": 256476, "cgroup_id": 92714, "event": "CONNECT", "addr": "01002f6465762f6c6f67000000000000010000003000200040b910c9697a00006071e3fdfd7f00000c0000000500000038c6c176555500000057b11c84b6da6d", "count": 1}
+{"ts": 7011517, "pid": 256476, "cgroup_id": 92714, "event": "SENDTO", "len": 115, "count": 1}
+{"ts": 7011517, "pid": 256476, "cgroup_id": 92714, "event": "CONNECT", "addr": "01002f6465762f6c6f67000084b6da6d0072e3fdfd7f000005000000000000006071e3fdfd7f00000c0000000500000073000000000000000057b11c84b6da6d", "count": 1}
+{"ts": 1769847565576, "pid": -1, "cgroup_id": 92714, "event": "AGGREGATED_SUMMARY", "category": "dev_node", "count": 1}
+{"ts": 1769847565576, "pid": -1, "cgroup_id": 92714, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 1}
+{"type": "RUN_END", "end_ts": 1769847566.017232, "events_count": 16, "analyzed_count": 0, "timeout": false}

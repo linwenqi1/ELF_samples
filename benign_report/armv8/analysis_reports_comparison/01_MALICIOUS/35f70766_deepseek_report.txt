@@ -1,0 +1,34 @@
+# DeepSeek Malware Analysis Report
+**Target:** `39dc72c781b23ca9ce9072ff43f2d8990e1db26bf0d905069f1ac1a4f11c684f` | **Job ID:** `35f70766`
+**Date:** 2026-01-31 16:20:58
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 85/100 🔴
+- **Verdict:** **Malicious**
+- **Family:** `Mirai`
+- **Threat Categories:** `Backdoor`, `Botnet`
+- **Standard Label:** `Backdoor.Linux.Mirai`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, established network connectivity and attempted privilege escalation to root via SETUID call, consistent with botnet backdoor behavior.
+
+### ⚠️ Suspicious Behaviors
+- SETUID call to uid 0 (root)
+- Network socket creation and connection
+- Execution from /tmp directory
+
+### 🔍 Key Evidence
+- SETUID call with uid=0 (root privilege escalation attempt)
+- SOCKET and CONNECT events establishing network communication
+- Binary execution from /tmp directory
+- local_alert indicating potential privilege escalation
+
+### 💡 Recommendations
+Isolate affected system, analyze network traffic for C2 communication patterns, check for persistence mechanisms in system directories, and monitor for DDoS attack patterns.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+Multicast Router Connectivity:
+```

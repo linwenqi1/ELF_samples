@@ -1,0 +1,36 @@
+# DeepSeek Malware Analysis Report
+**Target:** `a1cc12f169890528a9c6195d9f73f483ee77cbe8891375e1da1858007e5c352f` | **Job ID:** `5ad51b38`
+**Date:** 2026-01-31 16:21:09
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 65/100 🟡
+- **Verdict:** **Suspicious**
+- **Family:** `None`
+- **Threat Categories:** `Backdoor`, `Evasion`
+- **Standard Label:** `Backdoor.Linux.None`
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in emulated environment, showing process manipulation capabilities and D-Bus communication attempts, but no clear malicious payload delivery or persistence observed.
+
+### ⚠️ Suspicious Behaviors
+- prctl(SET_KEEPCAPS) calls to retain capabilities
+- Multiple socket connections to /dev/log and D-Bus system socket
+- Process forking and clone operations
+
+### 🔍 Key Evidence
+- Two prctl(SET_KEEPCAPS) calls (PID 267738)
+- Socket connections to /dev/log and /var/run/dbus/system_bus_socket
+- Execution from /tmp with QEMU emulation artifacts
+- ModemManager service name acquisition failure in output
+
+### 💡 Recommendations
+Further static analysis of binary to identify embedded payloads; monitor for network connections to external C2 servers; check for persistence mechanisms in system directories.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+[25]: <info>  ModemManager (version 1.8.0) starting in system bus...
+[25]: <warn>  Could not acquire the 'org.freedesktop.ModemManager1' service name
+[25]: <info>  ModemManager is shut down
+```

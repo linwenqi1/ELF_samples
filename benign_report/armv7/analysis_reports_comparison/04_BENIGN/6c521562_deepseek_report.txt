@@ -1,0 +1,41 @@
+# DeepSeek Malware Analysis Report
+**Target:** `89637abeb27ec5197131d2c98ca8af20d4c6a2a44a28064850e4bddff26e93f9` | **Job ID:** `6c521562`
+**Date:** 2026-01-31 16:12:46
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Benign**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Success`
+
+## 📝 Analysis Summary
+> Binary executed successfully in Docker environment with QEMU emulation, showing only benign system resource checks and no malicious activity.
+
+### 🔍 Key Evidence
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No access to sensitive paths outside /tmp
+- No network activity, file writes, process manipulation, or persistence attempts
+- Exit code 0 with clean termination
+
+### 💡 Recommendations
+No immediate action required. Binary appears to be a benign utility or test program. Monitor for any future executions with expanded capabilities.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+RESOURCE DESCRIPTION                                              LIMIT USED  USE%
+MSGMNI   Number of message queues                                 32000    0 0.00%
+MSGMAX   Max size of message (bytes)                               8192    -     -
+MSGMNB   Default max size of queue (bytes)                        16384    -     -
+SHMMNI   Shared memory segments                                    4096    0 0.00%
+SHMALL   Shared memory pages                       18446744073692774399    0 0.00%
+SHMMAX   Max size of shared memory segment (bytes) 18446744073692774399    -     -
+SHMMIN   Min size of shared memory segment (bytes)                    1    -     -
+SEMMNI   Number of semaphore identifiers                          32000    0 0.00%
+SEMMNS   Total number of semaphores                          1024000000    0 0.00%
+SEMMSL   Max semaphores per semaphore set.                        32000    -     -
+SEMOPM   Max number of operations per semop(2)                      500    -     -
+SEMVMX   Semaphore max value                                      32767    -     -
+```

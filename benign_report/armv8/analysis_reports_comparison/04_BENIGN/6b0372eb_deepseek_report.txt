@@ -1,0 +1,30 @@
+# DeepSeek Malware Analysis Report
+**Target:** `fbe5168fa84fda54dd89f5b10b32a151d4a8de8ccd066f9d4d52790f3d15d791` | **Job ID:** `6b0372eb`
+**Date:** 2026-01-31 16:19:48
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to environment incompatibility (non-x86 architecture emulation via QEMU) before exhibiting any malicious behavior.
+
+### 🔍 Key Evidence
+- Exit code 1 with 'Not supported' error message
+- TRACK_QEMU event indicating emulation environment
+- No malicious syscall patterns detected in trace
+
+### 💡 Recommendations
+Test in native x86 environment to observe actual behavior; current execution was terminated before any payload could run.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+fbe5168fa84fda54dd89f5b10b32a151d4a8de8ccd066f9d4d52790f3d15d791: Not supported: Want control 'STA','CID','RSVD','VIC','BW','BWC'.
+```

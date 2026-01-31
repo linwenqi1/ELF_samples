@@ -1,0 +1,31 @@
+# DeepSeek Malware Analysis Report
+**Target:** `070569705420b9e535795c69064907806f46fe2ce7d85a63e2ea2f1465246619` | **Job ID:** `3161bb62`
+**Date:** 2026-01-31 16:22:11
+---
+## 🛡️ AI Verdict
+- **Risk Score:** 0/100 🟢
+- **Verdict:** **Unknown**
+- **Family:** `None`
+- **Threat Categories:** `None`
+- **Standard Label:** ``
+- **Execution Status:** `Env_Mismatch`
+
+> ⚠️ **Note:** The analysis indicates the program terminated early due to environment incompatibility or active evasion techniques. The behavior observed may not represent the full payload.
+
+## 📝 Analysis Summary
+> Binary failed to execute due to missing /dev/rfkill device in emulated environment, showing no malicious activity before exit.
+
+### 🔍 Key Evidence
+- Failed to open /dev/rfkill (device not present in emulation)
+- TRACK_QEMU event (emulation artifact, not evasion)
+- No malicious syscall patterns detected
+
+### 💡 Recommendations
+Test in environment with proper hardware device access or analyze binary statically for potential functionality.
+
+---
+## 💻 Execution Output (Stdout/Stderr)
+```text
+070569705420b9e535795c69064907806f46fe2ce7d85a63e2ea2f1465246619: cannot open /dev/rfkill: No such file or directory
+070569705420b9e535795c69064907806f46fe2ce7d85a63e2ea2f1465246619: cannot read /dev/rfkill: Bad file descriptor
+```

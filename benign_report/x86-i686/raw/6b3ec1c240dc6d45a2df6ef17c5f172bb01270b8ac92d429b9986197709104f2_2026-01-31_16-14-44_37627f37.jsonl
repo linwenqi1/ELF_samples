@@ -1,0 +1,9 @@
+{"type": "RUN_META", "session": "35a6089d2b0249fc9ee3abfa4c5ba446", "job": null, "runtime_mode": "docker", "target": "/home/zzh/Compass-Proj1/MirrorShield/ELF_samples/benign/x86-i686/6b3ec1c240dc6d45a2df6ef17c5f172bb01270b8ac92d429b9986197709104f2", "backend": "cbpf", "arch": {"machine": 3, "bits": 32, "endian": "little", "libc_variant": "glibc", "interpreter": null}, "host_root_pid": 225635, "cgroup_inode": 79986, "container_id": "c6b38a0119e75d1c5126767aaf7a3544767d92dd032f188a5828456a16d66ccd", "container_name": "interesting_mcclintock", "container_image": "custom/i386-qemu", "qemu_cmd": "native", "start_ts": 1769847284.6027205}
+{"ts": 6730835, "pid": 226205, "cgroup_id": 79986, "event": "EXEC", "filename": "/tmp/6b3ec1c240dc6d45a2df6ef17c5f172bb01270b8ac92d429b9986197709104f2"}
+{"ts": 6730835, "pid": 226205, "cgroup_id": 79986, "event": "TRACK_QEMU", "bin": "6b3ec1c240dc6d4", "count": 1}
+{"ts": 6730838, "pid": 226127, "cgroup_id": 79986, "event": "SIGNAL_GENERATE", "sig": 17, "count": 1}
+{"ts": 6730838, "pid": 226127, "cgroup_id": 79986, "event": "WAIT4_EXITED", "reaped_child": 26, "count": 1}
+{"ts": 1769847284842, "pid": -1, "cgroup_id": 79986, "event": "AGGREGATED_SUMMARY", "category": "temp_file", "count": 1}
+{"ts": 1769847284842, "pid": -1, "cgroup_id": 79986, "event": "AGGREGATED_SUMMARY", "category": "shared_library", "count": 2}
+{"ts": 1769847284842, "pid": -1, "cgroup_id": 79986, "event": "AGGREGATED_SUMMARY", "category": "proc_fs", "count": 4}
+{"type": "RUN_END", "end_ts": 1769847285.3422577, "events_count": 7, "analyzed_count": 0, "timeout": false}
