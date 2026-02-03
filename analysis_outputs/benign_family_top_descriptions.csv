@@ -1,8 +1,28 @@
 family,description,count
 arm32,"Memory Corruption (Weak Signal)",2
 arm32,"Root Directory Change Detected (CHROOT)",1
+arm32_add,"Memory Corruption (Weak Signal)",5
+arm32_add,"Abnormal Signal Handling Detected",2
 arm64,"Abnormal Signal Handling Detected",2
+armv7,"Potential Privilege Escalation",9
+armv7,"System reconnaissance: scanning /proc, /sys, and /dev simultaneously",5
+armv7,"Seccomp Syscall Filter Operation: SET_MODE_FILTER",5
+armv7,"Potential Command Injection",2
+armv7,"Seccomp Syscall Filter Operation: GET_ACTION_AVAIL",2
+armv8,"Potential Privilege Escalation",7
+armv8,"System reconnaissance: scanning /proc, /sys, and /dev simultaneously",3
+armv8,"Process Control Operation Detected: SET_KEEPCAPS",2
+armv8,"Process Control Operation Detected: SET_DUMPABLE",1
+armv8,"Potential Command Injection",1
 mips,"Kernel module management tool executed",1
 riscV64,"Abnormal Signal Handling Detected",1
+x86-i686,"Memory Corruption (Weak Signal)",4
+x86-i686,"Potential Privilege Escalation",2
+x86-i686,"Potential Command Injection",2
+x86-i686,"Process Control Operation Detected: SET_DUMPABLE",2
 x86_32,"Abnormal Signal Handling Detected",3
 x86_64,"Root Directory Change Detected (CHROOT)",1
+x86_64_add,"System reconnaissance: scanning /proc, /sys, and /dev simultaneously",9
+x86_64_add,"Abnormal Signal Handling Detected",6
+x86_64_add,"Potential Reverse Shell Detected",2
+x86_64_add,"Potential Command Injection",2
